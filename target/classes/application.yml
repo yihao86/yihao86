@@ -1,0 +1,56 @@
+server:
+  servlet:
+    context-path: /my
+
+Mydir:
+  serverURI: C:\Users\lenovo\Desktop\学习\y2\apache-tomcat-8.5.31\webapps\video/
+
+getPic:
+  serverURI: C:\Users\lenovo\Desktop\学习\y2\apache-tomcat-8.5.31\webapps\video/
+
+
+mybatis:
+  type-aliases-package: com.pojo
+  configuration:
+    auto-mapping-behavior: full
+    use-generated-keys: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///vote?serverTimezone=GMT
+    username: root
+    password: 123
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm
+    time-zone: GMT+8
+    
+  resources:
+    static-locations:
+    - classpath:/templates/
+    
+  servlet:
+    multipart:
+      enabled: true
+      maxFileSize: 1024mb
+      maxRequestSize: 2048Mb
+      
+#thymeleaf start
+  thymeleaf:
+    encoding: UTF-8
+    #开发时关闭缓存,不然没法看到实时页面
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+#thymeleaf end
+
+
+
+#
+##分页
+#pagehelper:
+#  helper-dialect: mysql
+#  reasonable: true
+#  support-methods-arguments: true
+#  params: count=countSql 
