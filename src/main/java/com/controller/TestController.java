@@ -38,14 +38,14 @@ public class TestController {
      * @throws IOException
      */
     @RequestMapping("/upload")
-    public String upload( HttpServletRequest request,@RequestParam("file") MultipartFile[] files) throws IOException{
+    public String upload(@RequestParam("file") MultipartFile[] files) throws IOException{
         System.out.println("进来了");
 
         List<String> list = new ArrayList<String>();
         // 获得项目的路径
         //ServletContext sc = request.getSession().getServletContext();
         // 上传位置
-        String path = fileDir; // 设定文件保存的目录
+        String path = fileDir+"壁虎老师/专辑1/课程1/第一章/"; // 设定文件保存的目录
         File f = new File(path);
         
         if (!f.exists())
@@ -53,17 +53,13 @@ public class TestController {
         for (int i = 0; i < files.length; i++) {
             // 获得原始文件名
             String fileName = files[i].getOriginalFilename();
-            fileName = URLDecoder.decode(fileName, "utf-8");
-            System.out.println("原始文件名:" + fileName);
-            
+            fileName = URLDecoder.decode(fileName, "utf-8");            
             if (!files[i].isEmpty()) {
                 try {
-                	
         			MultipartFile file = files[i];
-        			file.transferTo(new File(fileDir+fileName));               	           
+        			file.transferTo(new File(path+fileName));               	           
                     //通过CommonsMultipartFile的方法直接写文件（注意这个时候）
-               
-                   /* FileOutputStream fos = new FileOutputStream(path
+        		    /* FileOutputStream fos = new FileOutputStream(path
                             + fileName);
                     InputStream in = files[i].getInputStream();
                     int b = 0;
@@ -137,7 +133,7 @@ public class TestController {
     /**
      * 递归获取某路径下的所有文件，文件夹，并输出
      */
-    public static List getFiles(String path) {
+    public static List<String> getFiles(String path) {
         File file = new File(path);
         List<String> pname = new ArrayList<>();
         // 如果这个路径是文件夹
