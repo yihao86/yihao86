@@ -18,7 +18,7 @@ public class VideosController {
 
 	@RequestMapping("gogogo")
 	public String queryVideos(Model mod) {
-		System.out.println("hhh_查询所有视频方法.......");
+		System.out.println("hhh_888查询所有视频方法.......");
 		List<Videos> vlist = vs.searchAll();
 		System.out.println(vlist.size());
 		mod.addAttribute("vlist", vlist);
