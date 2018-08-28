@@ -10,7 +10,7 @@ getPic:
 
 
 mybatis:
-  type-aliases-package: com.pojo
+  type-aliases-package: com.yihao86.pojo
   configuration:
     auto-mapping-behavior: full
     use-generated-keys: true

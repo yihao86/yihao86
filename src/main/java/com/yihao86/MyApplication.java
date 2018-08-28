@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @EnableTransactionManagement
-@MapperScan(basePackages="com.dao")
+@MapperScan(basePackages="com.yihao86.dao")
 @SpringBootApplication
 public class MyApplication extends SpringBootServletInitializer {
 	
