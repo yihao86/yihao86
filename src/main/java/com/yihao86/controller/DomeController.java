@@ -1,4 +1,4 @@
-package com.controller;
+package com.yihao86.controller;
 
 public class DomeController {
 

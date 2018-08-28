@@ -18,7 +18,7 @@ mybatis:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql:///vote?serverTimezone=GMT
+    url: jdbc:mysql:///yihao86?serverTimezone=GMT
     username: root
     password: 123
 

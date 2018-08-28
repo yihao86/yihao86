@@ -1,4 +1,4 @@
-package com.util;
+package com.yihao86.util;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
