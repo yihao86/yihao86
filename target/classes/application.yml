@@ -3,10 +3,10 @@ server:
     context-path: /my
 
 Mydir:
-  serverURI: C:\Users\lenovo\Desktop\学习\y2\apache-tomcat-8.5.31\webapps\video\
+  serverURI: C:\tomcat_media\webapps\video\
 
 getPic:
-  serverURI: C:\Users\lenovo\Desktop\学习\y2\apache-tomcat-8.5.31\webapps\video\
+  serverURI: C:\tomcat_media\webapps\video\
 
 
 mybatis:
@@ -18,9 +18,9 @@ mybatis:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql:///yihao86?serverTimezone=GMT
+    url: jdbc:mysql://111.230.232.46:3306/yihao86?serverTimezone=GMT
     username: root
-    password: 123
+    password: 1234
 
   jackson:
     date-format: yyyy-MM-dd HH:mm
