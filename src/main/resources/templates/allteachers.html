@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN"
+xmlns:th="www.thymeleay.org">
 <!-- Mirrored from yihao86/teachers/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 01:15:07 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
@@ -148,7 +149,7 @@
         </div>
     </div>
     <div id="teacher-list">
-        <div class="teacher-banner"><p>这里有<span>1239</span>名讲师</p>
+        <div class="teacher-banner"><p>这里有<span>3</span>名讲师</p>
             <p>带你一起学</p></div>
         <div class="teacher-m layout-cont">
             <div class="teacher-nav">
@@ -184,24 +185,31 @@
                 <div class="filter"><a href="curriculum_num-0-1/index.html" class="active">课程数</a><a
                         href="learned_num-0-1/index.html" class="">学习人数</a></div>
             </div>
-            <div class="teacher-con">
+            
+            
+            
+            
+            <div th:each="teachers,t:${tlist}"  class="teacher-con">
                 <div class="list clearfix">
-                    <div class="teacher-avatar fl"><a href="../teacher/1694691.html" target="_blank"><img
-                            src="../../imgs/image/000/000/009/9DEC52DB-6209-3788-CCDE-67F3422EDCC5.jpg"></a></div>
-                    <div class="teacher-info fl">
-                        <div class="teacher-name"><a href="../teacher/1694691.html" target="_blank">薛奔<i></i></a></div>
-                        <p class="speciality">
-                            擅长：
-                            <span></span></p>
-                        <p class="num"><span>课程数 416</span><span>学习人数 602763</span></p>
-                        <p class="con">
-                            微软Excel认证专家：前1号店数据分析师（负责品类管理和流量运营），前大众点评(新美大)网站运营高级主管（负责流量费用效率和渠道质量管理），精通Excel函数透视表图表，擅长数据分析自动化和商业报表设计，资深Excel培训师，线下线上学员多达上万人。</p>
-                        <div class="btn" data-id="993" style="padding-top: 12px; display: inline-block;"><a
-                                href="javascript:;" onclick='toLogin()' class='follow'>关注</a></div>
+                    <div class="teacher-avatar fl"><a th:href="@{'clickOneTeacher?tid='+${teachers.tid}}" target="_blank">
+                    	<img th:src="'http://localhost:9352/video/'+${teachers.t_photo}"></a>
                     </div>
-                    <div class="teacher-video fl"><a href="../course/20122.html" target="_blank">
-                        <div class="show-img"><img class="lazy"
-                                                   src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
+                    <div class="teacher-info fl">
+                        <div class="teacher-name">
+                        	<a th:href="@{'clickOneTeacher?tid='+${teachers.tid}}" target="_blank" th:text="${teachers.t_name}">薛奔<i></i></a>
+                        </div>
+                        <p class="speciality"> 擅长：<span></span></p>
+                        <p class="num"><span>课程数 416</span><span>学习人数 602763</span></p>
+                        <p class="con" th:text="'http://localhost:9352/video/'+${teachers.t_abstract}">
+                        </p>
+                        <div class="btn" data-id="993" style="padding-top: 12px; display: inline-block;">
+                        	<a href="javascript:;" onclick='toLogin()' class='follow'>关注</a>
+                        </div>
+                    </div>
+                    <div class="teacher-video fl">
+                    	<a href="../course/20122.html" target="_blank">
+                        <div class="show-img">
+                        <img class="lazy" src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
                                                    data-original="https://pic.huke88.com/video/cover/2018-07-23/EC340327-A66E-CF60-93B5-0E6D1D4770E7.jpg!/fw/500/compress/true/format/jpg"
                         ><span class="time-length">7分11秒</span></div>
                         <div class="show-mask"><span class="play-btn"></span></div>
@@ -222,6 +230,10 @@
                     </a></div>
                 </div>
             </div>
+            
+            
+            
+            
             <div id="page-m">
                 <div class="page-li"><a class="on active" href="index2679.html?page=1" data-page="0">1</a><a
                         href="index4658.html?page=2" data-page="1">2</a><a href="index9ba9.html?page=3"

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: yi Maven Webapp
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: 她的名字？H
+Built-By: lenovo
 Implementation-Vendor-Id: com.yi
 Build-Jdk: 1.8.0_45
 Implementation-URL: http://maven.apache.org
