@@ -10,4 +10,31 @@
   <select id="findOneTeacher" resultType="Teachers">
   	SELECT * FROM teachers WHERE tid = #{tid}
   </select>
+  
+  <!-- 拿到当前老师的所有视频 -->
+  <select id="teacherVideo" resultType="Videos">
+  	SELECT vid,v_name,v_uploadtime,v_imgs FROM videos WHERE v_disable = 0 AND v_teacherId =#{v_teacherId}
+  </select>
+  
+  <!-- 当前的观看人数 -->
+  <select id="viewingNumber" resultType="int">
+  	SELECT COUNT(0) FROM history WHERE h_vid = #{h_vid}
+  </select>
+  
+  <!-- 查询当前教师总学习次数 -->
+  <select id="total" resultType="int">
+  	SELECT COUNT(0) FROM history a JOIN(
+	SELECT MIN(hid) hid,h_uid,h_vid FROM history GROUP BY h_uid,h_vid) b
+	ON a.hid = b.hid
+	WHERE h_tid = #{h_tid}
+  </select>
+  
+  <!-- 查询当前教师成就信息-->
+  <select id="achievement" resultType="map">
+	SELECT COUNT(DISTINCT f_uid) fans,COUNT(DISTINCT h_uid) numberOfPepole,COUNT(DISTINCT vid) videoNum
+	FROM follow f,history h ,videos v
+	WHERE f.f_ftid = h.h_tid 
+	AND f.f_ftid = v.v_teacherId  
+	AND  f_ftid = #{f_ftid}
+  </select>
 </mapper>

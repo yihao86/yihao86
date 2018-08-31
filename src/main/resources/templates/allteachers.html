@@ -182,8 +182,6 @@ xmlns:th="www.thymeleay.org">
                     服装设计 </a><a href="curriculum_num-31-1/index.html">
                     手机摄影 </a><a href="curriculum_num-32-1/index.html">
                     思维导图 </a></div>
-                <div class="filter"><a href="curriculum_num-0-1/index.html" class="active">课程数</a><a
-                        href="learned_num-0-1/index.html" class="">学习人数</a></div>
             </div>
             
             
@@ -199,35 +197,28 @@ xmlns:th="www.thymeleay.org">
                         	<a th:href="@{'clickOneTeacher?tid='+${teachers.tid}}" target="_blank" th:text="${teachers.t_name}">薛奔<i></i></a>
                         </div>
                         <p class="speciality"> 擅长：<span></span></p>
-                        <p class="num"><span>课程数 416</span><span>学习人数 602763</span></p>
+                        <p class="num"><span>课程数 </span><span>学习人数 </span></p>
                         <p class="con" th:text="'http://localhost:9352/video/'+${teachers.t_abstract}">
                         </p>
                         <div class="btn" data-id="993" style="padding-top: 12px; display: inline-block;">
                         	<a href="javascript:;" onclick='toLogin()' class='follow'>关注</a>
                         </div>
                     </div>
-                    <div class="teacher-video fl">
-                    	<a href="../course/20122.html" target="_blank">
-                        <div class="show-img">
-                        <img class="lazy" src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                   data-original="https://pic.huke88.com/video/cover/2018-07-23/EC340327-A66E-CF60-93B5-0E6D1D4770E7.jpg!/fw/500/compress/true/format/jpg"
-                        ><span class="time-length">7分11秒</span></div>
-                        <div class="show-mask"><span class="play-btn"></span></div>
-                    </a></div>
-                    <div class="teacher-video fl"><a href="../course/20121.html" target="_blank">
-                        <div class="show-img"><img class="lazy"
-                                                   src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                   data-original="https://pic.huke88.com/video/cover/2018-07-23/3D755DC9-D637-C401-2BAD-CDB6C37BD38C.jpg!/fw/500/compress/true/format/jpg"
-                        ><span class="time-length">9分30秒</span></div>
-                        <div class="show-mask"><span class="play-btn"></span></div>
-                    </a></div>
-                    <div class="teacher-video fl"><a href="../course/20120.html" target="_blank">
-                        <div class="show-img"><img class="lazy"
-                                                   src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                   data-original="https://pic.huke88.com/video/cover/2018-07-23/2B032A2D-74AF-7AB1-F527-C98772C8D1FA.jpg!/fw/500/compress/true/format/jpg"
-                        ><span class="time-length">11分15秒</span></div>
-                        <div class="show-mask"><span class="play-btn"></span></div>
-                    </a></div>
+                    
+                    
+                    <div th:each="imgpath,path:${path}" th:if="${path.index < 2}" class="teacher-video fl">
+                    	<a href="" target="_blank">
+                        	<div class="show-img">
+                        		<img class="lazy"
+                                 src="'http://localhost:9352/video/'+${imgpath[path.index]}">
+                                 <span class="time-length">11分15秒</span>
+                             </div>
+                        	<div class="show-mask">
+                        	<span class="play-btn"></span>
+                        	</div>
+                    	</a>
+                    </div>
+                    
                 </div>
             </div>
             

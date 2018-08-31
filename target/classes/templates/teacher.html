@@ -15,12 +15,10 @@
     <meta name="csrf-token" content="emxfTXlsUEglBik1SiEzLztVCi88JgEFQjgxAh1YBiIcFTU8KVU/Ig==">
     <title>在线学习网站--一号86</title>
     <meta property="wb:webmaster" content="c2797be5e9930c26">
-    <link href="static/assets/revision/!!css/base.v107.css,css/ucenter/pgc-teacher.v1.css,css/681e08d.css?v=681"
-          rel="stylesheet">
+    <link href="static/681e08d.css?v=681" rel="stylesheet">
     <script>
         var Url = {};
         var Param = {};
-
         Param.isLogin = '0';
         Param.uid = '0';
         Param.uv_id = '';
@@ -155,47 +153,46 @@
             <div class="teac-info">
                 <div class="teac-avatar"><img th:src="'http://localhost:9352/video/'+${teacher.t_photo}"></div>
                 <h1 class="name" th:text="${teacher.t_name}"></h1>
-                <p class="teac-fans">粉丝数：615</p><a class="btn udo-btn attention follow-btn" href="javascript:void(0)"
+                <p class="teac-fans">粉丝数：<span th:text="${achievement['fans']}"></span></p><a class="btn udo-btn attention follow-btn" href="javascript:void(0)"
                                                    data-id="4" data-evevt-js="follow-js">添加关注</a></div>
             <div class="achieve"><h3>讲师成就</h3>
-                <p class="num-c">课程数量：18</p>
+                <p class="num-c">课程数量：<span th:text="${achievement['videoNum']}"></span></p>
                 <p class="view-p">
-                    总学习人数：39,300</p>
+                    总学习人数：<span th:text="${achievement['numberOfPepole']}">123</span></p>
                 <p class="view-c">
-                    总学习次数：57,951</p></div>
+                    总学习次数：<span th:text="${total}">23</span></p></div>
         </div>
-        <script>
-            Url.cancelUrl = 'ajax-cancel-follow.html';
-            Url.followUrl = 'ajax-follow.html';
-        </script>
         <div class="teac-r fr">
             <div class="teac-des"><h3>讲师介绍</h3>
-                <p>平面设计师、插画师；双鱼座；A型血；2年授课经验。</p></div>
+                <p>qwertyuiopoiuytre</p></div>
             <div class="course-list">
                 <div class="list-t">
                     <div class="course-num fr">
-                        共有会员课程<span>18</span>节课
+                        共有课程<span th:text="${achievement['videoNum']}"></span>节课
                     </div>
-                    <div class="course-tabs clearfix"><a href="javascript:void(0);" class="active">会员课程</a><a
-                            href="10dab.html?type=2">付费课程</a></div>
+                    <div class="course-tabs clearfix"><a href="javascript:void(0);" class="active">全部课程</a></div>
                 </div>
                 <div class="list-m imgshow-m clearfix">
-                    <div class="list">
-                        <div class="list-img"><a class="show-img"
-                                                 href="../course/292.html"
-                                                 target="_blank""><img
-                                class="lazy"
-                                src="https://pic.huke88.com/cover/cover.png!/compress/true/format/jpg/fh/294"
-                                data-original="https://pic.huke88.com/video/cover/2017-07-03/1B7A4B88-27AD-725B-4E12-D0E6A6AA0637.jpg!/fw/500/coalesce/true/format/jpg/quality/80"
-                                alt="PS-渐变映射"
-                        ><span class="play-cover"></span></a><span class="time-length">2分43秒</span></div>
-                        <div class="img-name clearfix"><a href="../course/292.html"
-                                                          class="name-link fl" target="_blank">PS-渐变映射</a></div>
-                        <div class="img-data clearfix"><span class="class-type fl type-poster">软件</span><span
-                                class="level fl">初级练习</span><span class="learn-num fr">7025人已学</span></div>
+                    <div th:each="vlist,v:${vlist}" class="list">
+                        <div class="list-img">
+                        <a class="show-img" href="" target="_blank">
+                        	<img class="lazy"
+                                th:src="'http://localhost:9352/video/'+${vlist.v_imgs}"
+                                th:alt="${vlist.v_name}" >
+                        	<span class="play-cover"></span>
+                        </a>
+                        <span class="time-length">2分43秒</span>
+                   		</div>
+                        <div class="img-name clearfix">
+                        	<a href="../course/292.html" class="name-link fl" target="_blank" th:text="${vlist.v_name}">视频名字</a>
+                        </div>
+                        <div class="img-data clearfix">
+                        	<span class="class-type fl type-poster" th:text="${vlist.v_uploadtime}"></span>
+                        	<span class="learn-num fr" th:text="${list[v.index]}+'人已学'">人已学</span>
+                        </div>
                     </div>
-                    
-                </div><!--分页 s-->
+                </div>
+                <!--分页 s-->
                 <div id="page-m">
                     <div class="page-li"><a class="on active" href="10b2f.html?page=1&amp;per-page=24"
                                             data-page="0">1</a></div>

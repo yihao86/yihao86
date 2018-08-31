@@ -99,8 +99,14 @@
             <artifactId>javax.mail</artifactId>
             <version>1.6.1</version>
         </dependency>
-	
-    
+        
+        
+        <!-- 视频 jave-->
+        <dependency>
+			<groupId>org.javers</groupId>
+			<artifactId>javers-core</artifactId>
+			<version>1.0.2</version>
+		</dependency>
   </dependencies>
   
   
