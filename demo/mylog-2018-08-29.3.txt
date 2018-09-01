@@ -1,0 +1,1202 @@
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@11ef1616
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/index.html]
+Looking up handler method for path /index.html
+Did not find handler method for [/index.html]
+Matching patterns for request [/index.html] are [/**]
+URI Template variables for request [/index.html] are {}
+Mapping [/index.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@7c95ce63]]] and 1 interceptor
+Last-Modified value for [/yi/index.html] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@11ef1616
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@11ef1616
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/index.html]
+Looking up handler method for path /index.html
+Did not find handler method for [/index.html]
+Matching patterns for request [/index.html] are [/**]
+URI Template variables for request [/index.html] are {}
+Mapping [/index.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@7c95ce63]]] and 1 interceptor
+Skip CORS processing: request is from same origin
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@7c95ce63]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@7c95ce63]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Request method 'POST' not supported
+Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@11ef1616
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Skip CORS processing: request is from same origin
+Written [{timestamp=Wed Aug 29 18:03:07 CST 2018, status=405, error=Method Not Allowed, message=Request method 'POST' not supported, path=/yi/index.html}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@6394bd20]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@11ef1616
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@7c95ce63]]] and 1 interceptor
+Last-Modified value for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@11ef1616
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/yi/error] is: -1
+Written [{timestamp=Wed Aug 29 18:03:07 CST 2018, status=404, error=Not Found, message=No message available, path=/yi/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@6394bd20]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@11ef1616
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/index.html]
+Looking up handler method for path /index.html
+Did not find handler method for [/index.html]
+Matching patterns for request [/index.html] are [/**]
+URI Template variables for request [/index.html] are {}
+Mapping [/index.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@7c95ce63]]] and 1 interceptor
+Skip CORS processing: request is from same origin
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@7c95ce63]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@7c95ce63]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Request method 'POST' not supported
+Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@11ef1616
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Skip CORS processing: request is from same origin
+Written [{timestamp=Wed Aug 29 18:03:07 CST 2018, status=405, error=Method Not Allowed, message=Request method 'POST' not supported, path=/yi/index.html}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@6394bd20]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@11ef1616
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/clickAllTeacher]
+Looking up handler method for path /clickAllTeacher
+Returning handler method [public java.lang.String com.yihao86.controller.TeachersController.allTeachers(org.springframework.ui.Model)]
+Returning cached instance of singleton bean 'teachersController'
+Last-Modified value for [/yi/clickAllTeacher] is: -1
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1395abc4] was not registered for synchronization because synchronization is not active
+Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@325359514 wrapping com.mysql.jdbc.JDBC4Connection@99c09e2] will not be managed by Spring
+==>  Preparing: SELECT * FROM teachers WHERE t_disable = 0 
+==> Parameters: 
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1395abc4]
+Returning JDBC Connection to DataSource
+Requested media types are [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'allteachers'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@22d1f397] based on requested media type 'text/html'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@22d1f397] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@11ef1616
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@11ef1616
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/clickAllTeacher]
+Looking up handler method for path /clickAllTeacher
+Returning handler method [public java.lang.String com.yihao86.controller.TeachersController.allTeachers(org.springframework.ui.Model)]
+Returning cached instance of singleton bean 'teachersController'
+Last-Modified value for [/yi/clickAllTeacher] is: -1
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66a76cb4] was not registered for synchronization because synchronization is not active
+Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@180711789 wrapping com.mysql.jdbc.JDBC4Connection@99c09e2] will not be managed by Spring
+==>  Preparing: SELECT * FROM teachers WHERE t_disable = 0 
+==> Parameters: 
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@47c5dfe9
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@7c95ce63]]] and 1 interceptor
+Last-Modified value for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@47c5dfe9
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/yi/error] is: -1
+Written [{timestamp=Wed Aug 29 18:03:10 CST 2018, status=404, error=Not Found, message=No message available, path=/yi/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@6394bd20]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66a76cb4]
+Returning JDBC Connection to DataSource
+Requested media types are [image/webp, image/apng, image/*, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'allteachers'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@5d8639d8] based on requested media type '*/*;q=0.8'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@5d8639d8] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@11ef1616
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@11ef1616
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/clickOneTeacher]
+Looking up handler method for path /clickOneTeacher
+Returning handler method [public java.lang.String com.yihao86.controller.TeachersController.oneTeacher(org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'teachersController'
+Last-Modified value for [/yi/clickOneTeacher] is: -1
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36b0a9b5] was not registered for synchronization because synchronization is not active
+Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@1467923342 wrapping com.mysql.jdbc.JDBC4Connection@99c09e2] will not be managed by Spring
+==>  Preparing: SELECT * FROM teachers WHERE tid = ? 
+==> Parameters: 1(Integer)
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36b0a9b5]
+Returning JDBC Connection to DataSource
+Requested media types are [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'teacher'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@891342] based on requested media type 'text/html'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@891342] in DispatcherServlet with name 'dispatcherServlet'
+[THYMELEAF][http-nio-8080-exec-5] Exception processing template "teacher": An error happened during template parsing (template: "class path resource [templates/teacher.html]" - line 184, col 47)
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/teacher.html]" - line 184, col 47)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.attoparser.ParseException: (Line = 184, Column = 47) Incomplete structure: "<a class="show-img"
+                                                 href="../course/292.html"
+                                                 target="_blank""><img
+                                class="lazy"
+                                src="https://pic.huke88.com/cover/cover.png!/compress/true/format/jpg/fh/294"
+                                data-original="https://pic.huke88.com/video/cover/2017-07-03/1B7A4B88-27AD-725B-4E12-D0E6A6AA0637.jpg!/fw/500/coalesce/true/format/jpg/quality/80"
+                                alt="PS-渐变映射"
+                        ><span class="play-cover"></span></a><span class="time-length">2分43秒</span></div>
+                        <div class="img-name clearfix"><a href="../course/292.html"
+                                                          class="name-link fl" target="_blank">PS-渐变映射</a></div>
+                        <div class="img-data clearfix"><span class="class-type fl type-poster">软件</span><span
+                                class="level fl">初级练习</span><span class="learn-num fr">7025人已学</span></div>
+                    </div>
+                    
+                </div><!--分页 s-->
+                <div id="page-m">
+                    <div class="page-li"><a class="on active" href="10b2f.html?page=1&amp;per-page=24"
+                                            data-page="0">1</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div id="BigImgShowBox" class="bigImgShow" style="display:none;"><!--遮罩层-->
+        <div class="bigImgShow-mask"></div>
+        <div class="bigImgShow-box"><a href="javscript:void(0);" onclick="return false;" class="close"></a><img src="#"
+                                                                                                                alt="">
+        </div>
+    </div><!-- 特殊版讲师主页 end -->
+    <script>
+        //异步获取粉丝数目
+        Url.ajaxGetFans = '../teacher/ajax-get-teacher-fans.html';
+        //讲师关注、取消关注
+        Url.teacherFollow = "../teacher/ajax-follow.html";
+        Url.teacherCancel = "../teacher/ajax-cancel-follow.html";
+        //讲师id
+        Param.tid = '213';
+    </script>
+    <div id="footer">
+        <div class="layout-cont flogo"><a href="#"></a></div>
+        <div class="our-link layout-cont"><a href="../site/about.html" target="_blank" rel="nofollow">关于我们</a><a
+                href="../site/about.html#2" target="_blank" rel="nofollow">版权声明</a><a href="../site/about.html#3"
+                                                                                      target="_blank" rel="nofollow">侵权举报</a><a
+                href="../site/about.html#4" target="_blank" rel="nofollow">联系我们</a><a href="../site/about.html#5"
+                                                                                      target="_blank" rel="nofollow">售后服务</a><a
+                href="../site/about.html#6" target="_blank" rel="nofollow">常见问题</a><a href="../vip/47.html"
+                                                                                      target="_blank"
+                                                                                      onclick="buttonClickRecord(47);"
+                                                                                      rel="nofollow">VIP特权</a></div>
+        <div class="color-bg">
+            <div class="friends-link layout-cont">
+                <div class="link-t"><span class="next">></span><span class="prev"><</span></div>
+                <div class="slide-m">
+                    <div class="link-m">友情链接：
+                        <a target="_blank" href="http://www.cgmol.com/" rel="nofollow">摩尔网</a><a target="_blank"
+                                                                                                 href="http://www.huishenghuiying.com.cn/"
+                                                                                                 rel="nofollow">视频编辑软件</a><a
+                                target="_blank" href="http://www.mobiletrain.org/" rel="nofollow">Java培训</a><a
+                                target="_blank" href="https://www.xlisi.cn/" rel="nofollow">英语学习网</a><a target="_blank"
+                                                                                                        href="http://www.onlycollege.com.cn/"
+                                                                                                        rel="nofollow">英语培训</a><a
+                                target="_blank" href="http://www.kaoyan1v1.com/" rel="nofollow">研招网</a><a
+                                target="_blank" href="http://www.16xx8.com/" rel="nofollow">PS教程自学网</a><a
+                                target="_blank" href="http://www.compassedu.hk/" rel="nofollow">指南者留学</a><a
+                                target="_blank" href="http://www.prcu.cn/" rel="nofollow">学日语</a><a target="_blank"
+                                                                                                    href="http://www.100.com/"
+                                                                                                    rel="nofollow">一对一辅导</a><a
+                                target="_blank" href="https://aiji66.com/" rel="nofollow">设计素材</a><a target="_blank"
+                                                                                                     href="http://www.narkii.com/"
+                                                                                                     rel="nofollow">工业设计</a><a
+                                target="_blank" href="http://www.ffpic.com/" rel="nofollow">ppt素材</a><a target="_blank"
+                                                                                                        href="http://www.xueui.cn/"
+                                                                                                        rel="nofollow">学UI网</a><a
+                                target="_blank" href="http://ui.tedu.cn/" rel="nofollow">平面设计培训</a><a target="_blank"
+                                                                                                      href="http://www.logosc.cn/"
+                                                                                                      rel="nofollow">LOGO在线制作</a><a
+                                target="_blank" href="http://www.sumiaowang.com/" rel="nofollow">素描</a><a
+                                target="_blank" href="http://hu.offcn.com/" rel="nofollow">湖北人事考试网</a><a target="_blank"
+                                                                                                         href="http://www.68design.net/"
+                                                                                                         rel="nofollow">互联网设计师</a><a
+                                target="_blank" href="http://www.58pic.com/" rel="nofollow">千图网</a><a target="_blank"
+                                                                                                      href="http://pic.netbian.com/"
+                                                                                                      rel="nofollow">4k壁纸</a><a
+                                target="_blank" href="http://www.netbian.com/" rel="nofollow">壁纸</a><a target="_blank"
+                                                                                                       href="http://699pic.com/"
+                                                                                                       rel="nofollow">摄图网</a><a
+                                target="_blank" href="http://www.ooopic.com/" rel="nofollow">我图网</a><a target="_blank"
+                                                                                                       href="http://90sheji.com/"
+                                                                                                       rel="nofollow">90设计</a><a
+                                target="_blank" href="http://588ku.com/ppt/" rel="nofollow">千库网</a><a target="_blank"
+                                                                                                      href="http://ibaotu.com/"
+                                                                                                      rel="nofollow">包图网</a><a
+                                target="_blank" href="../app.html" rel="nofollow">虎课APP</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="currentUrlInput" name="currentUrl" value="213.html"></div><!--登录弹窗-->
+<div id="loginModal" class="hkt-win hide"><!--遮罩层-->
+    <div class="hkt-mask">
+        <div class="hkt-cell">
+            <div class="lrframe-box"><span class="frame-close" data-bind-bs="hideModal"></span>
+                <div class="tab-head"><span class="t1 active">登录</span><span class="t2">注册</span></div><!--登录部分-->
+                <div class="tab-main clerafix" id="loginModal-t1">
+                    <div class="frame-bd fl">
+                        <div class="go-phone">使用手机号码登录</div>
+                    </div>
+                    <div class="phone-m fl">
+                        <div class="phone-title"><span>使用手机号码登录</span></div>
+                        <div class="phone-num"><i class="phone-icon"></i><input type="text" name="phone"
+                                                                                placeholder="请输入11位的手机号码">
+                            <div class="error-txt">手机号码格式错误</div>
+                        </div>
+                        <div class="phone-code clearfix">
+                            <div class="code-l fl"><input type="text" name="" placeholder="请输入图形验证码"></div>
+                            <div class="code-r fr"><img class="captchaimg" src="#" alt="换一个" title="换一个"
+                                                        style="cursor:pointer"></div>
+                            <div class="error-txt">图形验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-yz">
+                            <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
+                            <div class="yz-r fr"><input type="text" value="获取动态密码" class="get-p"/></div>
+                            <div class="error-txt">验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-btn">登录</div>
+                    </div>
+                </div><!--注册部分-->
+                <div class="tab-main clerafix" style="display: none" id="loginModal-t2">
+                    <div class="frame-bd fl">
+                        <div class="go-phone">使用手机号码注册</div>
+                        <div class="agree-deal"><label for="checkput"><input type="checkbox" checked=""
+                                                                             id="checkput"><span>同意 <a
+                                href="../site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label></div>
+                    </div>
+                    <div class="phone-m fl">
+                        <div class="phone-title"><span>使用手机号码注册</span></div>
+                        <div class="phone-num"><i class="phone-icon"></i><input type="text" name="phone"
+                                                                                placeholder="请输入11位的手机号码">
+                            <div class="error-txt">手机号码格式错误</div>
+                        </div>
+                        <div class="phone-code clearfix" style="display:block;">
+                            <div class="code-l fl"><input type="text" name="" placeholder="请输入图形验证码"></div>
+                            <div class="code-r fr"><img class="captchaimg" src="#" alt="换一个" title="换一个"
+                                                        style="cursor:pointer"></div>
+                            <div class="error-txt">图形验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-yz">
+                            <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
+                            <div class="yz-r fr"><input type="submit" value="获取动态密码" class="get-p"></div>
+                            <div class="error-txt">验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-btn">注册</div>
+                        <div class="agree-deal"><label for="checkput"><input type="checkbox" checked=""
+                                                                             id="checkput"><span>同意 <a
+                                href="../site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--//登录弹窗 end-->
+<script>
+    function openCenterLoginWindow(url, name) {
+        var url = url; //转向网页的地址;
+        var name = ''; //网页名称，可为空;
+        var iWidth = 660; //弹出窗口的宽度;
+        var iHeight = 560; //弹出窗口的高度;
+        var iTop = (window.screen.height - 30 - iHeight) / 2; //获得窗口的垂直位置;
+        var iLeft = (window.screen.width - 10 - iWidth) / 2; //获得窗口的水平位置;
+        window.open(url, name, 'height=' + iHeight + ',,innerHeight=' + iHeight + ',width=' + iWidth + ',innerWidth=' + iWidth + ',top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
+    }
+</script>
+<script>
+    //统计运行时间
+    Param.execTime = '0.0276780128479';
+</script>
+<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/ucenter/pgc-teacher.js,js/681e08d.js?v=681"></script>
+<script src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
+<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/plugins/layer/layer.huke.js,js/public.102.j/681.d70e08d.delaye?v=681"></script>
+</body>
+<!-- Mirrored from yihao86/teachers/teacher.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 01:12:37 GMT -->
+</html>
+"
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:366)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 52 common frames omitted
+Error rendering view [org.thymeleaf.spring5.view.ThymeleafView@891342] in DispatcherServlet with name 'dispatcherServlet'
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/teacher.html]" - line 184, col 47)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.attoparser.ParseException: (Line = 184, Column = 47) Incomplete structure: "<a class="show-img"
+                                                 href="../course/292.html"
+                                                 target="_blank""><img
+                                class="lazy"
+                                src="https://pic.huke88.com/cover/cover.png!/compress/true/format/jpg/fh/294"
+                                data-original="https://pic.huke88.com/video/cover/2017-07-03/1B7A4B88-27AD-725B-4E12-D0E6A6AA0637.jpg!/fw/500/coalesce/true/format/jpg/quality/80"
+                                alt="PS-渐变映射"
+                        ><span class="play-cover"></span></a><span class="time-length">2分43秒</span></div>
+                        <div class="img-name clearfix"><a href="../course/292.html"
+                                                          class="name-link fl" target="_blank">PS-渐变映射</a></div>
+                        <div class="img-data clearfix"><span class="class-type fl type-poster">软件</span><span
+                                class="level fl">初级练习</span><span class="learn-num fr">7025人已学</span></div>
+                    </div>
+                    
+                </div><!--分页 s-->
+                <div id="page-m">
+                    <div class="page-li"><a class="on active" href="10b2f.html?page=1&amp;per-page=24"
+                                            data-page="0">1</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div id="BigImgShowBox" class="bigImgShow" style="display:none;"><!--遮罩层-->
+        <div class="bigImgShow-mask"></div>
+        <div class="bigImgShow-box"><a href="javscript:void(0);" onclick="return false;" class="close"></a><img src="#"
+                                                                                                                alt="">
+        </div>
+    </div><!-- 特殊版讲师主页 end -->
+    <script>
+        //异步获取粉丝数目
+        Url.ajaxGetFans = '../teacher/ajax-get-teacher-fans.html';
+        //讲师关注、取消关注
+        Url.teacherFollow = "../teacher/ajax-follow.html";
+        Url.teacherCancel = "../teacher/ajax-cancel-follow.html";
+        //讲师id
+        Param.tid = '213';
+    </script>
+    <div id="footer">
+        <div class="layout-cont flogo"><a href="#"></a></div>
+        <div class="our-link layout-cont"><a href="../site/about.html" target="_blank" rel="nofollow">关于我们</a><a
+                href="../site/about.html#2" target="_blank" rel="nofollow">版权声明</a><a href="../site/about.html#3"
+                                                                                      target="_blank" rel="nofollow">侵权举报</a><a
+                href="../site/about.html#4" target="_blank" rel="nofollow">联系我们</a><a href="../site/about.html#5"
+                                                                                      target="_blank" rel="nofollow">售后服务</a><a
+                href="../site/about.html#6" target="_blank" rel="nofollow">常见问题</a><a href="../vip/47.html"
+                                                                                      target="_blank"
+                                                                                      onclick="buttonClickRecord(47);"
+                                                                                      rel="nofollow">VIP特权</a></div>
+        <div class="color-bg">
+            <div class="friends-link layout-cont">
+                <div class="link-t"><span class="next">></span><span class="prev"><</span></div>
+                <div class="slide-m">
+                    <div class="link-m">友情链接：
+                        <a target="_blank" href="http://www.cgmol.com/" rel="nofollow">摩尔网</a><a target="_blank"
+                                                                                                 href="http://www.huishenghuiying.com.cn/"
+                                                                                                 rel="nofollow">视频编辑软件</a><a
+                                target="_blank" href="http://www.mobiletrain.org/" rel="nofollow">Java培训</a><a
+                                target="_blank" href="https://www.xlisi.cn/" rel="nofollow">英语学习网</a><a target="_blank"
+                                                                                                        href="http://www.onlycollege.com.cn/"
+                                                                                                        rel="nofollow">英语培训</a><a
+                                target="_blank" href="http://www.kaoyan1v1.com/" rel="nofollow">研招网</a><a
+                                target="_blank" href="http://www.16xx8.com/" rel="nofollow">PS教程自学网</a><a
+                                target="_blank" href="http://www.compassedu.hk/" rel="nofollow">指南者留学</a><a
+                                target="_blank" href="http://www.prcu.cn/" rel="nofollow">学日语</a><a target="_blank"
+                                                                                                    href="http://www.100.com/"
+                                                                                                    rel="nofollow">一对一辅导</a><a
+                                target="_blank" href="https://aiji66.com/" rel="nofollow">设计素材</a><a target="_blank"
+                                                                                                     href="http://www.narkii.com/"
+                                                                                                     rel="nofollow">工业设计</a><a
+                                target="_blank" href="http://www.ffpic.com/" rel="nofollow">ppt素材</a><a target="_blank"
+                                                                                                        href="http://www.xueui.cn/"
+                                                                                                        rel="nofollow">学UI网</a><a
+                                target="_blank" href="http://ui.tedu.cn/" rel="nofollow">平面设计培训</a><a target="_blank"
+                                                                                                      href="http://www.logosc.cn/"
+                                                                                                      rel="nofollow">LOGO在线制作</a><a
+                                target="_blank" href="http://www.sumiaowang.com/" rel="nofollow">素描</a><a
+                                target="_blank" href="http://hu.offcn.com/" rel="nofollow">湖北人事考试网</a><a target="_blank"
+                                                                                                         href="http://www.68design.net/"
+                                                                                                         rel="nofollow">互联网设计师</a><a
+                                target="_blank" href="http://www.58pic.com/" rel="nofollow">千图网</a><a target="_blank"
+                                                                                                      href="http://pic.netbian.com/"
+                                                                                                      rel="nofollow">4k壁纸</a><a
+                                target="_blank" href="http://www.netbian.com/" rel="nofollow">壁纸</a><a target="_blank"
+                                                                                                       href="http://699pic.com/"
+                                                                                                       rel="nofollow">摄图网</a><a
+                                target="_blank" href="http://www.ooopic.com/" rel="nofollow">我图网</a><a target="_blank"
+                                                                                                       href="http://90sheji.com/"
+                                                                                                       rel="nofollow">90设计</a><a
+                                target="_blank" href="http://588ku.com/ppt/" rel="nofollow">千库网</a><a target="_blank"
+                                                                                                      href="http://ibaotu.com/"
+                                                                                                      rel="nofollow">包图网</a><a
+                                target="_blank" href="../app.html" rel="nofollow">虎课APP</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="currentUrlInput" name="currentUrl" value="213.html"></div><!--登录弹窗-->
+<div id="loginModal" class="hkt-win hide"><!--遮罩层-->
+    <div class="hkt-mask">
+        <div class="hkt-cell">
+            <div class="lrframe-box"><span class="frame-close" data-bind-bs="hideModal"></span>
+                <div class="tab-head"><span class="t1 active">登录</span><span class="t2">注册</span></div><!--登录部分-->
+                <div class="tab-main clerafix" id="loginModal-t1">
+                    <div class="frame-bd fl">
+                        <div class="go-phone">使用手机号码登录</div>
+                    </div>
+                    <div class="phone-m fl">
+                        <div class="phone-title"><span>使用手机号码登录</span></div>
+                        <div class="phone-num"><i class="phone-icon"></i><input type="text" name="phone"
+                                                                                placeholder="请输入11位的手机号码">
+                            <div class="error-txt">手机号码格式错误</div>
+                        </div>
+                        <div class="phone-code clearfix">
+                            <div class="code-l fl"><input type="text" name="" placeholder="请输入图形验证码"></div>
+                            <div class="code-r fr"><img class="captchaimg" src="#" alt="换一个" title="换一个"
+                                                        style="cursor:pointer"></div>
+                            <div class="error-txt">图形验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-yz">
+                            <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
+                            <div class="yz-r fr"><input type="text" value="获取动态密码" class="get-p"/></div>
+                            <div class="error-txt">验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-btn">登录</div>
+                    </div>
+                </div><!--注册部分-->
+                <div class="tab-main clerafix" style="display: none" id="loginModal-t2">
+                    <div class="frame-bd fl">
+                        <div class="go-phone">使用手机号码注册</div>
+                        <div class="agree-deal"><label for="checkput"><input type="checkbox" checked=""
+                                                                             id="checkput"><span>同意 <a
+                                href="../site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label></div>
+                    </div>
+                    <div class="phone-m fl">
+                        <div class="phone-title"><span>使用手机号码注册</span></div>
+                        <div class="phone-num"><i class="phone-icon"></i><input type="text" name="phone"
+                                                                                placeholder="请输入11位的手机号码">
+                            <div class="error-txt">手机号码格式错误</div>
+                        </div>
+                        <div class="phone-code clearfix" style="display:block;">
+                            <div class="code-l fl"><input type="text" name="" placeholder="请输入图形验证码"></div>
+                            <div class="code-r fr"><img class="captchaimg" src="#" alt="换一个" title="换一个"
+                                                        style="cursor:pointer"></div>
+                            <div class="error-txt">图形验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-yz">
+                            <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
+                            <div class="yz-r fr"><input type="submit" value="获取动态密码" class="get-p"></div>
+                            <div class="error-txt">验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-btn">注册</div>
+                        <div class="agree-deal"><label for="checkput"><input type="checkbox" checked=""
+                                                                             id="checkput"><span>同意 <a
+                                href="../site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--//登录弹窗 end-->
+<script>
+    function openCenterLoginWindow(url, name) {
+        var url = url; //转向网页的地址;
+        var name = ''; //网页名称，可为空;
+        var iWidth = 660; //弹出窗口的宽度;
+        var iHeight = 560; //弹出窗口的高度;
+        var iTop = (window.screen.height - 30 - iHeight) / 2; //获得窗口的垂直位置;
+        var iLeft = (window.screen.width - 10 - iWidth) / 2; //获得窗口的水平位置;
+        window.open(url, name, 'height=' + iHeight + ',,innerHeight=' + iHeight + ',width=' + iWidth + ',innerWidth=' + iWidth + ',top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
+    }
+</script>
+<script>
+    //统计运行时间
+    Param.execTime = '0.0276780128479';
+</script>
+<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/ucenter/pgc-teacher.js,js/681e08d.js?v=681"></script>
+<script src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
+<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/plugins/layer/layer.huke.js,js/public.102.j/681.d70e08d.delaye?v=681"></script>
+</body>
+<!-- Mirrored from yihao86/teachers/teacher.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 01:12:37 GMT -->
+</html>
+"
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:366)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 52 common frames omitted
+Could not complete request
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/teacher.html]" - line 184, col 47)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.attoparser.ParseException: (Line = 184, Column = 47) Incomplete structure: "<a class="show-img"
+                                                 href="../course/292.html"
+                                                 target="_blank""><img
+                                class="lazy"
+                                src="https://pic.huke88.com/cover/cover.png!/compress/true/format/jpg/fh/294"
+                                data-original="https://pic.huke88.com/video/cover/2017-07-03/1B7A4B88-27AD-725B-4E12-D0E6A6AA0637.jpg!/fw/500/coalesce/true/format/jpg/quality/80"
+                                alt="PS-渐变映射"
+                        ><span class="play-cover"></span></a><span class="time-length">2分43秒</span></div>
+                        <div class="img-name clearfix"><a href="../course/292.html"
+                                                          class="name-link fl" target="_blank">PS-渐变映射</a></div>
+                        <div class="img-data clearfix"><span class="class-type fl type-poster">软件</span><span
+                                class="level fl">初级练习</span><span class="learn-num fr">7025人已学</span></div>
+                    </div>
+                    
+                </div><!--分页 s-->
+                <div id="page-m">
+                    <div class="page-li"><a class="on active" href="10b2f.html?page=1&amp;per-page=24"
+                                            data-page="0">1</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div id="BigImgShowBox" class="bigImgShow" style="display:none;"><!--遮罩层-->
+        <div class="bigImgShow-mask"></div>
+        <div class="bigImgShow-box"><a href="javscript:void(0);" onclick="return false;" class="close"></a><img src="#"
+                                                                                                                alt="">
+        </div>
+    </div><!-- 特殊版讲师主页 end -->
+    <script>
+        //异步获取粉丝数目
+        Url.ajaxGetFans = '../teacher/ajax-get-teacher-fans.html';
+        //讲师关注、取消关注
+        Url.teacherFollow = "../teacher/ajax-follow.html";
+        Url.teacherCancel = "../teacher/ajax-cancel-follow.html";
+        //讲师id
+        Param.tid = '213';
+    </script>
+    <div id="footer">
+        <div class="layout-cont flogo"><a href="#"></a></div>
+        <div class="our-link layout-cont"><a href="../site/about.html" target="_blank" rel="nofollow">关于我们</a><a
+                href="../site/about.html#2" target="_blank" rel="nofollow">版权声明</a><a href="../site/about.html#3"
+                                                                                      target="_blank" rel="nofollow">侵权举报</a><a
+                href="../site/about.html#4" target="_blank" rel="nofollow">联系我们</a><a href="../site/about.html#5"
+                                                                                      target="_blank" rel="nofollow">售后服务</a><a
+                href="../site/about.html#6" target="_blank" rel="nofollow">常见问题</a><a href="../vip/47.html"
+                                                                                      target="_blank"
+                                                                                      onclick="buttonClickRecord(47);"
+                                                                                      rel="nofollow">VIP特权</a></div>
+        <div class="color-bg">
+            <div class="friends-link layout-cont">
+                <div class="link-t"><span class="next">></span><span class="prev"><</span></div>
+                <div class="slide-m">
+                    <div class="link-m">友情链接：
+                        <a target="_blank" href="http://www.cgmol.com/" rel="nofollow">摩尔网</a><a target="_blank"
+                                                                                                 href="http://www.huishenghuiying.com.cn/"
+                                                                                                 rel="nofollow">视频编辑软件</a><a
+                                target="_blank" href="http://www.mobiletrain.org/" rel="nofollow">Java培训</a><a
+                                target="_blank" href="https://www.xlisi.cn/" rel="nofollow">英语学习网</a><a target="_blank"
+                                                                                                        href="http://www.onlycollege.com.cn/"
+                                                                                                        rel="nofollow">英语培训</a><a
+                                target="_blank" href="http://www.kaoyan1v1.com/" rel="nofollow">研招网</a><a
+                                target="_blank" href="http://www.16xx8.com/" rel="nofollow">PS教程自学网</a><a
+                                target="_blank" href="http://www.compassedu.hk/" rel="nofollow">指南者留学</a><a
+                                target="_blank" href="http://www.prcu.cn/" rel="nofollow">学日语</a><a target="_blank"
+                                                                                                    href="http://www.100.com/"
+                                                                                                    rel="nofollow">一对一辅导</a><a
+                                target="_blank" href="https://aiji66.com/" rel="nofollow">设计素材</a><a target="_blank"
+                                                                                                     href="http://www.narkii.com/"
+                                                                                                     rel="nofollow">工业设计</a><a
+                                target="_blank" href="http://www.ffpic.com/" rel="nofollow">ppt素材</a><a target="_blank"
+                                                                                                        href="http://www.xueui.cn/"
+                                                                                                        rel="nofollow">学UI网</a><a
+                                target="_blank" href="http://ui.tedu.cn/" rel="nofollow">平面设计培训</a><a target="_blank"
+                                                                                                      href="http://www.logosc.cn/"
+                                                                                                      rel="nofollow">LOGO在线制作</a><a
+                                target="_blank" href="http://www.sumiaowang.com/" rel="nofollow">素描</a><a
+                                target="_blank" href="http://hu.offcn.com/" rel="nofollow">湖北人事考试网</a><a target="_blank"
+                                                                                                         href="http://www.68design.net/"
+                                                                                                         rel="nofollow">互联网设计师</a><a
+                                target="_blank" href="http://www.58pic.com/" rel="nofollow">千图网</a><a target="_blank"
+                                                                                                      href="http://pic.netbian.com/"
+                                                                                                      rel="nofollow">4k壁纸</a><a
+                                target="_blank" href="http://www.netbian.com/" rel="nofollow">壁纸</a><a target="_blank"
+                                                                                                       href="http://699pic.com/"
+                                                                                                       rel="nofollow">摄图网</a><a
+                                target="_blank" href="http://www.ooopic.com/" rel="nofollow">我图网</a><a target="_blank"
+                                                                                                       href="http://90sheji.com/"
+                                                                                                       rel="nofollow">90设计</a><a
+                                target="_blank" href="http://588ku.com/ppt/" rel="nofollow">千库网</a><a target="_blank"
+                                                                                                      href="http://ibaotu.com/"
+                                                                                                      rel="nofollow">包图网</a><a
+                                target="_blank" href="../app.html" rel="nofollow">虎课APP</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="currentUrlInput" name="currentUrl" value="213.html"></div><!--登录弹窗-->
+<div id="loginModal" class="hkt-win hide"><!--遮罩层-->
+    <div class="hkt-mask">
+        <div class="hkt-cell">
+            <div class="lrframe-box"><span class="frame-close" data-bind-bs="hideModal"></span>
+                <div class="tab-head"><span class="t1 active">登录</span><span class="t2">注册</span></div><!--登录部分-->
+                <div class="tab-main clerafix" id="loginModal-t1">
+                    <div class="frame-bd fl">
+                        <div class="go-phone">使用手机号码登录</div>
+                    </div>
+                    <div class="phone-m fl">
+                        <div class="phone-title"><span>使用手机号码登录</span></div>
+                        <div class="phone-num"><i class="phone-icon"></i><input type="text" name="phone"
+                                                                                placeholder="请输入11位的手机号码">
+                            <div class="error-txt">手机号码格式错误</div>
+                        </div>
+                        <div class="phone-code clearfix">
+                            <div class="code-l fl"><input type="text" name="" placeholder="请输入图形验证码"></div>
+                            <div class="code-r fr"><img class="captchaimg" src="#" alt="换一个" title="换一个"
+                                                        style="cursor:pointer"></div>
+                            <div class="error-txt">图形验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-yz">
+                            <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
+                            <div class="yz-r fr"><input type="text" value="获取动态密码" class="get-p"/></div>
+                            <div class="error-txt">验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-btn">登录</div>
+                    </div>
+                </div><!--注册部分-->
+                <div class="tab-main clerafix" style="display: none" id="loginModal-t2">
+                    <div class="frame-bd fl">
+                        <div class="go-phone">使用手机号码注册</div>
+                        <div class="agree-deal"><label for="checkput"><input type="checkbox" checked=""
+                                                                             id="checkput"><span>同意 <a
+                                href="../site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label></div>
+                    </div>
+                    <div class="phone-m fl">
+                        <div class="phone-title"><span>使用手机号码注册</span></div>
+                        <div class="phone-num"><i class="phone-icon"></i><input type="text" name="phone"
+                                                                                placeholder="请输入11位的手机号码">
+                            <div class="error-txt">手机号码格式错误</div>
+                        </div>
+                        <div class="phone-code clearfix" style="display:block;">
+                            <div class="code-l fl"><input type="text" name="" placeholder="请输入图形验证码"></div>
+                            <div class="code-r fr"><img class="captchaimg" src="#" alt="换一个" title="换一个"
+                                                        style="cursor:pointer"></div>
+                            <div class="error-txt">图形验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-yz">
+                            <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
+                            <div class="yz-r fr"><input type="submit" value="获取动态密码" class="get-p"></div>
+                            <div class="error-txt">验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-btn">注册</div>
+                        <div class="agree-deal"><label for="checkput"><input type="checkbox" checked=""
+                                                                             id="checkput"><span>同意 <a
+                                href="../site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--//登录弹窗 end-->
+<script>
+    function openCenterLoginWindow(url, name) {
+        var url = url; //转向网页的地址;
+        var name = ''; //网页名称，可为空;
+        var iWidth = 660; //弹出窗口的宽度;
+        var iHeight = 560; //弹出窗口的高度;
+        var iTop = (window.screen.height - 30 - iHeight) / 2; //获得窗口的垂直位置;
+        var iLeft = (window.screen.width - 10 - iWidth) / 2; //获得窗口的水平位置;
+        window.open(url, name, 'height=' + iHeight + ',,innerHeight=' + iHeight + ',width=' + iWidth + ',innerWidth=' + iWidth + ',top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
+    }
+</script>
+<script>
+    //统计运行时间
+    Param.execTime = '0.0276780128479';
+</script>
+<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/ucenter/pgc-teacher.js,js/681e08d.js?v=681"></script>
+<script src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
+<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/plugins/layer/layer.huke.js,js/public.102.j/681.d70e08d.delaye?v=681"></script>
+</body>
+<!-- Mirrored from yihao86/teachers/teacher.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 01:12:37 GMT -->
+</html>
+"
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:366)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 52 common frames omitted
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@11ef1616
+Servlet.service() for servlet [dispatcherServlet] in context with path [/yi] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/teacher.html]" - line 184, col 47)] with root cause
+org.attoparser.ParseException: (Line = 184, Column = 47) Incomplete structure: "<a class="show-img"
+                                                 href="../course/292.html"
+                                                 target="_blank""><img
+                                class="lazy"
+                                src="https://pic.huke88.com/cover/cover.png!/compress/true/format/jpg/fh/294"
+                                data-original="https://pic.huke88.com/video/cover/2017-07-03/1B7A4B88-27AD-725B-4E12-D0E6A6AA0637.jpg!/fw/500/coalesce/true/format/jpg/quality/80"
+                                alt="PS-渐变映射"
+                        ><span class="play-cover"></span></a><span class="time-length">2分43秒</span></div>
+                        <div class="img-name clearfix"><a href="../course/292.html"
+                                                          class="name-link fl" target="_blank">PS-渐变映射</a></div>
+                        <div class="img-data clearfix"><span class="class-type fl type-poster">软件</span><span
+                                class="level fl">初级练习</span><span class="learn-num fr">7025人已学</span></div>
+                    </div>
+                    
+                </div><!--分页 s-->
+                <div id="page-m">
+                    <div class="page-li"><a class="on active" href="10b2f.html?page=1&amp;per-page=24"
+                                            data-page="0">1</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div id="BigImgShowBox" class="bigImgShow" style="display:none;"><!--遮罩层-->
+        <div class="bigImgShow-mask"></div>
+        <div class="bigImgShow-box"><a href="javscript:void(0);" onclick="return false;" class="close"></a><img src="#"
+                                                                                                                alt="">
+        </div>
+    </div><!-- 特殊版讲师主页 end -->
+    <script>
+        //异步获取粉丝数目
+        Url.ajaxGetFans = '../teacher/ajax-get-teacher-fans.html';
+        //讲师关注、取消关注
+        Url.teacherFollow = "../teacher/ajax-follow.html";
+        Url.teacherCancel = "../teacher/ajax-cancel-follow.html";
+        //讲师id
+        Param.tid = '213';
+    </script>
+    <div id="footer">
+        <div class="layout-cont flogo"><a href="#"></a></div>
+        <div class="our-link layout-cont"><a href="../site/about.html" target="_blank" rel="nofollow">关于我们</a><a
+                href="../site/about.html#2" target="_blank" rel="nofollow">版权声明</a><a href="../site/about.html#3"
+                                                                                      target="_blank" rel="nofollow">侵权举报</a><a
+                href="../site/about.html#4" target="_blank" rel="nofollow">联系我们</a><a href="../site/about.html#5"
+                                                                                      target="_blank" rel="nofollow">售后服务</a><a
+                href="../site/about.html#6" target="_blank" rel="nofollow">常见问题</a><a href="../vip/47.html"
+                                                                                      target="_blank"
+                                                                                      onclick="buttonClickRecord(47);"
+                                                                                      rel="nofollow">VIP特权</a></div>
+        <div class="color-bg">
+            <div class="friends-link layout-cont">
+                <div class="link-t"><span class="next">></span><span class="prev"><</span></div>
+                <div class="slide-m">
+                    <div class="link-m">友情链接：
+                        <a target="_blank" href="http://www.cgmol.com/" rel="nofollow">摩尔网</a><a target="_blank"
+                                                                                                 href="http://www.huishenghuiying.com.cn/"
+                                                                                                 rel="nofollow">视频编辑软件</a><a
+                                target="_blank" href="http://www.mobiletrain.org/" rel="nofollow">Java培训</a><a
+                                target="_blank" href="https://www.xlisi.cn/" rel="nofollow">英语学习网</a><a target="_blank"
+                                                                                                        href="http://www.onlycollege.com.cn/"
+                                                                                                        rel="nofollow">英语培训</a><a
+                                target="_blank" href="http://www.kaoyan1v1.com/" rel="nofollow">研招网</a><a
+                                target="_blank" href="http://www.16xx8.com/" rel="nofollow">PS教程自学网</a><a
+                                target="_blank" href="http://www.compassedu.hk/" rel="nofollow">指南者留学</a><a
+                                target="_blank" href="http://www.prcu.cn/" rel="nofollow">学日语</a><a target="_blank"
+                                                                                                    href="http://www.100.com/"
+                                                                                                    rel="nofollow">一对一辅导</a><a
+                                target="_blank" href="https://aiji66.com/" rel="nofollow">设计素材</a><a target="_blank"
+                                                                                                     href="http://www.narkii.com/"
+                                                                                                     rel="nofollow">工业设计</a><a
+                                target="_blank" href="http://www.ffpic.com/" rel="nofollow">ppt素材</a><a target="_blank"
+                                                                                                        href="http://www.xueui.cn/"
+                                                                                                        rel="nofollow">学UI网</a><a
+                                target="_blank" href="http://ui.tedu.cn/" rel="nofollow">平面设计培训</a><a target="_blank"
+                                                                                                      href="http://www.logosc.cn/"
+                                                                                                      rel="nofollow">LOGO在线制作</a><a
+                                target="_blank" href="http://www.sumiaowang.com/" rel="nofollow">素描</a><a
+                                target="_blank" href="http://hu.offcn.com/" rel="nofollow">湖北人事考试网</a><a target="_blank"
+                                                                                                         href="http://www.68design.net/"
+                                                                                                         rel="nofollow">互联网设计师</a><a
+                                target="_blank" href="http://www.58pic.com/" rel="nofollow">千图网</a><a target="_blank"
+                                                                                                      href="http://pic.netbian.com/"
+                                                                                                      rel="nofollow">4k壁纸</a><a
+                                target="_blank" href="http://www.netbian.com/" rel="nofollow">壁纸</a><a target="_blank"
+                                                                                                       href="http://699pic.com/"
+                                                                                                       rel="nofollow">摄图网</a><a
+                                target="_blank" href="http://www.ooopic.com/" rel="nofollow">我图网</a><a target="_blank"
+                                                                                                       href="http://90sheji.com/"
+                                                                                                       rel="nofollow">90设计</a><a
+                                target="_blank" href="http://588ku.com/ppt/" rel="nofollow">千库网</a><a target="_blank"
+                                                                                                      href="http://ibaotu.com/"
+                                                                                                      rel="nofollow">包图网</a><a
+                                target="_blank" href="../app.html" rel="nofollow">虎课APP</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="currentUrlInput" name="currentUrl" value="213.html"></div><!--登录弹窗-->
+<div id="loginModal" class="hkt-win hide"><!--遮罩层-->
+    <div class="hkt-mask">
+        <div class="hkt-cell">
+            <div class="lrframe-box"><span class="frame-close" data-bind-bs="hideModal"></span>
+                <div class="tab-head"><span class="t1 active">登录</span><span class="t2">注册</span></div><!--登录部分-->
+                <div class="tab-main clerafix" id="loginModal-t1">
+                    <div class="frame-bd fl">
+                        <div class="go-phone">使用手机号码登录</div>
+                    </div>
+                    <div class="phone-m fl">
+                        <div class="phone-title"><span>使用手机号码登录</span></div>
+                        <div class="phone-num"><i class="phone-icon"></i><input type="text" name="phone"
+                                                                                placeholder="请输入11位的手机号码">
+                            <div class="error-txt">手机号码格式错误</div>
+                        </div>
+                        <div class="phone-code clearfix">
+                            <div class="code-l fl"><input type="text" name="" placeholder="请输入图形验证码"></div>
+                            <div class="code-r fr"><img class="captchaimg" src="#" alt="换一个" title="换一个"
+                                                        style="cursor:pointer"></div>
+                            <div class="error-txt">图形验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-yz">
+                            <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
+                            <div class="yz-r fr"><input type="text" value="获取动态密码" class="get-p"/></div>
+                            <div class="error-txt">验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-btn">登录</div>
+                    </div>
+                </div><!--注册部分-->
+                <div class="tab-main clerafix" style="display: none" id="loginModal-t2">
+                    <div class="frame-bd fl">
+                        <div class="go-phone">使用手机号码注册</div>
+                        <div class="agree-deal"><label for="checkput"><input type="checkbox" checked=""
+                                                                             id="checkput"><span>同意 <a
+                                href="../site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label></div>
+                    </div>
+                    <div class="phone-m fl">
+                        <div class="phone-title"><span>使用手机号码注册</span></div>
+                        <div class="phone-num"><i class="phone-icon"></i><input type="text" name="phone"
+                                                                                placeholder="请输入11位的手机号码">
+                            <div class="error-txt">手机号码格式错误</div>
+                        </div>
+                        <div class="phone-code clearfix" style="display:block;">
+                            <div class="code-l fl"><input type="text" name="" placeholder="请输入图形验证码"></div>
+                            <div class="code-r fr"><img class="captchaimg" src="#" alt="换一个" title="换一个"
+                                                        style="cursor:pointer"></div>
+                            <div class="error-txt">图形验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-yz">
+                            <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
+                            <div class="yz-r fr"><input type="submit" value="获取动态密码" class="get-p"></div>
+                            <div class="error-txt">验证码错误，请重新输入</div>
+                        </div>
+                        <div class="phone-btn">注册</div>
+                        <div class="agree-deal"><label for="checkput"><input type="checkbox" checked=""
+                                                                             id="checkput"><span>同意 <a
+                                href="../site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--//登录弹窗 end-->
+<script>
+    function openCenterLoginWindow(url, name) {
+        var url = url; //转向网页的地址;
+        var name = ''; //网页名称，可为空;
+        var iWidth = 660; //弹出窗口的宽度;
+        var iHeight = 560; //弹出窗口的高度;
+        var iTop = (window.screen.height - 30 - iHeight) / 2; //获得窗口的垂直位置;
+        var iLeft = (window.screen.width - 10 - iWidth) / 2; //获得窗口的水平位置;
+        window.open(url, name, 'height=' + iHeight + ',,innerHeight=' + iHeight + ',width=' + iWidth + ',innerWidth=' + iWidth + ',top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
+    }
+</script>
+<script>
+    //统计运行时间
+    Param.execTime = '0.0276780128479';
+</script>
+<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/ucenter/pgc-teacher.js,js/681e08d.js?v=681"></script>
+<script src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
+<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/plugins/layer/layer.huke.js,js/public.102.j/681.d70e08d.delaye?v=681"></script>
+</body>
+<!-- Mirrored from yihao86/teachers/teacher.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 01:12:37 GMT -->
+</html>
+"
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:366)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/yi/error] is: -1
+Found key 'spring.template.provider.cache' in PropertySource 'configurationProperties' with value of type String
+Found key 'spring.thymeleaf.prefix' in PropertySource 'configurationProperties' with value of type String
+Found key 'spring.thymeleaf.suffix' in PropertySource 'configurationProperties' with value of type String
+Requested media types are [text/html, text/html;q=0.8] based on Accept header types and producible media types [text/html])
+Returning cached instance of singleton bean 'error'
+Returning [org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$SpelView@43264e23] based on requested media type 'text/html'
+Rendering view [org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$SpelView@43264e23] in DispatcherServlet with name 'dispatcherServlet'
+Cannot render error page for request [/yi/clickOneTeacher] and exception [An error happened during template parsing (template: "class path resource [templates/teacher.html]" - line 184, col 47)] as the response has already been committed. As a result, the response may have the wrong status code.
+Successfully completed request
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Application shutdown requested.
+Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d4ad35f: startup date [Wed Aug 29 16:25:13 CST 2018]; root of context hierarchy
+Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
+Returning cached instance of singleton bean 'lifecycleProcessor'
+Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1d990cb2: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,myApplication,org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory,teachersController,testController,videosController,teachersServiceImpl,videosServiceImpl,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,org.springframework.transaction.config.internalTransactionalEventListenerFactory,org.springframework.aop.config.internalAutoProxyCreator,teachersDao,videosDao,org.springframework.boot.autoconfigure.AutoConfigurationPackages,org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration,org.springframework.boot.autoconfigure.condition.BeanTypeRegistry,propertySourcesPlaceholderConfigurer,org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration,websocketContainerCustomizer,org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration,org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat,tomcatServletWebServerFactory,org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration,servletWebServerFactoryCustomizer,tomcatServletWebServerFactoryCustomizer,server-org.springframework.boot.autoconfigure.web.ServerProperties,org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor,org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata,webServerFactoryCustomizerBeanPostProcessor,errorPageRegistrarBeanPostProcessor,org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration,dispatcherServlet,mainDispatcherServletPathProvider,spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties,org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration,dispatcherServletRegistration,org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration,org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration,defaultValidator,methodValidationPostProcessor,org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration,error,beanNameViewResolver,org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration,conventionErrorViewResolver,org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration,errorAttributes,basicErrorController,errorPageCustomizer,preserveErrorControllerTargetClassPostProcessor,spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties,org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration,faviconHandlerMapping,faviconRequestHandler,org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration,requestMappingHandlerAdapter,requestMappingHandlerMapping,mvcConversionService,mvcValidator,mvcContentNegotiationManager,mvcPathMatcher,mvcUrlPathHelper,viewControllerHandlerMapping,beanNameHandlerMapping,resourceHandlerMapping,mvcResourceUrlProvider,defaultServletHandlerMapping,mvcUriComponentsContributor,httpRequestHandlerAdapter,simpleControllerHandlerAdapter,handlerExceptionResolver,mvcViewResolver,mvcHandlerMappingIntrospector,org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter,defaultViewResolver,viewResolver,welcomePageHandlerMapping,requestContextFilter,org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration,hiddenHttpMethodFilter,httpPutFormContentFilter,org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari,dataSource,org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration$Hikari,org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration,org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration,org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration,hikariPoolDataSourceMetadataProvider,org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration,org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker,org.springframework.boot.autoconfigure.jdbc.DataSourceInitializationConfiguration,dataSourceInitializerPostProcessor,org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties,org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration,sqlSessionFactory,sqlSessionTemplate,mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties,org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration,mbeanExporter,objectNamingStrategy,mbeanServer,org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,springApplicationAdminRegistrar,org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration,org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration,persistenceExceptionTranslationPostProcessor,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration,standardJacksonObjectMapperBuilderCustomizer,spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration,jacksonObjectMapperBuilder,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration,parameterNamesModule,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration,jacksonObjectMapper,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,jsonComponentModule,org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration,stringHttpMessageConverter,spring.http.encoding-org.springframework.boot.autoconfigure.http.HttpEncodingProperties,org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration,mappingJackson2HttpMessageConverter,org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration,org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration,messageConverters,org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$JacksonCodecConfiguration,jacksonCodecCustomizer,org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration,org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration,spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties,org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration$JdbcTemplateConfiguration,jdbcTemplate,org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration$NamedParameterJdbcTemplateConfiguration,namedParameterJdbcTemplate,org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,spring.jdbc-org.springframework.boot.autoconfigure.jdbc.JdbcProperties,org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration,spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafJava8TimeDialect,java8TimeDialect,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebMvcConfiguration$ThymeleafViewResolverConfiguration,thymeleafViewResolver,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebMvcConfiguration,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafDefaultConfiguration,templateEngine,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration,defaultTemplateResolver,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration,spring.thymeleaf-org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties,org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration,transactionManager,org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration,org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration,transactionTemplate,org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration,platformTransactionManagerCustomizers,spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties,org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration,restTemplateBuilder,org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration$TomcatWebServerFactoryCustomizerConfiguration,tomcatWebServerFactoryCustomizer,org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration,org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,characterEncodingFilter,localeCharsetMappingsCustomizer,org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration,multipartConfigElement,multipartResolver,spring.servlet.multipart-org.springframework.boot.autoconfigure.web.servlet.MultipartProperties,org.springframework.boot.devtools.autoconfigure.DevToolsDataSourceAutoConfiguration,inMemoryDatabaseShutdownExecutor,org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration,classPathFileSystemWatcher,classPathRestartStrategy,hateoasObjenesisCacheDisabler,fileSystemWatcherFactory,conditionEvaluationDeltaLoggingListener,org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$LiveReloadConfiguration,liveReloadServer,optionalLiveReloadServer,liveReloadServerEventListener,org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration,spring.devtools-org.springframework.boot.devtools.autoconfigure.DevToolsProperties]; root of factory hierarchy
+Invoking destroy() on bean with name 'classPathFileSystemWatcher'
+Invoking destroy() on bean with name 'inMemoryDatabaseShutdownExecutor'
+Invoking destroy() on bean with name 'springApplicationAdminRegistrar'
+Invoking destroy() on bean with name 'mbeanExporter'
+Unregistering JMX-exposed beans on shutdown
+Unregistering JMX-exposed beans
+Retrieved dependent beans for bean 'mvcResourceUrlProvider': [requestMappingHandlerMapping]
+Retrieved dependent beans for bean 'mvcValidator': [requestMappingHandlerAdapter]
+Retrieved dependent beans for bean 'requestMappingHandlerAdapter': [mvcUriComponentsContributor]
+Invoking destroy() on bean with name 'mvcValidator'
+Invoking destroy() on bean with name 'defaultValidator'
+Retrieved dependent beans for bean 'sqlSessionTemplate': [teachersDao, videosDao]
+Retrieved dependent beans for bean 'teachersDao': [teachersServiceImpl]
+Retrieved dependent beans for bean 'teachersServiceImpl': [teachersController]
+Retrieved dependent beans for bean 'videosDao': [videosServiceImpl]
+Retrieved dependent beans for bean 'videosServiceImpl': [videosController]
+Invoking destroy() on bean with name 'sqlSessionTemplate'
+Retrieved dependent beans for bean 'dataSource': [sqlSessionFactory, org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration$Hikari, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration$JdbcTemplateConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration]
+Invoking destroy method 'close' on bean with name 'dataSource'
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@99c09e2: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@69b3f6ad: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@7776bfe4: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@6e6dddb5: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@47eb94d3: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@27c46b9c: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@bc2729a: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@4f0b7dbc: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@7d3a5fcd: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@cb959cf: (connection evicted)
+HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+HikariPool-1 - Shutdown completed.
+Invoking destroy() on bean with name 'characterEncodingFilter'
+Invoking destroy() on bean with name 'httpPutFormContentFilter'
+Invoking destroy() on bean with name 'hiddenHttpMethodFilter'
+Invoking destroy() on bean with name 'requestContextFilter'
+Retrieved dependent beans for bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory': [org.springframework.context.annotation.internalConfigurationAnnotationProcessor]
