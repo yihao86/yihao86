@@ -13,6 +13,7 @@ import com.yihao86.pojo.Type;
 import com.yihao86.pojo.Videos;
 import com.yihao86.service.TeachersService;
 
+
 @Controller
 public class TeachersController {
 

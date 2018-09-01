@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <!-- Mirrored from yihao86/software by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 01:07:52 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
 <head>
+
     <script>
         var renderingStartTime = (new Date()).valueOf();
     </script>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit">
@@ -21,9 +23,10 @@
     <meta href="https://m.huke88.com/software" rel="alternate" media="only screen and (max-width: 640px)">
     <meta property="wb:webmaster" content="c2797be5e9930c26">
     <link href="software/index-2.html" rel="canonical">
+  
     <link href="static/assets/revision/!!css/base.v107.css,css/video-list/type-list.v15.css,css/681e08d.css?v=681"
           rel="stylesheet">
-    <script>
+    <script type="text/javascript">
         var Url = {};
         var Param = {};
 
@@ -87,9 +90,14 @@
         Url.getBrowserNoticeDom = "https://asyn.huke88.com/site/update-browser-notice-new";
 
         var _hmt = _hmt || [];
+           
     </script>
+
+
+   
 </head>
 <body onload="load()">
+
 <div id="body-container"><input type="hidden" id="referrer" value="index.html">
     <div id="new-header">
         <div class="layout-cont clearfix">
@@ -160,167 +168,32 @@
                 <div class="select-tags fl"></div>
             </div><!--//当前位置 end--><!--大分类筛选 s-->
             <div class="classify-tiny classify-type clearfix">
-                <div class="tiny-item type-item clearfix"><span class="tiny-name fl">分类：</span>
-                    <div class="tiny-list fl"><a href="course/1-0-0-0-0-0-1-16/index.html"
-                                                 class="">字体设计</a><a href="poster/3-0-0-0-0-0-1-16/index.html"
-                                                                     class="">海报设计</a><a href="software/index-2.html"
-                                                                                         class="on">软件入门</a><a
-                            href="comprehensive/5-0-0-0-0-0-1-16/index.html"
-                            class="">综合教程</a><a href="c4d/index.html"
-                                                class="">C4D教程</a><a href="synthesis/7-0-0-0-0-0-1-16/index.html"
-                                                                     class="">图像合成</a><a
-                            href="refinement/4-0-0-0-0-0-1-16/index.html"
-                            class="">产品精修</a><a href="photography/9-0-0-0-0-0-1-16/index.html"
-                                                class="">摄影艺术</a><a href="dynamic/10-0-0-0-0-0-1-16/index.html"
-                                                                    class="">影视动画</a><a
-                            href="occupation/11-0-0-0-0-0-1-16/index.html"
-                            class="">职业发展</a><a href="portrait/14-0-0-0-0-0-1-16/index.html"
-                                                class="">人像精修</a><a href="illustration/15-0-0-0-0-0-1-16/index.html"
-                                                                    class="">商业插画</a><a
-                            href="store/16-0-0-0-0-0-1-16/index.html"
-                            class="">店铺装修</a><a href="indoor/18-0-0-0-0-0-1-16/index.html"
-                                                class="">室内设计</a><a href="lesson.html" class="">系列课</a><a
-                            href="tasks/12-0-0-0-0-0-1-16/index.html"
-                            class="">视频评改</a><a href="foreign/19-0-0-0-0-0-1-16/index.html"
-                                                class="">海外教程</a><a href="brand/20-0-0-0-0-0-1-16/index.html"
-                                                                    class="">品牌设计</a><a
-                            href="ui/21-0-0-0-0-0-1-16/index.html"
-                            class="">UI设计</a></div>
+                <div class="tiny-item type-item clearfix"><span class="tiny-name fl">分类：</span>                   
+                    <div class="tiny-list fl" th:each="f,flist:${flist}">
+							<a th:href="@{'findTyeps?f_trid='+${f.f_trid}}"
+								th:text="${f.typename}" th:if="${f.f_trid} eq ${ftrid} "
+								th:class="on">字体设计</a> <a
+								th:href="@{'findTyeps?f_trid='+${f.f_trid}}"
+								th:text="${f.typename}" th:if="${f.f_trid} ne ${ftrid} "
+								class="">字体设计</a>
+						</div>         
                 </div>
             </div><!--大分类筛选 e--><!--细分类筛选 s-->
             <div class="classify-tiny limit-height">
-                <div class="tiny-item"><span class="tiny-name">软件：</span>
-                    <div class="tiny-list tags-list-click" data-parent-tag-id="2" data-parent-tag-name="软件"><a
-                            href="software/0-0-0-0-1/index.html"
-                            class="on" rel='nofollow'>
-                        全部
-                    </a><a href="software/49-0-0-0-1/index.html"
-                           class=""
-                           data-tag-id="49" data-tag-name="PS" rel='nofollow'>
-                        PS </a><a href="software/870-0-0-0-1/index.html"
-                                  class=""
-                                  data-tag-id="870" data-tag-name="DaVinci" rel='nofollow'>
-                        DaVinci </a><a href="software/887-0-0-0-1/index.html"
-                                       class=""
-                                       data-tag-id="887" data-tag-name="Zbrush" rel='nofollow'>
-                        Zbrush </a><a href="software/929-0-0-0-1/index.html"
-                                      class=""
-                                      data-tag-id="929" data-tag-name="Animate" rel='nofollow'>
-                        Animate </a><a href="software/931-0-0-0-1/index.html"
-                                       class=""
-                                       data-tag-id="931" data-tag-name="Lumion" rel='nofollow'>
-                        Lumion </a><a href="software/941-0-0-0-1/index.html"
-                                      class=""
-                                      data-tag-id="941" data-tag-name="Keyshot" rel='nofollow'>
-                        Keyshot </a><a href="software/948-0-0-0-1/index.html"
-                                       class=""
-                                       data-tag-id="948" data-tag-name="Excel" rel='nofollow'>
-                        Excel </a><a href="software/954-0-0-0-1/index.html"
-                                     class=""
-                                     data-tag-id="954" data-tag-name="AutoCAD(机械工业）" rel='nofollow'>
-                        AutoCAD(机械工业） </a><a href="software/958-0-0-0-1/index.html"
-                                             class=""
-                                             data-tag-id="958" data-tag-name="Principle" rel='nofollow'>
-                        Principle </a><a href="software/961-0-0-0-1/index.html"
-                                         class=""
-                                         data-tag-id="961" data-tag-name="Word" rel='nofollow'>
-                        Word </a><a href="software/968-0-0-0-1/index.html"
-                                    class=""
-                                    data-tag-id="968" data-tag-name="PPT" rel='nofollow'>
-                        PPT </a><a href="software/993-0-0-0-1/index.html"
-                                   class=""
-                                   data-tag-id="993" data-tag-name="C#语言" rel='nofollow'>
-                        C#语言 </a><a href="software/996-0-0-0-1/index.html"
-                                    class=""
-                                    data-tag-id="996" data-tag-name="AU" rel='nofollow'>
-                        AU </a><a href="software/1001-0-0-0-1/index.html"
-                                  class=""
-                                  data-tag-id="1001" data-tag-name="Hype" rel='nofollow'>
-                        Hype </a><a href="software/1002-0-0-0-1/index.html"
-                                    class=""
-                                    data-tag-id="1002" data-tag-name="Unity3D" rel='nofollow'>
-                        Unity3D </a><a href="software/1008-0-0-0-1/index.html"
-                                       class=""
-                                       data-tag-id="1008" data-tag-name="SolidWorks" rel='nofollow'>
-                        SolidWorks </a><a href="software/1086-0-0-0-1/index.html"
-                                          class=""
-                                          data-tag-id="1086" data-tag-name="Rhino犀牛" rel='nofollow'>
-                        Rhino犀牛 </a><a href="software/1089-0-0-0-1/index.html"
-                                       class=""
-                                       data-tag-id="1089" data-tag-name="Mockplus" rel='nofollow'>
-                        Mockplus </a><a href="software/1090-0-0-0-1/index.html"
-                                        class=""
-                                        data-tag-id="1090" data-tag-name="虚幻4引擎" rel='nofollow'>
-                        虚幻4引擎 </a><a href="software/1091-0-0-0-1/index.html"
-                                     class=""
-                                     data-tag-id="1091" data-tag-name="SubstancePainter" rel='nofollow'>
-                        SubstancePainter </a><a href="software/1184-0-0-0-1/index.html"
-                                                class=""
-                                                data-tag-id="1184" data-tag-name="Pro/E" rel='nofollow'>
-                        Pro/E </a><a href="software/1189-0-0-0-1/index.html"
-                                     class=""
-                                     data-tag-id="1189" data-tag-name="Nuke" rel='nofollow'>
-                        Nuke </a><a href="software/1198-0-0-0-1/index.html"
-                                    class=""
-                                    data-tag-id="1198" data-tag-name="Vegas" rel='nofollow'>
-                        Vegas </a><a href="software/1205-0-0-0-1/index.html"
-                                     class=""
-                                     data-tag-id="1205" data-tag-name="FCPX" rel='nofollow'>
-                        FCPX </a><a href="software/1217-0-0-0-1/index.html"
-                                    class=""
-                                    data-tag-id="1217" data-tag-name="UG" rel='nofollow'>
-                        UG </a><a href="software/1224-0-0-0-1/index.html"
-                                  class=""
-                                  data-tag-id="1224" data-tag-name="墨刀" rel='nofollow'>
-                        墨刀 </a><a href="software/1241-0-0-0-1/index.html"
-                                  class=""
-                                  data-tag-id="1241" data-tag-name="Xmind" rel='nofollow'>
-                        Xmind </a><a href="software/249-0-0-0-1/index.html"
-                                     class=""
-                                     data-tag-id="249" data-tag-name="AI" rel='nofollow'>
-                        AI </a><a href="software/365-0-0-0-1/index.html"
-                                  class=""
-                                  data-tag-id="365" data-tag-name="AE" rel='nofollow'>
-                        AE </a><a href="software/334-0-0-0-1/index.html"
-                                  class=""
-                                  data-tag-id="334" data-tag-name="C4D" rel='nofollow'>
-                        C4D </a><a href="software/496-0-0-0-1/index.html"
-                                   class=""
-                                   data-tag-id="496" data-tag-name="PR" rel='nofollow'>
-                        PR </a><a href="software/408-0-0-0-1/index.html"
-                                  class=""
-                                  data-tag-id="408" data-tag-name="InDesign" rel='nofollow'>
-                        InDesign </a><a href="software/429-0-0-0-1/index.html"
-                                        class=""
-                                        data-tag-id="429" data-tag-name="LR" rel='nofollow'>
-                        LR </a><a href="software/395-0-0-0-1/index.html"
-                                  class=""
-                                  data-tag-id="395" data-tag-name="Sketch" rel='nofollow'>
-                        Sketch </a><a href="software/522-0-0-0-1/index.html"
-                                      class=""
-                                      data-tag-id="522" data-tag-name="DW" rel='nofollow'>
-                        DW </a><a href="software/556-0-0-0-1/index.html"
-                                  class=""
-                                  data-tag-id="556" data-tag-name="AutoCAD（室内设计）" rel='nofollow'>
-                        AutoCAD（室内设计） </a><a href="software/746-0-0-0-1/index.html"
-                                             class=""
-                                             data-tag-id="746" data-tag-name="3dMax" rel='nofollow'>
-                        3dMax </a><a href="software/715-0-0-0-1/index.html"
-                                     class=""
-                                     data-tag-id="715" data-tag-name="MAYA" rel='nofollow'>
-                        MAYA </a><a href="software/713-0-0-0-1/index.html"
-                                    class=""
-                                    data-tag-id="713" data-tag-name="SketchUp" rel='nofollow'>
-                        SketchUp </a><a href="software/368-0-0-0-1/index.html"
-                                        class=""
-                                        data-tag-id="368" data-tag-name="CDR" rel='nofollow'>
-                        CDR </a><a href="software/806-0-0-0-1/index.html"
-                                   class=""
-                                   data-tag-id="806" data-tag-name="Axure" rel='nofollow'>
-                        Axure </a><a href="software/373-0-0-0-1/index.html"
-                                     class=""
-                                     data-tag-id="373" data-tag-name="SAI" rel='nofollow'>
-                        SAI </a></div>
+                <div class="tiny-item"><span class="tiny-name">软件：</span>                                  
+                    <div class="tiny-list tags-list-click" data-parent-tag-id="2"
+							data-parent-tag-name="软件">
+							<a href="findTyeps" th:class="${typeId} eq 0 ?'on':''" rel='nofollow'>
+								全部 </a> <span th:each="s,slist:${slist}">
+								 <a  th:if="${s.typeid} eq ${typeId}" th:href="@{'findTyeps?typeId='+${s.typeid}}"
+								th:text="${s.typename}" th:class="on" data-tag-id="49"
+								data-tag-name="PS" rel='nofollow'> PS </a>
+								<a th:if="${s.typeid} ne ${typeId}" th:href="@{'findTyeps?typeId='+${s.typeid}}"
+								th:text="${s.typename}" class="" data-tag-id="49"
+								data-tag-name="PS" rel='nofollow'> PS </a>
+							</span>
+						</div>
+                    
                     <span class="tiny-more hide"><i></i>更多</span></div>
                 <div class="tiny-item"><span class="tiny-name">类型：</span>
                     <div class="tiny-list"><a href="software/0-0-0-0-1/index.html"
@@ -351,683 +224,36 @@
             </div><!--//排序和选中 e--><!--列表流 s-->
             <div class="result-content">
                 <div class="flow-list clearfix" style="margin-bottom: 60px;">
-                    <div class="flow-item fl"><a href="route/ps.html" id="route-PS-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="PS"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/A4C616BB-ADDF-A9FC-931F-92DC97FF309E.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">PS软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">88万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共31节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/ai.html" id="route-AI-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="AI"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/B62AC1E9-3A51-3BEA-673B-D39AF53CC3A4.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">AI软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">39万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共29节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="course.html" id="route-AE-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="AE"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/0172A465-9228-DA0B-C0C2-A30DB81E93FE.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">AE软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">47万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共101节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/c4d.html" id="route-C4D-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="C4D"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/65915049-E465-0135-76B9-196020467827.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">C4D软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">45万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共66节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/pr.html" id="route-PR-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="PR"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/2CA5A5F0-B687-C202-1E1B-D6A55436BB9B.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">PR软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">31万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共61节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/id.html" id="route-ID-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="ID"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/25A15B21-9195-F1AF-9BBD-E783C4F6E2B9.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">ID软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">12万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共35节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/autocad.html" id="route-CAD-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="CAD"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/9121970B-F61D-679F-0416-2009B3099FB4.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">CAD软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">47万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共66节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/autocad-mech.html" id="route-AutoCAD-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="AutoCAD"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/874E99C5-7E93-FDC9-A934-ABC6CD5599A2.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">AutoCAD软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">3632人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共80节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/excel.html" id="route-Excel-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Excel"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/E106196A-B31E-AEDE-650A-28C8EE59A554.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Excel软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">10万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共97节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/word.html" id="route-Word-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Word"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/5F81566D-4E6E-2094-0701-E235EE216AAA.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Word软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">4853人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共21节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/ppt.html" id="route-PPT-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="PPT"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/E29D21C8-156E-5D2E-D78E-94D054813F34.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">PPT软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">3978人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共24节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/3dsmax.html" id="route-3DS MAX-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="3DS MAX"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/03B364B2-2121-71E8-C7C4-F97A32F9111B.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">3DS MAX软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">9万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共137节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/maya.html" id="route-Maya-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Maya"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/B126E8D2-539E-B7BA-3509-9C0D71706377.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Maya软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">5.1万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共138节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/principle.html" id="route-Principle-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Principle"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/E68CEC5F-14E9-7ECF-F450-A95F9004B7FA.png"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Principle软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">415人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共17节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/hype.html" id="route-Hype 3-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Hype 3"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/623C31AB-08A0-6B69-F2AB-F0D00C216D7A.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Hype 3软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">3.6万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共17节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/mockingbot.html" id="route-墨刀-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="墨刀"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/C3BB0179-0665-9A2D-F1F3-6D7FFD7258FE.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">墨刀软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">5万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共10节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/sketchup.html" id="route-SketchUp-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="SketchUp"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/D7E1EC74-DC60-31B5-F439-0DAFD8B7B994.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">SketchUp软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">6.9万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共168节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/sketch.html" id="route-Sketch-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Sketch"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/367F9147-A24F-AAAA-FFFF-1E5BB15A3309.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Sketch软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">6.5万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共10节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/axure.html" id="route-Axure-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Axure"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/FB41D35B-78CC-1203-B094-4E90E2EB23C5.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Axure软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">5.9万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共22节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/mockplus.html" id="route-Mockplus-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Mockplus"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/E20A65CC-54EF-6117-B673-25F319E06627.png"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Mockplus软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">1.5万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共14节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/dw.html" id="route-DW-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="DW"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/E10ABCC5-6091-D8DE-6F23-A571C4715C55.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">DW软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">14万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共60节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/lumion.html" id="route-Lumion-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Lumion"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/923D0566-701B-7DD9-7013-94EC8D182D04.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Lumion软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">8965人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共41节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/keyshot.html" id="route-Keyshot-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Keyshot"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/7FD601C4-CB21-96FB-4C55-75BED29E3499.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Keyshot软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">4657人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共18节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/animate.html" id="route-Animate（Flash）-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Animate（Flash）"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/E67B68EC-F821-7855-9692-53E93AE5FF58.png"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Animate（Flash）软件入门教程</span>
-                            </div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">5476人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共34节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/zbrush.html" id="route-ZBrush-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="ZBrush"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/375B8637-0CBF-54A0-3D53-79FB025484C2.png"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">ZBrush软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">1.2万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共44节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/davinci.html" id="route-DaVinci-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="DaVinci"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/80903C21-D909-5E55-B7CA-E4E2674CD18B.png"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">DaVinci软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">1.1万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共20节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/au.html" id="route-AU-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="AU"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/DFB31E44-2F34-C968-870C-7A671641ACBE.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">AU软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">4.4万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共39节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/nuke.html" id="route-Nuke-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Nuke"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/ABD2587C-5E57-083F-F4C0-C11DEF4B20AE.png"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Nuke软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">7540人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共20节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/vegas.html" id="route-Vegas-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Vegas"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/25E21EC0-7475-41A5-8D97-622FF60E8F36.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Vegas软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">5万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共50节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/fcpx.html" id="route-FCPX-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="FCPX"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/1D10E37B-C831-5809-E9FF-B3DFE38FD76F.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">FCPX软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">5万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共15节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/lr.html" id="route-LR-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="LR"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/BF8372EF-CB45-207E-4817-D6B7CA4D7658.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">LR软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">4.9万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共11节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/sw.html" id="route-SolidWorks-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="SolidWorks"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/97C2DAFE-EF32-93AD-6B71-F0A60427D387.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">SolidWorks软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">5.2万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共114节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/rhino.html" id="route-Rhino（犀牛）-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Rhino（犀牛）"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/EDCBDCA0-2697-DE44-0E65-D6D478935DD5.png"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Rhino（犀牛）软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">5.6万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共22节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/pro-e.html" id="route-ProE-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="ProE"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/3D970CEB-490C-DFE4-A1AE-5A61AEC8131E.png"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">ProE软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">2340人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共93节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/ug.html" id="route-UG-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="UG"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/36CDA745-6B72-5325-F2D5-A2FFBE24FA85.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">UG软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">5万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共81节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/cdr.html" id="route-CDR-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="CDR"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/FCE36550-3FA8-8F67-FD51-CEA7241DD9C7.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">CDR软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">18万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共46节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/ue4.html" id="route-UE4-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="UE4"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/EEAE68DB-F1D3-6004-DBB7-E8DD07CB12FA.png"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">UE4软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">3487人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共22节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/csharp.html" id="route-C#-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="C#"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/89E637F5-3B2C-F766-72FE-EA15F1CCDA7F.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">C#软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">7.5万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共18节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/u3d.html" id="route-Unity3D-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Unity3D"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/DB3FFABC-0B32-7A95-1C6F-97C507B846BE.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Unity3D软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">1.2万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共43节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/substance-painter.html" id="route-SubstancePainter-3"
-                                                 target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="SubstancePainter"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/D019907E-2F1D-22F3-77C7-23D5BC34AEA0.png"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">SubstancePainter软件入门教程</span>
-                            </div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">4780人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共17节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/sai.html" id="route-SAI-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="SAI"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/108098AF-6F3E-E4BF-52AF-8CE99E22180D.jpg"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">SAI软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">3万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共3节课</span></div>
-                        </div>
-                    </a></div>
-                    <div class="flow-item fl"><a href="route/xmind.html" id="route-Xmind-3" target="_blank">
-                        <div class="item-show">
-                            <div class="show-img"><img class="lazy" alt="Xmind"
-                                                       src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                       data-original="../pic.huke88.com/image/000/000/000/8110EBBC-E3D3-CA33-C427-77060BAEFCC7.png"><span
-                                    class="time-length"></span></div>
-                            <div class="show-mask"><span class="play-btn"></span></div>
-                        </div>
-                        <div class="item-info">
-                            <div class="info-title clearfix"><span class="title-name fl">Xmind软件入门教程</span></div>
-                            <div class="info-tabs clearfix">
-                                <div class="tab-left fl"><span class="view-num" style="color: #999;">5万人已学</span>
-                                    <!--<span class="tabs-sp disc-num">111</span>--></div>
-                                <span class="fr other-sp">共10节课</span></div>
-                        </div>
-                    </a></div>
+                <div th:each="v,video:${vlist}"  class="flow-item fl">
+							<a th:href="@{'goVideo?vid='+${v.vid}}" id="route-PS-3"
+								target="_blank">
+								<div class="item-show">
+									<div class="show-img">
+										<img class="lazy" alt="PS"
+											th:src="'http://localhost:9352/video/'+${v.v_imgs}">
+									 <span class="time-length"></span></div>
+									<div class="show-mask">
+										<span class="play-btn" ></span>
+									</div>
+								</div>
+								<div class="item-info">
+									<div class="info-title clearfix">
+										<span th:text="${v.v_name}" class="title-name fl">PS软件入门教程</span>
+									</div>
+									<div class="info-tabs clearfix">
+										<div class="tab-left fl">
+											<span th:text="${v.num+'人已学'}" class="view-num"
+												style="color: #999;">88万人已学</span>
+											<!-- <span class="tabs-sp disc-num">111</span> -->
+										</div>
+										<span class="fr other-sp" th:text="${v.v_uploadtime}">共31节课</span>
+									</div>
+								</div>
+							</a>
+						</div> 	                                      
                 </div>
-            </div><!--//列表流 e--><!--分页 s--></div>
+          <!--//列表流 e--><!--分页 s-->
+             <div class="M-box1"></div>
     </div>
     <div id="footer">
         <div class="layout-cont flogo"><a href="#"></a></div>
@@ -1171,9 +397,24 @@
 </script>
 <script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye?v=681"></script>
 <script src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.pagination.js"></script>
+<link href="css/pagination.css" rel="stylesheet"/>
 <script>
     Param.class_id = "2";
+    $(function () { 
+    	$('.M-box1').pagination({
+    	    totalData: 200,
+    	    showData: 5,
+    	    current:1,
+    	    pageCount:40,
+    	    coping: true,
+    	    callback: function (current) {
+    	   alert(current);    	    	
+    	});
+    });
 </script>
+
 </body>
 <!-- Mirrored from yihao86/software by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 01:07:55 GMT -->
 </html>

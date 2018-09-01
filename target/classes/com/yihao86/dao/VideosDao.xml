@@ -4,7 +4,56 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.yihao86.dao.VideosDao">
-  <select id="findAll" resultType="Videos">
-    SELECT * FROM `videos`
-  </select>
+	<select id="findAll" resultType="map">
+		SELECT
+		v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,COUNT(h.`h_uid`)
+		AS num
+		FROM `videos` v
+		LEFT JOIN `history` h ON v.`vid`=h.`h_vid`
+		GROUP
+		BY v.`vid`
+	</select>
+
+	<select id="findVideoById" resultType="Videos">
+		SELECT * FROM `videos`
+		WHERE vid=#{vid} AND `v_disable`=0
+	</select>
+
+	<select id="findNewestVideo" resultType="map">
+		SELECT
+		v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,COUNT(h.`h_uid`)
+		AS num
+		FROM `videos` v
+		LEFT JOIN `history` h ON v.`vid`=h.`h_vid`
+		WHERE
+		DATE(v.`v_uploadtime`) >= DATE_SUB(CURDATE(),
+		INTERVAL 7 DAY)
+		GROUP BY
+		v.`vid`
+	</select>
+
+	<select id="findVideosByTid" resultType="map">
+		SELECT
+		v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid`
+		,COUNT(h.`h_uid`) AS num
+		FROM `videos` v
+		LEFT JOIN `history` h ON v.`vid`=h.`h_vid`
+		LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid`
+		WHERE t.`typeid`=#{typeId}
+		GROUP BY v.`vid`
+	</select>
+
+	<select id="findVideosByOne" resultType="map">
+		SELECT
+		v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid`
+		,COUNT(h.`h_uid`) AS num
+		FROM `videos` v
+		LEFT JOIN `history` h ON
+		v.`vid`=h.`h_vid`
+		LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid`
+		WHERE
+		t.`f_trid`=#{f_trid}
+		GROUP BY v.`vid`
+	</select>
+
 </mapper>

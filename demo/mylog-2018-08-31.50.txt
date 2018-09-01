@@ -1,0 +1,1659 @@
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Written [{timestamp=Fri Aug 31 17:32:44 CST 2018, status=404, error=Not Found, message=No message available, path=/my/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@303cfd71]
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@702452206 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@702452206 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@349474be]
+JDBC Connection [HikariProxyConnection@702452206 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@349474be]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@349474be]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@349474be]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@349474be]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@702452206 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6]
+Releasing JDBC Connection [HikariProxyConnection@702452206 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1572978188 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1572978188 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44a0dcb4]
+JDBC Connection [HikariProxyConnection@1572978188 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44a0dcb4]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44a0dcb4]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44a0dcb4]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44a0dcb4]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1572978188 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6]
+Releasing JDBC Connection [HikariProxyConnection@1572978188 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1860542518 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1860542518 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e1af929]
+JDBC Connection [HikariProxyConnection@1860542518 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e1af929]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e1af929]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e1af929]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e1af929]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1860542518 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6]
+Releasing JDBC Connection [HikariProxyConnection@1860542518 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@4bcb78a1] based on requested media type 'text/html'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@4bcb78a1] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/js/jquery.min.js]
+Looking up handler method for path /js/jquery.min.js
+Did not find handler method for [/js/jquery.min.js]
+Matching patterns for request [/js/jquery.min.js] are [/**]
+URI Template variables for request [/js/jquery.min.js] are {}
+Mapping [/js/jquery.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/js/jquery.min.js] is: -1
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/css/pagination.css]
+Successfully completed request
+Looking up handler method for path /css/pagination.css
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+Did not find handler method for [/css/pagination.css]
+Matching patterns for request [/css/pagination.css] are [/**]
+URI Template variables for request [/css/pagination.css] are {}
+Mapping [/css/pagination.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/css/pagination.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye]
+Looking up handler method for path /static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye
+Did not find handler method for [/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye]
+Matching patterns for request [/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye] are [/**]
+URI Template variables for request [/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye] are {}
+Mapping [/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.hukee08d.js]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.hukee08d.js
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.hukee08d.js]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.hukee08d.js] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.hukee08d.js] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.hukee08d.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.hukee08d.js] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/images/base-icon.v17.png]
+Looking up handler method for path /static/assets/revision/images/base-icon.v17.png
+Did not find handler method for [/static/assets/revision/images/base-icon.v17.png]
+Matching patterns for request [/static/assets/revision/images/base-icon.v17.png] are [/**]
+URI Template variables for request [/static/assets/revision/images/base-icon.v17.png] are {}
+Mapping [/static/assets/revision/images/base-icon.v17.png] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/images/base-icon.v17.png] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1703362537 wrapping com.mysql.jdbc.JDBC4Connection@245606ee] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1703362537 wrapping com.mysql.jdbc.JDBC4Connection@245606ee] to manual commit
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/my/error] is: -1
+Written [{timestamp=Fri Aug 31 17:33:13 CST 2018, status=404, error=Not Found, message=No message available, path=/my/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@303cfd71]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c876448]
+JDBC Connection [HikariProxyConnection@1703362537 wrapping com.mysql.jdbc.JDBC4Connection@245606ee] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c876448]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c876448]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c876448]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c876448]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1703362537 wrapping com.mysql.jdbc.JDBC4Connection@245606ee]
+Releasing JDBC Connection [HikariProxyConnection@1703362537 wrapping com.mysql.jdbc.JDBC4Connection@245606ee] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1421618238 wrapping com.mysql.jdbc.JDBC4Connection@245606ee] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1421618238 wrapping com.mysql.jdbc.JDBC4Connection@245606ee] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3499be9]
+JDBC Connection [HikariProxyConnection@1421618238 wrapping com.mysql.jdbc.JDBC4Connection@245606ee] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3499be9]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3499be9]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3499be9]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3499be9]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1421618238 wrapping com.mysql.jdbc.JDBC4Connection@245606ee]
+Releasing JDBC Connection [HikariProxyConnection@1421618238 wrapping com.mysql.jdbc.JDBC4Connection@245606ee] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@88331238 wrapping com.mysql.jdbc.JDBC4Connection@245606ee] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@88331238 wrapping com.mysql.jdbc.JDBC4Connection@245606ee] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5060af65]
+JDBC Connection [HikariProxyConnection@88331238 wrapping com.mysql.jdbc.JDBC4Connection@245606ee] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5060af65]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5060af65]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5060af65]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5060af65]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@88331238 wrapping com.mysql.jdbc.JDBC4Connection@245606ee]
+Releasing JDBC Connection [HikariProxyConnection@88331238 wrapping com.mysql.jdbc.JDBC4Connection@245606ee] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [image/webp, image/apng, image/*, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@6b04646a] based on requested media type '*/*;q=0.8'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@6b04646a] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.huke.css]
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/css/pagination.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Looking up handler method for path /css/pagination.css
+Did not find handler method for [/css/pagination.css]
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/css/pagination.css] are [/**]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/css/pagination.css] are {}
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/css/pagination.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Last-Modified value for [/my/css/pagination.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/error]
+Looking up handler method for path /error
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/my/error] is: -1
+Written [{timestamp=Fri Aug 31 17:33:35 CST 2018, status=404, error=Not Found, message=No message available, path=/my/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@303cfd71]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@988864773 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@988864773 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b15417a]
+JDBC Connection [HikariProxyConnection@988864773 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b15417a]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b15417a]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b15417a]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b15417a]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@988864773 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@988864773 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1617945738 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1617945738 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c295249]
+JDBC Connection [HikariProxyConnection@1617945738 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c295249]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c295249]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c295249]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c295249]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1617945738 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1617945738 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1091796187 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1091796187 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fc6aa30]
+JDBC Connection [HikariProxyConnection@1091796187 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fc6aa30]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fc6aa30]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fc6aa30]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fc6aa30]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1091796187 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1091796187 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@570945c2] based on requested media type 'text/html'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@570945c2] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/css/pagination.css]
+Looking up handler method for path /css/pagination.css
+Did not find handler method for [/css/pagination.css]
+Matching patterns for request [/css/pagination.css] are [/**]
+URI Template variables for request [/css/pagination.css] are {}
+Mapping [/css/pagination.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/css/pagination.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/js/jquery.min.js]
+Looking up handler method for path /js/jquery.min.js
+Did not find handler method for [/js/jquery.min.js]
+Matching patterns for request [/js/jquery.min.js] are [/**]
+URI Template variables for request [/js/jquery.min.js] are {}
+Mapping [/js/jquery.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/js/jquery.min.js] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1588893892 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1588893892 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a52e0a9]
+JDBC Connection [HikariProxyConnection@1588893892 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a52e0a9]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a52e0a9]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a52e0a9]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a52e0a9]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1588893892 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/my/error] is: -1
+Written [{timestamp=Fri Aug 31 17:34:49 CST 2018, status=404, error=Not Found, message=No message available, path=/my/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@303cfd71]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Releasing JDBC Connection [HikariProxyConnection@1588893892 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1551776917 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1551776917 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43a6f2e0]
+JDBC Connection [HikariProxyConnection@1551776917 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43a6f2e0]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43a6f2e0]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43a6f2e0]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43a6f2e0]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1551776917 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1551776917 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@652792913 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@652792913 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78298aba]
+JDBC Connection [HikariProxyConnection@652792913 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78298aba]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78298aba]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78298aba]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78298aba]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@652792913 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@652792913 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [image/webp, image/apng, image/*, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@39e60a4b] based on requested media type '*/*;q=0.8'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@39e60a4b] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1821712792 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1821712792 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@231afe96]
+JDBC Connection [HikariProxyConnection@1821712792 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@231afe96]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@231afe96]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@231afe96]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@231afe96]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1821712792 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1821712792 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@2099900588 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@2099900588 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d5eda73]
+JDBC Connection [HikariProxyConnection@2099900588 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d5eda73]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d5eda73]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d5eda73]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d5eda73]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@2099900588 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@2099900588 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1659087651 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1659087651 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7758dcd4]
+JDBC Connection [HikariProxyConnection@1659087651 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7758dcd4]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7758dcd4]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7758dcd4]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7758dcd4]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1659087651 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1659087651 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@7a251389] based on requested media type 'text/html'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@7a251389] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/css/pagination.css]
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/js/jquery.min.js]
+Looking up handler method for path /css/pagination.css
+Looking up handler method for path /js/jquery.min.js
+Did not find handler method for [/css/pagination.css]
+Did not find handler method for [/js/jquery.min.js]
+Matching patterns for request [/css/pagination.css] are [/**]
+Matching patterns for request [/js/jquery.min.js] are [/**]
+URI Template variables for request [/css/pagination.css] are {}
+URI Template variables for request [/js/jquery.min.js] are {}
+Mapping [/css/pagination.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Mapping [/js/jquery.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/css/pagination.css] is: -1
+Last-Modified value for [/my/js/jquery.min.js] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/my/error] is: -1
+Written [{timestamp=Fri Aug 31 17:36:17 CST 2018, status=404, error=Not Found, message=No message available, path=/my/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@303cfd71]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Acquired Connection [HikariProxyConnection@1002498523 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1002498523 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61982482]
+JDBC Connection [HikariProxyConnection@1002498523 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61982482]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61982482]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61982482]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61982482]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1002498523 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6]
+Releasing JDBC Connection [HikariProxyConnection@1002498523 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1783744363 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1783744363 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29272907]
+JDBC Connection [HikariProxyConnection@1783744363 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29272907]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29272907]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29272907]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29272907]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1783744363 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6]
+Releasing JDBC Connection [HikariProxyConnection@1783744363 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1950653937 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1950653937 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34631dfd]
+JDBC Connection [HikariProxyConnection@1950653937 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34631dfd]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34631dfd]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34631dfd]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34631dfd]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1950653937 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6]
+Releasing JDBC Connection [HikariProxyConnection@1950653937 wrapping com.mysql.jdbc.JDBC4Connection@5e03f0b6] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [image/webp, image/apng, image/*, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@5b0a9180] based on requested media type '*/*;q=0.8'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@5b0a9180] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@462441728 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@462441728 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d50c1e3]
+JDBC Connection [HikariProxyConnection@462441728 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d50c1e3]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d50c1e3]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d50c1e3]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d50c1e3]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@462441728 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@462441728 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@741616240 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@741616240 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c38d2d7]
+JDBC Connection [HikariProxyConnection@741616240 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c38d2d7]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c38d2d7]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c38d2d7]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c38d2d7]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@741616240 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@741616240 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1597469558 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1597469558 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74cf4240]
+JDBC Connection [HikariProxyConnection@1597469558 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74cf4240]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74cf4240]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74cf4240]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74cf4240]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1597469558 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1597469558 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@45139e73] based on requested media type 'text/html'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@45139e73] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@398137667 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@398137667 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/my/error] is: -1
+Written [{timestamp=Fri Aug 31 17:36:46 CST 2018, status=404, error=Not Found, message=No message available, path=/my/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@303cfd71]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75bf115]
+JDBC Connection [HikariProxyConnection@398137667 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75bf115]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75bf115]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75bf115]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75bf115]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@398137667 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@398137667 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@2105961566 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@2105961566 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d72005d]
+JDBC Connection [HikariProxyConnection@2105961566 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d72005d]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d72005d]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d72005d]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d72005d]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@2105961566 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@2105961566 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1653599345 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1653599345 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e2a43a9]
+JDBC Connection [HikariProxyConnection@1653599345 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e2a43a9]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e2a43a9]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e2a43a9]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e2a43a9]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1653599345 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1653599345 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [image/webp, image/apng, image/*, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@5230818f] based on requested media type '*/*;q=0.8'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@5230818f] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@2085500023 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@2085500023 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7420ad]
+JDBC Connection [HikariProxyConnection@2085500023 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7420ad]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7420ad]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7420ad]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7420ad]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@2085500023 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@2085500023 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@134782736 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@134782736 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4fb3e4bd]
+JDBC Connection [HikariProxyConnection@134782736 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4fb3e4bd]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4fb3e4bd]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4fb3e4bd]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4fb3e4bd]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@134782736 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@134782736 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1561123360 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1561123360 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15adf6e0]
+JDBC Connection [HikariProxyConnection@1561123360 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15adf6e0]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15adf6e0]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15adf6e0]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15adf6e0]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1561123360 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1561123360 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@7f05ee38] based on requested media type 'text/html'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@7f05ee38] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/css/pagination.css]
+Looking up handler method for path /css/pagination.css
+Did not find handler method for [/css/pagination.css]
+Matching patterns for request [/css/pagination.css] are [/**]
+URI Template variables for request [/css/pagination.css] are {}
+Mapping [/css/pagination.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/css/pagination.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@455571156 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@455571156 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/my/error] is: -1
+Written [{timestamp=Fri Aug 31 17:37:06 CST 2018, status=404, error=Not Found, message=No message available, path=/my/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@303cfd71]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@652759c]
+JDBC Connection [HikariProxyConnection@455571156 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@652759c]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@652759c]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@652759c]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@652759c]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@455571156 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@455571156 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1912251045 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1912251045 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69678eb9]
+JDBC Connection [HikariProxyConnection@1912251045 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69678eb9]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69678eb9]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69678eb9]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69678eb9]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1912251045 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1912251045 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@848040207 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@848040207 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e85a62d]
+JDBC Connection [HikariProxyConnection@848040207 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e85a62d]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e85a62d]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e85a62d]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e85a62d]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@848040207 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@848040207 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [image/webp, image/apng, image/*, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@9a1774] based on requested media type '*/*;q=0.8'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@9a1774] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1963483304 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1963483304 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@550111d1]
+JDBC Connection [HikariProxyConnection@1963483304 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@550111d1]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@550111d1]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@550111d1]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@550111d1]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1963483304 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1963483304 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@487268382 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@487268382 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1252cb89]
+JDBC Connection [HikariProxyConnection@487268382 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1252cb89]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1252cb89]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1252cb89]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1252cb89]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@487268382 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@487268382 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1029254110 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1029254110 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39575884]
+JDBC Connection [HikariProxyConnection@1029254110 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39575884]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39575884]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39575884]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39575884]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1029254110 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1029254110 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@7462b2e7] based on requested media type 'text/html'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@7462b2e7] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1985845687 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1985845687 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/my/error] is: -1
+Written [{timestamp=Fri Aug 31 17:37:22 CST 2018, status=404, error=Not Found, message=No message available, path=/my/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@303cfd71]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ca82bb5]
+JDBC Connection [HikariProxyConnection@1985845687 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ca82bb5]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ca82bb5]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ca82bb5]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ca82bb5]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1985845687 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1985845687 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@913092612 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@913092612 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35b8019e]
+JDBC Connection [HikariProxyConnection@913092612 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35b8019e]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35b8019e]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35b8019e]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35b8019e]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@913092612 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@913092612 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1559106231 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1559106231 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62137818]
+JDBC Connection [HikariProxyConnection@1559106231 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62137818]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62137818]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62137818]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62137818]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1559106231 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1559106231 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [image/webp, image/apng, image/*, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@1fe72ad6] based on requested media type '*/*;q=0.8'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@1fe72ad6] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1415059648 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1415059648 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17a73031]
+JDBC Connection [HikariProxyConnection@1415059648 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17a73031]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17a73031]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17a73031]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17a73031]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1415059648 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1415059648 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1500078538 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1500078538 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7737f53b]
+JDBC Connection [HikariProxyConnection@1500078538 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7737f53b]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7737f53b]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7737f53b]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7737f53b]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1500078538 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1500078538 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1837885454 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1837885454 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4180c140]
+JDBC Connection [HikariProxyConnection@1837885454 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4180c140]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4180c140]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4180c140]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4180c140]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1837885454 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1837885454 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@c798452] based on requested media type 'text/html'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@c798452] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@4a79f63c
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/css/pagination.css]
+Looking up handler method for path /css/pagination.css
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@68aed516
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/!!css/base.v107.css,css/video-list/type-list.v15.css,css/681e08d.css]
+Looking up handler method for path /static/assets/revision/!!css/base.v107.css,css/video-list/type-list.v15.css,css/681e08d.css
+Did not find handler method for [/css/pagination.css]
+Matching patterns for request [/css/pagination.css] are [/**]
+URI Template variables for request [/css/pagination.css] are {}
+Did not find handler method for [/static/assets/revision/!!css/base.v107.css,css/video-list/type-list.v15.css,css/681e08d.css]
+Matching patterns for request [/static/assets/revision/!!css/base.v107.css,css/video-list/type-list.v15.css,css/681e08d.css] are [/**]
+URI Template variables for request [/static/assets/revision/!!css/base.v107.css,css/video-list/type-list.v15.css,css/681e08d.css] are {}
+Mapping [/static/assets/revision/!!css/base.v107.css,css/video-list/type-list.v15.css,css/681e08d.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/!!css/base.v107.css,css/video-list/type-list.v15.css,css/681e08d.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@68aed516
+Mapping [/css/pagination.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/css/pagination.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@4a79f63c
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@156426d6
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/js/jquery.min.js]
+Looking up handler method for path /js/jquery.min.js
+Did not find handler method for [/js/jquery.min.js]
+Matching patterns for request [/js/jquery.min.js] are [/**]
+URI Template variables for request [/js/jquery.min.js] are {}
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@14b480de
+Mapping [/js/jquery.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye]
+Last-Modified value for [/my/js/jquery.min.js] is: -1
+Looking up handler method for path /static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye
+Did not find handler method for [/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye]
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+Matching patterns for request [/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye] are [/**]
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/js/jquery.pagination.js]
+URI Template variables for request [/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye] are {}
+Looking up handler method for path /js/jquery.pagination.js
+Mapping [/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/inde/681.175e08d.delaye] is: -1
+Did not find handler method for [/js/jquery.pagination.js]
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@4a79f63c
+Matching patterns for request [/js/jquery.pagination.js] are [/**]
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.hukee08d.js]
+URI Template variables for request [/js/jquery.pagination.js] are {}
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Mapping [/js/jquery.pagination.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Successfully completed request
+Last-Modified value for [/my/js/jquery.pagination.js] is: -1
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.hukee08d.js
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@156426d6
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@14b480de
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.hukee08d.js]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.hukee08d.js] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.hukee08d.js] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.hukee08d.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.hukee08d.js] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@4a79f63c
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@4a79f63c
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@268992862 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@268992862 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/images/base-icon.v17.png]
+Looking up handler method for path /static/assets/revision/images/base-icon.v17.png
+Did not find handler method for [/static/assets/revision/images/base-icon.v17.png]
+Matching patterns for request [/static/assets/revision/images/base-icon.v17.png] are [/**]
+URI Template variables for request [/static/assets/revision/images/base-icon.v17.png] are {}
+Mapping [/static/assets/revision/images/base-icon.v17.png] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/images/base-icon.v17.png] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/my/error] is: -1
+Written [{timestamp=Fri Aug 31 17:39:26 CST 2018, status=404, error=Not Found, message=No message available, path=/my/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@303cfd71]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ca416c5]
+JDBC Connection [HikariProxyConnection@268992862 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ca416c5]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ca416c5]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ca416c5]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ca416c5]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@268992862 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@268992862 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1094194427 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1094194427 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62589917]
+JDBC Connection [HikariProxyConnection@1094194427 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62589917]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62589917]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62589917]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62589917]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1094194427 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1094194427 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@586241536 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@586241536 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1effc1ef]
+JDBC Connection [HikariProxyConnection@586241536 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1effc1ef]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1effc1ef]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1effc1ef]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1effc1ef]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@586241536 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@586241536 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [image/webp, image/apng, image/*, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@2577a25b] based on requested media type '*/*;q=0.8'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@2577a25b] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@4a79f63c
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@4a79f63c
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@942605224 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@942605224 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@55c36b76]
+JDBC Connection [HikariProxyConnection@942605224 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@55c36b76]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@55c36b76]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@55c36b76]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@55c36b76]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@942605224 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@942605224 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@205916822 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@205916822 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@583e59e8]
+JDBC Connection [HikariProxyConnection@205916822 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@583e59e8]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@583e59e8]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@583e59e8]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@583e59e8]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@205916822 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@205916822 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@501688864 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@501688864 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d992993]
+JDBC Connection [HikariProxyConnection@501688864 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d992993]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d992993]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d992993]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d992993]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@501688864 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@501688864 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@24277b22] based on requested media type 'text/html'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@24277b22] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@4a79f63c
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@4a79f63c
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1295368778 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1295368778 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/my/error] is: -1
+Written [{timestamp=Fri Aug 31 17:39:40 CST 2018, status=404, error=Not Found, message=No message available, path=/my/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@303cfd71]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5bfc043]
+JDBC Connection [HikariProxyConnection@1295368778 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5bfc043]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5bfc043]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5bfc043]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5bfc043]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1295368778 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1295368778 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@968563102 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@968563102 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ee38f60]
+JDBC Connection [HikariProxyConnection@968563102 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ee38f60]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ee38f60]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ee38f60]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ee38f60]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@968563102 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@968563102 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@996316419 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@996316419 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@96760de]
+JDBC Connection [HikariProxyConnection@996316419 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@96760de]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@96760de]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@96760de]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@96760de]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@996316419 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@996316419 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [image/webp, image/apng, image/*, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@41393ed5] based on requested media type '*/*;q=0.8'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@41393ed5] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@4a79f63c
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Returning cached instance of singleton bean 'org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration'
+Returning cached instance of singleton bean 'liveReloadServerEventListener'
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@4a79f63c
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1272985161 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1272985161 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bef7c]
+JDBC Connection [HikariProxyConnection@1272985161 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bef7c]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bef7c]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bef7c]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bef7c]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1272985161 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1272985161 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1578282887 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1578282887 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17010730]
+JDBC Connection [HikariProxyConnection@1578282887 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17010730]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17010730]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17010730]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17010730]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1578282887 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1578282887 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1220180864 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1220180864 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51a6b6c3]
+JDBC Connection [HikariProxyConnection@1220180864 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51a6b6c3]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51a6b6c3]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51a6b6c3]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51a6b6c3]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1220180864 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1220180864 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@4aba3ed7] based on requested media type 'text/html'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@4aba3ed7] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@4a79f63c
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@4a79f63c
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/js/jquery.min.js]
+Looking up handler method for path /js/jquery.min.js
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+Did not find handler method for [/js/jquery.min.js]
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/js/jquery.pagination.js]
+Looking up handler method for path /js/jquery.pagination.js
+Did not find handler method for [/js/jquery.pagination.js]
+Matching patterns for request [/js/jquery.pagination.js] are [/**]
+URI Template variables for request [/js/jquery.pagination.js] are {}
+Mapping [/js/jquery.pagination.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/js/jquery.pagination.js] is: -1
+Matching patterns for request [/js/jquery.min.js] are [/**]
+URI Template variables for request [/js/jquery.min.js] are {}
+Mapping [/js/jquery.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/js/jquery.min.js] is: -1
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@14b480de
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/css/pagination.css]
+Looking up handler method for path /css/pagination.css
+Did not find handler method for [/css/pagination.css]
+Matching patterns for request [/css/pagination.css] are [/**]
+URI Template variables for request [/css/pagination.css] are {}
+Mapping [/css/pagination.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/css/pagination.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@4a79f63c
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@14b480de
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@14b480de
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/findTyeps]
+Looking up handler method for path /findTyeps
+Returning handler method [public java.lang.String com.yihao86.controller.TypeController.queryTyeps(java.lang.String,org.springframework.ui.Model,java.lang.String)]
+Returning cached instance of singleton bean 'typeController'
+Last-Modified value for [/my/findTyeps] is: -1
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@801273504 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@801273504 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@5b5ca234]]] and 1 interceptor
+Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@6c76ad62
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/my/error] is: -1
+Written [{timestamp=Fri Aug 31 17:42:19 CST 2018, status=404, error=Not Found, message=No message available, path=/my/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@303cfd71]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64b87a1d]
+JDBC Connection [HikariProxyConnection@801273504 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
+==> Parameters: 
+<==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64b87a1d]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64b87a1d]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64b87a1d]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64b87a1d]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@801273504 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@801273504 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectSonList]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@1468299719 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@1468299719 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10068223]
+JDBC Connection [HikariProxyConnection@1468299719 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=? AND `f_trid` <> `typeid` 
+==> Parameters: 1(Integer)
+<==      Total: 9
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10068223]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10068223]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10068223]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10068223]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@1468299719 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@1468299719 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.selectVideoByOne]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+Acquired Connection [HikariProxyConnection@610706153 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] for JDBC transaction
+Switching JDBC Connection [HikariProxyConnection@610706153 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] to manual commit
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c402531]
+JDBC Connection [HikariProxyConnection@610706153 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] will be managed by Spring
+==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_typeId`,t.`f_trid` ,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `type` t ON v.`v_typeId` =t.`typeid` WHERE t.`f_trid`=? GROUP BY v.`vid` 
+==> Parameters: 1(Integer)
+<==      Total: 14
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c402531]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c402531]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c402531]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c402531]
+Initiating transaction commit
+Committing JDBC transaction on Connection [HikariProxyConnection@610706153 wrapping com.mysql.jdbc.JDBC4Connection@797983c2]
+Releasing JDBC Connection [HikariProxyConnection@610706153 wrapping com.mysql.jdbc.JDBC4Connection@797983c2] after transaction
+Returning JDBC Connection to DataSource
+Requested media types are [image/webp, image/apng, image/*, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'type'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@141626f6] based on requested media type '*/*;q=0.8'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@141626f6] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@14b480de
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@797983c2: (connection has passed maxLifetime)
+HikariPool-1 - Pool stats (total=9, active=0, idle=9, waiting=0)
+HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@602d9e00
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5e03f0b6: (connection has passed maxLifetime)
+HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@3c04193d
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@51c1a559: (connection has passed maxLifetime)
+HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5c2be672
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@245606ee: (connection has passed maxLifetime)
+HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5865dee8
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@7beac1a5: (connection has passed maxLifetime)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@1b6e5591: (connection has passed maxLifetime)
+HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1bbeaba2
+HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7b9154ed
+HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@100891fb: (connection has passed maxLifetime)
+HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7fdf4bd5
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@34a3abfe: (connection has passed maxLifetime)
+HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5ca76df4
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@548c54b1: (connection has passed maxLifetime)
+HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@ddb9924
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@1dcd3ec6: (connection has passed maxLifetime)
+HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6df4666b
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m25s636ms892µs47ns).
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
