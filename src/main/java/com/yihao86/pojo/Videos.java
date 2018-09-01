@@ -28,5 +28,7 @@ public class Videos {
 	private int v_disable;
 	
 	private String v_vpath;
+	
+	private int v_typeId;
 
 }

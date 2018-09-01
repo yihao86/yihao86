@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <!-- Mirrored from yihao86/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 00:33:20 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
@@ -204,8 +204,10 @@
     </div>
     <div class="subnav">
         <div class="layout-cont">
-            <a target="_blank" onclick="pagePositionClick(136);" href="type.html">字体设计</a>
-            <a target="_blank" onclick="pagePositionClick(137);" href="type.html">海报设计</a>
+        <span th:each="t,type:${tlist}">
+       <a target="_blank"  th:href="@{'findTyeps?f_trid='+${t.f_trid}}" th:text="${t.typename}">字体设计</a>
+        </span>         
+           <!--  <a target="_blank" onclick="pagePositionClick(137);" href="type.html">海报设计</a>
             <a target="_blank" onclick="pagePositionClick(138);" href="type.html">C4D教程</a>
             <a target="_blank" onclick="pagePositionClick(139);" href="type.html">图像合成</a>
             <a target="_blank" onclick="pagePositionClick(140);" href="type.html">产品精修</a>
@@ -213,7 +215,7 @@
             <a target="_blank" onclick="pagePositionClick(142);" href="type.html">影视动画</a>
             <a target="_blank" onclick="pagePositionClick(143);" href="type.html">综合教程</a>
             <a target="_blank" onclick="pagePositionClick(341);" href="type.html">UI设计</a>
-            <a target="_blank" onclick="pagePositionClick(144);" href="type.html">人像精修</a>
+            <a target="_blank" onclick="pagePositionClick(144);" href="type.html">人像精修</a> -->
         </div>
     </div>
     <div class="section-img ">
@@ -222,30 +224,30 @@
                 <div class="hr-link fr clearfix">
                     <a href="type.html" class="more-link" target="_blank" rel='nofollow'>更多教程>></a>
                 </div>
-                <h2 class="h2"><span>推荐视频</span><em>共<i>22353</i>节课</em></h2>
-            </div>
-            <div class="imgshow-m clearfix">
-                <div class="list">
+                <h2 class="h2"><span>推荐视频</span><em>共<i th:text="${vlist.size()}">22353</i>节课</em></h2>
+            </div>      
+             <div class="imgshow-m clearfix">
+                <div th:each="v,video:${vlist}" th:if="${video.index lt 12 }" class="list">                                         
                     <div class="list-img">
-                        <a class="show-img" href="video.html" target="_blank">
-                            <img class="lazy"
-                             src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                             data-original="https://pic.huke88.com/video/cover/2017-06-29/B4695D45-EC2B-0D40-0F87-7A2B69A5F4AA.jpg!/fw/500/compress/true/format/jpg"
-                                 alt="PS软件介绍及安装" data-exposure-id="2018">
+                        <a class="show-img" th:href="@{'goVideo?vid='+${v.vid}}" target="_blank">
+                            <img class="lazy"  
+                            th:src="'http://localhost:9352/video/'+${v.v_imgs}"                                           
+                                                 th:alt="${v.v_name}"
+                                                 data-exposure-id="20702">
                             <span class="play-cover"></span>
-                            <span class="time-length">8月15号</span>
+                            <span th:text="${v.v_uploadtime}"class="time-length">19分42秒</span>
                         </a>
                     </div>
                     <div class="img-name clearfix">
-                        <a href="video.html" class="name-link fl" target="_blank">PS软件介绍及安装</a>
+                        <a href="video.html" th:text="${v.v_name}" class="name-link fl" target="_blank">PS-只用曲线工具也可以调出完美色调</a>
                     </div>
                     <div class="img-data clearfix">
-                        <span class="learn-num fr">244万 人已学</span>
-                    </div>
+                        <span class="learn-num fr" th:text="${v.num}+'人已学'">2913 人已学</span>
+                    </div>                   
                 </div>
-            </div>
+            </div>                
             <div class="more-btn">
-                <a rel='nofollow' href="type.html" target="_blank">点击查看更多教程</a>
+                <a rel='nofollow' href="findTyeps" target="_blank">点击查看更多教程</a>
             </div>
         </div>
     </div>
@@ -255,30 +257,29 @@
                 <div class="hr-link fr clearfix">
                     <a href="type.html" class="more-link" target="_blank" onclick="pagePositionClick(59)" rel='nofollow'>更多教程>></a>
                 </div>
-                <h2 class="h2"><span>JAVA入门</span><em>今日更新<i>100</i>节课</em></h2>
+                <h2 class="h2"><span>七天视频</span><em>近日更新<i th:text="${newlist.size()}">100</i>节课</em></h2>
             </div>
             <div class="imgshow-m clearfix">
-                <div class="list">
+                <div th:each="v,nvideo:${newlist}" th:if="${nvideo.index lt 16 }" class="list" >
                     <div class="list-img">
-                        <a class="show-img" href="video.html" target="_blank" onclick="videoExposureLogic(20702, 1, 'click_times');">
-                            <img class="lazy"  src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                                 data-original="https://pic.huke88.com/video/cover/2018-07-31/D9D6F100-1D7A-7D0E-510E-777E04BBC4AB.gif!/fw/500/compress/true/format/jpg"
-                                                 alt="PS-只用曲线工具也可以调出完美色调"
+                        <a class="show-img" th:href="@{'goVideo?vid='+${v.vid}}" target="_blank" onclick="videoExposureLogic(20702, 1, 'click_times');">
+                            <img class="lazy"  th:src="'http://localhost:9352/video/'+${v.v_imgs}"                                                      
+                                                 th:alt="${v.v_name}"
                                                  data-exposure-id="20702">
                             <span class="play-cover"></span>
-                            <span class="time-length">19分42秒</span>
+                            <span th:text="${v.v_uploadtime}" class="time-length">19分42秒</span>
                         </a>
                     </div>
                     <div class="img-name clearfix">
-                        <a href="video.html" class="name-link fl" target="_blank">PS-只用曲线工具也可以调出完美色调</a>
+                        <a href="video.html" th:text="${v.v_name}" class="name-link fl" target="_blank">PS-只用曲线工具也可以调出完美色调</a>
                     </div>
                     <div class="img-data clearfix">
-                        <span class="learn-num fr">2913 人已学</span>
+                        <span class="learn-num fr" th:text="${v.num}+'人已学'">2913 人已学</span>
                     </div>
                 </div>
             </div>
             <div class="more-btn"><a rel='nofollow'
-                                     href="type.html"
+                                     href="findTyeps"
                                      target="_blank">点击查看更多教程</a>
             </div>
         </div>
@@ -619,6 +620,7 @@
         var iLeft = (window.screen.width - 10 - iWidth) / 2; //获得窗口的水平位置;
         window.open(url, name, 'height=' + iHeight + ',,innerHeight=' + iHeight + ',width=' + iWidth + ',innerWidth=' + iWidth + ',top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
     }
+  
 </script>
 
 <script>

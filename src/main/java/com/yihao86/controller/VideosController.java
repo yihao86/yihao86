@@ -1,7 +1,5 @@
 package com.yihao86.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,13 +14,18 @@ public class VideosController {
 	@Autowired
 	private VideosService vs;
 
-	@RequestMapping("gogogo")
-	public String queryVideos(Model mod) {
-		System.out.println("hhhhhh_查询所有视频方法.......");
-		List<Videos> vlist = vs.searchAll();
-		System.out.println(vlist.size());
-		mod.addAttribute("vlist", vlist);
-		return "index";
+	@RequestMapping("goVideo")
+	public String queryVideos(Model mod, int vid) {
+		System.out.println("根据ID查询视频方法.......");
+		Videos v = vs.selectById(vid);
+		mod.addAttribute("v", v);
+		return "video";
+	}
+
+	public String queryVideosByTid(int f_trid) {
+		
+		
+           return "type";
 	}
 
 }
