@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yihao86.dao.TypeDao">
+
+  <select id="findType" resultType="Type">
+   SELECT * FROM `type` WHERE `f_trid`=`typeid`
+  </select>
+  
+  <select id="findSonList" resultType="Type">
+  SELECT * FROM `type` WHERE `f_trid`=#{f_trid} AND `f_trid` &lt;&gt; `typeid`
+  </select>
+</mapper>
