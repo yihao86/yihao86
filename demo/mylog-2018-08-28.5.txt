@@ -7475,6 +7475,7 @@ Invoking destroy() on bean with name 'httpPutFormContentFilter'
 Invoking destroy() on bean with name 'hiddenHttpMethodFilter'
 Invoking destroy() on bean with name 'requestContextFilter'
 Retrieved dependent beans for bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory': [org.springframework.context.annotation.internalConfigurationAnnotationProcessor]
+<<<<<<< HEAD
 Loaded expression factory via original TCCL
 Could not find key 'logging.register-shutdown-hook' in any property source
 Application started with classpath: [file:/F:/git/yihao86/target/classes/]
@@ -8756,3 +8757,5 @@ Returning cached instance of singleton bean 'org.springframework.transaction.con
 Finished creating instance of bean 'errorAttributes'
 Creating shared instance of singleton bean 'basicErrorController'
 Creating instance of bean 'basicErrorController'
+=======
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git

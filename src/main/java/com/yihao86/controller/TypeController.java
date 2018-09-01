@@ -29,11 +29,9 @@ public class TypeController {
 	private VideosService vs;
 
 	@RequestMapping("/findTyeps")
-	public String queryTyeps(String f_trid, Model mod, String typeId,String current) {
-		
+	public String queryTyeps(String f_trid, Model mod, String typeId) {		
 		System.out.println("1111111111111111111");
 		String ftrid = f_trid == null ? "1" : f_trid;
-		String page = current == null ? "1" : current;
 		List<Type> flist = ts.selectType();
 		mod.addAttribute("flist", flist);
 		System.out.println(flist.size());
@@ -47,7 +45,7 @@ public class TypeController {
 			System.out.println(vlist.size());
 			mod.addAttribute("vlist", vlist);
 		}else {
-			System.out.println("第二次金入。。。。。。。。。。。。。");
+			System.out.println("第二次进入。。。。。。。。。。。。。");
 			vlist = vs.selectVideoByTid(Integer.valueOf(typeId));
 			System.out.println(vlist.size());		
 			mod.addAttribute("vlist", vlist);	

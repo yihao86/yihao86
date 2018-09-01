@@ -1,6 +1,6 @@
 server:
   servlet:
-    context-path: /my
+    context-path: /yi
 
 Mydir:
   serverURI: C:\tomcat_media\webapps\video\

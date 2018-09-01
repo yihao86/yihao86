@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.condition.BeanTypeRegistry'
 Returning cached instance of singleton bean 'autoConfigurationReport'
 Registering bean definition for @Bean method org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration.objectNamingStrategy()
@@ -3071,7 +3072,10 @@ HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2a725900
 HikariPool-1 - Start completed.
 Acquired Connection [HikariProxyConnection@1159754550 wrapping com.mysql.jdbc.JDBC4Connection@2a725900] for JDBC transaction
 Switching JDBC Connection [HikariProxyConnection@1159754550 wrapping com.mysql.jdbc.JDBC4Connection@2a725900] to manual commit
+=======
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Creating a new SqlSession
+<<<<<<< HEAD
 Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3728f633]
 JDBC Connection [HikariProxyConnection@1159754550 wrapping com.mysql.jdbc.JDBC4Connection@2a725900] will be managed by Spring
 ==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` GROUP BY v.`vid` 
@@ -3121,7 +3125,17 @@ Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaul
 Initiating transaction commit
 Committing JDBC transaction on Connection [HikariProxyConnection@1732615757 wrapping com.mysql.jdbc.JDBC4Connection@2a725900]
 Releasing JDBC Connection [HikariProxyConnection@1732615757 wrapping com.mysql.jdbc.JDBC4Connection@2a725900] after transaction
+=======
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@56c8df8f] was not registered for synchronization because synchronization is not active
+Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@1732797498 wrapping com.mysql.jdbc.JDBC4Connection@73e94194] will not be managed by Spring
+==>  Preparing: SELECT typename FROM teachers tc,`type` ty WHERE tc.t_occupation = ty.typeid AND tid = ? 
+==> Parameters: 3(Integer)
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@56c8df8f]
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Returning JDBC Connection to DataSource
+<<<<<<< HEAD
 Requested media types are [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] based on Accept header types and producible media types [*/*])
 No matching bean found for view name 'index'
 Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
@@ -3569,11 +3583,30 @@ Last-Modified value for [/my/static/assets/revision/images/base-icon.v17.png] is
 Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 Successfully completed request
 Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@4856434f
+=======
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Creating a new SqlSession
+<<<<<<< HEAD
 Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@13f787db]
 JDBC Connection [HikariProxyConnection@601573356 wrapping com.mysql.jdbc.JDBC4Connection@2a725900] will be managed by Spring
 ==>  Preparing: SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,COUNT(h.`h_uid`) AS num FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` GROUP BY v.`vid` 
+=======
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@541b0886] was not registered for synchronization because synchronization is not active
+Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@1153405229 wrapping com.mysql.jdbc.JDBC4Connection@73e94194] will not be managed by Spring
+==>  Preparing: SELECT (SELECT COUNT(0) FROM follow f WHERE f.`f_ftid` = t.`tid` ) fans, (SELECT COUNT(0) FROM history h WHERE h.h_tid = t.`tid` ) numberOfPepole, (SELECT COUNT(0) FROM videos v WHERE v.v_teacherId = t.`tid` ) videoNum FROM teachers t WHERE tid = ? 
+==> Parameters: 3(Integer)
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@541b0886]
+Returning JDBC Connection to DataSource
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c1e938e] was not registered for synchronization because synchronization is not active
+Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@1355677619 wrapping com.mysql.jdbc.JDBC4Connection@73e94194] will not be managed by Spring
+==>  Preparing: SELECT typeid,typename,f_trid FROM `type` WHERE typeid = f_trid 
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 ==> Parameters: 
+<<<<<<< HEAD
 Bound request context to thread: org.apache.catalina.connector.RequestFacade@6404f62f
 DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/images/nav/slide-btn.png]
 Looking up handler method for path /static/assets/revision/images/nav/slide-btn.png
@@ -3597,8 +3630,107 @@ Matching patterns for request [/static/assets/revision/images/hk_new_index_icons
 URI Template variables for request [/static/assets/revision/images/hk_new_index_icons3698d.png] are {}
 Mapping [/static/assets/revision/images/hk_new_index_icons3698d.png] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@c8f49b5]]] and 1 interceptor
 Last-Modified value for [/my/static/assets/revision/images/hk_new_index_icons3698d.png] is: -1
+=======
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c1e938e]
+Returning JDBC Connection to DataSource
+Requested media types are [image/webp, image/apng, image/*, */*;q=0.8] based on Accept header types and producible media types [*/*])
+No matching bean found for view name 'allteachers'
+Returning [org.thymeleaf.spring5.view.ThymeleafView@1ae290a6] based on requested media type '*/*;q=0.8'
+Rendering view [org.thymeleaf.spring5.view.ThymeleafView@1ae290a6] in DispatcherServlet with name 'dispatcherServlet'
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@131635d3
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/index.html]
+Looking up handler method for path /index.html
+Did not find handler method for [/index.html]
+Matching patterns for request [/index.html] are [/**]
+URI Template variables for request [/index.html] are {}
+Mapping [/index.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Skip CORS processing: request is from same origin
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Request method 'POST' not supported
+Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
 Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Skip CORS processing: request is from same origin
+Written [{timestamp=Sat Sep 01 11:31:21 CST 2018, status=405, error=Method Not Allowed, message=Request method 'POST' not supported, path=/yi/index.html}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/index.html]
+Looking up handler method for path /index.html
+Did not find handler method for [/index.html]
+Matching patterns for request [/index.html] are [/**]
+URI Template variables for request [/index.html] are {}
+Mapping [/index.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Skip CORS processing: request is from same origin
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Request method 'POST' not supported
+Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Skip CORS processing: request is from same origin
+Written [{timestamp=Sat Sep 01 11:31:21 CST 2018, status=405, error=Method Not Allowed, message=Request method 'POST' not supported, path=/yi/index.html}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Last-Modified value for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/yi/error] is: -1
+Written [{timestamp=Sat Sep 01 11:31:21 CST 2018, status=404, error=Not Found, message=No message available, path=/yi/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/index.html]
+Looking up handler method for path /index.html
+Did not find handler method for [/index.html]
+Matching patterns for request [/index.html] are [/**]
+URI Template variables for request [/index.html] are {}
+Mapping [/index.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Skip CORS processing: request is from same origin
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Request method 'POST' not supported
+Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Skip CORS processing: request is from same origin
+Written [{timestamp=Sat Sep 01 11:31:21 CST 2018, status=405, error=Method Not Allowed, message=Request method 'POST' not supported, path=/yi/index.html}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+<<<<<<< HEAD
 Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@4856434f
 Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 Successfully completed request
@@ -3665,35 +3797,190 @@ DispatcherServlet with name 'dispatcherServlet' processing POST request for [/my
 Looking up handler method for path /gogogo
 Returning handler method [public java.lang.String com.yihao86.controller.IndexController.index(org.springframework.ui.Model)]
 Returning cached instance of singleton bean 'indexController'
+=======
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/index.html]
+Looking up handler method for path /index.html
+Did not find handler method for [/index.html]
+Matching patterns for request [/index.html] are [/**]
+URI Template variables for request [/index.html] are {}
+Mapping [/index.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Skip CORS processing: request is from same origin
+<<<<<<< HEAD
 Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.searchAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
 Bound request context to thread: org.apache.catalina.connector.RequestFacade@4856434f
 DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/static/assets/revision/js/plugins/layer/layer.huke.css]
+=======
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Request method 'POST' not supported
+Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Skip CORS processing: request is from same origin
+Written [{timestamp=Sat Sep 01 11:31:30 CST 2018, status=405, error=Method Not Allowed, message=Request method 'POST' not supported, path=/yi/index.html}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/teacherCourse.html]
+Looking up handler method for path /teacherCourse.html
+Did not find handler method for [/teacherCourse.html]
+Matching patterns for request [/teacherCourse.html] are [/**]
+URI Template variables for request [/teacherCourse.html] are {}
+Mapping [/teacherCourse.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Last-Modified value for [/yi/teacherCourse.html] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@131635d3
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/static/assets/revision/!!css/base.v107.css,css/pgc/main.v5.css,css/681e08d.css]
+Looking up handler method for path /static/assets/revision/!!css/base.v107.css,css/pgc/main.v5.css,css/681e08d.css
+Did not find handler method for [/static/assets/revision/!!css/base.v107.css,css/pgc/main.v5.css,css/681e08d.css]
+Matching patterns for request [/static/assets/revision/!!css/base.v107.css,css/pgc/main.v5.css,css/681e08d.css] are [/**]
+URI Template variables for request [/static/assets/revision/!!css/base.v107.css,css/pgc/main.v5.css,css/681e08d.css] are {}
+Mapping [/static/assets/revision/!!css/base.v107.css,css/pgc/main.v5.css,css/681e08d.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Last-Modified value for [/yi/static/assets/revision/!!css/base.v107.css,css/pgc/main.v5.css,css/681e08d.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@131635d3
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/pgc/main.v4.js,js/681e08d.js]
+Looking up handler method for path /static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/pgc/main.v4.js,js/681e08d.js
+Did not find handler method for [/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/pgc/main.v4.js,js/681e08d.js]
+Matching patterns for request [/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/pgc/main.v4.js,js/681e08d.js] are [/**]
+URI Template variables for request [/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/pgc/main.v4.js,js/681e08d.js] are {}
+Mapping [/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/pgc/main.v4.js,js/681e08d.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Last-Modified value for [/yi/static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/pgc/main.v4.js,js/681e08d.js] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@131635d3
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@131635d3
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/static/assets/revision/images/nav/banner-btn.png]
+Looking up handler method for path /static/assets/revision/images/nav/banner-btn.png
+Did not find handler method for [/static/assets/revision/images/nav/banner-btn.png]
+Matching patterns for request [/static/assets/revision/images/nav/banner-btn.png] are [/**]
+URI Template variables for request [/static/assets/revision/images/nav/banner-btn.png] are {}
+Mapping [/static/assets/revision/images/nav/banner-btn.png] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Last-Modified value for [/yi/static/assets/revision/images/nav/banner-btn.png] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@131635d3
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css]
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
 Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
 Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
 URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+<<<<<<< HEAD
 Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@c8f49b5]]] and 1 interceptor
 Last-Modified value for [/my/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
 Releasing JDBC Connection [HikariProxyConnection@601573356 wrapping com.mysql.jdbc.JDBC4Connection@2a725900] after transaction
 Returning JDBC Connection to DataSource
 Creating new transaction with name [com.yihao86.service.impl.TypeServiceImpl.selectType]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
 Acquired Connection [HikariProxyConnection@1431008738 wrapping com.mysql.jdbc.JDBC4Connection@2a725900] for JDBC transaction
+=======
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Last-Modified value for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 Switching JDBC Connection [HikariProxyConnection@1431008738 wrapping com.mysql.jdbc.JDBC4Connection@2a725900] to manual commit
 Successfully completed request
+<<<<<<< HEAD
 Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@4856434f
 DispatcherServlet with name 'dispatcherServlet' processing GET request for [/my/error]
+=======
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/error]
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Looking up handler method for path /error
 Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
 Returning cached instance of singleton bean 'basicErrorController'
+<<<<<<< HEAD
 Last-Modified value for [/my/error] is: -1
 Bound request context to thread: org.apache.catalina.connector.RequestFacade@306a9598
 DispatcherServlet with name 'dispatcherServlet' processing POST request for [/my/gogogo]
 Looking up handler method for path /gogogo
 Returning handler method [public java.lang.String com.yihao86.controller.IndexController.index(org.springframework.ui.Model)]
 Returning cached instance of singleton bean 'indexController'
+=======
+Last-Modified value for [/yi/error] is: -1
+Written [{timestamp=Sat Sep 01 11:31:30 CST 2018, status=404, error=Not Found, message=No message available, path=/yi/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Last-Modified value for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/yi/error] is: -1
+Written [{timestamp=Sat Sep 01 11:32:01 CST 2018, status=404, error=Not Found, message=No message available, path=/yi/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/exe.html]
+Looking up handler method for path /exe.html
+Did not find handler method for [/exe.html]
+Matching patterns for request [/exe.html] are [/**]
+URI Template variables for request [/exe.html] are {}
+Mapping [/exe.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Last-Modified value for [/yi/exe.html] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@43e9c74d
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/static/assets/revision/!!css/base.v107.css,css/practice/index.v1.css,css/681e08d.css]
+Looking up handler method for path /static/assets/revision/!!css/base.v107.css,css/practice/index.v1.css,css/681e08d.css
+Did not find handler method for [/static/assets/revision/!!css/base.v107.css,css/practice/index.v1.css,css/681e08d.css]
+Matching patterns for request [/static/assets/revision/!!css/base.v107.css,css/practice/index.v1.css,css/681e08d.css] are [/**]
+URI Template variables for request [/static/assets/revision/!!css/base.v107.css,css/practice/index.v1.css,css/681e08d.css] are {}
+Mapping [/static/assets/revision/!!css/base.v107.css,css/practice/index.v1.css,css/681e08d.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Last-Modified value for [/yi/static/assets/revision/!!css/base.v107.css,css/practice/index.v1.css,css/681e08d.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@43e9c74d
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/static/assets/revision/images/practice/practice-icon.png]
+Looking up handler method for path /static/assets/revision/images/practice/practice-icon.png
+Did not find handler method for [/static/assets/revision/images/practice/practice-icon.png]
+Matching patterns for request [/static/assets/revision/images/practice/practice-icon.png] are [/**]
+URI Template variables for request [/static/assets/revision/images/practice/practice-icon.png] are {}
+Mapping [/static/assets/revision/images/practice/practice-icon.png] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Last-Modified value for [/yi/static/assets/revision/images/practice/practice-icon.png] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@43e9c74d
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/index.html]
+Looking up handler method for path /index.html
+Did not find handler method for [/index.html]
+Matching patterns for request [/index.html] are [/**]
+URI Template variables for request [/index.html] are {}
+Mapping [/index.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Skip CORS processing: request is from same origin
+<<<<<<< HEAD
 Creating new transaction with name [com.yihao86.service.impl.VideosServiceImpl.searchAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
 Creating a new SqlSession
 Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ca9010]
@@ -3701,8 +3988,15 @@ JDBC Connection [HikariProxyConnection@1431008738 wrapping com.mysql.jdbc.JDBC4C
 ==>  Preparing: SELECT * FROM `type` WHERE `f_trid`=`typeid` 
 ==> Parameters: 
 Written [{timestamp=Sat Sep 01 11:34:34 CST 2018, status=404, error=Not Found, message=No message available, path=/my/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@69670252]
+=======
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Request method 'POST' not supported
+Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 Successfully completed request
+<<<<<<< HEAD
 <==      Total: 6
 Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ca9010]
 Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ca9010]
@@ -3971,7 +4265,41 @@ Requested media types are [application/json, text/javascript, */*;q=0.01] based 
 No matching bean found for view name 'index'
 Returning [org.thymeleaf.spring5.view.ThymeleafView@31f567dd] based on requested media type '*/*;q=0.01'
 Rendering view [org.thymeleaf.spring5.view.ThymeleafView@31f567dd] in DispatcherServlet with name 'dispatcherServlet'
+=======
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Skip CORS processing: request is from same origin
+Written [{timestamp=Sat Sep 01 11:33:53 CST 2018, status=405, error=Method Not Allowed, message=Request method 'POST' not supported, path=/yi/index.html}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 Successfully completed request
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/index.html]
+Looking up handler method for path /index.html
+Did not find handler method for [/index.html]
+Matching patterns for request [/index.html] are [/**]
+URI Template variables for request [/index.html] are {}
+Mapping [/index.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Skip CORS processing: request is from same origin
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Request method 'POST' not supported
+Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Skip CORS processing: request is from same origin
+Written [{timestamp=Sat Sep 01 11:33:53 CST 2018, status=405, error=Method Not Allowed, message=Request method 'POST' not supported, path=/yi/index.html}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
+Successfully completed request
+<<<<<<< HEAD
 Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@57a0be99
 HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2c1062de
 HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@30395987
@@ -3983,16 +4311,111 @@ HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2d24c448
 HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6aff8e97
 HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@64244557
 HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+=======
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Last-Modified value for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/yi/error] is: -1
+Written [{timestamp=Sat Sep 01 11:33:53 CST 2018, status=404, error=Not Found, message=No message available, path=/yi/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/index.html]
+Looking up handler method for path /index.html
+Did not find handler method for [/index.html]
+Matching patterns for request [/index.html] are [/**]
+URI Template variables for request [/index.html] are {}
+Mapping [/index.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Skip CORS processing: request is from same origin
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Request method 'POST' not supported
+Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Skip CORS processing: request is from same origin
+Written [{timestamp=Sat Sep 01 11:33:53 CST 2018, status=405, error=Method Not Allowed, message=Request method 'POST' not supported, path=/yi/index.html}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
 HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
 HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
+HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/index.html]
+Looking up handler method for path /index.html
+Did not find handler method for [/index.html]
+Matching patterns for request [/index.html] are [/**]
+URI Template variables for request [/index.html] are {}
+Mapping [/index.html] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Skip CORS processing: request is from same origin
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Resolving exception from handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Request method 'POST' not supported
+Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing POST request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Skip CORS processing: request is from same origin
+Written [{timestamp=Sat Sep 01 11:35:24 CST 2018, status=405, error=Method Not Allowed, message=Request method 'POST' not supported, path=/yi/index.html}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Bound request context to thread: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css]
+Looking up handler method for path /static/assets/revision/js/plugins/layer/layer.huke.css
+Did not find handler method for [/static/assets/revision/js/plugins/layer/layer.huke.css]
+Matching patterns for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are [/**]
+URI Template variables for request [/static/assets/revision/js/plugins/layer/layer.huke.css] are {}
+Mapping [/static/assets/revision/js/plugins/layer/layer.huke.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[class path resource [templates/], ServletContext resource [/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@748115d8]]] and 1 interceptor
+Last-Modified value for [/yi/static/assets/revision/js/plugins/layer/layer.huke.css] is: -1
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
+Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@43e9c74d
+DispatcherServlet with name 'dispatcherServlet' processing GET request for [/yi/error]
+Looking up handler method for path /error
+Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+Returning cached instance of singleton bean 'basicErrorController'
+Last-Modified value for [/yi/error] is: -1
+Written [{timestamp=Sat Sep 01 11:35:24 CST 2018, status=404, error=Not Found, message=No message available, path=/yi/static/assets/revision/js/plugins/layer/layer.huke.css}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4ee0d381]
+Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+Successfully completed request
 HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
 HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
 HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
 Application shutdown requested.
+<<<<<<< HEAD
 Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@46af4009: startup date [Sat Sep 01 11:34:16 CST 2018]; root of context hierarchy
+=======
+Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ecffdf0: startup date [Sat Sep 01 11:14:43 CST 2018]; root of context hierarchy
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
 Returning cached instance of singleton bean 'lifecycleProcessor'
+<<<<<<< HEAD
 Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@190c3d8f: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,myApplication,org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory,indexController,testController,typeController,videosController,typeServiceImpl,videosServiceImpl,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,org.springframework.transaction.config.internalTransactionalEventListenerFactory,org.springframework.aop.config.internalAutoProxyCreator,typeDao,videosDao,org.springframework.boot.autoconfigure.AutoConfigurationPackages,org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration,org.springframework.boot.autoconfigure.condition.BeanTypeRegistry,propertySourcesPlaceholderConfigurer,org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration,websocketContainerCustomizer,org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration,org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat,tomcatServletWebServerFactory,org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration,servletWebServerFactoryCustomizer,tomcatServletWebServerFactoryCustomizer,server-org.springframework.boot.autoconfigure.web.ServerProperties,org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor,org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata,webServerFactoryCustomizerBeanPostProcessor,errorPageRegistrarBeanPostProcessor,org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration,dispatcherServlet,mainDispatcherServletPathProvider,spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties,org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration,dispatcherServletRegistration,org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration,org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration,defaultValidator,methodValidationPostProcessor,org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration,error,beanNameViewResolver,org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration,conventionErrorViewResolver,org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration,errorAttributes,basicErrorController,errorPageCustomizer,preserveErrorControllerTargetClassPostProcessor,spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties,org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration,faviconHandlerMapping,faviconRequestHandler,org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration,requestMappingHandlerAdapter,requestMappingHandlerMapping,mvcConversionService,mvcValidator,mvcContentNegotiationManager,mvcPathMatcher,mvcUrlPathHelper,viewControllerHandlerMapping,beanNameHandlerMapping,resourceHandlerMapping,mvcResourceUrlProvider,defaultServletHandlerMapping,mvcUriComponentsContributor,httpRequestHandlerAdapter,simpleControllerHandlerAdapter,handlerExceptionResolver,mvcViewResolver,mvcHandlerMappingIntrospector,org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter,defaultViewResolver,viewResolver,welcomePageHandlerMapping,requestContextFilter,org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration,hiddenHttpMethodFilter,httpPutFormContentFilter,org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari,dataSource,org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration$Hikari,org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration,org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration,org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration,hikariPoolDataSourceMetadataProvider,org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration,org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker,org.springframework.boot.autoconfigure.jdbc.DataSourceInitializationConfiguration,dataSourceInitializerPostProcessor,org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties,org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration,sqlSessionFactory,sqlSessionTemplate,mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties,com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration,pageHelperProperties,pagehelper-com.github.pagehelper.autoconfigure.PageHelperProperties,org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration,mbeanExporter,objectNamingStrategy,mbeanServer,org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,springApplicationAdminRegistrar,org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration,org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration,persistenceExceptionTranslationPostProcessor,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration,standardJacksonObjectMapperBuilderCustomizer,spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration,jacksonObjectMapperBuilder,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration,parameterNamesModule,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration,jacksonObjectMapper,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,jsonComponentModule,org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration,stringHttpMessageConverter,spring.http.encoding-org.springframework.boot.autoconfigure.http.HttpEncodingProperties,org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration,mappingJackson2HttpMessageConverter,org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration,org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration,messageConverters,org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$JacksonCodecConfiguration,jacksonCodecCustomizer,org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration,org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration,spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties,org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration$JdbcTemplateConfiguration,jdbcTemplate,org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration$NamedParameterJdbcTemplateConfiguration,namedParameterJdbcTemplate,org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,spring.jdbc-org.springframework.boot.autoconfigure.jdbc.JdbcProperties,org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration,spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafJava8TimeDialect,java8TimeDialect,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebMvcConfiguration$ThymeleafViewResolverConfiguration,thymeleafViewResolver,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebMvcConfiguration,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafDefaultConfiguration,templateEngine,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration,defaultTemplateResolver,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration,spring.thymeleaf-org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties,org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration,transactionManager,org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration,org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration,transactionTemplate,org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration,platformTransactionManagerCustomizers,spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties,org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration,restTemplateBuilder,org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration$TomcatWebServerFactoryCustomizerConfiguration,tomcatWebServerFactoryCustomizer,org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration,org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,characterEncodingFilter,localeCharsetMappingsCustomizer,org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration,multipartConfigElement,multipartResolver,spring.servlet.multipart-org.springframework.boot.autoconfigure.web.servlet.MultipartProperties,org.springframework.boot.devtools.autoconfigure.DevToolsDataSourceAutoConfiguration,inMemoryDatabaseShutdownExecutor,org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration,classPathFileSystemWatcher,classPathRestartStrategy,hateoasObjenesisCacheDisabler,fileSystemWatcherFactory,conditionEvaluationDeltaLoggingListener,org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$LiveReloadConfiguration,liveReloadServer,optionalLiveReloadServer,liveReloadServerEventListener,org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration,spring.devtools-org.springframework.boot.devtools.autoconfigure.DevToolsProperties]; root of factory hierarchy
+=======
+Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@78408082: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,myApplication,org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory,teachersController,testController,videosController,teachersServiceImpl,videosServiceImpl,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,org.springframework.transaction.config.internalTransactionalEventListenerFactory,org.springframework.aop.config.internalAutoProxyCreator,teachersDao,videosDao,org.springframework.boot.autoconfigure.AutoConfigurationPackages,org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration,org.springframework.boot.autoconfigure.condition.BeanTypeRegistry,propertySourcesPlaceholderConfigurer,org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration,websocketContainerCustomizer,org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration,org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat,tomcatServletWebServerFactory,org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration,servletWebServerFactoryCustomizer,tomcatServletWebServerFactoryCustomizer,server-org.springframework.boot.autoconfigure.web.ServerProperties,org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor,org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata,webServerFactoryCustomizerBeanPostProcessor,errorPageRegistrarBeanPostProcessor,org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration,dispatcherServlet,mainDispatcherServletPathProvider,spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties,org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration,dispatcherServletRegistration,org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration,org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration,defaultValidator,methodValidationPostProcessor,org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration,error,beanNameViewResolver,org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration,conventionErrorViewResolver,org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration,errorAttributes,basicErrorController,errorPageCustomizer,preserveErrorControllerTargetClassPostProcessor,spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties,org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration,faviconHandlerMapping,faviconRequestHandler,org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration,requestMappingHandlerAdapter,requestMappingHandlerMapping,mvcConversionService,mvcValidator,mvcContentNegotiationManager,mvcPathMatcher,mvcUrlPathHelper,viewControllerHandlerMapping,beanNameHandlerMapping,resourceHandlerMapping,mvcResourceUrlProvider,defaultServletHandlerMapping,mvcUriComponentsContributor,httpRequestHandlerAdapter,simpleControllerHandlerAdapter,handlerExceptionResolver,mvcViewResolver,mvcHandlerMappingIntrospector,org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter,defaultViewResolver,viewResolver,welcomePageHandlerMapping,requestContextFilter,org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration,hiddenHttpMethodFilter,httpPutFormContentFilter,org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari,dataSource,org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration$Hikari,org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration,org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration,org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration,hikariPoolDataSourceMetadataProvider,org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration,org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker,org.springframework.boot.autoconfigure.jdbc.DataSourceInitializationConfiguration,dataSourceInitializerPostProcessor,org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties,org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration,sqlSessionFactory,sqlSessionTemplate,mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties,org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration,mbeanExporter,objectNamingStrategy,mbeanServer,org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,springApplicationAdminRegistrar,org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration,org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration,persistenceExceptionTranslationPostProcessor,org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration,gsonBuilder,gson,standardGsonBuilderCustomizer,spring.gson-org.springframework.boot.autoconfigure.gson.GsonProperties,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration,standardJacksonObjectMapperBuilderCustomizer,spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration,jacksonObjectMapperBuilder,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration,parameterNamesModule,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration,jacksonObjectMapper,org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,jsonComponentModule,org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration,stringHttpMessageConverter,spring.http.encoding-org.springframework.boot.autoconfigure.http.HttpEncodingProperties,org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration,mappingJackson2HttpMessageConverter,org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration,org.springframework.boot.autoconfigure.http.GsonHttpMessageConvertersConfiguration,org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration,messageConverters,org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$JacksonCodecConfiguration,jacksonCodecCustomizer,org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration,org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration,spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties,org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration$JdbcTemplateConfiguration,jdbcTemplate,org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration$NamedParameterJdbcTemplateConfiguration,namedParameterJdbcTemplate,org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,spring.jdbc-org.springframework.boot.autoconfigure.jdbc.JdbcProperties,org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration,spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafJava8TimeDialect,java8TimeDialect,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebMvcConfiguration$ThymeleafViewResolverConfiguration,thymeleafViewResolver,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebMvcConfiguration,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafDefaultConfiguration,templateEngine,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration,defaultTemplateResolver,org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration,spring.thymeleaf-org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties,org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration,transactionManager,org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration,org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration,transactionTemplate,org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration,platformTransactionManagerCustomizers,spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties,org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration,restTemplateBuilder,org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration$TomcatWebServerFactoryCustomizerConfiguration,tomcatWebServerFactoryCustomizer,org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration,org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,characterEncodingFilter,localeCharsetMappingsCustomizer,org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration,multipartConfigElement,multipartResolver,spring.servlet.multipart-org.springframework.boot.autoconfigure.web.servlet.MultipartProperties,org.springframework.boot.devtools.autoconfigure.DevToolsDataSourceAutoConfiguration,inMemoryDatabaseShutdownExecutor,org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration,classPathFileSystemWatcher,classPathRestartStrategy,hateoasObjenesisCacheDisabler,fileSystemWatcherFactory,conditionEvaluationDeltaLoggingListener,org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$LiveReloadConfiguration,liveReloadServer,optionalLiveReloadServer,liveReloadServerEventListener,org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration,spring.devtools-org.springframework.boot.devtools.autoconfigure.DevToolsProperties]; root of factory hierarchy
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Invoking destroy() on bean with name 'classPathFileSystemWatcher'
 Invoking destroy() on bean with name 'inMemoryDatabaseShutdownExecutor'
 Invoking destroy() on bean with name 'springApplicationAdminRegistrar'
@@ -4004,7 +4427,13 @@ Retrieved dependent beans for bean 'mvcValidator': [requestMappingHandlerAdapter
 Retrieved dependent beans for bean 'requestMappingHandlerAdapter': [mvcUriComponentsContributor]
 Invoking destroy() on bean with name 'mvcValidator'
 Invoking destroy() on bean with name 'defaultValidator'
+<<<<<<< HEAD
 Retrieved dependent beans for bean 'sqlSessionTemplate': [videosDao, typeDao]
+=======
+Retrieved dependent beans for bean 'sqlSessionTemplate': [teachersDao, videosDao]
+Retrieved dependent beans for bean 'teachersDao': [teachersServiceImpl]
+Retrieved dependent beans for bean 'teachersServiceImpl': [teachersController]
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Retrieved dependent beans for bean 'videosDao': [videosServiceImpl]
 Retrieved dependent beans for bean 'videosServiceImpl': [indexController, typeController, videosController]
 Retrieved dependent beans for bean 'typeDao': [typeServiceImpl]
@@ -4014,6 +4443,7 @@ Retrieved dependent beans for bean 'sqlSessionFactory': [com.github.pagehelper.a
 Invoking destroy method 'close' on bean with name 'dataSource'
 HikariPool-1 - Shutdown initiated...
 HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+<<<<<<< HEAD
 HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@2a725900: (connection evicted)
 HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@2c1062de: (connection evicted)
 HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@30395987: (connection evicted)
@@ -4024,6 +4454,18 @@ HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@7d7eda10: (conn
 HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@2d24c448: (connection evicted)
 HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@6aff8e97: (connection evicted)
 HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@64244557: (connection evicted)
+=======
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@73e94194: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@1c9a5463: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@70d9ab4f: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5c31e83: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@3bbcae5a: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@3d457c76: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@619c0562: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@23b385db: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@37dd5fc4: (connection evicted)
+HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@139b9f42: (connection evicted)
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
 HikariPool-1 - Shutdown completed.
 Invoking destroy() on bean with name 'characterEncodingFilter'

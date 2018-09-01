@@ -156,10 +156,4 @@ public class TestController {
         System.out.println(pname.size());
         return pname;
     }
-    
-    @RequestMapping("/hello")
-    public String go() {
-    	
-    	return "type";
-    }
 }
