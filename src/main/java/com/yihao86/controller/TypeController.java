@@ -30,7 +30,7 @@ public class TypeController {
 
 	@RequestMapping("/findTyeps")
 	public String queryTyeps(String f_trid, Model mod, String typeId) {		
-		System.out.println("1111111111111111111");
+		System.out.println("11111111111111");
 		String ftrid = f_trid == null ? "1" : f_trid;
 		List<Type> flist = ts.selectType();
 		mod.addAttribute("flist", flist);
