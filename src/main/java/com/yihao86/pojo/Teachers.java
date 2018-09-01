@@ -24,4 +24,6 @@ public class Teachers {
 	private String t_icard;
 	
 	private int t_disable;
+	
+	private int t_occupation;
 }

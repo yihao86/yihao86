@@ -3,13 +3,13 @@ package com.yihao86.controller;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yihao86.pojo.Teachers;
+import com.yihao86.pojo.Type;
 import com.yihao86.pojo.Videos;
 import com.yihao86.service.TeachersService;
 
@@ -20,16 +20,12 @@ public class TeachersController {
 	private TeachersService ts;
 	
 	@RequestMapping("clickAllTeacher")
-	public String allTeachers(Model model,String tid) {
-		List<Teachers> tlist = ts.findAllTeacher();
-		//List<Videos> vlist = ts.teacherVideo(Integer.valueOf(tid));
-		//查看当前老师的成就信息
-		//Map<String,Object> achievement = ts.achievement(Integer.valueOf(tid));
-		//model.addAttribute("vlist", vlist);
-		//model.addAttribute("achievement", achievement);
-		List<String> path = ts.findAllAchievement();
-		model.addAttribute("tlist", tlist);
-		model.addAttribute("path", path);
+	public String allTeachers(Model model,String tid,String t_occupation) {
+		List<Map<String,Object>> map = ts.findAllAchievement(Integer.valueOf(t_occupation));
+		List<Type> typelist = ts.teacherType();
+		model.addAttribute("map", map);
+		model.addAttribute("typelist", typelist);
+		model.addAttribute("t_occupation", t_occupation);
 		return "allteachers";
 	}
 	

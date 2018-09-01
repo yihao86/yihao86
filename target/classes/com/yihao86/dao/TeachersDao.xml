@@ -5,6 +5,9 @@
   <mapper namespace="com.yihao86.dao.TeachersDao">
   <select id="findAllTeacher"  resultType="Teachers">
     SELECT * FROM teachers WHERE t_disable = 0
+    <if test="t_occupation != 0 and t_occupation != null">
+    	AND t_occupation=#{t_occupation}
+    </if>
   </select>
   
   <select id="findOneTeacher" resultType="Teachers">
@@ -14,6 +17,7 @@
   <!-- 拿到当前老师的所有视频 -->
   <select id="teacherVideo" resultType="Videos">
   	SELECT vid,v_name,v_uploadtime,v_imgs FROM videos WHERE v_disable = 0 AND v_teacherId =#{v_teacherId}
+  	ORDER BY v_uploadtime DESC
   </select>
   
   <!-- 当前的观看人数 -->
@@ -31,10 +35,20 @@
   
   <!-- 查询当前教师成就信息-->
   <select id="achievement" resultType="map">
-	SELECT COUNT(DISTINCT f_uid) fans,COUNT(DISTINCT h_uid) numberOfPepole,COUNT(DISTINCT vid) videoNum
-	FROM follow f,history h ,videos v
-	WHERE f.f_ftid = h.h_tid 
-	AND f.f_ftid = v.v_teacherId  
-	AND  f_ftid = #{f_ftid}
+	SELECT (SELECT COUNT(0) FROM follow f WHERE f.`f_ftid` = t.`tid` ) fans,
+	(SELECT COUNT(0) FROM history h WHERE h.h_tid = t.`tid` ) numberOfPepole,
+	(SELECT COUNT(0) FROM videos v WHERE v.v_teacherId = t.`tid` ) videoNum
+	FROM teachers t
+	WHERE tid = #{tid}
+  </select>
+  
+  <!-- 查询所有职业 -->
+  <select id="teacherType" resultType="Type">
+  	SELECT typeid,typename,f_trid FROM `type` WHERE typeid = f_trid
+  </select>
+  
+  <!-- 查询老师的职业 -->
+  <select id="oneType" resultType="String">
+  	SELECT typename FROM teachers tc,`type` ty WHERE tc.t_occupation = ty.typeid AND tid = #{tid}
   </select>
 </mapper>

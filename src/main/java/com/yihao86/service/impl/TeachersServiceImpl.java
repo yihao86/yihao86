@@ -1,6 +1,7 @@
 package com.yihao86.service.impl;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.yihao86.dao.TeachersDao;
 import com.yihao86.pojo.Teachers;
+import com.yihao86.pojo.Type;
 import com.yihao86.pojo.Videos;
 import com.yihao86.service.TeachersService;
 
@@ -19,22 +21,23 @@ public class TeachersServiceImpl implements TeachersService {
 	private TeachersDao tdao;
 
 	@Override
-	public List<Teachers> findAllTeacher() {
-		return tdao.findAllTeacher();
+	public List<Teachers> findAllTeacher(int typeid) {
+		return tdao.findAllTeacher(typeid);
 	}
 	
 	@Override
-	public List<String> findAllAchievement(){
-		List<Teachers> tlist = tdao.findAllTeacher();
-		List<String> list = new ArrayList<>();
+	public List<Map<String,Object>> findAllAchievement(int t_occupation){
+		List<Teachers> tlist = tdao.findAllTeacher(t_occupation);
+		List<Map<String,Object>> list = new ArrayList<>();
 		for (Teachers t : tlist) {
+			Map<String,Object> map = new HashMap<>();
 			List<Videos> vlist = tdao.teacherVideo(t.getTid());
-			for (Videos v : vlist){
-				if(vlist.size() < 2) {
-					String path = v.getV_imgs();
-					list.add(path);
-				}
-			}
+			String typename = tdao.oneType(t.getTid());
+			map = tdao.achievement(t.getTid());
+			map.put("vlist", vlist);
+			map.put("Teachers", t);
+			map.put("typename", typename);
+			list.add(map);
 		}
 		return list;
 	} 
@@ -69,6 +72,24 @@ public class TeachersServiceImpl implements TeachersService {
 	public Map<String, Object> achievement(int tid) {
 		return tdao.achievement(tid);
 	}
+
+	@Override
+	public List<Type> teacherType() {
+		return tdao.teacherType();
+	}
+
+	/*@Override
+	public List<Map<String, Object>> findTeacherAchievement(int tid) {
+		List<Teachers> tlist = tdao.findAllTeacher(0);
+		List<Map<String, Object>> list = new ArrayList<>();
+		for (Teachers t : tlist) {
+			String typename = tdao.oneType(tid);
+			Map<String, Object> map = tdao.achievement(tid);
+			map.put("typename", typename);
+			list.add(map);
+		}
+		return list;
+	}*/
 	
 	
 

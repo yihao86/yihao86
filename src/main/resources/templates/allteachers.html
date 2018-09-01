@@ -19,6 +19,7 @@ xmlns:th="www.thymeleay.org">
     <meta property="wb:webmaster" content="c2797be5e9930c26">
     <link href="static/assets/revision/!!css/base.v107.css,css/teacher/index.v2.css,css/681e08d.css?v=681"
           rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script>
         var Url = {};
         var Param = {};
@@ -153,64 +154,39 @@ xmlns:th="www.thymeleay.org">
             <p>带你一起学</p></div>
         <div class="teacher-m layout-cont">
             <div class="teacher-nav">
-                <div class="nav-l"><!--                    --><a href="curriculum_num-0-1/index.html"
-                                                                 style='color:#ff7700'>全部讲师</a></div>
-                <div class="nav-m"><a href="curriculum_num-5-1/index.html">
-                    图像合成 </a><a href="curriculum_num-7-1/index.html">
-                    字体设计 </a><a href="curriculum_num-8-1/index.html">
-                    产品精修 </a><a href="curriculum_num-9-1/index.html">
-                    人像精修 </a><a href="curriculum_num-10-1/index.html">
-                    摄影后期 </a><a href="curriculum_num-11-1/index.html">
-                    C4D </a><a href="curriculum_num-12-1/index.html">
-                    动效 </a><a href="curriculum_num-13-1/index.html">
-                    软件入门 </a><a href="curriculum_num-14-1/index.html">
-                    UI图标 </a><a href="curriculum_num-15-1/index.html">
-                    手绘插画 </a><a href="curriculum_num-16-1/index.html">
-                    鼠绘 </a><a href="curriculum_num-17-1/index.html">
-                    排版配色 </a><a href="curriculum_num-19-1/index.html">
-                    LOGO设计 </a><a href="curriculum_num-20-1/index.html">
-                    包装设计 </a><a href="curriculum_num-21-1/index.html">
-                    PPT </a><a href="curriculum_num-22-1/index.html">
-                    职业发展 </a><a href="curriculum_num-23-1/index.html">
-                    影视动画 </a><a href="curriculum_num-24-1/index.html">
-                    游戏三维 </a><a href="curriculum_num-25-1/index.html">
-                    Word </a><a href="curriculum_num-26-1/index.html">
-                    Excel </a><a href="curriculum_num-27-1/index.html">
-                    ui </a><a href="curriculum_num-28-1/index.html">
-                    视觉营销 </a><a href="curriculum_num-29-1/index.html">
-                    PC端店铺装修 </a><a href="curriculum_num-30-1/index.html">
-                    服装设计 </a><a href="curriculum_num-31-1/index.html">
-                    手机摄影 </a><a href="curriculum_num-32-1/index.html">
-                    思维导图 </a></div>
+                <div class="nav-l">
+                	<a href="clickAllTeacher?t_occupation=0" th:style="${t_occupation} eq 0 ? 'color:#ff7700' : ''" id="aaa">全部讲师</a>
+                </div>
+                <div class="nav-m">
+                	<a th:each="typelist,tl:${typelist}" th:href="@{'clickAllTeacher?t_occupation='+${typelist.typeid}}" th:text="${typelist.typename}" 
+                	th:style="${typelist.typeid} eq ${t_occupation} ? 'color:#ff7700' : ''" ></a>
+                </div>
             </div>
             
-            
-            
-            
-            <div th:each="teachers,t:${tlist}"  class="teacher-con">
-                <div class="list clearfix">
-                    <div class="teacher-avatar fl"><a th:href="@{'clickOneTeacher?tid='+${teachers.tid}}" target="_blank">
-                    	<img th:src="'http://localhost:9352/video/'+${teachers.t_photo}"></a>
+            <div th:each="teachers,t:${map}"   class="teacher-con">
+                <div class="list clearfix" >
+                    <div class="teacher-avatar fl"><a th:href="@{'clickOneTeacher?tid='+${teachers.Teachers.tid}}" target="_blank">
+                    	<img th:src="'http://localhost:9352/video/'+${teachers.Teachers.t_photo}"></a>
                     </div>
-                    <div class="teacher-info fl">
+                    
+                   <div  class="teacher-info fl">
                         <div class="teacher-name">
-                        	<a th:href="@{'clickOneTeacher?tid='+${teachers.tid}}" target="_blank" th:text="${teachers.t_name}">薛奔<i></i></a>
+                        	<a th:href="@{'clickOneTeacher?tid='+${teachers.Teachers.tid}}" target="_blank" th:text="${teachers.Teachers.t_name}">薛奔<i></i></a>
                         </div>
-                        <p class="speciality"> 擅长：<span></span></p>
-                        <p class="num"><span>课程数 </span><span>学习人数 </span></p>
-                        <p class="con" th:text="'http://localhost:9352/video/'+${teachers.t_abstract}">
+                        <p class="speciality"> 擅长：<span th:text="${teachers.typename}"></span></p>
+                        <p class="num"><span th:text="'课程数 :'+${teachers.videoNum}"> </span><span th:text="'学习人数 :'+${teachers.numberOfPepole}">学习人数 </span></p>
+                        <p class="con" th:text="${teachers.Teachers.t_abstract}">
                         </p>
                         <div class="btn" data-id="993" style="padding-top: 12px; display: inline-block;">
                         	<a href="javascript:;" onclick='toLogin()' class='follow'>关注</a>
                         </div>
-                    </div>
+                    </div> 
                     
                     
-                    <div th:each="imgpath,path:${path}" th:if="${path.index < 2}" class="teacher-video fl">
+                    <div th:each="imgpath,map:${teachers.vlist}" th:if="${map.index < 2}" class="teacher-video fl">
                     	<a href="" target="_blank">
                         	<div class="show-img">
-                        		<img class="lazy"
-                                 src="'http://localhost:9352/video/'+${imgpath[path.index]}">
+                        		<img class="lazy" th:src="'http://localhost:9352/video/'+${imgpath.v_imgs}">
                                  <span class="time-length">11分15秒</span>
                              </div>
                         	<div class="show-mask">

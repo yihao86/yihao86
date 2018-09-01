@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Map;
 
 import com.yihao86.pojo.Teachers;
+import com.yihao86.pojo.Type;
 import com.yihao86.pojo.Videos;
 
 public interface TeachersService {
 
-	List<Teachers> findAllTeacher();
+	List<Teachers> findAllTeacher(int typeid);
 	
 	Teachers findOneTeacher(int tid);
 	
@@ -24,5 +25,13 @@ public interface TeachersService {
 	//查看当前老师的学习总次数
 	int total(int tid);
 	
-	List<String> findAllAchievement();
+	
+	List<Map<String,Object>> findAllAchievement(int t_occupation);
+	
+	//查看老师页面的职业
+	List<Type> teacherType();
+	
+	//查询所有老师的成就
+	//List<Map<String, Object>> findTeacherAchievement(int tid);
+	
 }

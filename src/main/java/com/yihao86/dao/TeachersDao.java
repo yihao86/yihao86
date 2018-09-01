@@ -6,11 +6,12 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Param;
 
 import com.yihao86.pojo.Teachers;
+import com.yihao86.pojo.Type;
 import com.yihao86.pojo.Videos;
 
 public interface TeachersDao {
 	
-	List<Teachers> findAllTeacher();
+	List<Teachers> findAllTeacher(@Param("t_occupation") int typeid);
 	
 	Teachers findOneTeacher(@Param("tid") int tid);
 	
@@ -21,9 +22,15 @@ public interface TeachersDao {
 	int viewingNumber(@Param("h_vid") int vid);
 	
 	//查看当前老师的成就信息
-	Map<String,Object> achievement(@Param("f_ftid") int tid);
+	Map<String,Object> achievement(@Param("tid") int tid);
 	
 	//查看当前老师的成就信息
 	int total(@Param("h_tid") int tid);
+	
+	//查看老师页面的职业
+	List<Type> teacherType();
+	
+	//查看老师职业
+	String oneType(@Param("tid") int tid);
 
 }

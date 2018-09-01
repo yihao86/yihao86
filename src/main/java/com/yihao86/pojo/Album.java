@@ -13,6 +13,8 @@ public class Album {
 	
 	private int a_typeId;
 	
+	private int a_teacherId;
+	
 	private String a_abstract;
 	
 }
