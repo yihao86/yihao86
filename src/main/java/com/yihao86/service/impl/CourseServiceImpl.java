@@ -58,8 +58,7 @@ public class CourseServiceImpl implements CourseService {
 	        for (Videos videos :vlist) {
 				System.out.println(videos.getV_vpath());
 		    }	
-		}		
-			
+		}	
 		return map;
 	}
 
