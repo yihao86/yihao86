@@ -21,7 +21,7 @@ a,button{cursor:pointer}
 img{border:none}
 b,em,h1,h2,h3,h4,h5,h6,strong{font-weight:700}
 a,a:hover,del,ins,s,u{text-decoration:none}
-body,button,input,keygen,legend,select,textarea{outline:0;color:#333;font:14px/1 '微软雅黑',Microsoft YaHei,Arial,Verdana,\5b8b\4f53}
+body,button,input,keygen,legend,select,textarea{outline:0;color:#333;font:14px/1 '寰蒋闆呴粦',Microsoft YaHei,Arial,Verdana,\5b8b\4f53}
 body{min-width:1200px;background:#fff;overflow-x:hidden}
 a,a:hover{color:#666;text-decoration:none}
 li,ul{list-style-type:none}
@@ -38,11 +38,11 @@ a,a:hover{color:#666}
 .layout-cont{width:1240px;margin:0 auto}
 .block-bg{background:#fafafa}
 .overhiden{overflow:hidden}
-/*弹窗功用样式部分*/
+/*寮圭獥鍔熺敤鏍峰紡閮ㄥ垎*/
 .hkt-win{width:100%;height:100%;position:fixed;left:0;top:0;background:rgba(0,0,0,0.4);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);z-index:1000;overflow:hidden}
 .hkt-win .hkt-mask{display:table;table-layout:fixed;width:100%;height:100%}
 .hkt-win .hkt-cell{display:table-cell;width:100%;height:100%;vertical-align:middle;padding:10px}
-/*公共提示弹窗*/
+/*鍏叡鎻愮ず寮圭獥*/
 .comments-popup{margin:0 auto;width:580px;background:#fff;-webkit-border-radius:2px;border-radius:2px;position:relative;overflow:hidden}
 .comments-popup .close-btn{position:absolute;top:14px;right:14px;display:block;width:15px;height:15px;background:url(../../../../images/base-icon.v17.png) no-repeat -69px -493px;cursor:pointer}
 .comments-popup .popup-title{height:47px;border-bottom:1px #c1c1c1 solid;text-align:center}
@@ -52,16 +52,16 @@ a,a:hover{color:#666}
 .comments-popup .but-box{margin-top:15px;text-align:center;padding-bottom:20px}
 .comments-popup .but-box .rm-but{display:inline-block;margin:0 5px;width:86px;height:40px;-webkit-border-radius:2px;border-radius:2px;background:#f0efed;color:#666;text-align:center;font-size:18px;line-height:40px;-webkit-transition:.2s;-o-transition:.2s;transition:.2s;cursor:pointer}
 .comments-popup .but-box .rm-but.sure-btn{background:#f8d447;color:#333}
-/*默认缺省页*/
+/*榛樿缂虹渷椤�*/
 .default-null-page{padding:40px;text-align:center}
 .default-null-page p{font-size:16px;margin-top:30px;color:#999}
 #body-container{position:relative;min-height:100%;padding-bottom:186px;-webkit-box-sizing:border-box;box-sizing:border-box}
-/*== 弹窗功用样式部分 end==*/
+/*== 寮圭獥鍔熺敤鏍峰紡閮ㄥ垎 end==*/
 
 
 /*==header end==*/
 /*flowItem*/
-/*列表流 最新修改于6-227*/
+/*鍒楄〃娴� 鏈�鏂颁慨鏀逛簬6-227*/
 .flow-list{margin-bottom:-20px;margin-right:-20px;width:104% \9}
 .flow-list .flow-item{position:relative;width:295px;margin:0 20px 20px 0}
 .flow-list .flow-item:hover:after{width:100%}
@@ -107,7 +107,7 @@ a,a:hover{color:#666}
 .flow-list .flow-item .info-tabs .tabs-sp.disc-num:before{width:19px;background-position:-238px -403px}
 .flow-list .flow-item .info-tabs .other-sp{font-size:14px;color:#999;height: 14px;}
 
-/* 新图片流tag颜色 */
+/* 鏂板浘鐗囨祦tag棰滆壊 */
 .imgshow-m .list .img-data .class-type.type-words{background:#F5C607!important}
 .imgshow-m .list .img-data .class-type.type-poster{background:#FF7C00!important}
 .imgshow-m .list .img-data .class-type.type-sysn{background:#40B0FF!important}
@@ -144,9 +144,9 @@ a,a:hover{color:#666}
 .flow-list .flow-item .item-info.uhome-page .time-tips:after{content:'';display:block;width:0;height:0;border-top:10px solid #ffd500;border-right:8px solid transparent;position:absolute;left:0;bottom:-10px}
 .flow-list .flow-item .info-tabs .tabs-sp.good-num{padding-left:16px}
 .flow-list .flow-item .info-tabs .tabs-sp.good-num:before{content:'';height:14px;width:14px;display:block;background:url(../../../../images/thumbs-like.png) no-repeat;position:absolute;left:0;top:0}
-/*新添加结束*/
+/*鏂版坊鍔犵粨鏉�*/
 /*==flowItem end ==*/
-/*侧边悬浮*/
+/*渚ц竟鎮诞*/
 .fixed-bar{position:fixed;bottom:20%;right:50%;margin-right:-750px;z-index:999}
 .fixed-bar .fixed-box{position:relative;width:60px;height:60px;border:1px solid #eee;border-top:0;background:#fff}
 .fixed-bar .fixed-box.first-child{border-top:1px solid #eee}
@@ -192,7 +192,7 @@ a,a:hover{color:#666}
 .fixed-bar .fixed-box .box-drop .app-m .m-cj p{line-height:16px;font-size:12px;color:#666;text-align:center;padding:3px 0}
 .fixed-bar .fixed-box .box-drop .app-m .b-cj{margin:6px auto 0;width:20px;height:20px;border-radius:10px;background:#ffee98}
 .fixed-bar .fixed-box .box-drop .app-m .m-cj .code-img{width: 110px;height: 110px;margin:0 auto;background: url(../../../../images/base-icon.v17.png) -376px -410px;}
-/*vip入口*/
+/*vip鍏ュ彛*/
 .fixed-bar .active-box{width: 97px;height: 115px;position: absolute;left:-20px;top: -120px;background: url(../../../../images/base-icon.v17.png) -327px -198px;-webkit-animation: activeBox 4s linear infinite;animation: activeBox 4s linear infinite;-webkit-transform: scale(.8);transform: scale(.8);}
 .fixed-bar .active-box.vip{background-position: -424px -198px;}
 .fixed-bar .active-box a{display: block;height: 100%;}
@@ -211,15 +211,15 @@ a,a:hover{color:#666}
     70%{-webkit-transform: scale(.8);transform: scale(.8);}
 }
 
-/*==侧边悬浮==*/
-/*分页*/
+/*==渚ц竟鎮诞==*/
+/*鍒嗛〉*/
 .page-list{text-align:center;margin:40px 0}
 .page-list a.page_click_class{display:inline-block;width:32px;height:32px;border:1px solid #c1c1c1;text-align:center;line-height:30px;margin:0 4px;font-size:12px;vertical-align:middle}
 .page-list a.next{width:60px}
 .page-list a.prev{width:60px}
 .page-list a:hover,.page-list a.on{background:#ffd200;border-color:#ffd200}
-/*==分页==*/
-/*导航栏开始*/
+/*==鍒嗛〉==*/
+/*瀵艰埅鏍忓紑濮�*/
 .vip-drop-titles{height:60px;color:#ffa900;font-size:18px;font-weight:900;line-height:60px;border-bottom:px dashed #e8e8e8;margin:0}
 .vip-drop-titles>span{display:inline-block;width:35px;height:40px;vertical-align:middle;margin:0 15px 0 19px}
 .vip-drop-p{height:38px;line-height:30px;color:#666666;font-size:16px;padding-top:8px}
@@ -251,7 +251,7 @@ a,a:hover{color:#666}
 .classify-vip-icon20{background-position:-410px -325px}
 .classify-vip-icon21{background-position:-492px -372px}
 
-/* -- header 分类vip样式 -------- */
+/* -- header 鍒嗙被vip鏍峰紡 -------- */
 #new-header .nav-list .top-con .vip-type.course-con{width: 548px;border:1px #ddd solid;padding: 0;left: -240px;}
 .top-con .vip-type .type-list{padding: 14px 0 0 14px;}
 .top-con .vip-type .type-list a{width: 119px;height: 34px;border-radius: 4px;line-height: 32px;position: relative;padding-left: 31px;color:#666;border:1px #ddd solid;transition: all .2s;margin:0 14px 14px 0;}
@@ -270,7 +270,7 @@ a,a:hover{color:#666}
 .top-con .vip-type .more-vip{height: 36px;line-height: 34px;border-top: 1px #ddd solid;text-align: center;}
 .top-con .vip-type .more-vip a{height: 35px;display: block;font-size: 14px;color:#666;transition: all .2s}
 .top-con .vip-type .more-vip a:hover{background: #f8f8f8;}
-/*vip到期提醒开始*/
+/*vip鍒版湡鎻愰啋寮�濮�*/
 #expire-win{position:fixed;left:0;top:0;z-index:1005;width:100%;height:100%}
 #expire-win .expire-bg{width:100%;height:100%;background-color:rgba(0,0,0,.3);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000,endColorstr=#4c000000)}
 #expire-win .expire-m{width:726px;height:480px;position:absolute;left:50%;top:50%;margin:-230px 0 0 -363px;background:url(../../../../images/vip/action-bg.png) no-repeat}
@@ -281,29 +281,29 @@ a,a:hover{color:#666}
 #expire-win .expire-btn{width:200px;height:68px;margin:0 auto}
 #expire-win .expire-btn a{display:block;width:200px;height:60px;line-height:60px;text-align:center;background-color:#ff8a50;color:#fff;font-size:28px;box-shadow:0 8px 0 #da5c10;border-radius:12px;transition:all .2s}
 #expire-win .expire-btn a:hover{background-color:#ffa77c;box-shadow:0 8px 0 #e3854c}
-/*vip到期提醒结束*/
+/*vip鍒版湡鎻愰啋缁撴潫*/
 
-/* 绑定手机号弹窗 */
+/* 缁戝畾鎵嬫満鍙峰脊绐� */
 .get-phone{position:fixed;z-index:102;width:100%;height:100%;left:0;top:0}
 .get-phone .phone-bg{background-color:rgba(0,0,0,.3);width:100%;height:100%}
 .get-phone .phone-m{width:800px;height:320px;left:50%;top:50%;margin:-160px 0 0 -400px;position:absolute;background-color:#fff;border-radius:4px;box-shadow:0 0 8px rgba(0,0,0,.2)}
-.get-phone .phone-m .close{font-size:22px;font-family:"宋体";position:absolute;right:10px;top:10px;color:#666;cursor:pointer}
+.get-phone .phone-m .close{font-size:22px;font-family:"瀹嬩綋";position:absolute;right:10px;top:10px;color:#666;cursor:pointer}
 .get-phone .phone-txt{font-size:18px;color:#333333;text-align:center;line-height:44px;padding:45px 0}
 .get-phone .phone-but{padding:0 110px}
 .get-phone .phone-but .c-btn{width:240px;height:60px;cursor:pointer;background-color:#f2f2f2;border:1px #c1c1c1 solid;border-radius:4px;font-size:20px;color:#333;text-align:center;line-height:58px}
 .get-phone .phone-but .get-btn{width:240px;height:60px}
 .get-phone .phone-but .get-btn a{display:block;background-color:#ffd200;border-radius:4px;line-height:60px;text-align:center;font-size:20px;color:#333;transition:all .2s}
 .get-phone .phone-but .get-btn a:hover{background-color:#ffe465}
-/*用户下拉面板添加样式*/
+/*鐢ㄦ埛涓嬫媺闈㈡澘娣诲姞鏍峰紡*/
 .user-drop .name span{position:relative}
 .user-drop .name span i{position:absolute}
 .user-drop .name span i.authen{right:-52px;font-size:12px;color:#ffa900;top:5px}
 .user-drop .name span i.authend{right:-60px;font-size:12px;width:56px;height:21px;line-height:18px;text-align:center;top:1px;right:-66px}
 .user-drop .name span i.authend a{display:block;line-height:18px;border:1px #c1c1c1 solid;background-color:#f3f3f3;color:#999;border-radius:9px;transition:all .2s}
 .user-drop .name span i.authend a:hover{color:#666;border-color:#666}
-/*vip到期提醒结束*/
+/*vip鍒版湡鎻愰啋缁撴潫*/
 
-/*签到模块开始*/
+/*绛惧埌妯″潡寮�濮�*/
 .sign-btn{margin-top:0px;width:60px;height:60px;background:url(../../../../images/base-icon.v17.png) 0 -756px;}
 .sign-btn:hover{background-position:-61px -756px;cursor:pointer}
 #sign-win{position:fixed;left:0;top:0;z-index:1005;width:100%;height:100%}
@@ -343,20 +343,20 @@ a,a:hover{color:#666}
 #sign-win .main .btn:hover{background-color:#ffd51b;color:#000}
 #sign-win .main .btn.ed,#sign-win .main .btn.ed:hover{background-color:#c1c1c1;border-color:#c1c1c1;color:#fff;cursor:not-allowed}
 #sign-win .main .action-txt{text-align:center;color:#666;font-size:12px;line-height:26px}
-/*签到模块结束*/
+/*绛惧埌妯″潡缁撴潫*/
 
-/* 绑定手机号弹窗 */
+/* 缁戝畾鎵嬫満鍙峰脊绐� */
 .get-phone{position:fixed;z-index:102;width:100%;height:100%;left:0;top:0}
 .get-phone .phone-bg{background-color:rgba(0,0,0,.3);width:100%;height:100%}
 .get-phone .phone-m{width:800px;height:320px;left:50%;top:50%;margin:-160px 0 0 -400px;position:absolute;background-color:#fff;border-radius:4px;box-shadow:0 0 8px rgba(0,0,0,.2)}
-.get-phone .phone-m .close{font-size:22px;font-family:"宋体";position:absolute;right:10px;top:10px;color:#666;cursor:pointer}
+.get-phone .phone-m .close{font-size:22px;font-family:"瀹嬩綋";position:absolute;right:10px;top:10px;color:#666;cursor:pointer}
 .get-phone .phone-txt{font-size:18px;color:#333333;text-align:center;line-height:44px;padding:45px 0}
 .get-phone .phone-but{padding:0 110px}
 .get-phone .phone-but .c-btn{width:240px;height:60px;cursor:pointer;background-color:#f2f2f2;border:1px #c1c1c1 solid;border-radius:4px;font-size:20px;color:#333;text-align:center;line-height:58px}
 .get-phone .phone-but .get-btn{width:240px;height:60px}
 .get-phone .phone-but .get-btn a{display:block;background-color:#ffd200;border-radius:4px;line-height:60px;text-align:center;font-size:20px;color:#333;transition:all .2s}
 .get-phone .phone-but .get-btn a:hover{background-color:#ffe465}
-/*用户下拉面板添加样式*/
+/*鐢ㄦ埛涓嬫媺闈㈡澘娣诲姞鏍峰紡*/
 .user-drop .name span{position:relative;display:inline-block}
 .user-drop .name span i{position:absolute}
 .user-drop .name span i.authen{right:-52px;font-size:12px;color:#ffa900;top:5px}
@@ -365,7 +365,7 @@ a,a:hover{color:#666}
 .user-drop .name span i.authend a:hover{color:#666;border-color:#666}
 .user-drop .name span em{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:92px;font-weight:normal;display:inline-block}
 .header .head-group .user-main .user-drop.ed .client-info .id-num{top:0}
-/*分页*/
+/*鍒嗛〉*/
 #page-m{margin:30px auto;text-align:center}
 #page-m a{display:inline-block;height:43px;line-height:40px;font-size:18px;color:#999;border:1px #c1c1c1 solid;margin:0 5px;max-width:53px;min-width:43px;padding:0 10px}
 #page-m a:hover{background-color:#ffd200;border-color:#ffd200;color:#666}
@@ -373,7 +373,7 @@ a,a:hover{color:#666}
 #page-m span{display:inline-block;padding:0 12px;line-height:40px;color:#999;font-size:20px}
 #page-m .pre,#page-m .next{max-width:92px;width:92px}
 
-/* 9-15导航改版 end */
+/* 9-15瀵艰埅鏀圭増 end */
 /* -------- header 2017-10-12 -- */
 #new-header .sj{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:8px solid #fff;position:absolute;left:50%;top:53px;margin-left:-5px;z-index:10}
 #new-header{background-color:#1e1e1e;height:60px;z-index:20;position:relative}
@@ -382,7 +382,7 @@ a,a:hover{color:#666}
 #new-header.header-fixed{position:fixed;left:0;top:0;width:100%;-webkit-transform:translateZ(0)}
 #new-header.header-fixed .design-course .nav-m{display:none}
 
-/* -------- 头部导航部分 -- */
+/* -------- 澶撮儴瀵艰埅閮ㄥ垎 -- */
 #new-header .nav-list{position:relative;margin-left:30px}
 #new-header .nav-list .nav-t{font-size:16px;color:#fff;height:60px;display:block;line-height:60px;position:relative}
 #new-header .nav-list .nav-t .sj{display:none}
@@ -431,7 +431,7 @@ a,a:hover{color:#666}
 #new-header .nav-list .app-download p{font-size:14px;color:#666;line-height:22px;margin-top:5px}
 #new-header .nav-list .app-download a{display:inline-block;width:112px;height:34px;border-radius:17px;text-align:center;line-height:34px;transition:all .2s;background:#ffd305;font-size:14px;color:#333333;margin-top:5px}
 #new-header .nav-list .app-download a:hover{opacity:.8}
-/* -------- 头部搜索&签到&消息 -- */
+/* -------- 澶撮儴鎼滅储&绛惧埌&娑堟伅 -- */
 #new-header .header-search{width:150px;height:30px;line-height:30px;position:relative;margin:15px 30px 0 0}
 #new-header .header-search .txt{display:block;height:30px;border:none;border-radius:15px;font-size:12px;width:100%;padding:0 10px 0 34px}
 #new-header .header-search .submit-abtn{width:14px;height:13px;top:8px;left:10px;background:url(../../../../images/base-icon.v17.png) -51px -27px;position:absolute}
@@ -459,7 +459,7 @@ a,a:hover{color:#666}
 #new-header .user-news .news-con .user-avatar{position:absolute;width:42px;height:42px;left:25px;top:15px}
 #new-header .user-news .news-con .user-avatar img{width:42px;height:42px;border-radius:21px}
 #new-header .user-news .news-con.pl .list{padding-left:82px}
-/* -------- 头部用户信息 -- */
+/* -------- 澶撮儴鐢ㄦ埛淇℃伅 -- */
 #new-header .login{padding-left:42px;position:relative;height:60px;line-height:60px;color:#999;cursor:pointer}
 /*#new-header .login span{width:36px;height:36px;border-radius:18px;background:url(/assets/revision/images/nav/header-icon-v2.png) -97px -26px;position:absolute;left:0;top:12px}*/
 #new-header .user-info{position:relative}
@@ -504,15 +504,15 @@ a,a:hover{color:#666}
 #new-header .user-info .info-m .loading{text-align:center;padding:60px 0}
 #new-header .user-news .loading{text-align:center;padding:60px 0}
 
-/*导航栏升级全站升级终身VIP样式*/
+/*瀵艰埅鏍忓崌绾у叏绔欏崌绾х粓韬玍IP鏍峰紡*/
 .upvip{margin:4px 0 -12px}
 .upvip a{width: 316px;height: 74px;display: block;margin:0 auto;background:url(../../../../images/base-icon.v17.png) 0 -176px; }
 #new-header .user-info .info-m .user-i{border-bottom:none}
 
-/*账号多处登录提示*/
+/*璐﹀彿澶氬鐧诲綍鎻愮ず*/
 .login-tips{position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,.5);z-index:1000;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000)}
 .login-tips .win-m{width:550px;height:310px;left:50%;top:50%;margin:-155px 0 0 -275px;background:#fff;position:absolute;border-radius:6px;box-shadow:0 0 15px rgba(0,0,0,.5);overflow:hidden}
-.login-tips .win-m .close{position:absolute;color:#fff;right:15px;top:15px;font-family:"宋体";font-size:28px;cursor:pointer}
+.login-tips .win-m .close{position:absolute;color:#fff;right:15px;top:15px;font-family:"瀹嬩綋";font-size:28px;cursor:pointer}
 .login-tips .win-m .main{height:212px;background:#fda41d;background-image:-webkit-linear-gradient(to bottom,#fb8e0e,#ffb72c);background-image:linear-gradient(to bottom,#fb8e0e,#ffb72c);border-bottom-left-radius:6px;border-bottom-right-radius:6px;overflow:hidden}
 .login-tips .win-m .login-icon{width:56px;height:65px;margin:30px auto 0;background:url(../../../../images/base-icon.v17.png) -202px -652px}
 .login-tips .win-m .p1{font-size:24px;text-align:center;color:#fff;line-height:80px;height:70px;overflow:hidden}
@@ -520,7 +520,7 @@ a,a:hover{color:#666}
 .login-tips .win-m .btn{width:158px;height:48px;line-height:48px;text-align:center;border-radius:24px;color:#fff;display:block;margin:25px auto 0;background:#fd9e1d;font-size:22px}
 .login-tips .win-m .btn:hover{opacity:.8}
 
-/*用户下拉新增样式(优惠券折扣券)*/
+/*鐢ㄦ埛涓嬫媺鏂板鏍峰紡(浼樻儬鍒告姌鎵ｅ埜)*/
 #new-header .user-info .info-m .user-bottom{height:47px;line-height:46px;padding:0 19px;background:#f3f4f4;margin:15px -20px -20px;border-top:1px solid #e8e8e8}
 #new-header .user-info .info-m .hkb{width:212px}
 #new-header .user-info .info-m .hkb a{float:right;color:#ee9d4c;padding-right:13px}
@@ -529,7 +529,7 @@ a,a:hover{color:#666}
 #new-header .user-info .info-m .yhj .uyhj{width:150px;height:26px;border-radius:13px;border:1px #e8e8e8 solid;font-size:12px;color:#ee9d4c;display:inline-block;text-align:center;transition:all .2s}
 #new-header .user-info .info-m .yhj .uyhj:hover{background:#ee9d4c;border-color:#ee9d4c;color:#fff}
 #new-header .user-info .info-m .yhj a.fr{color:#ee9d4c;font-size:12px}
-/*2017-12-25 合辑升级*/
+/*2017-12-25 鍚堣緫鍗囩骇*/
 #album-win{position:absolute;z-index:105;width:280px;border:1px #e8e8e8 solid;border-radius:1px;padding:14px;background:#fff;left:40%;top:40%}
 #album-win:before{content:"";position:absolute;right:27px;bottom:-8px;width:14px;height:8px;background:url(../../../../images/album/album-win-icon.png) 0 -9px;transform:rotate(180deg)}
 #album-win .add-album{height:30px}
@@ -553,7 +553,7 @@ a,a:hover{color:#666}
 #album-win .album-plist .plist i{font-size:12px;color:#999}
 .video-detail .video-body .left-foot .album-win-btn{border-color:#dddddd;color:#ddd;transition:all .2s;margin-right:15px}
 .video-detail .video-body .left-foot .album-win-btn:hover{border-color:#ffd500;color:#ffd500}
-/* 按钮css，放到对应的的css文件底部就可以 */
+/* 鎸夐挳css锛屾斁鍒板搴旂殑鐨刢ss鏂囦欢搴曢儴灏卞彲浠� */
 .video-body .left-foot .clect-cut{padding:0 11px;height:26px;line-height:24px;border:1px #ffd500 solid;width:auto;color:#ffd500}
 .video-body .left-foot .clect-cut .clect-icon{width:16px;height:14px;background:url(../../../../images/album/collect-icon.png);vertical-align:-2px;color:#ffd500}
 .video-body .left-foot .clect-cut:hover .clect-icon{background:url(../../../../images/album/images/collect-icon.html)}
@@ -564,7 +564,7 @@ a,a:hover{color:#666}
 .album-collect-success span{display:inline-block;padding:0 10px;height:24px;line-height:24px;background:#fda171;border-radius:12px;color:#fff;font-size:12px;margin-left:10px;vertical-align:top}
 .album-collect-success span:hover{background:#fe9159;cursor:pointer}
 
-/*搜索升级*/
+/*鎼滅储鍗囩骇*/
 #new-header .header-search .submit-abtn{right:11px;left:auto}
 #new-header .header-search .txt{padding-left:12px}
 #new-header .header-search .txt::placeholder{color:#999}
@@ -588,7 +588,7 @@ a,a:hover{color:#666}
 #new-header .header-search .search-win .search-list .list-m.hotm p:nth-child(-n+3) a i{background:#ff7700}
 #new-header .header-search .search-win .search-list .list-m.hotm p:nth-child(-n+3) a{color:#ff7700}
 #new-header .header-search .search-win .search-list .list-m p .close{width:10px;height:10px;background:url(../../../../images/base-icon.v17.png) -328px 0;margin-top:8px}
-/* 导航新增下拉部分 2017-11-29 */
+/* 瀵艰埅鏂板涓嬫媺閮ㄥ垎 2017-11-29 */
 #new-header .nav-list .dian span{width:4px;height:4px;display:inline-block;background:#fff;border-radius:2px;margin-right:4px;vertical-align:4px}
 #new-header .nav-list .more-nav{border:1px #e8e8e8 solid;background:#fff;border:1px #e8e8e8 solid;border-bottom-right-radius:6px;border-bottom-left-radius:6px;width:130px;padding:4px 0;left:-15px}
 #new-header .nav-list .more-nav a{display:block;height:35px;line-height:34px;padding-left:18px;font-size:16px;color:#666}
@@ -600,7 +600,7 @@ a,a:hover{color:#666}
 #new-header .nav-list .nav-m .new-icon{position: relative;}
 #new-header .nav-list .nav-m .new-icon:after{content: "";width: 25px;height: 13px;background: url(../../../../images/base-icon.v17.png) -70px -46px;position: absolute;left: 83px;top: 5px;}
 
-/*赠送VIP的弹窗*/
+/*璧犻�乂IP鐨勫脊绐�*/
 .vip-win{position:fixed;width:100%;height:100%;left:0;top:0;z-index:1002;background:rgba(0,0,0,.5)}
 .vip-win .close{width:16px;height:16px;position:absolute;cursor:pointer}
 .vip-win .btn{width:195px;height:56px;display:block;border-radius:16px;overflow:hidden;box-shadow:0 0 10px #fd550e;animation:size .4s infinite}
@@ -616,11 +616,11 @@ a,a:hover{color:#666}
 .qt-tg .qq-link,.qt-tg .wechat-link{width: 186px;height: 48px;display: inline-block;margin-right: 20px;}
 
 @keyframes size{0%{transform:scale(1)} 50%{transform:scale(.9)} 100%{transform:scale(1)}}
-/*引导绑定手机号的弹窗*/
+/*寮曞缁戝畾鎵嬫満鍙风殑寮圭獥*/
 #bind-phone-new{position:fixed;width:100%;height:100%;left:0;top:0;z-index:1005;background:rgba(0,0,0,.55)}
 #bind-phone-new .win-m{width:532px;position:absolute;left:50%;top:50%;border-radius:8px;background:#fff;margin:-235px 0 0 -266px}
 #bind-phone-new .win-m .head{padding:0 20px;height:52px;line-height:50px;border-bottom:1px #ddd solid;color:#666;font-size:16px}
-#bind-phone-new .win-m .head .close{font-family:"宋体";font-size:24px;cursor:pointer}
+#bind-phone-new .win-m .head .close{font-family:"瀹嬩綋";font-size:24px;cursor:pointer}
 #bind-phone-new .win-m .main .p1{color:#999;height:52px;line-height:52px;text-align:center}
 #bind-phone-new .win-m .main .p2{text-align:center;height:32px;color:#999}
 #bind-phone-new .win-m .main .p2 span{color:#fc583d}
@@ -646,7 +646,7 @@ a,a:hover{color:#666}
 #bind-phone-new .win-m .main .phone{position:relative}
 #bind-phone-new .win-m .main .input-list .phone input{padding-left:44px}
 #bind-phone-new .win-m .main .phone-icon{width:15px;height:25px;position:absolute;top:11px;left:14px;background:url(../../../../images/hk_new_index_icons.png) -95px -192px}
-/*低版本ie升级浏览器提醒*/
+/*浣庣増鏈琲e鍗囩骇娴忚鍣ㄦ彁閱�*/
 .upbrower{height:300px;position:fixed;width:100%;top:50%;margin-top:-150px;left:0;background:#fff5e0;z-index:101}
 .upbrower .close{position:absolute;left:50%;margin-left:592px;font-size:26px;cursor:pointer}
 .upbrower .p1{padding-top:32px;font-size:20px;color:#666666;text-align:center}
@@ -662,7 +662,7 @@ a,a:hover{color:#666}
 #new-header .nav-list .global-vip-drop .vip-drop-purchase{width:250px;height:38px;line-height:38px;border-radius:19px;color:#fff;background-color:#ffa900;transition:all .2s}
 #new-header .nav-list .global-vip-drop .vip-drop-titles{font-size:24px;border:none;border:2px #fefefe solid;box-shadow:0 0 0 1px #ffa900,0 0 0 1px #ffa900 inset;display:inline-block;height:38px;line-height:30px;padding:0 5px;margin-top:19px}
 
-/*2018-1-9导航栏升级*/
+/*2018-1-9瀵艰埅鏍忓崌绾�*/
 #new-header .nav-list .top-con .course-con{position:absolute;left:0;top:60px;background:#fff;width:450px;padding-bottom:6px;display:none;box-shadow:0 3px 3px rgba(0,0,0,.1);z-index:5}
 #new-header .nav-list:hover .top-con .course-con{display:block}
 #new-header .nav-list .top-con .course-con .head{height:46px;line-height:44px;border-bottom:1px #e8e8e8 solid;padding:0 15px;margin-bottom:6px}
@@ -804,7 +804,7 @@ a,a:hover{color:#666}
 #footer .copyRight .kexin{background:url(../../../../images/base-icon.v17.png) 0 -622px;width:83px;height:30px;display:inline-block;vertical-align:-10px;margin-left:20px}
 .hk-head-nav-recharge a {font-size: 18px;color: #999;height: 60px;display: block;line-height: 60px;position: relative;margin-left: 16px;}
 
-/* 底部样式  请放到公共样式表里*/
+/* 搴曢儴鏍峰紡  璇锋斁鍒板叕鍏辨牱寮忚〃閲�*/
 #body-container{padding-bottom:340px!important}
 #footer{width:100%;position:absolute;left:0;bottom:0;height:340px;background:#222222;color:#999999}
 #footer a{color:#999999;transition:all .2s}
@@ -888,18 +888,18 @@ a,a:hover{color:#666}
 .lrframe-box .tab-main .error .error-txt{position: absolute;display: block;left: 15px;top: 55px;line-height: 14px;color:#f53500;}
 .lrframe-box .tab-main .error input[type="text"]{border-color:#f53500 }
 
-/*底部友链左右滑动*/
+/*搴曢儴鍙嬮摼宸﹀彸婊戝姩*/
 #footer .friends-link{position: relative;}
 #footer .friends-link .slide-m{overflow:hidden;width: 100%;position: relative;height: 100%}
 #footer .friends-link .link-m{white-space: nowrap;float: left;position: absolute;left: 0;top: 0;transition: all .4s;}
-#footer .friends-link .link-t span{font-family: "宋体";font-size: 20px;position: absolute;cursor: pointer;display: none;}
+#footer .friends-link .link-t span{font-family: "瀹嬩綋";font-size: 20px;position: absolute;cursor: pointer;display: none;}
 #footer .color-bg:hover .link-t span{display: block;}
 #footer .friends-link .link-t span:hover{color:#fff;}
 #footer .friends-link .next{right: -26px;}
 #footer .color-bg .friends-link .link-t .prev{left: -26px;display: none;}
 #footer .friends-link .link-t span.stop{display: none;}
 
-/* -------- 头部作业评改提示 -- */
+/* -------- 澶撮儴浣滀笟璇勬敼鎻愮ず -- */
 #new-header .nav-list .task-tips{position: absolute;left: -126px;top: 60px;height: 28px;line-height: 26px;border-radius: 14px;padding: 0 7px 0 15px;background: #ffeee1;color:#666;white-space: nowrap;}
 #new-header .nav-list .task-tips:before{content: "";border:6px transparent solid;border-bottom-color: #ffeee1;position: absolute;left: 158px;top: -12px;}
 #new-header .nav-list .task-tips span{color:#ff5409;}
@@ -910,34 +910,34 @@ a,a:hover{color:#666}
 #new-header .tasked-tips a{color:#ff5409;margin-left: 8px;display: inline-block;vertical-align: top;}
 #new-header .layout-cont{position: relative;}
 
-/* -- 分类vip图标样式 ------- */
+/* -- 鍒嗙被vip鍥炬爣鏍峰紡 ------- */
 [class*="vipIcon-"]{width: 50px;height: 57px;position: relative;display: inline-block;font-size: 50px;}
 [class*="vipIcon-"]:before{content: "";position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: url(../../../../images/update-all-vip-info/vip-icon.v2.png) no-repeat;background-size: 3em 3.32em}
 [class*="vvipIcon-"]:before{background-position:-2em 0;}
 [class*="svipIcon-"]:before{background-position:0 0;}
-.svipIcon-font,.vvipIcon-font{background: #f5c607}/*字体VIP*/
-.svipIcon-poster,.vvipIcon-poster{background: #40b0ff}/*海报VIP*/
-.svipIcon-c4d,.vvipIcon-c4d{background: #367dd5}/*C4D教程*/
-.svipIcon-software,.vvipIcon-software{background: #ff7c00}/*软件VIP*/
-.svipIcon-synthesize,.vvipIcon-synthesize{background: #6ebd6b}/*综合VIP*/
-.svipIcon-image,.vvipIcon-image{background: #00a99d}/*图像VIP*/
-.svipIcon-truing,.vvipIcon-truing{background: #b062a3}/*精修VIP*/
-.svipIcon-photograph,.vvipIcon-photograph{background: #494166}/*摄影VIP*/
-.svipIcon-movies,.vvipIcon-movies{background: #d49688}/*影视VIP*/
-.svipIcon-job,.vvipIcon-job{background: #00528e}/*职业VIP*/
-.svipIcon-portrait,.vvipIcon-portrait{background: #ccb374}/*人像VIP*/
-.svipIcon-printing,.vvipIcon-printing{background: #a68369}/*印刷VIP*/
-.svipIcon-illustrations,.vvipIcon-illustrations{background: #ea5442}/*商业插画VIP*/
-.svipIcon-illustration,.vvipIcon-illustration{background: #ea5442}/*商业插画VIP*/
-.svipIcon-store,.vvipIcon-store{background: #617f74}/*店铺装修VIP*/
-.svipIcon-packing,.vvipIcon-packing{background: #e5869a}/*包装设计VIP*/
-.svipIcon-indoor,.vvipIcon-indoor{background: #74c4c4}/*室内设计VIP*/
-.svipIcon-foreign,.vvipIcon-foreign{background: #fbb03b}/*老外教程VIP*/
-.svipIcon-brand,.vvipIcon-brand{background: #00a2b9}/*品牌设计VIP*/
-.svipIcon-ui,.vvipIcon-ui{background: #eb4c8c}/*UI设计VIP*/
+.svipIcon-font,.vvipIcon-font{background: #f5c607}/*瀛椾綋VIP*/
+.svipIcon-poster,.vvipIcon-poster{background: #40b0ff}/*娴锋姤VIP*/
+.svipIcon-c4d,.vvipIcon-c4d{background: #367dd5}/*C4D鏁欑▼*/
+.svipIcon-software,.vvipIcon-software{background: #ff7c00}/*杞欢VIP*/
+.svipIcon-synthesize,.vvipIcon-synthesize{background: #6ebd6b}/*缁煎悎VIP*/
+.svipIcon-image,.vvipIcon-image{background: #00a99d}/*鍥惧儚VIP*/
+.svipIcon-truing,.vvipIcon-truing{background: #b062a3}/*绮句慨VIP*/
+.svipIcon-photograph,.vvipIcon-photograph{background: #494166}/*鎽勫奖VIP*/
+.svipIcon-movies,.vvipIcon-movies{background: #d49688}/*褰辫VIP*/
+.svipIcon-job,.vvipIcon-job{background: #00528e}/*鑱屼笟VIP*/
+.svipIcon-portrait,.vvipIcon-portrait{background: #ccb374}/*浜哄儚VIP*/
+.svipIcon-printing,.vvipIcon-printing{background: #a68369}/*鍗板埛VIP*/
+.svipIcon-illustrations,.vvipIcon-illustrations{background: #ea5442}/*鍟嗕笟鎻掔敾VIP*/
+.svipIcon-illustration,.vvipIcon-illustration{background: #ea5442}/*鍟嗕笟鎻掔敾VIP*/
+.svipIcon-store,.vvipIcon-store{background: #617f74}/*搴楅摵瑁呬慨VIP*/
+.svipIcon-packing,.vvipIcon-packing{background: #e5869a}/*鍖呰璁捐VIP*/
+.svipIcon-indoor,.vvipIcon-indoor{background: #74c4c4}/*瀹ゅ唴璁捐VIP*/
+.svipIcon-foreign,.vvipIcon-foreign{background: #fbb03b}/*鑰佸鏁欑▼VIP*/
+.svipIcon-brand,.vvipIcon-brand{background: #00a2b9}/*鍝佺墝璁捐VIP*/
+.svipIcon-ui,.vvipIcon-ui{background: #eb4c8c}/*UI璁捐VIP*/
 
 
-/* ---- 头部导航 app 下载 -- */
+/* ---- 澶撮儴瀵艰埅 app 涓嬭浇 -- */
 #new-header .app-d .app-download{width: 360px;height: 210px;padding: 20px 20px 0;left: -154px;}
 #new-header .app-d .app-download .app-box-l{width: 158px;}
 #new-header .app-d .app-download .app-box-l img{display: block;width: 158px;height: 158px;}
@@ -950,18 +950,18 @@ a,a:hover{color:#666}
 #new-header .app-d .app-download .app-box-r a.iphone-download:before{background-position: -245px -147px;left: 23px;top: 6px;width: 10px;height: 20px;}
 #new-header .app-d .app-download .app-box-r a.android-download:before{background-position: -214px -147px;left: 20px;top: 7px;width: 16px;height: 18px;}
 #new-header .app-d .app-download .app-box-r a.ipad-download:before{background-position: -269px -148px;left: 21px;top: 8px;width: 13px;height: 17px;}
-/*侧边栏*/
+/*渚ц竟鏍�*/
 .fixed-box .app-box{width: 184px;padding: 15px 0 12px;text-align: center;}
 .fixed-box .app-box .p1{font-size: 16px;height: 24px;color:#333;}
 .fixed-box .app-box .img{width: 154px;height: 154px;margin:0 auto;}
 .fixed-box .app-box .img img{display: block;width: 100%}
 .fixed-box .app-box .p2{font-size: 10px;color:#666;padding-top: 6px;}
 
-/* ---- 限制登录弹窗 ---- */
+/* ---- 闄愬埗鐧诲綍寮圭獥 ---- */
 .layui-layer-content .qq-icon{width: 70px;height:19px;display: inline-block;background: url(../../../../images/base-icon.v17.png) -196px -732px;vertical-align: top;}
 .proving-phone-win{position: fixed;z-index: 1001;width: 100%;height: 100%;left: 0;top: 0;background:rgba(0,0,0,.5);}
 .proving-phone-win .win-m{background: #fff;position: absolute;width:420px;border-radius: 4px;left: 50%;top: 50%;margin:-180px 0 0 -210px;padding: 0 14px 30px;}
-.proving-phone-win .win-m .close{position: absolute;right: 10px;top: 10px;font-family:"宋体";cursor:pointer;}
+.proving-phone-win .win-m .close{position: absolute;right: 10px;top: 10px;font-family:"瀹嬩綋";cursor:pointer;}
 .proving-phone-win .win-m .p1{text-align: center;padding-top: 30px;font-size: 20px;}
 .proving-phone-win .win-m .p2{padding-top: 20px;text-align: center;color:#666;font-size: 16px;}
 .proving-phone-win .win-m .phone-num{height: 25x;margin:30px 0 20px;position: relative;font-size: 18px;padding-left: 44px;line-height: 26px;}
@@ -985,7 +985,7 @@ a,a:hover{color:#666}
 .proving-phone-win .win-m .error .error-txt{position: absolute;display: block;left: 15px;top: 55px;line-height: 14px;color:#f53500;}
 .proving-phone-win .win-m .error input[type="text"]{border-color:#f53500 }
 
-/* --- sem登录弹框 --- */
+/* --- sem鐧诲綍寮规 --- */
 .welfare-win{position: fixed;left: 0;top: 0;width: 100%;height: 100%;background: rgba(0,0,0,.5);z-index: 1001;}
 .welfare-win .win-m{width: 394px;height: 367px;position: absolute;left: 50%;top: 50%;margin:-183px 0 0 -197px;background: url(../../../../images/site/new-user-welfare.png) no-repeat;padding: 296px 0 0 39px;}
 .welfare-win .win-m .close{position: absolute;width: 38px;height: 38px;position: absolute;right: 0;top: 0;cursor:pointer;}
@@ -1052,7 +1052,7 @@ a,a:hover{color:#666}
     #new-header .header-search .txt{width:140px!important}
 }
 /* COMBO: filename = css/pgc/main.v5.css, type = text/css, resp = 200 */
-/* -------- PGC所有页面css汇总 -- */
+/* -------- PGC鎵�鏈夐〉闈ss姹囨�� -- */
 
 
 
@@ -1062,11 +1062,11 @@ a,a:hover{color:#666}
    --
    --
    --
-   首页样式
+   棣栭〉鏍峰紡
    -------------------------
 */
 
-.nav-banner{height: 350px;background: url(../../../../images/teacher/teacher-banner.png) no-repeat center  top #4b0099;position:relative}
+.nav-banner{height: 200px;background: url(../../../../images/teacher/teacher-banner.png) no-repeat center  top #4b0099;position:relative}
 .nav-slide .hd li{width: 10px;height: 10px;text-align: center;line-height: 18px;/* float: left; */display: inline-block;margin: 0 5px;}
 .nav-slide .hd li span{display: inline-block;border-radius: 5px;width: 6px;height: 6px;background: none;transition: all .2s;box-shadow:0 0 0 2px rgba(255,255,255,.5);vertical-align: -2px}
 .nav-slide .hd li.on span{width: 10px;height: 10px;border-width: 4px;background: #fff;border-radius: 5px;vertical-align: -4px;box-shadow: 0 0 0 4px rgba(255,255,255,.5)}
@@ -1120,7 +1120,7 @@ a,a:hover{color:#666}
    --
    --
    --
-   教程详情页
+   鏁欑▼璇︽儏椤�
    -------------------------
 */
 .pgc-header{background: #373737;padding-bottom: 38px;}
@@ -1230,7 +1230,7 @@ a,a:hover{color:#666}
    --
    --
    --
-   pgc播放页面
+   pgc鎾斁椤甸潰
    -------------------------
 */
 .pgc-header .head .class-item{position: absolute;right:0;top: 0;background: #313131;width: 370px;z-index: 8;height: 74px;overflow: hidden;transition: height .2s}
@@ -1292,7 +1292,7 @@ a,a:hover{color:#666}
    --
    --
    --
-   弹窗部分
+   寮圭獥閮ㄥ垎
    -------------------------
 */
 .pay-win{position: fixed;z-index: 1001;left: 0;top: 0;width: 100%;height: 100%;background:rgba(0,0,0,.5);}
@@ -1354,7 +1354,7 @@ a,a:hover{color:#666}
    --
    --
    --
-   支付相关页面
+   鏀粯鐩稿叧椤甸潰
    -------------------------
 */
 .sstip{font-size: 16px;color:#999999;line-height: 60px;padding-left: 18px;}
@@ -1379,7 +1379,7 @@ a,a:hover{color:#666}
    --
    --
    --
-   小屏幕兼容部分
+   灏忓睆骞曞吋瀹归儴鍒�
    -------------------------
 */
 @media only screen and (max-width: 1440px) {

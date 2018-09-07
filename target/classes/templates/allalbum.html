@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <!-- Mirrored from yihao86/album by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 00:34:42 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
@@ -90,9 +90,9 @@
             <div class="logo fl"><a href="index.html" title="返回首页"></a></div>
             <div class="nav fl clearfix">
                 <div class="nav-list fl rjrm-list">
-                    <a href="index.html" class="nav-t" target="_blank" onclick="pagePositionClick(21);">java 入门</a>
+                    <a href="index.html" class="nav-t" target="_blank">java 入门</a>
                 </div><!-- 设计教程 -->
-                <div class="nav-list fl sjjc-list"><a href="" class="nav-t" target="_blank" onclick="pagePositionClick(11);">设计教程</a>
+                <div class="nav-list fl sjjc-list"><a href="" class="nav-t" target="_blank">设计教程</a>
                     <!--<div class="top-con">
                         <div class="course-con sjjc-wrap">
                             <div class="loading">
@@ -114,8 +114,8 @@
                 <div class="nav-list fl bwidth">
                     <a href="javascript:;" target="_blank" class="nav-t dian"><span></span><span></span><span></span></a>
                     <div class="nav-m more-nav">
-                        <a href="allteachers.html" target="_blank" class="" onclick="pagePositionClick(17);">讲师</a>
-                        <a href="allalbum.html" target="_blank" class="" rel='nofollow' onclick="pagePositionClick(18);">专辑</a>
+                        <a href="allteachers.html" target="_blank" class="">讲师</a>
+                        <a href="allalbum.html" target="_blank" class="" rel='nofollow'>专辑</a>
                     </div>
                 </div>
             </div><!-- 个人信息 --><!-- 未登录状态 -->
@@ -152,37 +152,23 @@
             <div class="album-nav">
                 <div class="nav-l" style="    font-weight: 600;"><a href="javascript:void(0)">方向</a></div>
                 <div class="nav-m"><!-- 目前仅有tag1 --->
-                    <div class="wrap-m"><a href="allalbum.html"
-                                           class="active">全部</a><a href="album/10.html"
-                                                                   class=""
-                    >职场</a><a href="album/11.html"
-                              class=""
-                    >室内设计</a><a href="album/2.html"
-                                class=""
-                    >平面设计</a><a href="album/3.html"
-                                class=""
-                    >电商设计</a><a href="album/5.html"
-                                class=""
-                    >软件技术</a><a href="album/4.html"
-                                class=""
-                    >绘画</a><a href="album/6.html"
-                              class=""
-                    >摄影</a><a href="album/7.html"
-                              class=""
-                    >动效</a><a href="album/8.html"
-                              class=""
-                    >UI设计</a><a href="album/9.html"
-                                class=""
-                    >字体设计</a></div>
+                    <div class="wrap-m">
+                    	<a href="fandAllAlbum?typeid=0" class="active"
+                    	th:style="${typeid} eq 0 ? 'color:#ff7700' : 'color:#666'">全部</a>
+                    	<a th:each="type,t:${tlist}" th:href="@{'fandAllAlbum?typeid='+${type.typeid}}" th:text="${type.typename}"
+                    	th:style="${type.typeid} eq ${typeid} ? 'color:#ff7700' : ''" >字体设计</a>
+                    </div>
                 </div>
             </div><!--                    <span class="more-btn"><i></i>更多</span>--></div><!-- 专辑list start -->
         <div class="album-list clearfix layout-cont">
-            <div class="wrap">
-                <div class="list"><span class="tips">官方专辑</span>
-                    <div class="img"><a href="album.html" target="_blank"><img
-                            src="https://pic.huke88.com/album/comment/2018-07-04/D435C13E-E20A-26B8-821E-19106D101EAE.jpg!/format/jpg"></a>
+            <div th:each="album,a:${alist}" class="wrap">
+                <div class="list">
+                	<span class="tips" th:if="${a.index < 30}" th:text="最新专辑">官方专辑</span>
+                    <div class="img">
+                    	<a th:href="@{'fandAlbum?aid='+${album.aid}+'&tcid='+${album.a_teacherId}}" target="_blank">
+                    	<img th:src="'http://localhost:9352/video/'+${album.a_img}"></a>
                     </div>
-                    <div class="con"><a href="album/detail/1066189.html" target="_blank">配色小练习&小技巧</a></div>
+                    <div class="con"><a th:href="@{'fandAlbum?aid='+${album.aid}}" target="_blank" th:text="${album.a_title}">配色小练习&小技巧</a></div>
                 </div>
             </div>
         </div>

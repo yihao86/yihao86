@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.yihao86.dao.AlbumDao">
+  
+  		<select id="fandAllAlbum" resultType="Album">
+  			SELECT aid,a_title,a_typeId,a_teacherId,a_abstract,a_img FROM album 
+  			<if test="a_typeId != 0 and a_typeId != null">
+  				WHERE a_typeId = #{a_typeId}
+  			</if>
+  			<if test="aid != 0 and aid != null">
+  				WHERE aid = #{aid}
+  			</if>
+  			GROUP BY aid DESC
+  		</select>
+  		
+  		<select id="fandAlbum" resultType="Course">
+  			SELECT crid,crname,cr_aid,cr_img,cr_price FROM course 
+  			<if test="cr_aid != 0 and cr_aid != null">
+  				WHERE cr_aid = #{cr_aid}
+  			</if>
+  			ORDER BY crid DESC
+  		</select>
+  	
+  </mapper>

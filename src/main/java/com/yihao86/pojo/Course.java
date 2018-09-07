@@ -9,7 +9,11 @@ public class Course {
 
 	private int crid;
 	
-	private int crname;
+	private String crname;
 	
 	private int cr_aid;
+	
+	private String cr_img;
+	
+	private Double cr_price;
 }

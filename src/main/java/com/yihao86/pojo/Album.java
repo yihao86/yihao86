@@ -17,4 +17,6 @@ public class Album {
 	
 	private String a_abstract;
 	
+	private String a_img;
+	
 }
