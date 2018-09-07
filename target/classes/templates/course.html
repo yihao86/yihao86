@@ -183,7 +183,7 @@
                         <div class="item-tit" th:text="'第'+${l.index+1}+'章&nbsp;'+${list}">第一章&nbsp;AE入门<span
                                 class="down-icon fr"></span></div>
                         <div class="item-cont" th:each="vch,v:${v}"><!--2018-1-15修改为默认展示所有课程-->  
-                                                                      
+                              <h1 th:text="${v[list]}"></h1>                                        
                             <div class="cont-box"  id='anchor'>
                                 <div class="img">
                                 <a target="_blank" href="../course/1991.html">
