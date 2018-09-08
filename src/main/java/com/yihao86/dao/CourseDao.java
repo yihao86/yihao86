@@ -16,4 +16,10 @@ public interface CourseDao {
 	
 	//查询课程的基本信息
 	Map<String,Object> fandCourseInfo(@Param("crid") int crid);
+	
+	//查询专辑下面的课程
+	List<Map<String,Object>> fandAlbumCourse(@Param("a_typeId") int a_typeId);
+	
+	//查找购买数量
+	int fandNumber(@Param("p_cid") int crid);
 }

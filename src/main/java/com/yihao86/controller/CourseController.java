@@ -23,17 +23,17 @@ public class CourseController {
 	private TypeService ts;
 	
 	@Autowired
-	private AlbumService as;
-	
-	@Autowired
 	private CourseService cs;
 	
 	@RequestMapping("/fandCourse")
-	public String fandCourse(Model model) {
+	public String fandCourse(Model model,String a_typeId) {
 		List<Type> tlist = ts.selectType();
 		model.addAttribute("tlist", tlist);
-		List<Course> clist = as.fandAlbum(0);
+		List<Map<String,Object>> clist = cs.fandAlbumCourse(Integer.valueOf(a_typeId));
 		model.addAttribute("clist", clist);
+		model.addAttribute("a_typeId", a_typeId);
+		List<Integer> list = cs.fandNumber(Integer.valueOf(a_typeId));
+		model.addAttribute("list", list);
 		return "teacherCourse";
 	}
 	

@@ -16,4 +16,10 @@ public interface CourseService {
 	
 	//查看课程的基本信息
 	Map<String,Object> fandCourseInfo(int crid);
+	
+	//查询专辑下面的课程
+	List<Map<String,Object>> fandAlbumCourse(int a_typeId);
+	
+	//查找购买数量
+	List<Integer> fandNumber(int a_typeId);
 }

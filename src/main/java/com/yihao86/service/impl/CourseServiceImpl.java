@@ -68,5 +68,20 @@ public class CourseServiceImpl implements CourseService {
 	public Map<String, Object> fandCourseInfo(int crid) {
 		return cdao.fandCourseInfo(crid);
 	}
+	@Override
+	public List<Map<String, Object>> fandAlbumCourse(int a_typeId) {
+		return cdao.fandAlbumCourse(a_typeId);
+	}
+	@Override
+	public List<Integer> fandNumber(int a_typeId) {
+		List<Map<String, Object>> list = cdao.fandAlbumCourse(a_typeId);
+		List<Integer> lnum = new ArrayList<>();
+		for (Map<String, Object> map : list){
+			int num = cdao.fandNumber((int) map.get("crid"));
+			lnum.add(num);
+		}
+		return lnum;
+	}
+	
 
 }

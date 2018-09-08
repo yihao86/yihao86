@@ -17,4 +17,17 @@
 		FROM course c
 		WHERE crid = #{crid}
   	</select>
+  	<select id="fandAlbumCourse" resultType="map">
+  		 SELECT crid,crname,cr_aid,cr_img,cr_price,a_typeId,a_title,t.`t_name`,t.`t_photo` 
+ 		FROM course c,album a,teachers t
+		WHERE c.cr_aid = a.aid AND a.a_teacherId = t.`tid`
+  				<if test="a_typeId != 0 and a_typeId != null">
+  					AND a_typeId = #{a_typeId}
+  				</if>
+  			ORDER BY crid DESC
+  	</select>
+  	
+  	<select id="fandNumber" resultType="int">
+  		SELECT COUNT(0) FROM purchase WHERE p_cid = #{p_cid}
+  	</select>
   </mapper>

@@ -155,8 +155,8 @@
         <div class="layout-cont">名师机构为单独付费板块。所有学员可试看免费课程，付费后可学习完整课程，快来学习吧。</div>
     </div>
     <div class="pgc-nav layout-cont">
-        <div class="nav-l"><a href="teacherCourse.html" class="active">全部</a>
-        	<a href="#" th:each="type,t:${tlist}" th:text="${type.typename}">平面设计</a>
+        <div class="nav-l"><a href="fandCourse?a_typeId=0" th:class="${a_typeId} eq 0 ? active : ''">全部</a>
+        	<a  th:each="type,t:${tlist}" th:text="${type.typename}" th:href="@{'fandCourse?a_typeId='+${type.typeid}}"  th:class="${a_typeId} eq ${type.typeid} ? active : ''">平面设计</a>
     	</div>
     </div>
     <div class="pgc-list layout-cont">
@@ -169,18 +169,18 @@
                     <div class="info-l">
                         <div class="title"><a th:href="@{'fandOneCourse?crid='+${course.crid}}"
                                               target="_blank" th:text="${course.crname}">马丁的PhotoShop CC 2018大师课</a></div>
-                        <div class="classify" >平面设计</div>
+                        <div class="classify" th:text="${course.a_title}">平面设计</div>
                     </div>
                     <div class="info-r">
                         <div class="money" th:text="'￥'+${course.cr_price}">199.00</div>
-                        <div class="num">6人在学</div>
+                        <div class="num" th:text="${list[c.index]}+'人在学'">6人在学</div>
                     </div>
                 </div>
                 <div class="user-info"><a href="teacher/1167712.html"
-                                          class="avatar fl" target="_blank"><img
-                        src="https://pic.huke88.com/image/000/000/009/787CE620-E470-E4F3-80C7-11A10871EA25.png!/format/jpg/fw/22"></a><a
+                                          class="avatar fl" target="_blank">
+                                          <img th:src="'http://localhost:9352/video/'+${course.t_photo}"></a><a
                         href="teacher/1167712.html"
-                        target="_blank" class="user-name">译学馆</a></div>
+                        target="_blank" class="user-name" th:text="${course.t_name}">译学馆</a></div>
             </div>
         </div><!--分页 s-->
         <div id="page-m">
