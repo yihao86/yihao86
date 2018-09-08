@@ -204,7 +204,7 @@
     </div>
     <div class="subnav">
         <div class="layout-cont">
-        <span th:each="t,type:${tlist}">
+        <span th:each="t,type:${tlist}" th:if="${type.index <= 10}">
        <a target="_blank"  th:href="@{'findTyeps?f_trid='+${t.f_trid}}" th:text="${t.typename}">字体设计</a>
         </span>         
            <!--  <a target="_blank" onclick="pagePositionClick(137);" href="type.html">海报设计</a>

@@ -45,6 +45,8 @@ public class CourseController {
 		model.addAttribute("list",list);
 		Map<String,Object> v = cs.fandOneChapter(Integer.valueOf(crid));
 		model.addAttribute("v", v);
+		Map<String,Object> courseInfo = cs.fandCourseInfo(Integer.valueOf(crid));
+		model.addAttribute("courseInfo", courseInfo);
 		return "course";
 	}
 }

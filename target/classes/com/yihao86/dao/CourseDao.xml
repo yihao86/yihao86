@@ -9,4 +9,12 @@
   	<select id="fandChapter" resultType="Videos">
   		SELECT * FROM videos WHERE v_vpath LIKE CONCAT('%','${title}','%') 
   	</select>
+  	
+  	<select id="fandCourseInfo" resultType="map">
+  		SELECT (SELECT COUNT(0) FROM videos v WHERE v.v_crid = c.crid ) num,
+		(SELECT COUNT(0) FROM history h WHERE h.h_crid = c.crid ) hnum,
+		cr_price price,crname,cr_img
+		FROM course c
+		WHERE crid = #{crid}
+  	</select>
   </mapper>

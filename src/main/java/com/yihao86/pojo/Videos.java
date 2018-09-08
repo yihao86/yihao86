@@ -30,5 +30,8 @@ public class Videos {
 	private String v_vpath;
 	
 	private int v_typeId;
+	
+	private String v_difficulty;
+	
 
 }

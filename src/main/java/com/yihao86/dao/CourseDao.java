@@ -1,6 +1,7 @@
 package com.yihao86.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 
@@ -12,4 +13,7 @@ public interface CourseDao {
 	
 	//查询章节下面的课程
 	List<Videos>fandChapter(@Param("title") String title);
+	
+	//查询课程的基本信息
+	Map<String,Object> fandCourseInfo(@Param("crid") int crid);
 }

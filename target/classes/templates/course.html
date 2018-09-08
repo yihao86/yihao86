@@ -151,12 +151,12 @@
             <div class="path-pos"></div>
             <div class="banner-section">
                 <div class="software-img"><img
-                        src="imgs/6d4b71070f6fc86532b8135ba7046309.jpg"></div>
-                <div class="section-m"><h2>零基础学习After Effects软件<span>已完结</span></h2>
-                    <p class="data"><span>学习人数 474,843</span><span>主课程数量 101节</span><span>练习题数量 107节</span></p></div>
+                        th:src="'http://localhost:9352/video/'+${courseInfo['cr_img']}"></div>
+                <div class="section-m"><h2 th:text="${courseInfo['crname']}">零基础学习After Effects软件<span>已完结</span></h2>
+                    <p class="data"><span>学习人数<span th:text="${courseInfo['hnum']}"></span></span><span>主课程数量 <span th:text="${courseInfo['num']}+'节'"></span></span></p></div>
                 <div class="section-r">
                     <div style="height: 188px;"></div>
-                    <a href="javascript:;" class="go-study" onclick="toLogin()">购买该课程</a></div>
+                    <a href="javascript:;" class="go-study">购买该课程 ￥<span th:text="${courseInfo['price']}"></span></a></div>
             </div>
         </div>
     </div>
@@ -179,18 +179,19 @@
                             </p>
                             <p>学完全部课程可获得完成证书</p></div>
                     </div>
-                    <div class="les-item" th:each="list,l:${list}" >
-                        <div class="item-tit" th:text="'第'+${l.index+1}+'章&nbsp;'+${list}">第一章&nbsp;AE入门<span
+                    <div class="les-item" th:each="lists,l:${list}" >
+                        <div class="item-tit" th:text="'第'+${l.index+1}+'章&nbsp;'+${lists}">第一章&nbsp;AE入门<span
                                 class="down-icon fr"></span></div>
-                                <h1 th:text="${v[list]}"></h1>   
-                        <div class="item-cont" th:each="vch,v:${v}"><!--2018-1-15修改为默认展示所有课程-->  
+                                   
+                        <div class="item-cont" th:each="chapter,vs:${v.get(lists)}"><!--2018-1-15修改为默认展示所有课程-->
+                        	
                             <div class="cont-box"  id='anchor'>
                                 <div class="img">
                                 <a target="_blank" href="../course/1991.html">
                                 	<img
                                         class="lazy cover-pic"
-                                        th:src="'http://localhost:9352/video/'+${videos}"
-                                        data-exposure-id="1991" style="top:0"/>
+                                        th:src="'http://localhost:9352/video/'+${chapter.v_imgs}"
+                                        data-exposure-id="1991" style="top:0"/>s
                                     <span class="play-cover"></span></a>
                                 </div>
                                 <div class="box-main">
@@ -198,21 +199,23 @@
                                     <a target="_blank"
                                        href="../course/1991.html"
                                         class="tit-name tran fl"
-                                        > 课时1-界面介绍 </a>
+                                         th:text="${chapter.v_name}"> 课时1-界面介绍 </a>
                                         <span href="javascript:;" class="tit-status fr">
                                           <i class="point"></i>未学习
                                         </span>
                                     </div>
-                                    <div class="main-extent"><span>难度：新手入门</span><em
-                                            class="fg-line">|</em><span>14万人学习</span></div>
-                                    <span class="exercises-btn tran">练习题：1题</span>
+                                    <div class="main-extent"><span th:text="'难度：'+${chapter.v_difficulty}">难度：新手入门</span><em
+                                            class="fg-line">|</em>
+                                            <h1 ></h1>
+                                            <span th:text="${v.get(chapter.v_name)+'人学习'}">14万人学习</span></div>
+                                    <!-- <span class="exercises-btn tran">练习题：1题</span>
                                     <div class="exercises-list" style="display: block;"><h4>练习题</h4>
                                         <ul>
                                             <li><a href="../course/6604.html"
                                                    class="clearfix" target="_blank"><span class="less-name fl">AE-项目的输出与格式</span><i
                                                     class="play-icon fr"></i></a></li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <!--2018-1-15修改为默认展示所有课程-->
@@ -284,7 +287,7 @@
     </div>
     <a href="quests.html" target="_blank" rel='nofollow'
        onclick='_hmt.push(["_trackEvent", "导流", "点击", "侧边菜单(商城入口)"]);pagePositionClick(86)'>
-        <div class="sign-btn"></div>
+       
     </a></div><!--登录弹窗-->
 <div id="loginModal" class="hkt-win hide"><!--遮罩层-->
     <div class="hkt-mask">

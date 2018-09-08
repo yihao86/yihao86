@@ -13,4 +13,7 @@ public interface CourseService {
 	
 	//查询章节下面的课程
 	Map<String,Object>  fandOneChapter(int crid);
+	
+	//查看课程的基本信息
+	Map<String,Object> fandCourseInfo(int crid);
 }

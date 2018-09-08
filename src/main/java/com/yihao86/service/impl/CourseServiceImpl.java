@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.jms.artemis.ArtemisNoOpBindingRegi
 import org.springframework.stereotype.Service;
 
 import com.yihao86.dao.CourseDao;
+import com.yihao86.dao.TeachersDao;
 import com.yihao86.pojo.Videos;
 import com.yihao86.service.CourseService;
 
@@ -19,6 +20,8 @@ public class CourseServiceImpl implements CourseService {
 
 	@Autowired
 	private CourseDao cdao;
+	@Autowired
+	private TeachersDao tdao;
 	@Override
 	public List<Videos> fandOneCourse(int crid) {
 		return cdao.fandOneCourse(crid);
@@ -30,12 +33,9 @@ public class CourseServiceImpl implements CourseService {
 		List<String> list = new ArrayList<String>();
 		for (Videos v : vlist) {
 			String path = v.getV_vpath();
-			
 			String path1 = path.substring(0,path.lastIndexOf("/"));	
-		
 			path2 = path1.substring(path1.lastIndexOf("/")+1);
 			list.add(path2);
-			
 		}
 		 for(int i =  0;i < list.size() - 1;i++){       
 		      for(int j = list.size() -  1;j > i ;j--){       
@@ -54,12 +54,19 @@ public class CourseServiceImpl implements CourseService {
 		Map<String,Object> map = new HashMap<>();
 		for (String s : list) {
 			vlist = cdao.fandChapter(s);
-	        map.put(s, vlist);
-	        for (Videos videos :vlist) {
-				System.out.println(videos.getV_vpath());
-		    }	
+			for (Videos v : vlist) {
+				int num = tdao.viewingNumber(v.getVid());
+				map.put(v.getV_name(), num);
+			}
+	        map.put(s, vlist);	
 		}	
 		return map;
+	}
+	
+	
+	@Override
+	public Map<String, Object> fandCourseInfo(int crid) {
+		return cdao.fandCourseInfo(crid);
 	}
 
 }
