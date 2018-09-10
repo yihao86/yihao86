@@ -214,9 +214,9 @@
                 </div>
             </div>
         </div><!-- 专辑课程list start -->
-        <div class="flow-list clearfix" th:each="course,c:${clist}">
-            <div class="flow-item hover-album fl" data-ralation="355822">
-                <a href="course.html" target="_blank">
+        <div class="flow-list clearfix">
+            <div class="flow-item hover-album fl"  th:each="course,c:${clist}" data-ralation="355822">
+                <a th:href="@{'fandOneCourse?crid='+${course.crid}}" target="_blank">
                 <div class="item-show">
                     <div class="show-img"><img class="lazy1"
                                                th:src="'http://localhost:9352/video/'+${course.cr_img}"
@@ -248,8 +248,8 @@
             </div>
           
           	
-          	<div class="flow-list clearfix" th:each="album,a:${album}">
-            <div class="flow-item hover-album fl" data-ralation="355822">
+          	<div class="flow-list clearfix" >
+            <div class="flow-item hover-album fl" th:each="album,a:${album}" data-ralation="355822">
                 <a th:href="@{'fandAlbum?aid='+${album.aid}+'&tcid='+${album.a_teacherId}}" target="_blank">
                 <div class="item-show">
                     <div class="show-img"><img class="lazy1"

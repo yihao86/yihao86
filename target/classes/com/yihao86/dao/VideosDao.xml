@@ -10,6 +10,7 @@
 		AS num
 		FROM `videos` v
 		LEFT JOIN `history` h ON v.`vid`=h.`h_vid`
+		WHERE v.`v_disable`=0
 		GROUP
 		BY v.`vid`
 	</select>
@@ -25,7 +26,7 @@
 		AS num
 		FROM `videos` v
 		LEFT JOIN `history` h ON v.`vid`=h.`h_vid`
-		WHERE
+		WHERE v.`v_disable`=0 and
 		DATE(v.`v_uploadtime`) >= DATE_SUB(CURDATE(),
 		INTERVAL 7 DAY)
 		GROUP BY

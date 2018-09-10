@@ -125,7 +125,14 @@
 			<artifactId>javers-core</artifactId>
 			<version>1.0.2</version>
 		</dependency>
-
+		
+		
+		<!-- 任务调度 -->
+		<dependency>
+   			<groupId>org.springframework.boot</groupId>
+   			<artifactId>spring-boot-starter-quartz</artifactId>
+		</dependency>
+		
 	</dependencies>
 
   
