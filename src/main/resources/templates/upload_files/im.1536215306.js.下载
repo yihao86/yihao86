@@ -1,0 +1,865 @@
+$(function(){
+    var SYSTERM_NOTIFY = 'system';
+
+    layui.use('layim', function(layim){
+        window.layim = layim;
+
+        window.nowChat = '';
+        var allSession = new Array();
+        var connectTime = '';
+
+        window.nim = SDK.NIM.getInstance({
+            // debug: true,
+            appKey: Param.imAppkey,
+            account: Param.uid,
+            token: Param.imToken,
+            // db: false,
+            autoMarkRead:false,
+            syncSessionUnread:true,
+            onconnect: function (obj) {
+                console.log('链接了',obj);
+                console.log('SDK 连接成功');
+                connectTime = (new Date()).valueOf();
+                if (Param.chatroomId) {
+                    nim.getChatroomAddress({
+                        chatroomId: Param.chatroomId,
+                        done:getChatroomAddressDone
+                    });
+                }
+
+            },
+            onmsg: function (msg) {
+                console.log("收到消息");
+                console.log(msg);
+                // console.log('收到消息',msg);
+                getWyMessage(msg, 1);
+            },
+            onteams: function (teams) {
+                for (var i = 0; i < teams.length; i++) {
+                    var find = false;
+                    for (var j = 0; j < imTeams.length; j++) {
+                        if (imTeams[j].teamId == teams[i].teamId) {
+                            find = true;
+                            break;
+                        }       
+                    }
+                    //上报异常群聊
+                    if (find === false) {
+
+                    }
+                    
+                }
+
+            },
+            onofflinemsgs: function (obj) {
+                var msgs = obj.msgs;
+                for (var i = 0 ;i < msgs.length; i++) {
+                    getWyMessage(msgs[i], 0);
+                }
+            },
+            onroamingmsgs: function (obj) {
+                // console.log('收到漫游消息', obj);
+                var msgs = obj.msgs;
+                for (var i = 0 ;i < msgs.length; i++) {
+                    getWyMessage(msgs[i], 0);
+                }
+            },
+            onupdatesession: function (session) {
+                console.log('updatesession:',session);
+
+                var dom = $('.layim-list-history #layim-group' + session.to);
+                if (dom.length < 1) {
+                    var cache =  layui.layim.cache();
+                    layui.each(cache.group, function(index, item) {
+                        if (item.id == session.to) {
+                            item.type = 'group';
+                            item.name = item.groupname;
+                            layim.setHistory(item);
+                        }
+                    });
+                }
+
+                if (!nim.findSession(allSession, session.id)) {
+                    allSession.push(session);
+                }
+
+                //all un read
+                var total = 0;
+                for (var i = 0; i < allSession.length; i++) {
+                    if (allSession[i].id == session.id) {
+                        allSession[i] = session;
+                    }
+                    var silence = parseInt($('.layim-list-group #layim-group' + allSession[i].to).attr('data-lic'));
+                    if (silence == 0) {
+                        total = total + allSession[i].unread;
+                    }
+                }
+                if (total == 0) {
+                    $('.layui-layim-close .layui-layer-content span').html('虎课消息');
+                    layim.setMinTitle('虎课消息');
+                } else {
+                    if (total > 99) {
+                        total = '99+'
+                    } else {
+                        total = total.toString();
+                    }
+                    var text = '您有 <i>' + total + '</i> 未读消息';
+                    $('.layui-layim-close .layui-layer-content span').html(text);
+                    layim.setMinTitle(text);
+                }
+
+                
+                if (session.unread == 0) {
+                    $('.layim-list-history #layim-group' + session.to + ' span.new-num').text(0);
+                    $('.layim-list-history #layim-group' + session.to + ' span.new-num').hide();
+
+                    //chat window
+                    $('.layim-chatlist-group' + session.to + ' em.new-num').text(0);
+                    $('.layim-chatlist-group' + session.to + ' em.new-num').hide();
+                } else {
+                    var unread = session.unread > 99 ? '99+': session.unread;
+                    var silence = parseInt($('.layim-list-history #layim-group' + session.to).attr('data-lic'));
+                    if (silence == 1) {
+                        $('.layim-list-history #layim-group' + session.to + ' span.new-num').addClass('ban');
+                        $('.layim-chatlist-group' + session.to + ' em.new-num').addClass('ban');
+                    }
+                    $('.layim-list-history #layim-group' + session.to + ' span.new-num').text(unread);
+                    $('.layim-list-history #layim-group' + session.to + ' span.new-num').show();
+
+                    //chat window
+                    $('.layim-chatlist-group' + session.to + ' em.new-num').text(unread);
+                    $('.layim-chatlist-group' + session.to + ' em.new-num').show();
+                }
+            },
+            onsessions: function (sessions) {
+                allSession = sessions;
+                var total = 0;
+                //同步会话
+                for (var i = 0; i < sessions.length; i++) {
+                    //todo标注未读数
+                    var unread = sessions[i].unread > 99 ? '99+' : sessions[i].unread;
+                    $('.layim-list-history #layim-group' + sessions[i].to + ' .new-num').text(unread);
+                    var silence = parseInt($('.layim-list-history #layim-group' + sessions[i].to).attr('data-lic'));
+                    if (silence == 0) {
+                        if (silence == 0) {
+                            total = total + sessions[i].unread;    
+                        }
+                    } else {
+                        $('.layim-list-history #layim-group' + sessions[i].to + ' span.new-num').addClass('ban');
+                    }
+                    if (sessions[i].unread == 0) {
+                        $('.layim-list-history #layim-group' + sessions[i].to + ' .new-num').hide();
+                    } else if (sessions[i].unread > 0) {
+                        $('.layim-list-history #layim-group' + sessions[i].to + ' .new-num').show();
+                    }
+                }
+
+                if (total == 0) {
+                    $('.layui-layim-close .layui-layer-content span').html('虎课消息');
+                    layim.setMinTitle('虎课消息');
+                } else {
+                    if (total > 99) {
+                        total = '99+'
+                    } else {
+                        total = total.toString();
+                    }
+                    var text = '您有 <i>' + total + '</i> 未读消息';
+                    $('.layui-layim-close .layui-layer-content span').html(text);
+                    layim.setMinTitle(text);
+                }
+                
+            },
+
+            onsysmsg:function(sysMsg){
+                console.log("收到系统通知",sysMsg);
+            },
+            
+            ondisconnect: function (obj) {
+                console.log('SDK 连接断开', obj)
+            },
+            onwillreconnect: function (obj) {
+                console.log("即将重连");
+                console.log(obj);
+            },
+            onerror: function (error) {
+                console.log('SDK 连接失败', error)
+            }
+        })
+
+        function getWyMessage(msg, now){
+            var data = {};
+            if (msg.scene == 'p2p') {
+                if (msg.from == SYSTERM_NOTIFY) {
+                    var data = {username:'系统通知', avatar: Url.resourceBase + 'assets/revision/images/huke_default_avatar_bak.png', id:SYSTERM_NOTIFY, type:'group', content:msg.text, cid:msg.idClient, mine:false, fromid:msg.from, timestamp:msg.time, userid:msg.from, msgid: msg.idServer};
+                    layim.getMessage(data);
+                }
+
+                if ($('.layui-layim-chat .layim-chatlist-group' + msg.from).length > 0) {
+                    $('.layui-box.layui-layim-min.min-message-win').css('background', '#FFCC00');
+                }
+                reGroupList(SYSTERM_NOTIFY);
+            } else {
+                if (msg.type == 'notification') {
+                    if (msg.attach.type === 'addTeamMembers') {
+                        if ($.inArray(Param.uid + '', msg.attach.accounts) !== -1) {
+                            console.log("adding...");
+                            if ($('.layim-list-group #layim-group' + msg.to).length == 0) {
+                                layim.addList({type: 'group', groupname:msg.attach.team.name, id:msg.attach.team.teamId, avatar: Url.picBase + msg.attach.team.avatar, silence: 0, teacher: msg.attach.team.owner});    
+                            }
+                            if ($.inArray(msg.to, teamIdArr === -1)) {
+                                teamIdArr.push(msg.to);
+
+                                //todo获取管理员
+                                var admins = ',';
+                                nim.getTeamMembers({
+                                    teamId:msg.to,
+                                    done: function (error, obj){
+                                        if (error) {
+                                        } else {
+                                            var members = obj.members;
+                                            for (var i = 0; i < members.length; i++) {
+                                                if (members[i].type === "manager") {
+                                                    admins = admins + members[i].account + ',';
+                                                }
+                                            }
+                                        }
+                                    }
+                                });
+                                groupAdmins['g' + msg.to] = admins;
+                            }
+                            if (msg.time > connectTime) {
+                                if ($('.chat-joining-btn' + msg.from).length > 0) {
+                                    if ($('.chat-joining-btn' + msg.from).hasClass('video-detail-page')) {
+                                        $('.chat-joining-btn' + msg.from).text('进组');
+                                    } else {
+                                        $('.chat-joining-btn' + msg.from).text('进入讲师讨论组');
+                                    }   
+                                    $('.chat-joining-btn' + msg.from).removeClass('chat-joining-btn' + msg.from);
+                                    $('.layim-list-group #layim-group' + msg.to).trigger('click');
+                                }
+                            }
+
+                        } else {
+                            var account = msg.attach.accounts[0];
+                            var name = '';
+                            for (var i = 0; i < msg.attach.users.length - 1;i++) {
+                                if (msg.attach.users[i].account == account) {
+                                    name = msg.attach.users[i].nick;
+                                    break;
+                                }
+                            }
+
+                            layim.getMessage({
+                              system: true
+                              ,id: msg.to
+                              ,type: "group"
+                              ,content: '欢迎学员 ' + name + ' 加入本群组'
+                            });
+
+                            var index = $('.layui-layim-chat .layim-chatlist-group' + msg.to).index();
+                            if (index !== -1) {
+                                var total = parseInt($('.layui-layim-chat .layim-chat-box').children().eq(index).find('.layim-chat-members').text());
+                                if (total > 0) {
+                                    $('.layui-layim-chat .layim-chat-box').children().eq(index).find('.layim-chat-members').text(total+1);    
+                                }
+                            }
+                        }
+                    } else if (msg.attach.type === 'removeTeamMembers') {
+                        if ($.inArray(Param.uid + '', msg.attach.accounts) !== -1) {
+                            console.log("removeing...");
+                            layim.removeList({type: 'group',id:msg.to});
+                            $('.layim-list-history #layim-group' + msg.to).remove();
+                            //清除缓存
+                            var name = 'group' + msg.to;
+                            var local = layui.data('layim')[Param.uid];
+                            if (local && local.history) {
+                                delete local.history[name];
+                                delete local.chatlog[name];    
+                                layui.data('layim', {
+                                    key: Param.uid
+                                    ,value: local
+                                });
+                            }
+
+                            
+                            teamIdArr.splice($.inArray(msg.to,teamIdArr),1);
+
+                            var custom = eval('(' + msg.attach.custom + ')');
+                            if (custom && custom.is_quit == 0) {
+                                
+                            }
+                        } else {
+                            var index = $('.layui-layim-chat .layim-chatlist-group' + msg.to).index();
+                            if (index !== -1) {
+                                var total = parseInt($('.layui-layim-chat .layim-chat-box').children().eq(index).find('.layim-chat-members').text());
+                                if (total > 0) {
+                                    $('.layui-layim-chat .layim-chat-box').children().eq(index).find('.layim-chat-members').text(total - 1);
+                                }
+                            }
+                        }
+                    } else if (msg.attach.type === 'addTeamManagers') {
+                        if (groupAdmins['g' + msg.to]) {
+                            groupAdmins['g' + msg.to] = groupAdmins['g' + msg.to] + msg.attach.accounts[0] + ',';
+                        } else {
+                            groupAdmins['g' + msg.to] = ',' + msg.attach.accounts[0] + ',';
+                        }
+                    } else if (msg.attach.type === 'removeTeamManagers') {
+                        if (groupAdmins['g' + msg.to]) {
+                            groupAdmins['g' + msg.to] = groupAdmins['g' + msg.to].replace(new RegExp(',' + msg.attach.accounts[0] + ',' ,'g'),",");
+                        }
+
+                    } else if (msg.attach.type === 'dismissTeam') {
+                        layim.removeList({type: 'group',id:msg.to});
+                        $('.layim-list-history #layim-group' + msg.to).remove();
+                        //清除缓存
+                        var name = 'group' + msg.to;
+                        var local = layui.data('layim')[Param.uid];
+                        if (local && local.history) {
+                            delete local.history[name];
+                            delete local.chatlog[name];    
+                            layui.data('layim', {
+                                key: Param.uid
+                                ,value: local
+                            });
+                        }
+                        
+                        teamIdArr.splice($.inArray(msg.to,teamIdArr),1);
+                    }
+                } else {
+                    var mine = false;
+                    if (Param.uid == msg.from) {
+                        mine = true;
+                    }
+                    var isteacher = false;
+
+                    var after = '';
+                    if (!mine) {
+                        var teacherUid = $('.layim-list-group #layim-group' + msg.to).attr('data-teacher');
+                        if (msg.from == teacherUid) {
+                            isteacher = true;
+                            // after = '<i class="layim-is-teacher">(讲师)</i>';
+                        } else if (groupAdmins['g' + msg.to] && groupAdmins['g' + msg.to].indexOf(',' + msg.from + ',') > -1 ) {
+                            // after = '<i class="layim-is-admin">(助教)</i>';
+                        }
+                    }
+
+                    if ($.inArray(msg.to, teamIdArr) === -1) {
+                        return false;
+                    }
+                    
+                    var custom = {avatar:''};
+                    if (msg.custom) {
+                        custom = $.parseJSON(msg.custom);
+                    }
+                    data = {username:msg.fromNick, avatar:custom.avatar, id:msg.to, type:'group', content:msg.text, cid:msg.idClient, mine:mine, fromid:msg.from, timestamp:msg.time, userid: msg.from, isteacher:isteacher,msgid:msg.idServer};
+                    layim.getMessage(data);
+
+                    if ($('.layui-layim-chat .layim-chatlist-group' + msg.to).length > 0) {
+                        $('.layui-box.layui-layim-min.min-message-win').css('background', '#FFCC00');
+                    }
+                    reGroupList(msg.to);
+                }                
+            }
+
+        }
+
+        // 群组列表排序
+        var order = -1;
+        var reGroupList = function(groupId){
+          $('.layim-list-history li,.layim-chat-list li').each(function() {
+              var gid = $(this).attr('data-gid');
+              var lic = $(this).attr('data-lic');
+              if (gid == groupId && lic == 0) {
+                  $(this).css('order', order);
+                  order--;
+              }
+          });
+        }
+
+      
+        //演示自动回复
+        var autoReplay = [
+            '您好，我现在有事不在，一会再和您联系。', 
+            '你好，我是主人的美女秘书，有什么事就跟我说吧，等他回来我会转告他的。face[心] face[心] face[心] ',
+            '你要和我说话？你真的要和我说话？你确定自己想说吗？你一定非说不可吗？那你说吧，这是自动回复。'
+        ];
+
+        var imTeams = Param.imTeams;
+
+        window.groupAdmins = {};
+        var groups = new Array();
+        window.teamIdArr = new Array();
+
+        groups.push({groupname:'系统通知',type: 'group',avatar: Url.resourceBase + 'assets/revision/images/huke_default_avatar_bak.png',id: SYSTERM_NOTIFY,silence:0});
+
+        for (var i = 0; i < imTeams.length; i++) {
+            teamIdArr.push(imTeams[i].teamId);
+            groupAdmins['g' + imTeams[i].teamId] = ',' + imTeams[i].admins + ',';
+            groups.push({type: 'group', groupname:imTeams[i].name, id:imTeams[i].teamId, avatar: imTeams[i].avatar, silence: imTeams[i].silence, teacher: imTeams[i].teacher});
+        }
+
+        //监听layim建立就绪
+        layim.on('ready', function(res){
+            $('.layui-layim-tab li').eq(2).click();
+        });
+      
+        //基础配置
+        layim.config({
+            init: {
+                mine: {
+                    "username": Param.username //我的昵称
+                    ,"id": Param.uid //我的ID
+                    ,"status": "online" //在线状态 online：在线、hide：隐身
+                    ,"remark": "" //我的签名
+                    ,"avatar": Param.avatar //我的头像
+                }
+                ,friend: []
+                ,group: groups
+            }
+        
+            //查看群员接口
+            ,members: {
+                url: Url.frontBase + 'im/api/get-members'
+                ,data: {}
+            }
+        
+            //上传图片接口
+            ,uploadImage: {
+                url: Url.frontBase + 'im/api/upload-img' //（返回的数据格式见下文）
+                ,type: 'post' //默认post
+            } 
+        
+        
+            ,title: '虎课消息' //自定义主面板最小化时的标题
+            //,right: '100px' //主面板相对浏览器右侧距离
+            //,minRight: '90px' //聊天面板最小化时相对浏览器右侧距离
+            ,initSkin: '2.jpg' //1-5 设置初始背景
+            //,skin: ['aaa.jpg'] //新增皮肤
+            ,isfriend: false //是否开启好友
+            //,isgroup: false //是否开启群组
+            ,min: true //是否始终最小化主面板，默认false
+            ,minRight:'270px'
+            ,notice: false //是否开启桌面消息提醒，默认false
+            ,voice: false //声音提醒，默认开启，声音文件为：default.mp3
+            ,remind: false //消息提示
+            
+            // ,msgbox: layui.cache.dir + 'css/modules/layim/html/msgbox.html' //消息盒子页面地址，若不开启，剔除该项即可
+            ,find: Url.frontBase + 'im/api/find'
+            ,chatLog: Url.frontBase + 'im/api/chatlog'
+            
+        });
+
+        /*layim.setChatMin();*/
+
+        //监听在线状态的切换事件
+        layim.on('online', function(data){
+            //console.log(data);
+        });
+      
+        //监听签名修改
+        layim.on('sign', function(value){
+            //console.log(value);
+        });
+      
+        
+
+        layim.on('beforeSendMessage', function(to,content){
+            if (to === 'system') {
+                layim.sendMessageReal();
+                return false;
+            }
+
+            if (content.length > 200) {
+                layer.msg("聊天内容长度不得大于200");
+                return false;
+            }
+            
+
+            //check文本和图片
+            var checkContentUrl = Url.asynBase + 'antispam';
+
+            $.ajax({
+                url : checkContentUrl,
+                data:{
+                    content:content,
+                    from:'chat',
+                    '_csrf-frontend':$('meta[name=csrf-token]').attr('content')
+                },
+                async : false,
+                type : "POST",
+                dataType : 'json',
+                success : function (result){
+                    if (result.result === 0) {
+                        if (result.data == 1) {
+                            window.nim.sendText({
+                                scene: 'team',
+                                to: to,
+                                text: content,
+                                custom: '{"avatar": "' + Param.avatar + '"}',
+                                done: function(error, msg) {
+                                    if (error) {
+                                        // console.log('error:', error);
+                                        if (error.message.indexOf('socket状态不对') > -1) {
+                                            layer.msg("您已掉线,请刷新页面重新登录");
+                                            return false;
+                                        }
+
+                                        if (error.message.indexOf('没有权限') > -1) {
+                                            layer.msg("您已被禁言");
+                                        } else {
+                                            layer.msg("发送失败,失败原因:" + error.message.replace(/sendTeamMsg error:/i, ''), {icon: 2});
+                                        }
+                                        return false;
+                                    } else {
+                                        layim.sendMessageReal(msg);
+                                        return true;
+                                    }
+                                }
+                            })
+                        } else {
+                            layer.msg("发送失败，您发送的内容包含敏感词汇", {icon: 2});
+                            return false;
+                        }
+                    } else {
+                        layer.msg(result.msg, {icon: 2});
+                        return false;
+                    }
+                }
+            });
+        })
+
+        //监听发送消息
+        layim.on('sendMessage', function(data){
+            var To = data.to;
+            console.log(data);
+
+            reGroupList(To.id);          
+        });
+
+        //监听查看群员
+        layim.on('members', function(data){
+            // console.log('群成员',data);
+        });
+      
+        //监听聊天窗口的切换
+        layim.on('chatChange', function(res){
+            var type = res.data.type;
+            nowChat = res.data.id;
+            // console.log('nowChat', nowChat);
+            if(type === 'friend'){
+                
+            } else if(type === 'group'){
+                //mark read
+            }
+        });
+
+        layim.on('afterChatChange', function(){
+            if ($('.layim-chat-list .layim-this').length >= 1 ) {
+                nowChat = $('.layim-chat-list .layim-this').attr('data-gid');
+
+                var session = null;
+                if (nowChat === 'system') {
+                    session = nim.findSession(allSession, 'p2p-' + nowChat);
+                } else {
+                    session = nim.findSession(allSession, 'team-' + nowChat);
+                }
+                
+                if (session) {
+                    nim.setCurrSession(session.id);
+                }
+
+            } else {
+                nowChat = '';
+                nim.resetCurrSession();
+            }
+        });
+
+        $(document).on('click','.layui-layim-chat .layui-layer-close' ,function(){
+            nim.resetCurrSession();
+        });
+
+        var local = layui.data('layim')[Param.uid];
+
+        //静音
+        var silenceUrl = Url.frontBase + 'im/api/silence';
+        $(document).on('click', '.icon-xiaoxishezhi', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            var that = $(this);
+            var other = $('.icon-xiaoxipingbi');
+
+            layer.confirm("确定要屏蔽此群消息吗？", {
+                btn: ['是的', '再考虑考虑']
+            }, function(){
+                $.post(silenceUrl, {
+                    type:'add', 
+                    group_account:nowChat,
+                    '_csrf-frontend':$('meta[name=csrf-token]').attr('content')
+                }, function(res){
+                    if (res.code == 0) {
+                        layer.msg("已屏蔽", {icon: 1});
+                        that.hide();
+                        other.show();
+                        //todo操作数组和缓存
+                        $(that).parent().parent().parent().attr('data-lic',1);
+                        $('.layim-list-history #layim-group'+nowChat).attr('data-lic', 1);
+                        $('.layim-list-group #layim-group'+nowChat).attr('data-lic', 1);
+                        $('.layim-list-history #layim-group'+nowChat).find('.new-num').addClass('ban');
+
+
+                        //清除缓存
+                        var index = $('.layim-list-group #layim-group'+nowChat).index();
+                        var cache = layui.layim.cache();
+                        cache.group[index].silence = 1;
+                        layim.setCache(cache);
+
+                        var name = 'group'+ nowChat;
+                        var local = layui.data('layim')[Param.uid];
+                        if (local && local.history) {
+                            local.history[name].silence = 1;
+                            local.chatlog[name].silence = 1;
+                            layui.data('layim', {
+                                key: Param.uid
+                                ,value: local
+                            });
+                        }
+                    } else {
+                        layer.msg(res.msg, {icon: 2});
+                    }
+                });
+            },function(){
+
+            });
+        })
+
+        //取消静音
+        $(document).on('click', '.icon-xiaoxipingbi', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var that = $(this);
+            var other = $('.icon-xiaoxishezhi');
+
+            layer.confirm("确定要取消屏蔽群消息吗？", {
+                btn: ['是的','再考虑考虑'] //按钮
+            }, function(){
+                $.post(silenceUrl, {
+                    type:'cancel', 
+                    group_account:nowChat,
+                    '_csrf-frontend':$('meta[name=csrf-token]').attr('content')
+                }, function(res){
+                    if (res.code == 0) {
+                        layer.msg("已取消屏蔽", {icon: 1});
+                        that.hide();
+                        other.show();
+                        //todo操作数组和缓存
+                        $(that).parent().parent().parent().attr('data-lic',0);
+                        $('.layim-list-history #layim-group'+nowChat).attr('data-lic', 0);
+                        $('.layim-list-group #layim-group'+nowChat).attr('data-lic', 0);
+                        $('.layim-list-history #layim-group'+nowChat).find('.new-num').removeClass('ban');
+                        //清除缓存
+                        var index = $('.layim-list-group #layim-group'+nowChat).index();
+                        
+                        var cache = layui.layim.cache();
+                        cache.group[index].silence = 0;
+                        layim.setCache(cache);
+
+                        var name = 'group'+ nowChat;
+                        var local = layui.data('layim')[Param.uid];
+                        if (local && local.history) {
+                            local.history[name].silence = 0;
+                            local.chatlog[name].silence = 0;
+                            layui.data('layim', {
+                                key: Param.uid
+                                ,value: local
+                            });
+                        }
+                    } else {
+                        layer.msg(res.msg, {icon: 2});
+                    }
+                });
+            }, function(){
+
+            });
+        })
+
+        //退出
+        var quitUrl = Url.frontBase + 'im/api/quit';
+        $(document).on('click', 'i.icon-tuichuqunzu', function(e) {
+            var that = $(this);
+            e.preventDefault();
+            e.stopPropagation();
+
+            layer.confirm("确定要退出此群吗？", {
+                btn: ['确定','再考虑考虑'] //按钮
+            }, function(){
+                $.post(quitUrl,{
+                    'id':nowChat,
+                    '_csrf-frontend':$('meta[name=csrf-token]').attr('content')
+                },function(response){
+                    if (response.code == 0) {
+                        layer.msg("退出成功", {icon: 1});
+                        $('.layim-this .layui-icon').click();
+                    } else {
+                        layer.msg(response.msg, {icon: 2});
+                    }
+                });
+                
+            }, function(){
+            });
+        })
+
+        //踢出
+        var kickoutUrl = Url.frontBase + 'im/api/kick-out';
+        $(document).on('click', '.layim-members-list .tr', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var that = $(this);
+            var uid = $(this).parent().parent().attr('data-uid');
+            
+
+            layer.confirm("确定要踢出此群吗？", {
+                btn: ['确定','再考虑考虑'] //按钮
+            }, function(){
+                $.post(kickoutUrl,{
+                    'group_account':nowChat,
+                    'person_id':uid,
+                    '_csrf-frontend':$('meta[name=csrf-token]').attr('content')
+                },function(response){
+                    if (response.code == 0) {
+                        layer.msg("踢出成功", {icon: 1});
+                    } else {
+                        layer.msg(response.msg, {icon: 2});
+                    }
+                });
+                
+            }, function(){
+            });
+            return false;
+        })
+
+        //禁言
+        var banTalkUrl = Url.frontBase + 'im/api/forbid-talk';
+        $(document).on('click', '.layim-members-list .tr2', function(e) {
+            e.preventDefault();e.stopPropagation();
+            var that = $(this);
+            var uid = $(this).parent().parent().attr('data-uid');
+            var type = $(this).attr('type');
+            var tip = $(this).text();
+            var otherTip = '';
+            var otherType = '';
+            if (type === 'cancel') {
+                otherTip = '禁言';
+                otherType = 'do';
+            } else {
+                otherTip = '解禁';
+                otherType = 'cancel';
+            }
+            
+            layer.confirm("确定要" + tip + "此用户吗？", {
+                btn: ['确定','再考虑考虑'] //按钮
+            }, function(){
+                $.post(banTalkUrl,{
+                    'group_account':nowChat,
+                    'person_id':uid,
+                    'type':type,
+                    '_csrf-frontend':$('meta[name=csrf-token]').attr('content')
+                },function(response){
+                    if (response.code == 0) {
+                        layer.msg(tip + "成功", {icon: 1});
+                        $(that).text(otherTip);
+                        $(that).attr('type', otherType);
+                    } else {
+                        layer.msg(response.msg, {icon: 2});
+                    }
+                });
+                
+            }, function(){
+            });
+        })
+
+        var getNoticeUrl = Url.frontBase + 'im/api/get-group-notice';
+        $(document).on('click', 'i.icon-gonggao', function(e){
+            $.get(getNoticeUrl,{
+                'id':nowChat
+            },function(response){
+                if (response.code == 0) {
+                    layer.open({
+                        title: '公告',
+                        type: 1,
+                        skin: 'layer-rebtn', //加上边框
+                        area: ['420px', '240px'], //宽高
+                        content: response.data
+                    });
+                } else {
+                    layer.msg(response.msg, {icon: 2});
+                }
+            });
+        })
+
+        // 编辑
+        $(document).on('click', '.layer-rebtn .rebtn', function() {
+            if ($(this).hasClass('save-btn') == false) {
+                var text = $(this).siblings('.content-area')
+                var con = text.text();
+                $(this).text('保存').addClass('save-btn');
+                $('.layer-rebtn').find('.content-area').html('<textarea>'+con+'</textarea>').find('textarea').focus();
+
+            }
+        });
+        // 保存
+        var saveNoticeUrl = Url.frontBase + 'im/api/save-notice';
+        $(document).on('click', '.layer-rebtn .save-btn', function() {
+            var text = $(this).siblings('.content-area').find('textarea').val();
+            $('.layer-rebtn .content-area').text(text);
+            $(this).removeClass('save-btn').text('编辑公告');
+            if (text.length > 500) {
+                layer.msg("公告长度须小于500字");
+            }
+            //save
+            $.post(saveNoticeUrl, {
+                'content': text,
+                'id':nowChat,
+                '_csrf-frontend':$('meta[name=csrf-token]').attr('content')
+            }, function(response){
+                if (response.code == 0) {
+                    layer.msg("编辑成功", {icon: 1});
+                } else {
+                    layer.msg(response.msg, {icon: 2});   
+                }
+            });
+
+
+        });
+
+        $(document).on('click', '.layim-chat-user img',function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            var userId = $(this).parent().attr('data-user-id');
+            if (userId) {
+                // if ($(this).parent().find('.is-teacher').length) {
+                var url = Url.frontBase + 'teacher/' + userId + '.html';
+                // } else {
+                //     var url = Url.frontBase + 'person?uid=' + userId;
+                // }
+                window.open(url);
+            }
+        })
+
+        $(document).on('click', '.layim-members-list li', function(e){
+            var userId = $(this).attr('data-uid');
+
+            if (userId) {
+                if ($(this).find('.zjc').length) {
+                    var url = Url.frontBase + 'teacher/' + userId + '.html';
+                } else {
+                    var url = Url.frontBase + 'person?uid=' + userId;
+                }
+                window.open(url);
+            }
+
+        })
+
+
+
+    });
+})
