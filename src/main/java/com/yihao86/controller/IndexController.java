@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yihao86.pojo.Type;
 import com.yihao86.pojo.Videos;
+import com.yihao86.service.TeachersService;
 import com.yihao86.service.TypeService;
 import com.yihao86.service.VideosService;
 
@@ -21,7 +22,11 @@ public class IndexController {
 	
 	@Autowired
 	private TypeService ts;
+	
+	@Autowired
+	private TeachersService tcs;
 
+	
 	@RequestMapping("gogogo")
 	public String index(Model mod) {
 		System.out.println("hhhhhh_主页查询方法");
@@ -31,6 +36,9 @@ public class IndexController {
 		mod.addAttribute("tlist", tlist);
 		mod.addAttribute("vlist", vlist);
 	    mod.addAttribute("newlist", newlist);
+	    List<Map<String,Object>> map=tcs.findAllAchievement(0);
+		System.out.println(map.size());
+		mod.addAttribute("map",map);
 		return "index";
 	}
 

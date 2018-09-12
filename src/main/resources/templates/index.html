@@ -57,8 +57,24 @@
                     </div>
                 </div>
             </div><!-- 个人信息 --><!-- 未登录状态 -->
-            <a href="javascript:;" rel='nofollow' class="register-link fr" id="registerBtn">免费注册</a>
-            <a href="javascript:;" rel='nofollow' class="in-btn" id="loginBtn"><div class="login fr">登录</div></a>
+            <span th:if="${session.user} ne null">           
+            <div class="login fr" >  
+            <div class="user-avatar">
+                <a target="_blank" th:href="@{'findUserById?uid='+${session.user.uid}}">
+                <img style="width: 36px;
+                            height: 36px;
+                            border-radius: 50%;
+                            margin-top: 12px;" th:src="'http://localhost:9352/video/'+${session.user.u_photo}"/>
+               <!--  <i class="sj"></i>
+                <i class="jt"></i> -->
+                </a>
+            </div>                
+           </div></a></span>      
+           <div th:if="${session.user} eq null ">
+           <a href="javascript:;" rel='nofollow' class="register-link fr" id="registerBtn">免费注册</a>
+           <a href="#"  rel='nofollow' class="in-btn" id="loginBtn">
+           <div class="login fr" >登录 </div></a></div>
+            
             <div class="header-search fr">
                 <div class="search-m search-area">
                     <input type="text" name="search" placeholder="搜索教程/讲师" class="txt" value="">
@@ -419,55 +435,19 @@
         <div class="layout-cont teacher-con"><h2>优秀的老师都在这里</h2>
             <p class="con">实用案例深度解析，专业讲师为你带来设计界前沿的视频教程。设计技巧全面传授，提供成长道路上并不可少的技能。</p>
             <div class="teacher-slide" id="teacher-slide">
-                <div class="slide-m clearfix">
-                    <div class="list">
-                        <a href="teacher.html" target="_blank">
+                <div class="slide-m clearfix">                               
+                     <div th:each="teachers,map:${map}"  class="list">                 
+                        <a th:href="@{'clickOneTeacher?tid='+${teachers.Teachers.tid}}" target="_blank">
                         <div class="tc-avatar">
-                            <img class="lazy" src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/125x125"
-                                                data-original="https://pic.huke88.com/image/000/000/008/FA8D14DC-5F10-A2CD-CFFC-0C606091F910.jpg"
-                                                onclick=_hmt.push(["_trackEvent","广告","点击","杰克头像点击次数"]);  alt="杰克">
+                            <img class="lazy"  th:src="'http://localhost:9352/video/'+${teachers.Teachers.t_photo}"
+                                              th:alt="${teachers.Teachers.t_name}">
                         </div>
-                        <p class="tc-name">杰克</p>
-                        <p class="tc-info"><span>课程：18节</span><span>粉丝：3573人</span></p>
+                        <p th:text="${teachers.Teachers.t_name}" class="tc-name">杰克</p>
+                        <p class="tc-info"><span th:text="'课程数 :'+${teachers.videoNum}">课程：18节</span><span th:text="'学习人数 :'+${teachers.numberOfPepole}">学习人数：3573人</span></p>
                         <p class="tc-con">
                             著名平面设计师，杰视帮电商视觉创始人，有十多年电商设计的工作经验，服务过众多销量过千万的天猫店铺，例如：柏卡姿、玫莉蔻、贝蒂佩琪、香格尔等品牌；淘宝大学官方认证的资深讲师，至今为止培训过数百万行业设计师。</p>
                         </a>
-                    </div>
-                    <div class="list"><a href="teacher.html" target="_blank">
-                        <div class="tc-avatar"><img class="lazy"
-                                                    src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/125x125"
-                                                    data-original="https://pic.huke88.com/image/000/000/002/48197D31-0534-40A9-7AD6-D4F6C7B9C8D3.jpg"
-                                                    onclick=_hmt.push(["_trackEvent", "广告", "点击", "K先生头像点击次数"]);
-                            alt="K先生">
-                        </div>
-                        <p class="tc-name">K先生</p>
-                        <p class="tc-info"><span>课程：41节</span><span>粉丝：16833人</span></p>
-                        <p class="tc-con">
-                            研习设由K先生创立，是一个以研究设计、学习设计为目的的设计师组织。研习设（订阅号yanxishe2017），每周四晚9点，准时更新一篇高品质原创设计文章。欢迎对学习设计有持续热情的同学关注，期待你的进步。</p>
-                    </a></div>
-                    <div class="list"><a href="teacher.html" target="_blank">
-                        <div class="tc-avatar"><img class="lazy"
-                                                    src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/125x125"
-                                                    data-original="https://pic.huke88.com/image/000/000/010/1D83443A-DC81-4EE7-DEDB-2029690F396B.jpg"
-                                                    onclick=_hmt.push(["_trackEvent", "广告", "点击", "肆拾大道头像点击次数"]);
-                            alt="肆拾大道">
-                        </div>
-                        <p class="tc-name">肆拾大道</p>
-                        <p class="tc-info"><span>课程：45节</span><span>粉丝：2916人</span></p>
-                        <p class="tc-con">
-                            广告及设计行业从业10多年，曾就职多家4A广告公司，服务过汽车、电信、IT、快销品等领域；擅长标志、宣传册、包装、广告等方面的工作。期望多年工作经验的分享，助你广告、设计水平的提高。</p>
-                    </a></div>
-                    <div class="list"><a href="teacher.html" target="_blank">
-                        <div class="tc-avatar"><img class="lazy"
-                                                    src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/125x125"
-                                                    data-original="https://pic.huke88.com/image/000/000/010/777AB126-3FAB-517E-C9AD-04F7F5CF7C92.jpg"
-                                                    onclick=_hmt.push(["_trackEvent", "广告", "点击",
-                            "EthankDesign头像点击次数"]); alt="EthankDesign">
-                        </div>
-                        <p class="tc-name">EthankDesign</p>
-                        <p class="tc-info"><span>课程：23节</span><span>粉丝：3974人</span></p>
-                        <p class="tc-con">一群由美团、阿里、小米、今日头条的资深设计师组成的专业设计研究与分享团队，致力于帮助在职UI设计师提高专业技能，尤其注重产品思维、交互逻辑的教学。</p>
-                    </a></div>
+                    </div>          
                 </div>
             </div>
         </div>
@@ -632,6 +612,11 @@
 <script>
     Url.getVideoList = 'site/ajax-get-video-list.html';
     Url.recordNotice = 'site/record-notice.html';
+    $(".phone-btn").click(function() {
+        var phone=$("input[name='phone']").val();  	
+        var cade=$("input[name='code']").val();
+           window.location="findUser?phone="+phone+"&cade="+cade;
+		});
 </script><!-- 首页宣传视频  --><!--[if lt IE 9]>
 <script src="https://js.huke88.com/assets/revision/js/es5-shim.js"></script>
 <script src="https://js.huke88.com/assets/revision/js/es5-sham.js"></script><![endif]-->
