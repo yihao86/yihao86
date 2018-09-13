@@ -26,7 +26,7 @@ public interface TeachersService {
 	int total(int tid);
 	
 	
-	List<Map<String,Object>> findAllAchievement(int t_occupation);
+	List<Map<String,Object>> findAllAchievement(int t_occupation,int pageNow);
 	
 	//查看老师页面的职业
 	List<Type> teacherType();

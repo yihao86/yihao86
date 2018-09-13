@@ -26,7 +26,7 @@ public class TeachersServiceImpl implements TeachersService {
 	}
 	
 	@Override
-	public List<Map<String,Object>> findAllAchievement(int t_occupation){
+	public List<Map<String,Object>> findAllAchievement(int t_occupation,int pageNow){
 		List<Teachers> tlist = tdao.findAllTeacher(t_occupation);
 		List<Map<String,Object>> list = new ArrayList<>();
 		for (Teachers t : tlist) {
