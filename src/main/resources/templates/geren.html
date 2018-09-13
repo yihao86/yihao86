@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <!-- Mirrored from huke88.com/person/index?uid=1367229 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Aug 2018 11:17:36 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
@@ -84,6 +84,7 @@
 
         var _hmt = _hmt || [];
     </script>
+
 </head>
 <body onload="load()">
 <div id="body-container"><input type="hidden" id="referrer" value="">
@@ -122,7 +123,7 @@
                 </div>
             </div><!-- 个人信息 --><!-- 未登录状态 -->
             <a href="javascript:;" rel='nofollow' class="register-link fr" id="registerBtn">免费注册</a>
-            <a href="javascript:;" rel='nofollow' class="in-btn" id="loginBtn"><div class="login fr">登录</div></a>
+            <a href="javascript:;" rel='nofollow' class="in-btn" id="loginBtn"><div class="login fr" th:text="${u.u_name}">登录</div></a>
             <div class="header-search fr">
                 <div class="search-m search-area">
                     <input type="text" name="search" placeholder="搜索教程/讲师" class="txt" value="">
@@ -151,55 +152,100 @@
     <div class="user-banner">
         <div class="layout-cont clearfix">
             <div class="avatar fl"><img
-                    src="../static/assets/revision/images/huke_ucenter_default_avatar.jpg"></div>
+                    th:src="'http://localhost:9352/video/'+${session.user.u_photo}"></div>
             <div class="user-info fl">
                 <div class="name"><h1></h1></div>
                 <br/>
-                <p class="p1">ID:1367229<span><a href="https://huke88.com/mall"
+                <p  th:text="'ID:'+${u.u_account}" class="p1">ID:1367229<span><a href="https://huke88.com/mall"
                                                  target="_blank"></a></span></p>
                 <div class="vip-icon clearfix"><i class="novip"></i></div>
             </div>
             <div class="r-link fr"><a href="https://huke88.com/notice/list" target="_blank">消息<br><span>99+</span></a><a
                     href="collection6034.html?uid=1367229"
-                    target="_blank">收藏<br><span>0</span></a><a href="follow6034.html?uid=1367229"
-                                                               target="_blank">关注<br><span>1</span></a></div>
+                    target="_blank">收藏<br><span th:text="${umap.follow}">0</span></a><a href="follow6034.html?uid=1367229"
+                                                               target="_blank">关注<br><span th:text="${umap.coll}">1</span></a></div>
         </div>
     </div>
     <div class="user-wrapper clearfix layout-cont">
-        <div class="wrap-l fl"><a href="index6034.html?uid=1367229"
-                                  class="lnav c2 active"><i></i><span>学习中心</span></a><a
-                href="collection6034.html?uid=1367229" class="lnav c3 "><i></i><span>课程收藏</span></a><a
-                href="album6034.html?uid=1367229" class="lnav c9 "><i></i><span>他的专辑</span></a><a
-                href="follow6034.html?uid=1367229" class="lnav c4 "><i></i><span>关注讲师</span></a></div><!-- 右侧部分 -->
+        <div class="wrap-l fl"><a th:href="@{'findUserById?uid='+${u.uid}}"
+                                  th:class="${option} eq '1' ? 'lnav c2 active':'lnav c2'"><i></i><span>学习中心</span></a><a
+                th:href="@{'findUserById?uid='+${u.uid}+'&options=2'}" th:class="${option} eq '2' ? 'lnav c2 active':'lnav c2'"><i></i><span>课程收藏</span></a><a
+                th:href="@{'findUserById?uid='+${u.uid}+'&options=3'}"  th:class="${option} eq '3' ? 'lnav c2 active':'lnav c2'"><i></i><span>他的专辑</span></a><a
+                  th:href="@{'findUserById?uid='+${u.uid}+'&options=4'}" th:class="${option} eq '4' ? 'lnav c2 active':'lnav c2'"><i></i><span>关注讲师</span></a></div><!-- 右侧部分 -->
         <div class="wrap-r fr"><!-- 我的学习计划 -->
-            <div class="head"><h3 class="h3"><a href="indexcba2.html?uid=1367229&amp;type=1" class="active">课程</a><a
-                    href="indexa262.html?uid=1367229&amp;type=2">名师机构</a></h3></div><!-- 没有内容的提示 -->
+            <div class="head"><h3 class="h3">
+            <span th:if="${option} ne 4"><a href="indexcba2.html?uid=1367229&amp;type=1" class="active">课程</a></span>
+            <span th:if="${option} eq 4"><a href="indexcba2.html?uid=1367229&amp;type=1" class="active">我关注的教师</a></span>
+      </h3></div><!-- 没有内容的提示 -->
             <div class="uinfo-bd">
                 <div class="flow-list clearfix">
-                    <div class="flow-item fl">
-                        <div class="item-show"><a href="https://huke88.com/course/3815.html" target="_blank">
+                    <div th:each="v,ulist:${ulist}" class="flow-item fl">
+                        <div class="item-show">
+                        <span th:if="${v.crid} eq 0"><a th:href="@{'goVideo?vid='+${v.vid}}" target="_blank"></span>
+                        <span th:if="${v.crid} ne 0"><a th:href="@{'goCourse?crid='+${v.crid}}" target="_blank"></span>
+                        
                             <!--- 已登陆 && 当前用户 --->
                             <div class="show-img"><img class="lazy"
-                                                       src="https://pic.huke88.com/cover/cover.png!/compress/true/format/jpg/fh/294"
-                                                       alt="PS-城市与自由概念合成海报"
-                                                       data-original="https://pic.huke88.com/video/cover/2017-09-14/D24B54DD-BAD2-E9CB-1457-4573F2F2B770.jpg!/fw/500/format/jpg/quality/80"
+                                                        th:src="'http://localhost:9352/video/'+${v.v_imgs}" 
+                                                       th:alt="${v.v_name}"                                                  
                                                        style="display: block;"></div>
                             <div class="show-mask"><span class="play-btn"></span></div>
                         </a></div>
                         <div class="item-info uhome-page">
-                            <div class="info-title clearfix"><span class="title-name fl">PS-城市与自由概念合成海报</span><span
-                                    class="title-type fr"><span class="type-label type-sysn">  海报  </span></span></div>
+                            <div class="info-title clearfix"><span class="title-name fl" th:text="${v.v_name}">PS-城市与自由概念合成海报</span><span
+                                    class="title-type fr"><span class="type-label type-sysn" th:text="${v.typename}">海报</span></span></div>
                             <div class="info-tabs clearfix">
-                                <div class="tab-left fl"></div>
-                                <span class="fr other-sp"> 难度：初级练习 </span></div>
+                                <div class="tab-left fl">
+                                 <span th:if="${v.num} eq 0"><a href="" class="sb">我要评价</a></span> 
+                                <span th:if="${v.num} ne 0"><a href="" class="sb" th:text="${v.num}+'人已学习'">我要评价</a></span>                                                     
+                                </div>
+                                <span class="fr other-sp" th:text="${v.v_difficulty}"> 难度：初级练习 </span></div>
                         </div>
                     </div>
                 </div>
-            </div><!--分页 s-->
-            <div id="page-m">
-                <div class="page-li"><a class="on active" href="indexe5fd.html?uid=1367229&amp;page=1&amp;per-page=30"
-                                        data-page="0">1</a></div>
+                
+                <div class="teacher-con">
+                <div id="a" th:each="teacher,t:${tlist}" class="list clearfix" >
+                    <div class="teacher-avatar fl"><a th:href="@{'clickOneTeacher?tid='+${teacher.tid}}" target="_blank">
+                    	<img th:src="'http://localhost:9352/video/'+${teacher.t_photo}"></a>
+                    </div>                
+                   <div  class="teacher-info fl">
+                        <div class="teacher-name">
+                        	<a th:href="@{'clickOneTeacher?tid='+${teacher.tid}}" target="_blank" th:text="${teacher.t_name}">薛奔<i></i></a>
+                        </div>
+                        <p class="speciality"> 擅长：<span th:text="${teacher.typename}"></span></p>
+                        <p class="num"><span th:text="'课程数 :'+${teacher.videoNum}"> </span><span th:text="'学习人数 :'+${teacher.numberOfPepole}">学习人数 </span></p>
+                        <p class="con" th:text="${teacher.t_abstract}"></p>
+                        <div class="btn" data-id="993" style="padding-top: 12px; display: inline-block;">
+                        	<a href="javascript:;" class="followed">已关注</a>
+                        	<a href="javascript:;" th:onclick="'javascript:editTeacher('+${teacher.tid}+');'"  data-evevt-js="cancel-follow-js" data-id="445" class="refollow cared-delet">取消关注</a>
+                        </div>
+                    </div>                                             
+                    <div th:each="imgpath,map:${map.get(teacher.tid)}"  class="teacher-video fl">
+                    	<a th:href="@{'goVideo?vid='+${imgpath.vid}}" target="_blank">
+                        	<div class="show-img">
+                        		<img class="lazy" th:src="'http://localhost:9352/video/'+${imgpath.v_imgs}">
+                                 <span class="time-length">11分15秒</span>
+                             </div>
+                        	<div class="show-mask">
+                        	<span class="play-btn"></span>
+                        	</div>
+                    	</a>
+                    </div>                 
+                </div>
             </div>
+            </div><!--分页 s-->
+                 
+            <div id="page-m">
+                <div class="page-li"><a class="on active" href="album/1-16.html" data-page="0">1</a><a
+                        href="album/2-16.html" data-page="1">2</a><a href="album/3-16.html" data-page="2">3</a><a
+                        href="album/4-16.html" data-page="3">4</a><a href="album/5-16.html" data-page="4">5</a><a
+                        href="album/6-16.html" data-page="5">6</a><a href="album/7-16.html" data-page="6">7</a><a
+                        href="album/8-16.html" data-page="7">8</a><a href="album/9-16.html" data-page="8">9</a><a
+                        href="album/10-16.html" data-page="9">10</a><a class="next" href="album/2-16.html"
+                                                                       data-page="1">下一页</a></div>
+            </div>
+       <!-- 专辑list end -->
         </div>
     </div><!-- 奖状弹窗 -->
     <div class="jb-win hide">
@@ -362,8 +408,17 @@
             var oEvent = ev || event;
             oEvent.stopPropagation();
             return false;
-        });
-    })
+        });   
+    });
+     function editTeacher(tid) {
+    	 alert(tid);
+		$.post("editTeacherById?tid="+tid,function(t){
+			alert(t);
+			if(t=="Y"){
+				$("#a").remove();
+			}
+		});
+	  }
 </script>
 </body>
 <!-- Mirrored from huke88.com/person/index?uid=1367229 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Aug 2018 11:17:39 GMT -->

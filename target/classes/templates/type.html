@@ -185,10 +185,10 @@
 							data-parent-tag-name="软件">
 							<a href="findTyeps" th:class="${typeId} eq 0 ?'on':''" rel='nofollow'>
 								全部 </a> <span th:each="s,slist:${slist}">
-								 <a  th:if="${s.typeid} eq ${typeId}" th:href="@{'findTyeps?typeId='+${s.typeid}}"
+								 <a  th:if="${s.typeid} eq ${typeId}" th:href="@{'findTyeps?typeId='+${s.typeid}+'&f_trid='+${ftrid}}"
 								th:text="${s.typename}" th:class="on" data-tag-id="49"
 								data-tag-name="PS" rel='nofollow'> PS </a>
-								<a th:if="${s.typeid} ne ${typeId}" th:href="@{'findTyeps?typeId='+${s.typeid}}"
+								<a th:if="${s.typeid} ne ${typeId}" th:href="@{'findTyeps?typeId='+${s.typeid}+'&f_trid='+${ftrid}}"
 								th:text="${s.typename}" class="" data-tag-id="49"
 								data-tag-name="PS" rel='nofollow'> PS </a>
 							</span>

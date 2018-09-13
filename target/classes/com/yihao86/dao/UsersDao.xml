@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yihao86.dao.UsersDao">
+
+<!-- 查询个人资料 -->
+ <select id="findUsers" resultType="Users">
+  SELECT * FROM `users` WHERE `u_account`=#{u_account}
+ </select>
+ 
+ <!--查询自己关注的老师 和收藏的视频-->
+ <select id="findMyFolColl" resultType="map">
+ SELECT  COUNT(DISTINCT `f_ftid`) AS follow, COUNT(DISTINCT `c_vid`) AS coll
+ FROM `follow` f,`collection` c 
+ WHERE f.`f_uid` =#{uid} AND c.`c_uid`=#{uid}
+ </select>
+ 
+ <!--历史记录-->
+ <select id="findUserWatch" resultType="map">
+ SELECT DISTINCT h.`h_vid`,v.`vid`,v.`v_name`,h.`h_time`,v.`v_imgs`,v.`v_vpath`,v.`v_difficulty`,t.`typename`
+ FROM `history` h,`videos` v,`type` t 
+ WHERE h.`h_vid`=v.`vid` AND v.`v_typeId`=t.`typeid` AND h.`h_uid`=#{uid}
+ ORDER BY h.`h_time` DESC
+ </select>
+ 
+ <select id="findCollVideos" resultType="map">
+SELECT v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.`v_difficulty`,t.`typename`
+,COUNT(h.`h_uid`) AS num
+FROM `videos` v
+INNER JOIN `history` h ON v.`vid`=h.`h_vid`
+INNER JOIN `collection` c ON c.`c_vid`=v.`vid`
+INNER JOIN `type` t ON t.`typeid`=v.`v_typeId`
+WHERE c.`c_uid`=#{uid}
+GROUP BY v.`vid`
+ </select>
+ 
+ <select id="findUsersCourse" resultType="map">
+SELECT c.`crid`,c.`crname` AS v_name,c.`cr_img` AS v_imgs,c.`cr_price`, COUNT(p.`p_uid`) AS num 
+FROM `course` c,`purchase` p
+WHERE c.`crid`=p.`p_cid`  AND p.`p_uid`=#{uid}
+GROUP BY c.`crid`
+ </select>
+ 
+<select id="findUserTeachers" resultType="map">
+SELECT f.`fid`,f.`f_ftid`,t.`tid`,t.`t_name`,t.`t_photo`,t.`t_abstract`,ty.`typename`,
+(SELECT COUNT(0) FROM history h WHERE h.h_tid = t.`tid` ) numberOfPepole,
+(SELECT COUNT(0) FROM videos v WHERE v.v_teacherId = t.`tid` ) videoNum
+FROM `follow` f,`teachers` t,`type` ty
+WHERE f.`f_ftid`=t.`tid` AND t.`t_occupation`=ty.`typeid` AND f.`f_uid`=#{uid}
+ </select>
+
+<select id="findUsetTeacherId" resultType="map">
+ SELECT `tid` FROM `teachers` t, `follow` f 
+ WHERE t.`tid`=f.`f_ftid` AND f.`f_uid`=#{uid}
+</select>
+
+<select id="findTeacherVideo" resultType="Videos">
+SELECT * FROM `videos` WHERE `v_teacherId`=#{tid} 
+ORDER BY `v_uploadtime` DESC LIMIT 2
+</select>
+
+<!--取消关注-->
+<delete id="deleteTeacher">
+ DELETE FROM `follow` WHERE `f_uid`=#{uid} AND `f_ftid`=#{tid}
+</delete>
+</mapper>
