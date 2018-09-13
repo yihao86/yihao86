@@ -1,102 +1,113 @@
 <!DOCTYPE html>
-<html lang="zh-CN"
-xmlns:th="www.thymeleay.org">
+<html lang="zh-CN" xmlns:th="www.thymeleay.org">
 <!-- Mirrored from yihao86/teachers/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 01:15:07 GMT -->
 <!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
 <head>
-    <script>
-        var renderingStartTime = (new Date()).valueOf();
-    </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="csrf-param" content="_csrf-frontend">
-    <meta name="csrf-token" content="ekFCTnRKTGUlKzQ2RwcvAjt4FywxAB0oQhUsARB.Gg8cOCg/JHMjDw==">
-    <title>讲师列表--在线学习网站--一号86</title>
-    <meta href="index.html" rel="canonical">
-    <meta property="wb:webmaster" content="c2797be5e9930c26">
-    <link href="static/assets/revision/!!css/base.v107.css,css/teacher/index.v2.css,css/681e08d.css?v=681"
-          rel="stylesheet">
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script>
-        var Url = {};
-        var Param = {};
+<script>
+	var renderingStartTime = (new Date()).valueOf();
+</script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="csrf-param" content="_csrf-frontend">
+<meta name="csrf-token"
+	content="ekFCTnRKTGUlKzQ2RwcvAjt4FywxAB0oQhUsARB.Gg8cOCg/JHMjDw==">
+<title>讲师列表--在线学习网站--一号86</title>
+<meta href="index.html" rel="canonical">
+<meta property="wb:webmaster" content="c2797be5e9930c26">
+<link
+	href="static/assets/revision/!!css/base.v107.css,css/teacher/index.v2.css,css/681e08d.css?v=681"
+	rel="stylesheet">
+	<link rel="stylesheet" href="css/pagination.css"/>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
-        Param.isLogin = '0';
-        Param.uid = '0';
-        Param.uv_id = '';
-        Param.pageType = '0';
-        Param.userIP = '707810776';
-        Param.Checking = '1';
-        Param.openStatistics = '1';
-        Param.is_sem = '';
-        //登录限制弹窗
-        Param.loginPop = '1';
-        Param.userPhone = '';
+<script>
+	var Url = {};
+	var Param = {};
 
-        Url.basicsStatistics = "https://ajax.huke88.com/ajax/basics-statistics";   //基础统计
-        Url.entrance = "https://ajax.huke88.com/ajax/entrance";
-        Url.searchUrl = 'https://huke88.com/search/search';  //搜索
-        Url.buttonClickRecordUrl = 'https://ajax.huke88.com/ajax/button-click-record'; //统计按钮点击
-        Url.taskButtonClickRecordUrl = 'https://ajax.huke88.com/task/button-click-handle'; //统计按钮点击
-        Url.bindUrl = '../index.html';
-        Url.phoneValide = '../site/phone-valide.html';
+	Param.isLogin = '0';
+	Param.uid = '0';
+	Param.uv_id = '';
+	Param.pageType = '0';
+	Param.userIP = '707810776';
+	Param.Checking = '1';
+	Param.openStatistics = '1';
+	Param.is_sem = '';
+	//登录限制弹窗
+	Param.loginPop = '1';
+	Param.userPhone = '';
 
-        Url.cookiedesign = '../ajax/cookiedesign.html';
-        Url.design = '../ajax/design.html';
+	Url.basicsStatistics = "https://ajax.huke88.com/ajax/basics-statistics"; //基础统计
+	Url.entrance = "https://ajax.huke88.com/ajax/entrance";
+	Url.searchUrl = 'https://huke88.com/search/search'; //搜索
+	Url.buttonClickRecordUrl = 'https://ajax.huke88.com/ajax/button-click-record'; //统计按钮点击
+	Url.taskButtonClickRecordUrl = 'https://ajax.huke88.com/task/button-click-handle'; //统计按钮点击
+	Url.bindUrl = '../index.html';
+	Url.phoneValide = '../site/phone-valide.html';
 
-        //签到模块
-        Url.sign = '../header/sign.html';
-        Url.signConfirm = '../header/sign-confirm.html';
-        Url.signToday = '../header/sign-today.html';
+	Url.cookiedesign = '../ajax/cookiedesign.html';
+	Url.design = '../ajax/design.html';
 
-        //登录注册
-        Url.sendMessage = '../site/send-message.html';
-        Url.phoneMessageLogin = '../site/phone-message-login.html';
+	//签到模块
+	Url.sign = '../header/sign.html';
+	Url.signConfirm = '../header/sign-confirm.html';
+	Url.signToday = '../header/sign-today.html';
 
-        //导航个人中心下拉
-        Url.personalDropDown = 'https://asyn.huke88.com/header/personal-drop-down';
-        //导航软件入门下拉
-        Url.navSoftwareList = 'https://asyn.huke88.com/header/nav-software-list';
-        //消息下拉
-        Url.MessageDropDown = 'https://asyn.huke88.com/header/message-drop-down';
-        Url.MessageNotReadCount = 'https://asyn.huke88.com/header/message-not-read-count';
+	//登录注册
+	Url.sendMessage = '../site/send-message.html';
+	Url.phoneMessageLogin = '../site/phone-message-login.html';
 
-        //视频分类统计
-        Url.videoClassificationStatistics = 'https://ajax.huke88.com/ajax/video-classification-statistics';
-        Url.videoExposure = 'https://ajax.huke88.com/ajax/video-exposure';
+	//导航个人中心下拉
+	Url.personalDropDown = 'https://asyn.huke88.com/header/personal-drop-down';
+	//导航软件入门下拉
+	Url.navSoftwareList = 'https://asyn.huke88.com/header/nav-software-list';
+	//消息下拉
+	Url.MessageDropDown = 'https://asyn.huke88.com/header/message-drop-down';
+	Url.MessageNotReadCount = 'https://asyn.huke88.com/header/message-not-read-count';
 
-        //课程提醒
-        Url.lessonNoticeStatusChange = 'https://huke88.com/notice/ajax-teacher-read';
-        Url.videoCommentStatusChange = 'https://huke88.com/notice/ajax-video-sign-read';
+	//视频分类统计
+	Url.videoClassificationStatistics = 'https://ajax.huke88.com/ajax/video-classification-statistics';
+	Url.videoExposure = 'https://ajax.huke88.com/ajax/video-exposure';
 
-        // 上传相关
-        Url.webUploaderSwf = "https://js.huke88.com/assets/revision/js/plugins/webupload/Uploader.swf";
-        Url.webUploaderApiUrl = "https://v0.api.upyun.com/huke88-pic/";
+	//课程提醒
+	Url.lessonNoticeStatusChange = 'https://huke88.com/notice/ajax-teacher-read';
+	Url.videoCommentStatusChange = 'https://huke88.com/notice/ajax-video-sign-read';
 
-        //标签点击统计
-        Url.tagClickStatistics = "https://ajax.huke88.com/statistics/tag-click-record";
-        //首页各位置点击统计
-        Url.pagePositionClick = "https://ajax.huke88.com/statistics/position-click-record";
+	// 上传相关
+	Url.webUploaderSwf = "https://js.huke88.com/assets/revision/js/plugins/webupload/Uploader.swf";
+	Url.webUploaderApiUrl = "https://v0.api.upyun.com/huke88-pic/";
 
-        Url.getBrowserNoticeDom = "https://asyn.huke88.com/site/update-browser-notice-new";
+	//标签点击统计
+	Url.tagClickStatistics = "https://ajax.huke88.com/statistics/tag-click-record";
+	//首页各位置点击统计
+	Url.pagePositionClick = "https://ajax.huke88.com/statistics/position-click-record";
 
-        var _hmt = _hmt || [];
-    </script>
+	Url.getBrowserNoticeDom = "https://asyn.huke88.com/site/update-browser-notice-new";
+
+	var _hmt = _hmt || [];
+</script>
 </head>
 <body onload="load()">
-<div id="body-container"><input type="hidden" id="referrer" value="../index.html">
-    <div id="new-header">
-        <div class="layout-cont clearfix">
-            <div class="logo fl"><a href="index.html" title="返回首页"></a></div>
-            <div class="nav fl clearfix">
-                <div class="nav-list fl rjrm-list">
-                    <a href="index.html" class="nav-t" target="_blank" onclick="pagePositionClick(21);">java 入门</a>
-                </div><!-- 设计教程 -->
-                <div class="nav-list fl sjjc-list"><a href="" class="nav-t" target="_blank" onclick="pagePositionClick(11);">设计教程</a>
-                    <!--<div class="top-con">
+	<div id="body-container">
+		<input type="hidden" id="referrer" value="../index.html">
+		<div id="new-header">
+			<div class="layout-cont clearfix">
+				<div class="logo fl">
+					<a href="index.html" title="返回首页"></a>
+				</div>
+				<div class="nav fl clearfix">
+					<div class="nav-list fl rjrm-list">
+						<a href="index.html" class="nav-t" target="_blank"
+							onclick="pagePositionClick(21);">java 入门</a>
+					</div>
+					<!-- 设计教程 -->
+					<div class="nav-list fl sjjc-list">
+						<a href="" class="nav-t" target="_blank"
+							onclick="pagePositionClick(11);">设计教程</a>
+						<!--<div class="top-con">
                         <div class="course-con sjjc-wrap">
                             <div class="loading">
 
@@ -104,316 +115,401 @@ xmlns:th="www.thymeleay.org">
                             </div>
                         </div>
                     </div>-->
-                </div>
-                <div class="nav-list fl rjrm-list nav-task">
-                    <a href="upload.html" class="nav-t" target="_blank" onclick="pagePositionClick(234);"> 作品评改</a>
-                </div>
-                <div class="nav-list fl">
-                    <a href="exe.html" class="nav-t" target="_blank" rel='nofollow' onclick='pagePositionClick(12);'>每周一练</a>
-                </div>
-                <div class="nav-list fl">
-                    <a href="teacherCourse.html" class="nav-t" target="_blank" onclick="pagePositionClick(16);">教师机构</a>
-                </div>
-                <div class="nav-list fl bwidth">
-                    <a href="javascript:;" target="_blank" class="nav-t dian"><span></span><span></span><span></span></a>
-                    <div class="nav-m more-nav">
-                        <a href="allteachers.html" target="_blank" class="" onclick="pagePositionClick(17);">讲师</a>
-                        <a href="allalbum.html" target="_blank" class="" rel='nofollow' onclick="pagePositionClick(18);">专辑</a>
-                    </div>
-                </div>
-            </div><!-- 个人信息 --><!-- 未登录状态 -->
-            <a href="javascript:;" rel='nofollow' class="register-link fr" id="registerBtn">免费注册</a>
-            <a href="javascript:;" rel='nofollow' class="in-btn" id="loginBtn"><div class="login fr">登录</div></a>
-            <div class="header-search fr">
-                <div class="search-m search-area">
-                    <input type="text" name="search" placeholder="搜索教程/讲师" class="txt" value="">
-                    <input type="hidden" name="identify" id="search-identify" value="1533256412">
-                    <a href="javascript:void(0);" class="submit-abtn search-butn" id="submit-search"></a>
-                </div>
-                <!-- 头部搜索下拉框 -->
-                <div class="search-win hide">
-                    <div class="search-list">
-                        <div class="list-head hide" id="empty-record"><a
-                                href="javascript:;" class="fr empty-btn" id="empty-btn">清空</a>
-                            <h3 class="visi">最近搜索</h3></div>
-                        <div class="list-m hide" id="record-empty"></div>
-                        <div class="list-head"><h3 class="hot">热门推荐</h3></div>
-                        <div class="list-m hotm">
-                            <p><a href='type.html'
-                                  data-id="5" data-words="C4D" rel='nofollow'
-                                  class="hot-word"><i>1</i>C4D</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="teacher-list">
-        <div class="teacher-banner"><p>这里有<span>3</span>名讲师</p>
-            <p>带你一起学</p></div>
-        <div class="teacher-m layout-cont">
-            <div class="teacher-nav">
-                <div class="nav-l">
-                	<a href="clickAllTeacher?t_occupation=0" th:style="${t_occupation} eq 0 ? 'color:#ff7700' : ''" id="aaa">全部讲师</a>
-                </div>
-                <div class="nav-m">
-                	<a th:each="typelist,tl:${typelist}" th:href="@{'clickAllTeacher?t_occupation='+${typelist.typeid}}" th:text="${typelist.typename}" 
-                	th:style="${typelist.typeid} eq ${t_occupation} ? 'color:#ff7700' : ''" ></a>
-                </div>
-            </div>
-            
-            <div th:each="teachers,t:${map}"   class="teacher-con">
-                <div class="list clearfix" >
-                    <div class="teacher-avatar fl"><a th:href="@{'clickOneTeacher?tid='+${teachers.Teachers.tid}}" target="_blank">
-                    	<img th:src="'http://localhost:9352/video/'+${teachers.Teachers.t_photo}"></a>
-                    </div>
-                    
-                   <div  class="teacher-info fl">
-                        <div class="teacher-name">
-                        	<a th:href="@{'clickOneTeacher?tid='+${teachers.Teachers.tid}}" target="_blank" th:text="${teachers.Teachers.t_name}">薛奔<i></i></a>
-                        </div>
-                        <p class="speciality"> 擅长：<span th:text="${teachers.typename}"></span></p>
-                        <p class="num"><span th:text="'课程数 :'+${teachers.videoNum}"> </span><span th:text="'学习人数 :'+${teachers.numberOfPepole}">学习人数 </span></p>
-                        <p class="con" th:text="${teachers.Teachers.t_abstract}">
-                        </p>
-                        <div class="btn" data-id="993" style="padding-top: 12px; display: inline-block;">
-                        	<a href="javascript:;" onclick='toLogin()' class='follow'>关注</a>
-                        </div>
-                    </div> 
-                    
-                    
-                    <div th:each="imgpath,map:${teachers.vlist}" th:if="${map.index < 2}" class="teacher-video fl">
-                    	<a href="" target="_blank">
-                        	<div class="show-img">
-                        		<img class="lazy" th:src="'http://localhost:9352/video/'+${imgpath.v_imgs}">
-                                 <span class="time-length">11分15秒</span>
-                             </div>
-                        	<div class="show-mask">
-                        	<span class="play-btn"></span>
-                        	</div>
-                    	</a>
-                    </div>
-                    
-                </div>
-            </div>
-            
-            
-            
-            
-            <div id="page-m">
-                <div class="page-li"><a class="on active" href="index2679.html?page=1" data-page="0">1</a><a
-                        href="index4658.html?page=2" data-page="1">2</a><a href="index9ba9.html?page=3"
-                                                                           data-page="2">3</a><a
-                        href="indexfdb0.html?page=4" data-page="3">4</a><a href="indexaf4d.html?page=5"
-                                                                           data-page="4">5</a><a
-                        href="indexc575.html?page=6" data-page="5">6</a><a href="index235c.html?page=7"
-                                                                           data-page="6">7</a><a
-                        href="indexfdfa.html?page=8" data-page="7">8</a><a href="index0b08.html?page=9"
-                                                                           data-page="8">9</a><a
-                        href="index1448.html?page=10" data-page="9">10</a><span>...</span><a class="last"
-                                                                                             href="index6c2f.html?page=41"
-                                                                                             data-page="40">41</a><a
-                        class="next" href="index4658.html?page=2" data-page="1">下一页</a></div>
-            </div>
-        </div>
-    </div>
-    <div id="footer">
-        <div class="layout-cont flogo"><a href="#"></a></div>
-        <div class="our-link layout-cont"><a href="../site/about.html" target="_blank" rel="nofollow">关于我们</a><a
-                href="../site/about.html#2" target="_blank" rel="nofollow">版权声明</a><a href="../site/about.html#3"
-                                                                                      target="_blank" rel="nofollow">侵权举报</a><a
-                href="../site/about.html#4" target="_blank" rel="nofollow">联系我们</a><a href="../site/about.html#5"
-                                                                                      target="_blank" rel="nofollow">售后服务</a><a
-                href="../site/about.html#6" target="_blank" rel="nofollow">常见问题</a><a href="../vip/47.html"
-                                                                                      target="_blank"
-                                                                                      onclick="buttonClickRecord(47);"
-                                                                                      rel="nofollow">VIP特权</a></div>
-        <div class="color-bg">
-            <div class="friends-link layout-cont">
-                <div class="link-t"><span class="next">></span><span class="prev"><</span></div>
-                <div class="slide-m">
-                    <div class="link-m">友情链接：
-                        <a target="_blank" href="http://www.cgmol.com/" rel="nofollow">摩尔网</a><a target="_blank"
-                                                                                                 href="http://www.huishenghuiying.com.cn/"
-                                                                                                 rel="nofollow">视频编辑软件</a><a
-                                target="_blank" href="http://www.mobiletrain.org/" rel="nofollow">Java培训</a><a
-                                target="_blank" href="https://www.xlisi.cn/" rel="nofollow">英语学习网</a><a target="_blank"
-                                                                                                        href="http://www.onlycollege.com.cn/"
-                                                                                                        rel="nofollow">英语培训</a><a
-                                target="_blank" href="http://www.kaoyan1v1.com/" rel="nofollow">研招网</a><a
-                                target="_blank" href="http://www.16xx8.com/" rel="nofollow">PS教程自学网</a><a
-                                target="_blank" href="http://www.compassedu.hk/" rel="nofollow">指南者留学</a><a
-                                target="_blank" href="http://www.prcu.cn/" rel="nofollow">学日语</a><a target="_blank"
-                                                                                                    href="http://www.100.com/"
-                                                                                                    rel="nofollow">一对一辅导</a><a
-                                target="_blank" href="https://aiji66.com/" rel="nofollow">设计素材</a><a target="_blank"
-                                                                                                     href="http://www.narkii.com/"
-                                                                                                     rel="nofollow">工业设计</a><a
-                                target="_blank" href="http://www.ffpic.com/" rel="nofollow">ppt素材</a><a target="_blank"
-                                                                                                        href="http://www.xueui.cn/"
-                                                                                                        rel="nofollow">学UI网</a><a
-                                target="_blank" href="http://ui.tedu.cn/" rel="nofollow">平面设计培训</a><a target="_blank"
-                                                                                                      href="http://www.logosc.cn/"
-                                                                                                      rel="nofollow">LOGO在线制作</a><a
-                                target="_blank" href="http://www.sumiaowang.com/" rel="nofollow">素描</a><a
-                                target="_blank" href="http://hu.offcn.com/" rel="nofollow">湖北人事考试网</a><a target="_blank"
-                                                                                                         href="http://www.68design.net/"
-                                                                                                         rel="nofollow">互联网设计师</a><a
-                                target="_blank" href="http://www.58pic.com/" rel="nofollow">千图网</a><a target="_blank"
-                                                                                                      href="http://pic.netbian.com/"
-                                                                                                      rel="nofollow">4k壁纸</a><a
-                                target="_blank" href="http://www.netbian.com/" rel="nofollow">壁纸</a><a target="_blank"
-                                                                                                       href="http://699pic.com/"
-                                                                                                       rel="nofollow">摄图网</a><a
-                                target="_blank" href="http://www.ooopic.com/" rel="nofollow">我图网</a><a target="_blank"
-                                                                                                       href="http://90sheji.com/"
-                                                                                                       rel="nofollow">90设计</a><a
-                                target="_blank" href="http://588ku.com/ppt/" rel="nofollow">千库网</a><a target="_blank"
-                                                                                                      href="http://ibaotu.com/"
-                                                                                                      rel="nofollow">包图网</a><a
-                                target="_blank" href="../app.html" rel="nofollow">虎课APP</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <input type="hidden" id="currentUrlInput" name="currentUrl" value="index.html"></div><!--fixed-bar-->
-<!--登录弹窗-->
-<div id="loginModal" class="hkt-win hide"><!--遮罩层-->
-    <div class="hkt-mask">
-        <div class="hkt-cell">
-            <div class="lrframe-box"><span class="frame-close" data-bind-bs="hideModal"></span>
-                <div class="tab-head"><span class="t1 active">登录</span><span class="t2">注册</span></div><!--登录部分-->
-                <div class="tab-main clerafix" id="loginModal-t1">
-                    <div class="frame-bd fl">
-                        <div class="go-phone">使用手机号码登录</div>
-                    </div>
-                    <div class="phone-m fl">
-                        <div class="phone-title"><span>使用手机号码登录</span></div>
-                        <div class="phone-num"><i class="phone-icon"></i><input type="text" name="phone"
-                                                                                placeholder="请输入11位的手机号码">
-                            <div class="error-txt">手机号码格式错误</div>
-                        </div>
-                        <div class="phone-code clearfix">
-                            <div class="code-l fl"><input type="text" name="" placeholder="请输入图形验证码"></div>
-                            <div class="code-r fr"><img class="captchaimg" src="#" alt="换一个" title="换一个"
-                                                        style="cursor:pointer"></div>
-                            <div class="error-txt">图形验证码错误，请重新输入</div>
-                        </div>
-                        <div class="phone-yz">
-                            <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
-                            <div class="yz-r fr"><input type="text" value="获取动态密码" class="get-p"/></div>
-                            <div class="error-txt">验证码错误，请重新输入</div>
-                        </div>
-                        <div class="phone-btn">登录</div>
-                    </div>
-                </div><!--注册部分-->
-                <div class="tab-main clerafix" style="display: none" id="loginModal-t2">
-                    <div class="frame-bd fl">
-                        <div class="go-phone">使用手机号码注册</div>
-                        <div class="agree-deal"><label for="checkput"><input type="checkbox" checked=""
-                                                                             id="checkput"><span>同意 <a
-                                href="../site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label></div>
-                    </div>
-                    <div class="phone-m fl">
-                        <div class="phone-title"><span>使用手机号码注册</span></div>
-                        <div class="phone-num"><i class="phone-icon"></i><input type="text" name="phone"
-                                                                                placeholder="请输入11位的手机号码">
-                            <div class="error-txt">手机号码格式错误</div>
-                        </div>
-                        <div class="phone-code clearfix" style="display:block;">
-                            <div class="code-l fl"><input type="text" name="" placeholder="请输入图形验证码"></div>
-                            <div class="code-r fr"><img class="captchaimg" src="#" alt="换一个" title="换一个"
-                                                        style="cursor:pointer"></div>
-                            <div class="error-txt">图形验证码错误，请重新输入</div>
-                        </div>
-                        <div class="phone-yz">
-                            <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
-                            <div class="yz-r fr"><input type="submit" value="获取动态密码" class="get-p"></div>
-                            <div class="error-txt">验证码错误，请重新输入</div>
-                        </div>
-                        <div class="phone-btn">注册</div>
-                        <div class="agree-deal"><label for="checkput"><input type="checkbox" checked=""
-                                                                             id="checkput"><span>同意 <a
-                                href="../site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div><!--//登录弹窗 end-->
-<script>
-    function openCenterLoginWindow(url, name) {
-        var url = url; //转向网页的地址;
-        var name = ''; //网页名称，可为空;
-        var iWidth = 660; //弹出窗口的宽度;
-        var iHeight = 560; //弹出窗口的高度;
-        var iTop = (window.screen.height - 30 - iHeight) / 2; //获得窗口的垂直位置;
-        var iLeft = (window.screen.width - 10 - iWidth) / 2; //获得窗口的水平位置;
-        window.open(url, name, 'height=' + iHeight + ',,innerHeight=' + iHeight + ',width=' + iWidth + ',innerWidth=' + iWidth + ',top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
-    }
-</script>
-<script>
-    //统计运行时间
-    Param.execTime = '0.071381092071533';
-</script>
-<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/681e08d.js?v=681"></script>
-<script src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
-<script type="text/javascript">
-    $('.lazy').lazyload({threshold: 200});
-    $(function () {
+					</div>
+					<div class="nav-list fl rjrm-list nav-task">
+						<a href="upload.html" class="nav-t" target="_blank"
+							onclick="pagePositionClick(234);"> 作品评改</a>
+					</div>
+					<div class="nav-list fl">
+						<a href="exe.html" class="nav-t" target="_blank" rel='nofollow'
+							onclick='pagePositionClick(12);'>每周一练</a>
+					</div>
+					<div class="nav-list fl">
+						<a href="teacherCourse.html" class="nav-t" target="_blank"
+							onclick="pagePositionClick(16);">教师机构</a>
+					</div>
+					<div class="nav-list fl bwidth">
+						<a href="javascript:;" target="_blank" class="nav-t dian"><span></span><span></span><span></span></a>
+						<div class="nav-m more-nav">
+							<a href="allteachers.html" target="_blank" class=""
+								onclick="pagePositionClick(17);">讲师</a> <a href="allalbum.html"
+								target="_blank" class="" rel='nofollow'
+								onclick="pagePositionClick(18);">专辑</a>
+						</div>
+					</div>
+				</div>
+				<!-- 个人信息 -->
+				<!-- 未登录状态 -->
+				<a href="javascript:;" rel='nofollow' class="register-link fr"
+					id="registerBtn">免费注册</a> <a href="javascript:;" rel='nofollow'
+					class="in-btn" id="loginBtn"><div class="login fr">登录</div></a>
+				<div class="header-search fr">
+					<div class="search-m search-area">
+						<input type="text" name="search" placeholder="搜索教程/讲师" class="txt"
+							value=""> <input type="hidden" name="identify"
+							id="search-identify" value="1533256412"> <a
+							href="javascript:void(0);" class="submit-abtn search-butn"
+							id="submit-search"></a>
+					</div>
+					<!-- 头部搜索下拉框 -->
+					<div class="search-win hide">
+						<div class="search-list">
+							<div class="list-head hide" id="empty-record">
+								<a href="javascript:;" class="fr empty-btn" id="empty-btn">清空</a>
+								<h3 class="visi">最近搜索</h3>
+							</div>
+							<div class="list-m hide" id="record-empty"></div>
+							<div class="list-head">
+								<h3 class="hot">热门推荐</h3>
+							</div>
+							<div class="list-m hotm">
+								<p>
+									<a href='type.html' data-id="5" data-words="C4D" rel='nofollow'
+										class="hot-word"><i>1</i>C4D</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="teacher-list">
+			<div class="teacher-banner">
+				<p>
+					这里有<span th:text="${pageTotal}"></span>名讲师
+				</p>
+				<p>带你一起学</p>
+			</div>
+			<div class="teacher-m layout-cont">
+				<div class="teacher-nav">
+					<div class="nav-l">
+						<a href="clickAllTeacher?t_occupation=0"
+							th:style="${t_occupation} eq 0 ? 'color:#ff7700' : ''" id="aaa">全部讲师</a>
+					</div>
+					<div class="nav-m">
+						<a th:each="typelist,tl:${typelist}"
+							th:href="@{'clickAllTeacher?t_occupation='+${typelist.typeid}}"
+							th:text="${typelist.typename}"
+							th:style="${typelist.typeid} eq ${t_occupation} ? 'color:#ff7700' : ''"></a>
+					</div>
+				</div>
 
-        var csrfToken = $('meta[name="csrf-token"]').attr("content");
+				<div th:each="teachers,t:${map}" class="teacher-con">
+					<div class="list clearfix">
+						<div class="teacher-avatar fl">
+							<a th:href="@{'clickOneTeacher?tid='+${teachers.Teachers.tid}}"
+								target="_blank"> <img
+								th:src="'http://localhost:9352/video/'+${teachers.Teachers.t_photo}"></a>
+						</div>
 
-        //关注
-        var cared_none = $('.cared-none');
-        var follow_url = '../teacher/ajax-follow.html';
-        cared_none.on('click', function () {
+						<div class="teacher-info fl">
+							<div class="teacher-name">
+								<a th:href="@{'clickOneTeacher?tid='+${teachers.Teachers.tid}}"
+									target="_blank" th:text="${teachers.Teachers.t_name}">薛奔<i></i></a>
+							</div>
+							<p class="speciality">
+								擅长：<span th:text="${teachers.typename}"></span>
+							</p>
+							<p class="num">
+								<span th:text="'课程数 :'+${teachers.videoNum}"> </span><span
+									th:text="'学习人数 :'+${teachers.numberOfPepole}">学习人数 </span>
+							</p>
+							<p class="con" th:text="${teachers.Teachers.t_abstract}"></p>
+							<div class="btn" data-id="993"
+								style="padding-top: 12px; display: inline-block;">
+								<a href="javascript:;" onclick='toLogin()' class='follow'>关注</a>
+							</div>
+						</div>
 
-            var _this = $(this);
-            var teacherId = $(this).parent().attr('data-id');
-            $.ajax({
-                url: follow_url,
-                data: {_csrf: csrfToken, "UserFlowerTeacherForm[tid]": teacherId},
-                headers: {'X-CSRF-TOKEN': csrfToken},
-                type: 'POST',
-                dataType: 'JSON',
-                success: function (res) {
-                    if (res.status == 1) {
-//                            _this.addClass('hide');
-//                            $('#cared-delet').removeClass('hide');
-                        _this.html('关注成功')
-                        location.reload();
-                    }
-                }
-            });
-        });
 
-        //取消关注
-        var cared_delet = $('.cared-delet');
-        var cancel_url = '../teacher/ajax-cancel-follow.html';
-        cared_delet.on('click', function () {
+						<div th:each="imgpath,map:${teachers.vlist}"
+							th:if="${map.index < 2}" class="teacher-video fl">
+							<a href="" target="_blank">
+								<div class="show-img">
+									<img class="lazy"
+										th:src="'http://localhost:9352/video/'+${imgpath.v_imgs}">
+									<span class="time-length">11分15秒</span>
+								</div>
+								<div class="show-mask">
+									<span class="play-btn"></span>
+								</div>
+							</a>
+						</div>
 
-            var _this = $(this);
-            var teacherId = $(this).parent().attr('data-id');
-            $.ajax({
-                url: cancel_url,
-                data: {_csrf: csrfToken, "UserFlowerTeacherForm[tid]": teacherId},
-                headers: {'X-CSRF-TOKEN': csrfToken},
-                type: 'POST',
-                dataType: 'JSON',
-                success: function (res) {
-                    if (res.status == 1) {
-//                            _this.addClass('hide');
-//                            $('#cared-none').removeClass('hide');
-                        _this.html('取消成功')
-                        location.reload();
-                    }
-                }
-            });
-        });
-    });
-</script>
+					</div>
+				</div>
+
+
+
+
+				<div id="page-m">
+						<input id="pages" type="hidden" th:value="${pages}"/>
+						<input id="pageNum" type="hidden" th:value="${pageNum}"/>
+						<input id="pageTotal" type="hidden" th:value="${pageTotal}"/>
+					<div class="M-box1">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="layout-cont flogo">
+				<a href="#"></a>
+			</div>
+			<div class="our-link layout-cont">
+				<a href="../site/about.html" target="_blank" rel="nofollow">关于我们</a><a
+					href="../site/about.html#2" target="_blank" rel="nofollow">版权声明</a><a
+					href="../site/about.html#3" target="_blank" rel="nofollow">侵权举报</a><a
+					href="../site/about.html#4" target="_blank" rel="nofollow">联系我们</a><a
+					href="../site/about.html#5" target="_blank" rel="nofollow">售后服务</a><a
+					href="../site/about.html#6" target="_blank" rel="nofollow">常见问题</a><a
+					href="../vip/47.html" target="_blank"
+					onclick="buttonClickRecord(47);" rel="nofollow">VIP特权</a>
+			</div>
+			<div class="color-bg">
+				<div class="friends-link layout-cont">
+					<div class="link-t">
+						<span class="next">></span><span class="prev"><</span>
+					</div>
+					<div class="slide-m">
+						<div class="link-m">
+							友情链接： <a target="_blank" href="http://www.cgmol.com/"
+								rel="nofollow">摩尔网</a><a target="_blank"
+								href="http://www.huishenghuiying.com.cn/" rel="nofollow">视频编辑软件</a><a
+								target="_blank" href="http://www.mobiletrain.org/"
+								rel="nofollow">Java培训</a><a target="_blank"
+								href="https://www.xlisi.cn/" rel="nofollow">英语学习网</a><a
+								target="_blank" href="http://www.onlycollege.com.cn/"
+								rel="nofollow">英语培训</a><a target="_blank"
+								href="http://www.kaoyan1v1.com/" rel="nofollow">研招网</a><a
+								target="_blank" href="http://www.16xx8.com/" rel="nofollow">PS教程自学网</a><a
+								target="_blank" href="http://www.compassedu.hk/" rel="nofollow">指南者留学</a><a
+								target="_blank" href="http://www.prcu.cn/" rel="nofollow">学日语</a><a
+								target="_blank" href="http://www.100.com/" rel="nofollow">一对一辅导</a><a
+								target="_blank" href="https://aiji66.com/" rel="nofollow">设计素材</a><a
+								target="_blank" href="http://www.narkii.com/" rel="nofollow">工业设计</a><a
+								target="_blank" href="http://www.ffpic.com/" rel="nofollow">ppt素材</a><a
+								target="_blank" href="http://www.xueui.cn/" rel="nofollow">学UI网</a><a
+								target="_blank" href="http://ui.tedu.cn/" rel="nofollow">平面设计培训</a><a
+								target="_blank" href="http://www.logosc.cn/" rel="nofollow">LOGO在线制作</a><a
+								target="_blank" href="http://www.sumiaowang.com/" rel="nofollow">素描</a><a
+								target="_blank" href="http://hu.offcn.com/" rel="nofollow">湖北人事考试网</a><a
+								target="_blank" href="http://www.68design.net/" rel="nofollow">互联网设计师</a><a
+								target="_blank" href="http://www.58pic.com/" rel="nofollow">千图网</a><a
+								target="_blank" href="http://pic.netbian.com/" rel="nofollow">4k壁纸</a><a
+								target="_blank" href="http://www.netbian.com/" rel="nofollow">壁纸</a><a
+								target="_blank" href="http://699pic.com/" rel="nofollow">摄图网</a><a
+								target="_blank" href="http://www.ooopic.com/" rel="nofollow">我图网</a><a
+								target="_blank" href="http://90sheji.com/" rel="nofollow">90设计</a><a
+								target="_blank" href="http://588ku.com/ppt/" rel="nofollow">千库网</a><a
+								target="_blank" href="http://ibaotu.com/" rel="nofollow">包图网</a><a
+								target="_blank" href="../app.html" rel="nofollow">虎课APP</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<input type="hidden" id="currentUrlInput" name="currentUrl"
+			value="index.html">
+	</div>
+	<!--fixed-bar-->
+	<!--登录弹窗-->
+	<div id="loginModal" class="hkt-win hide">
+		<!--遮罩层-->
+		<div class="hkt-mask">
+			<div class="hkt-cell">
+				<div class="lrframe-box">
+					<span class="frame-close" data-bind-bs="hideModal"></span>
+					<div class="tab-head">
+						<span class="t1 active">登录</span><span class="t2">注册</span>
+					</div>
+					<!--登录部分-->
+					<div class="tab-main clerafix" id="loginModal-t1">
+						<div class="frame-bd fl">
+							<div class="go-phone">使用手机号码登录</div>
+						</div>
+						<div class="phone-m fl">
+							<div class="phone-title">
+								<span>使用手机号码登录</span>
+							</div>
+							<div class="phone-num">
+								<i class="phone-icon"></i><input type="text" name="phone"
+									placeholder="请输入11位的手机号码">
+								<div class="error-txt">手机号码格式错误</div>
+							</div>
+							<div class="phone-code clearfix">
+								<div class="code-l fl">
+									<input type="text" name="" placeholder="请输入图形验证码">
+								</div>
+								<div class="code-r fr">
+									<img class="captchaimg" src="#" alt="换一个" title="换一个"
+										style="cursor: pointer">
+								</div>
+								<div class="error-txt">图形验证码错误，请重新输入</div>
+							</div>
+							<div class="phone-yz">
+								<div class="yz-l fl">
+									<input type="text" name="code" placeholder="请输入验证码">
+								</div>
+								<div class="yz-r fr">
+									<input type="text" value="获取动态密码" class="get-p" />
+								</div>
+								<div class="error-txt">验证码错误，请重新输入</div>
+							</div>
+							<div class="phone-btn">登录</div>
+						</div>
+					</div>
+					<!--注册部分-->
+					<div class="tab-main clerafix" style="display: none"
+						id="loginModal-t2">
+						<div class="frame-bd fl">
+							<div class="go-phone">使用手机号码注册</div>
+							<div class="agree-deal">
+								<label for="checkput"><input type="checkbox" checked=""
+									id="checkput"><span>同意 <a
+										href="../site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label>
+							</div>
+						</div>
+						<div class="phone-m fl">
+							<div class="phone-title">
+								<span>使用手机号码注册</span>
+							</div>
+							<div class="phone-num">
+								<i class="phone-icon"></i><input type="text" name="phone"
+									placeholder="请输入11位的手机号码">
+								<div class="error-txt">手机号码格式错误</div>
+							</div>
+							<div class="phone-code clearfix" style="display: block;">
+								<div class="code-l fl">
+									<input type="text" name="" placeholder="请输入图形验证码">
+								</div>
+								<div class="code-r fr">
+									<img class="captchaimg" src="#" alt="换一个" title="换一个"
+										style="cursor: pointer">
+								</div>
+								<div class="error-txt">图形验证码错误，请重新输入</div>
+							</div>
+							<div class="phone-yz">
+								<div class="yz-l fl">
+									<input type="text" name="code" placeholder="请输入验证码">
+								</div>
+								<div class="yz-r fr">
+									<input type="submit" value="获取动态密码" class="get-p">
+								</div>
+								<div class="error-txt">验证码错误，请重新输入</div>
+							</div>
+							<div class="phone-btn">注册</div>
+							<div class="agree-deal">
+								<label for="checkput"><input type="checkbox" checked=""
+									id="checkput"><span>同意 <a
+										href="../site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//登录弹窗 end-->
+	<script>
+		function openCenterLoginWindow(url, name) {
+			var url = url; //转向网页的地址;
+			var name = ''; //网页名称，可为空;
+			var iWidth = 660; //弹出窗口的宽度;
+			var iHeight = 560; //弹出窗口的高度;
+			var iTop = (window.screen.height - 30 - iHeight) / 2; //获得窗口的垂直位置;
+			var iLeft = (window.screen.width - 10 - iWidth) / 2; //获得窗口的水平位置;
+			window.open(url, name, 'height=' + iHeight + ',,innerHeight=' + iHeight + ',width=' + iWidth + ',innerWidth=' + iWidth + ',top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
+		}
+	</script>
+	<script>
+		//统计运行时间
+		Param.execTime = '0.071381092071533';
+	</script>
+	<script
+		src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/681e08d.js?v=681"></script>
+	<script
+		src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
+		<script type="text/javascript" src="js/jquery.pagination.js"></script>
+	<script type="text/javascript">
+		$('.lazy').lazyload({
+			threshold : 200
+		});
+		$(function() {
+	
+			var csrfToken = $('meta[name="csrf-token"]').attr("content");
+	
+			//关注
+			var cared_none = $('.cared-none');
+			var follow_url = '../teacher/ajax-follow.html';
+			cared_none.on('click', function() {
+	
+				var _this = $(this);
+				var teacherId = $(this).parent().attr('data-id');
+				$.ajax({
+					url : follow_url,
+					data : {
+						_csrf : csrfToken,
+						"UserFlowerTeacherForm[tid]" : teacherId
+					},
+					headers : {
+						'X-CSRF-TOKEN' : csrfToken
+					},
+					type : 'POST',
+					dataType : 'JSON',
+					success : function(res) {
+						if (res.status == 1) {
+							//                            _this.addClass('hide');
+							//                            $('#cared-delet').removeClass('hide');
+							_this.html('关注成功')
+							location.reload();
+						}
+					}
+				});
+			});
+	
+			//取消关注
+			var cared_delet = $('.cared-delet');
+			var cancel_url = '../teacher/ajax-cancel-follow.html';
+			cared_delet.on('click', function() {
+	
+				var _this = $(this);
+				var teacherId = $(this).parent().attr('data-id');
+				$.ajax({
+					url : cancel_url,
+					data : {
+						_csrf : csrfToken,
+						"UserFlowerTeacherForm[tid]" : teacherId
+					},
+					headers : {
+						'X-CSRF-TOKEN' : csrfToken
+					},
+					type : 'POST',
+					dataType : 'JSON',
+					success : function(res) {
+						if (res.status == 1) {
+							//                            _this.addClass('hide');
+							//                            $('#cared-none').removeClass('hide');
+							_this.html('取消成功')
+							location.reload();
+						}
+					}
+				});
+			});
+			
+			$('.M-box1').pagination({
+			totalData: $("#pageTotal").val(), //数据总条数
+        	showData: 4, //每页显示的条数
+        	pageCount: $("#pages").val(), //总页数,默认为9
+        	current: $("#pageNum").val(), //当前第几页
+   		 	mode: 'fixed'
+});
+		});
+		
+		function urlaction(index){
+			window.location="clickAllTeacher?pageNow="+index+"&t_occupation=0";
+		}
+	</script>
 </body>
 <!-- Mirrored from yihao86/teachers/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 01:15:09 GMT -->
 </html>

@@ -18,7 +18,7 @@ mybatis:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://111.230.232.46:3306/yihao86?serverTimezone=GMT
+    url: jdbc:mysql://111.230.232.46:3306/yihao86?serverTimezone=GMT&useSSL=false&useUnicode=true&characterEncoding=utf-8
     username: root
     password: z@2418
 
@@ -48,10 +48,10 @@ spring:
 
 
 #  pagehelper:
-#    helperDialect:mysql
-#    reasonable:true
-#    supportMethodsArguments:true
-#    params:count=countSql
+#    helperDialect: mysql
+#    reasonable: true
+#    supportMethodsArguments: true
+#    params: count=countSql
 
 
 

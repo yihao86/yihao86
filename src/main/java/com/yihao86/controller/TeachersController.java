@@ -7,7 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.github.pagehelper.Page;
 import com.yihao86.pojo.Teachers;
 import com.yihao86.pojo.Type;
 import com.yihao86.pojo.Videos;
@@ -21,12 +24,24 @@ public class TeachersController {
 	private TeachersService ts;
 	
 	@RequestMapping("clickAllTeacher")
-	public String allTeachers(Model model,String tid,String t_occupation) {
-		List<Map<String,Object>> map = ts.findAllAchievement(Integer.valueOf(t_occupation));
+	public String allTeachers(Model model,String tid,String t_occupation,@RequestParam(name="pageNow",defaultValue="1") Integer pageNow) {
+		
+		List<Map<String,Object>> map = ts.findAllAchievement(Integer.valueOf(t_occupation),pageNow);
+		Page<Teachers> pageAll=null;
 		List<Type> typelist = ts.teacherType();
+		for (Map<String, Object> maps : map) {
+			pageAll=(Page<Teachers>)maps.get("pageAll");
+			
+		}
+		if(pageAll!=null){
+			model.addAttribute("pages", pageAll.getPages());
+			model.addAttribute("pageNum", pageAll.getPageNum());
+			model.addAttribute("pageTotal",pageAll.getTotal());
+		}
 		model.addAttribute("map", map);
 		model.addAttribute("typelist", typelist);
 		model.addAttribute("t_occupation", t_occupation);
+		
 		return "allteachers";
 	}
 	

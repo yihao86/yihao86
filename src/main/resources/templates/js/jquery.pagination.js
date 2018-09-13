@@ -186,6 +186,7 @@
                         return false;
                     } else {
                         index = parseInt($obj.find('.' + opts.activeCls).text()) + 1;
+                        urlaction(index);
                     }
                 } else if ($(this).hasClass(opts.prevCls)) {
                     if ($obj.find('.' + opts.activeCls).text() <= 1) {
@@ -193,15 +194,18 @@
                         return false;
                     } else {
                         index = parseInt($obj.find('.' + opts.activeCls).text()) - 1;
+                        urlaction(index);
                     }
                 } else if ($(this).hasClass(opts.jumpBtnCls)) {
                     if ($obj.find('.' + opts.jumpIptCls).val() !== '') {
                         index = parseInt($obj.find('.' + opts.jumpIptCls).val());
+                        
                     } else {
                         return;
                     }
                 } else {
                     index = parseInt($(this).data('page'));
+                    urlaction(index);
                 }
                 that.filling(index);
                 typeof opts.callback === 'function' && opts.callback(that);
@@ -254,3 +258,7 @@
     };
 
 }));
+
+
+
+

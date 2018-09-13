@@ -36,7 +36,7 @@ public class IndexController {
 		mod.addAttribute("tlist", tlist);
 		mod.addAttribute("vlist", vlist);
 	    mod.addAttribute("newlist", newlist);
-	    List<Map<String,Object>> map=tcs.findAllAchievement(0);
+	    List<Map<String,Object>> map=tcs.findAllAchievement(0,-1);
 		System.out.println(map.size());
 		mod.addAttribute("map",map);
 		return "index";
