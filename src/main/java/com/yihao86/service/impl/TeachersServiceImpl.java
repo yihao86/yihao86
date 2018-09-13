@@ -7,7 +7,11 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.yihao86.dao.TeachersDao;
 import com.yihao86.pojo.Teachers;
 import com.yihao86.pojo.Type;
@@ -20,6 +24,8 @@ public class TeachersServiceImpl implements TeachersService {
 	@Autowired
 	private TeachersDao tdao;
 
+	
+	
 	@Override
 	public List<Teachers> findAllTeacher(int typeid) {
 		return tdao.findAllTeacher(typeid);
@@ -27,10 +33,24 @@ public class TeachersServiceImpl implements TeachersService {
 	
 	@Override
 	public List<Map<String,Object>> findAllAchievement(int t_occupation,int pageNow){
-		List<Teachers> tlist = tdao.findAllTeacher(t_occupation);
+		//List<Teachers> tlist = tdao.findAllTeacher(t_occupation);
+
+		List<Teachers> tlist=null;
+		Page<Teachers> pageAll=null;
+		if(pageNow==-1){
+			tlist = tdao.findAllTeacher(t_occupation);
+		}else {
+			PageHelper.startPage(pageNow,4);
+			List<Teachers> tlists = tdao.findAllTeacher(t_occupation);
+			pageAll=(Page<Teachers>)tlists;
+			tlist=pageAll.getResult();
+		}
+		
+		
 		List<Map<String,Object>> list = new ArrayList<>();
+		Map<String,Object> map=null;
 		for (Teachers t : tlist) {
-			Map<String,Object> map = new HashMap<>();
+			map = new HashMap<>();
 			List<Videos> vlist = tdao.teacherVideo(t.getTid());
 			String typename = tdao.oneType(t.getTid());
 			map = tdao.achievement(t.getTid());
@@ -39,6 +59,7 @@ public class TeachersServiceImpl implements TeachersService {
 			map.put("typename", typename);
 			list.add(map);
 		}
+		map.put("pageAll", pageAll);
 		return list;
 	} 
 

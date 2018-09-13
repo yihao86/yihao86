@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ==>  Preparing: SELECT * FROM `users` WHERE `u_account`=? 
 ==> Parameters: 18873299263(String)
 <==      Total: 1
@@ -10597,6 +10598,8 @@ Rendering view [org.springframework.boot.autoconfigure.web.servlet.error.ErrorMv
 Successfully completed request
 HikariPool-2 - Added connection com.mysql.jdbc.JDBC4Connection@8af613e
 HikariPool-2 - After adding stats (total=10, active=0, idle=10, waiting=0)
+=======
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Trying to load META-INF/validation.xml via TCCL
 Trying to load META-INF/validation.xml via Hibernate Validator's class loader
 No META-INF/validation.xml found. Using annotation based configuration only.

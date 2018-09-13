@@ -1,24 +1,23 @@
 @charset "UTF-8";
-.M-box1 {
+#page-m .M-box1 {
     position: relative;
-    left: 220px;
-    top: -38px;
+    left: 365px;
     text-align: center;
     zoom: 1;
 }
 
-.M-box1:before,
-.M-box1:after {
+#page-m .M-box1:before,
+#page-m .M-box1:after {
     content: "";
     display: table;
 }
 
-.M-box1:after {
+#page-m .M-box1:after {
     clear: both;
     overflow: hidden;
 }
 
-.M-box1 span {
+#page-m .M-box1 span {
     float: left;
     margin: 0 5px;
     width: 38px;
@@ -28,7 +27,7 @@
     font-size: 14px;
 }
 
-.M-box1 .active {
+#page-m .M-box1 .active {
     float: left;
     margin: 0 5px;
     width: 38px;
@@ -40,7 +39,7 @@
     border: 1px solid #f2b100;
 }
 
-.M-box1 a {
+#page-m .M-box1 a {
     float: left;
     margin: 0 5px;
     width: 38px;
@@ -52,13 +51,13 @@
     font-size: 14px;
 }
 
-.M-box1 a:hover {
+#page-m .M-box1 a:hover {
     color: #fff;
     background: #f2b100;
 }
 
-.M-box1 .next,
-.M-box1 .prev {
+#page-m .M-box1 .next,
+#page-m .M-box1 .prev {
     font-family: "Simsun";
     font-size: 16px;
     font-weight: bold;

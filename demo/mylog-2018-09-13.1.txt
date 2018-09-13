@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7045550d] was not registered for synchronization because synchronization is not active
 Fetching JDBC Connection from DataSource
 JDBC Connection [HikariProxyConnection@1705974524 wrapping com.mysql.jdbc.JDBC4Connection@2e8553e0] will not be managed by Spring
@@ -11398,6 +11399,8 @@ Cleared thread-bound request context: org.apache.catalina.connector.RequestFacad
 Creating a new SqlSession
 Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e365bc3]
 JDBC Connection [HikariProxyConnection@1457669955 wrapping com.mysql.jdbc.JDBC4Connection@5907f812] will be managed by Spring
+=======
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 <==      Total: 22
 Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e57414a]
 Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e57414a]

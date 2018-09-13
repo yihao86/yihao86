@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Starting Quartz Scheduler now, after delay of 5 seconds
 Scheduler scheduler_$_NON_CLUSTERED started.
 batch acquisition of 0 triggers
@@ -10664,6 +10665,8 @@ Returning cached instance of singleton bean 'conditionEvaluationDeltaLoggingList
 Returning cached instance of singleton bean 'springApplicationAdminRegistrar'
 Returning cached instance of singleton bean 'autoConfigurationReport'
 Condition evaluation unchanged
+=======
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Successfully enhanced org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration; enhanced class name is: org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration$$EnhancerBySpringCGLIB$$1ab72877
 Replacing bean definition 'org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration' existing class 'org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration' with enhanced class 'org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration$$EnhancerBySpringCGLIB$$1ab72877'
 Successfully enhanced org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration; enhanced class name is: org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration$$EnhancerBySpringCGLIB$$89a7b084

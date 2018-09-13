@@ -1942,6 +1942,7 @@ Invoking destroy() on bean with name 'requestContextFilter'
 Invoking destroy() on bean with name 'org.springframework.context.annotation.internalScheduledAnnotationProcessor'
 Retrieved dependent beans for bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory': [org.springframework.context.annotation.internalConfigurationAnnotationProcessor]
 Could not find key 'logging.register-shutdown-hook' in any property source
+<<<<<<< HEAD
 Application started with classpath: [file:/D:/eclipse/Spring/yi/target/classes/]
 Could not find key 'context.listener.classes' in any property source
 Adding PropertySource 'configurationProperties' with highest search precedence
@@ -12434,6 +12435,8 @@ Invoking destroy() on bean with name 'requestContextFilter'
 Invoking destroy() on bean with name 'org.springframework.context.annotation.internalScheduledAnnotationProcessor'
 Retrieved dependent beans for bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory': [org.springframework.context.annotation.internalConfigurationAnnotationProcessor]
 Could not find key 'logging.register-shutdown-hook' in any property source
+=======
+>>>>>>> branch 'master' of https://github.com/yihao86/yihao86.git
 Application started with classpath: [file:/D:/MyEclipse%202017/yihao86/target/classes/]
 Could not find key 'context.listener.classes' in any property source
 Adding PropertySource 'configurationProperties' with highest search precedence
