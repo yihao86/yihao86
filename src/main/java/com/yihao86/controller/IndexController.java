@@ -9,7 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yihao86.pojo.Type;
-import com.yihao86.pojo.Videos;
+import com.yihao86.quartz.ScheduledTasks;
 import com.yihao86.service.TeachersService;
 import com.yihao86.service.TypeService;
 import com.yihao86.service.VideosService;
@@ -25,6 +25,9 @@ public class IndexController {
 	
 	@Autowired
 	private TeachersService tcs;
+	
+	@Autowired
+	private ScheduledTasks st;
 
 	
 	@RequestMapping("gogogo")
@@ -36,9 +39,11 @@ public class IndexController {
 		mod.addAttribute("tlist", tlist);
 		mod.addAttribute("vlist", vlist);
 	    mod.addAttribute("newlist", newlist);
-	    List<Map<String,Object>> map=tcs.findAllAchievement(0,-1);
+	   	List<Map<String,Object>> map=tcs.findAllAchievement(0,-1);
 		System.out.println(map.size());
+		List<Map<String,Object>> vmap = st.reportCurrentByCron();
 		mod.addAttribute("map",map);
+		mod.addAttribute("vmap", vmap);
 		return "index";
 	}
 
