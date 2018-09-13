@@ -10,9 +10,6 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 @Configuration
 public class QuartzConfigration {
 	
-	
-	
-	
 	//配置电视任务1
 	@Bean(name = "jobDetail")  
     public MethodInvokingJobDetailFactoryBean detailFactoryBean(ScheduledTasks task) {
@@ -42,7 +39,7 @@ public class QuartzConfigration {
     public CronTriggerFactoryBean cronJobTrigger(MethodInvokingJobDetailFactoryBean jobDetail) {  
         CronTriggerFactoryBean tigger = new CronTriggerFactoryBean();  
         tigger.setJobDetail(jobDetail.getObject());  
-        tigger.setCronExpression("0 2 10 * * ? *");// 表示每个星期5上午10点
+        tigger.setCronExpression("0 44 16 * * ? *");// 表示每个星期5上午10点
         //tigger.set
         tigger.setName("myTigger");// trigger的name  
         return tigger;  

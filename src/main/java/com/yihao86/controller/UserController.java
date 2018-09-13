@@ -82,7 +82,7 @@ public class UserController {
    public void editTeacherById(String tid,HttpSession session,HttpServletResponse response)
 		   throws IOException {
 		Users user = (Users) session.getAttribute("user");
-	   // us.deleteTeachers(user.getUid(),Integer.valueOf(tid));
+	    us.deleteTeachers(user.getUid(),Integer.valueOf(tid));
 	    OutputStream out=response.getOutputStream();	    
 	    out.write("Y".getBytes());
 	  

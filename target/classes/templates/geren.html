@@ -160,10 +160,12 @@
                                                  target="_blank"></a></span></p>
                 <div class="vip-icon clearfix"><i class="novip"></i></div>
             </div>
-            <div class="r-link fr"><a href="https://huke88.com/notice/list" target="_blank">消息<br><span>99+</span></a><a
-                    href="collection6034.html?uid=1367229"
-                    target="_blank">收藏<br><span th:text="${umap.follow}">0</span></a><a href="follow6034.html?uid=1367229"
-                                                               target="_blank">关注<br><span th:text="${umap.coll}">1</span></a></div>
+            <div class="r-link fr"><a href="https://huke88.com/notice/list" target="_blank">消息<br><span>99+</span></a>
+            	<a th:href="@{'findUserById?uid='+${u.uid}+'&options=2'}"
+                   >收藏<br><span th:text="${umap.follow}">0</span></a>
+            	<a th:href="@{'findUserById?uid='+${u.uid}+'&options=4'}"
+                   >关注<br><span th:text="${umap.coll}">1</span></a>
+            </div>
         </div>
     </div>
     <div class="user-wrapper clearfix layout-cont">

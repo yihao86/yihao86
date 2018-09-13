@@ -105,112 +105,23 @@
             <div class="nav-slide" id="slide-box">
                 <div class="bd">
                     <ul class="clearfix">
-                        <li class="slide-item">
+                        <li class="slide-item" th:each="vmap,v:${vmap}">
                             <a data-id="320" data-bind="banner-a-click"
                                data-url="https://huke88.com/abroad-teacher"
                                data-auth="0" href="javascript:;"
                             >
                                 <div class="img"
-                                     data-address="../imgs/1xBl4472L10.jpg"
-                                     style="background: url(imgs/1xBl4472L10.jpg) no-repeat  center;
-                                     background-size: cover" title="跟着老外学设计">
+                                     th:data-address="'http://localhost:9352/video/'+${vmap.v_imgs}"
+                                     th:style="'background: url(http://localhost:9352/video/'+${vmap.v_imgs}+') no-repeat  center;
+                                     background-size: cover'" th:title="${vmap.v_name}">
                                 </div>
                             </a>
                         </li>
-                        <li class="slide-item">
-                            <a data-id="320" data-bind="banner-a-click"
-                               data-url="https://huke88.com/abroad-teacher"
-                               data-auth="0" href="javascript:;"
-                            >
-                                <div class="img"
-                                     data-address="../imgs/1xBl4472L10.jpg"
-                                     style="background: url(imgs/1xBl4472L10.jpg) no-repeat  center;
-                                 background-size: cover" title="跟着老外学设计">
-                                </div>
-                            </a>
-                        </li>
-                        <li class="slide-item">
-                            <a data-id="320" data-bind="banner-a-click"
-                                                  data-url="https://huke88.com/abroad-teacher"
-                                                  data-auth="0" href="javascript:;"
-                        >
-                            <div class="img"
-                                 data-address="../imgs/1xBl4472L10.jpg"
-                                 style="background: url(imgs/1xBl4472L10.jpg) no-repeat  center;
-                                 background-size: cover" title="跟着老外学设计">
-                            </div>
-                        </a>
-                        </li>
-                        <li class="slide-item">
-                            <a data-id="244" data-bind="banner-a-click" data-url="course.html"
-                               data-auth="0" href="javascript:;">
-                            <div class="img"
-                                 data-address="../imgs/1xBl4472L10.jpg"
-                                 style="background: url() no-repeat  center;background-size: cover"
-                                 title="全站通VIP"></div>
-                            </a></li>
-                        <li class="slide-item">
-                            <a data-id="244" data-bind="banner-a-click" data-url="course.html"
-                               data-auth="0" href="javascript:;">
-                            <div class="img"
-                                 data-address="../imgs/1xBl4472L10.jpg"
-                                 style="background: url() no-repeat  center;background-size: cover"
-                                 title="新片场"></div>
-                            </a></li>
-                        <li class="slide-item">
-                            <a data-id="244" data-bind="banner-a-click" data-url="course.html"
-                               data-auth="0" href="javascript:;">
-                            <div class="img"
-                                 data-address="../imgs/1xBl4472L10.jpg"
-                                 style="background: url() no-repeat  center;background-size: cover"
-                                 title=""></div>
-                            </a></li>
-                        <li class="slide-item">
-                            <a data-id="244" data-bind="banner-a-click" data-url="course.html"
-                               data-auth="0" href="javascript:;">
-                            <div class="img"
-                                 data-address="../imgs/1xBl4472L10.jpg"
-                                 style="background: url() no-repeat  center;background-size: cover"
-                                 title=""></div>
-                            </a></li>
-                        <li class="slide-item">
-                            <a data-id="244" data-bind="banner-a-click" data-url="course.html"
-                               data-auth="0" href="javascript:;">
-                            <div class="img"
-                                 data-address="../imgs/1xBl4472L10.jpg"
-                                 style="background: url() no-repeat  center;background-size: cover"
-                                 title=""></div>
-                            </a></li>
-                        <li class="slide-item">
-                            <a data-id="244" data-bind="banner-a-click" data-url="course.html"
-                               data-auth="0" href="javascript:;">
-                            <div class="img"
-                                 data-address="../imgs/1xBl4472L10.jpg"
-                                 style="background: url() no-repeat  center;background-size: cover"
-                                 title=""></div>
-                            </a></li>
-                        <li class="slide-item">
-                            <a data-id="244" data-bind="banner-a-click" data-url="course.html"
-                               data-auth="0" href="javascript:;">
-                            <div class="img"
-                                 data-address="../imgs/1xBl4472L10.jpg"
-                                 style="background: url() no-repeat  center;background-size: cover"
-                                 title="EthankDesign"></div>
-                        </a></li>
                     </ul>
                 </div>
                 <div class="hd">
                     <ul>
-                        <li><span>玩儿推一天任务耳热</span></li>
-                        <li><span>的非官方的非官方</span></li>
-                        <li><span>的非官方飞得更高放的地方</span></li>
-                        <li><span>表是从VB是从VBv</span></li>
-                        <li><span>不小心被冻结副书记</span></li>
-                        <li><span>带返回实践活动技术附件</span></li>
-                        <li><span>现在不行水电费发放</span></li>
-                        <li><span>出是你们项目你倒是</span></li>
-                        <li><span>带返回实践活动技术附件</span></li>
-                        <li><span>现在不行水电费发放</span></li>
+                        <li th:each="vmap,v:${vmap}"><span th:text="${vmap.v_name}">玩儿推一天任务耳热</span></li>
                     </ul>
                 </div>
                 <a href="javascript:;" class="prev slide-btn cut-btn"></a>
@@ -223,18 +134,9 @@
    
     <div class="subnav">
         <div class="layout-cont">
-        <span th:each="t,type:${tlist}" th:if="${type.index <= 10}">
-       <a target="_blank"  th:href="@{'findTyeps?f_trid='+${t.f_trid}}" th:text="${t.typename}">字体设计</a>
-        </span>         
-           <!--  <a target="_blank" onclick="pagePositionClick(137);" href="type.html">海报设计</a>
-            <a target="_blank" onclick="pagePositionClick(138);" href="type.html">C4D教程</a>
-            <a target="_blank" onclick="pagePositionClick(139);" href="type.html">图像合成</a>
-            <a target="_blank" onclick="pagePositionClick(140);" href="type.html">产品精修</a>
-            <a target="_blank" onclick="pagePositionClick(141);" href="type.html">摄影艺术</a>
-            <a target="_blank" onclick="pagePositionClick(142);" href="type.html">影视动画</a>
-            <a target="_blank" onclick="pagePositionClick(143);" href="type.html">综合教程</a>
-            <a target="_blank" onclick="pagePositionClick(341);" href="type.html">UI设计</a>
-            <a target="_blank" onclick="pagePositionClick(144);" href="type.html">人像精修</a> -->
+        	<span th:each="t,type:${tlist}" th:if="${type.index <= 10}">
+       			<a target="_blank"  th:href="@{'findTyeps?f_trid='+${t.f_trid}}" th:text="${t.typename}">字体设计</a>
+        	</span>
         </div>
     </div>
     <div class="section-img ">

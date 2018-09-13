@@ -56,5 +56,13 @@
 		t.`f_trid`=#{f_trid}
 		GROUP BY v.`vid`
 	</select>
+	
+	<select id="findBroadcast" resultType = "map">
+		SELECT v.vid,v.`v_name`,`v_teacherId`,`v_uploadtime`,v.`v_imgs`,v.`v_vpath` ,COUNT(h.`h_vid`)
+		FROM `videos` v  LEFT JOIN `history` h
+		ON v.`vid`=h.`h_vid` 
+		WHERE DATE(NOW()) - v_uploadtime &lt;= 7
+		GROUP BY v.vid  LIMIT 10
+	</select>
 
 </mapper>
