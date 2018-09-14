@@ -59,6 +59,9 @@ public class QuartzConfigration {
         return bean;  
     }
     
+    
+    
+    
     //多任务时的Scheduler，动态设置Trigger。一个SchedulerFactoryBean可能会有多个Trigger
     @Bean(name = "multitaskScheduler") 
     public SchedulerFactoryBean schedulerFactoryBean(){  

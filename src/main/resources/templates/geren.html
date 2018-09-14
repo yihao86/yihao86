@@ -19,6 +19,7 @@
     <meta property="wb:webmaster" content="c2797be5e9930c26">
     <link href="static/assets/revision/!!css/base.v109.css,css/person/main.v15.css,css/687529c.css?v=687"
           rel="stylesheet">
+          <link rel="stylesheet" href="css/pagination.css"/>
     <script>
         var Url = {};
         var Param = {};
@@ -239,14 +240,14 @@
             </div><!--分页 s-->
                  
             <div id="page-m">
-                <div class="page-li"><a class="on active" href="album/1-16.html" data-page="0">1</a><a
-                        href="album/2-16.html" data-page="1">2</a><a href="album/3-16.html" data-page="2">3</a><a
-                        href="album/4-16.html" data-page="3">4</a><a href="album/5-16.html" data-page="4">5</a><a
-                        href="album/6-16.html" data-page="5">6</a><a href="album/7-16.html" data-page="6">7</a><a
-                        href="album/8-16.html" data-page="7">8</a><a href="album/9-16.html" data-page="8">9</a><a
-                        href="album/10-16.html" data-page="9">10</a><a class="next" href="album/2-16.html"
-                                                                       data-page="1">下一页</a></div>
-            </div>
+            			<input id="uid" type="hidden" th:value="${u.uid}"/>
+						<input id="pages" type="hidden" th:value="${pages}"/>
+						<input id="pageNum" type="hidden" th:value="${pageNum}"/>
+						<input id="pageTotal" type="hidden" th:value="${pageTotal}"/>
+					<div class="M-box1">
+						
+					</div>
+				</div>
        <!-- 专辑list end -->
         </div>
     </div><!-- 奖状弹窗 -->
@@ -346,6 +347,7 @@
 </script>
 <script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/jquery.lazyload.js,js/person/main.js,js/687529c.js?v=687"></script>
 <script src="static/assets/revision/js/plugins/layer/layer.huke529c.js?v=687"></script>
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
 <script type="text/javascript">
     $('.lazy').lazyload({threshold: 200});
 
@@ -410,8 +412,18 @@
             var oEvent = ev || event;
             oEvent.stopPropagation();
             return false;
-        });   
+        }); 
+        $('.M-box1').pagination({
+			totalData: $("#pageTotal").val(), //数据总条数
+        	showData: 6, //每页显示的条数
+        	pageCount: $("#pages").val(), //总页数,默认为9
+        	current: $("#pageNum").val(), //当前第几页
+   		 	mode: 'fixed'
+		});
     });
+    function urlaction(index){
+			window.location="findUserById?pageNow="+index+"&uid="+$("#uid").val();
+		}  
      function editTeacher(tid) {
     	 alert(tid);
 		$.post("editTeacherById?tid="+tid,function(t){

@@ -46,9 +46,13 @@ public class TeachersController {
 	}
 	
 	@RequestMapping("clickOneTeacher")
-	public String oneTeacher(Model model,String tid) {
+	public String oneTeacher(Model model,String tid,@RequestParam(name="pageNow",defaultValue="1") Integer pageNow) {
 		Teachers teacher = ts.findOneTeacher(Integer.valueOf(tid));
+		PageHelper.startPage(pageNow,6);
+		
 		List<Videos> vlist = ts.teacherVideo(Integer.valueOf(tid));
+		PageInfo<Videos> pageAll=new PageInfo<Videos>(vlist);
+		System.out.println(pageAll.getPages()+"\t"+pageAll.getPageNum()+"\t"+pageAll.getTotal());
 		//查看当前视频的学习总人数
 		List<Integer> list = ts.viewingNumber(Integer.valueOf(tid));
 		//查看当前老师的成就信息
@@ -57,10 +61,13 @@ public class TeachersController {
 		int total = ts.total(Integer.valueOf(tid));
 		
 		model.addAttribute("teacher", teacher);
-		model.addAttribute("vlist", vlist);
+		model.addAttribute("vlist", pageAll.getList());
 		model.addAttribute("list", list);
 		model.addAttribute("achievement", achievement);
 		model.addAttribute("total", total);
+		model.addAttribute("pages", pageAll.getPages());
+		model.addAttribute("pageNum", pageAll.getPageNum());
+		model.addAttribute("pageTotal",pageAll.getTotal());
 		return "teacher";
 	}
 	
