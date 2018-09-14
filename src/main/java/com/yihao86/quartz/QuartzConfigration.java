@@ -10,7 +10,7 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 @Configuration
 public class QuartzConfigration {
 	
-	//配置电视任务1
+	//配置任务1
 	@Bean(name = "jobDetail")  
     public MethodInvokingJobDetailFactoryBean detailFactoryBean(ScheduledTasks task) {
         // ScheduleTask为需要执行的任务  

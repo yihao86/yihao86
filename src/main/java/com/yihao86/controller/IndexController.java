@@ -8,8 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.yihao86.pojo.Course;
 import com.yihao86.pojo.Type;
 import com.yihao86.quartz.ScheduledTasks;
+import com.yihao86.service.CourseService;
 import com.yihao86.service.TeachersService;
 import com.yihao86.service.TypeService;
 import com.yihao86.service.VideosService;
@@ -28,6 +30,9 @@ public class IndexController {
 	
 	@Autowired
 	private ScheduledTasks st;
+	
+	@Autowired
+	private CourseService cs;
 
 	
 	@RequestMapping("gogogo")
@@ -44,6 +49,13 @@ public class IndexController {
 		List<Map<String,Object>> vmap = st.reportCurrentByCron();
 		mod.addAttribute("map",map);
 		mod.addAttribute("vmap", vmap);
+		
+		List<Map<String,Object>> clist = cs.fandAlbumCourse(0);
+		mod.addAttribute("clist", clist);
+		
+		List<Integer> list = cs.fandNumber(0);
+		mod.addAttribute("list", list);
+		
 		return "index";
 	}
 

@@ -23,8 +23,6 @@ public class VideosController {
 	}
 
 	public String queryVideosByTid(int f_trid) {
-		
-		
            return "type";
 	}
 

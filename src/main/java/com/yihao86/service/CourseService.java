@@ -22,4 +22,5 @@ public interface CourseService {
 	
 	//查找购买数量
 	List<Integer> fandNumber(int a_typeId);
+
 }
