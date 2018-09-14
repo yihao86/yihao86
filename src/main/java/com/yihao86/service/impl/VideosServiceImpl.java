@@ -49,7 +49,7 @@ public class VideosServiceImpl  implements VideosService{
 	 */
 	@Override
 	public List<Map<Object,String>> selectNewestVideo() {
-		// TODO Auto-generated method stub
+		
 		return vdao.findNewestVideo();
 	}
 

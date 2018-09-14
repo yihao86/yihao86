@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import com.yihao86.dao.CourseDao;
 import com.yihao86.dao.TeachersDao;
+import com.yihao86.pojo.Course;
 import com.yihao86.pojo.Videos;
 import com.yihao86.service.CourseService;
 
@@ -81,6 +82,16 @@ public class CourseServiceImpl implements CourseService {
 			lnum.add(num);
 		}
 		return lnum;
+	}
+	@Override
+	public List<Integer> findCourseInfo() {
+		List<Course> list = cdao.findCourse();
+		List<Integer> clist = new ArrayList<>();
+		for (Course course : list) {
+			int num = cdao.findCourseNum(course.getCrid());
+			clist.add(num);
+		}
+		return clist;
 	}
 	
 

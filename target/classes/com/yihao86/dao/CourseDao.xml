@@ -30,4 +30,12 @@
   	<select id="fandNumber" resultType="int">
   		SELECT COUNT(0) FROM purchase WHERE p_cid = #{p_cid}
   	</select>
+  	
+  	<select id="findCourse" resultType="Course">
+  		SELECT * FROM course ORDER BY crid DESC
+  	</select>
+  	
+  	<select id="findCourseNum" resultType="int">
+  		SELECT COUNT(0) FROM videos WHERE v_crid = #{v_crid}
+  	</select>
   </mapper>
