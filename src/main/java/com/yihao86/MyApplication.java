@@ -26,6 +26,7 @@ public class MyApplication extends SpringBootServletInitializer {
 	  factory.setMaxRequestSize("2048MB");
 	  return factory.createMultipartConfig();
 	}*/
+	//
 	
 	/*@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {

@@ -22,7 +22,7 @@ public interface CourseService {
 	List<Map<String,Object>> fandAlbumCourse(int a_typeId);
 	
 	//查找购买数量
-	List<Integer> fandNumber(int a_typeId);	
+	List<Integer> fandNumber(int a_typeId);
 	
 	//查找单个课程的信息
 	List<Integer> findCourseInfo();
