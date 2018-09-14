@@ -17,6 +17,7 @@
     <meta property="wb:webmaster" content="c2797be5e9930c26">
     <link href="static/assets/revision/!!css/base.v107.css,css/pgc/main.v5.css,css/681e08d.css?v=681"
           rel="stylesheet">
+          <link rel="stylesheet" href="css/pagination.css"/>
     <script>
         var Url = {};
         var Param = {};
@@ -184,18 +185,13 @@
             </div>
         </div><!--分页 s-->
         <div id="page-m">
-            <div class="pager">
-                <div id="page-m">
-                    <div class="pagination"><a class="on active"
-                                               href="pgc/index1edd.html?page=1&amp;per-page=18&amp;isrank=1"
-                                               data-page="0">1</a><a
-                            href="pgc/index2f82.html?page=2&amp;per-page=18&amp;isrank=1" data-page="1">2</a><a
-                            href="pgc/indexa24f.html?page=3&amp;per-page=18&amp;isrank=1" data-page="2">3</a><a
-                            href="pgc/indexb62a.html?page=4&amp;per-page=18&amp;isrank=1" data-page="3">4</a><a
-                            class="next" href="pgc/index2f82.html?page=2&amp;per-page=18&amp;isrank=1"
-                            data-page="1">下一页</a></div>
-                </div>
-            </div>
+                		<input id="a_typeId" type="hidden" th:value="${a_typeId}"/>
+                  		<input id="pages" type="hidden" th:value="${pages}"/>
+						<input id="pageNum" type="hidden" th:value="${pageNum}"/>
+						<input id="pageTotal" type="hidden" th:value="${pageTotal}"/>
+					<div class="M-box1">
+						
+					</div>
         </div>
     </div><!-- pgc end -->
     
@@ -342,6 +338,7 @@
 </script>
 <script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/pgc/main.v4.js,js/681e08d.js?v=681"></script>
 <script src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
 <script>
     $(function () {
         // 商城晒单轮播图
@@ -351,7 +348,18 @@
             trigger: "click",
             interTime: 4000
         });
-    })
+    $('.M-box1').pagination({
+			totalData: $("#pageTotal").val(), //数据总条数
+        	showData: 6, //每页显示的条数
+        	pageCount: $("#pages").val(), //总页数,默认为9
+        	current: $("#pageNum").val(), //当前第几页
+   		 	mode: 'fixed'
+});
+		});
+		
+		function urlaction(index){
+			window.location="fandCourse?pageNow="+index+"&a_typeId="+$("#a_typeId").val();
+		}
 </script>
 </body>
 <!-- Mirrored from yihao86/pgc by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 00:34:38 GMT -->

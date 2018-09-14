@@ -16,6 +16,7 @@
     <title>在线学习网站--一号86</title>
     <meta property="wb:webmaster" content="c2797be5e9930c26">
     <link href="static/681e08d.css?v=681" rel="stylesheet">
+    <link rel="stylesheet" href="css/pagination.css"/>
     <script>
         var Url = {};
         var Param = {};
@@ -194,9 +195,14 @@
                 </div>
                 <!--分页 s-->
                 <div id="page-m">
-                    <div class="page-li"><a class="on active" href="10b2f.html?page=1&amp;per-page=24"
-                                            data-page="0">1</a></div>
-                </div>
+               			<input id="tid" type="hidden" th:value="${teacher.tid}"/>
+						<input id="pages" type="hidden" th:value="${pages}"/>
+						<input id="pageNum" type="hidden" th:value="${pageNum}"/>
+						<input id="pageTotal" type="hidden" th:value="${pageTotal}"/>
+					<div class="M-box1">
+						
+					</div>
+				</div>
             </div>
         </div>
     </div>
@@ -344,6 +350,11 @@
         </div>
     </div>
 </div><!--//登录弹窗 end-->
+<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/ucenter/pgc-teacher.js,js/681e08d.js?v=681"></script>
+<script src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
+<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/plugins/layer/layer.huke.js,js/public.102.j/681.d70e08d.delaye?v=681"></script>
+
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
 <script>
     function openCenterLoginWindow(url, name) {
         var url = url; //转向网页的地址;
@@ -354,14 +365,23 @@
         var iLeft = (window.screen.width - 10 - iWidth) / 2; //获得窗口的水平位置;
         window.open(url, name, 'height=' + iHeight + ',,innerHeight=' + iHeight + ',width=' + iWidth + ',innerWidth=' + iWidth + ',top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
     }
+    $(function(){
+    	$('.M-box1').pagination({
+			totalData: $("#pageTotal").val(), //数据总条数
+        	showData: 6, //每页显示的条数
+        	pageCount: $("#pages").val(), //总页数,默认为9
+        	current: $("#pageNum").val(), //当前第几页
+   		 	mode: 'fixed'
+		});	
+    });
+    function urlaction(index){
+			window.location="clickOneTeacher?pageNow="+index+"&tid="+$("#tid").val();
+		}
 </script>
 <script>
     //统计运行时间
     Param.execTime = '0.0276780128479';
 </script>
-<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/ucenter/pgc-teacher.js,js/681e08d.js?v=681"></script>
-<script src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
-<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/plugins/layer/layer.huke.js,js/public.102.j/681.d70e08d.delaye?v=681"></script>
 </body>
 <!-- Mirrored from yihao86/teachers/teacher.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 01:12:37 GMT -->
 </html>

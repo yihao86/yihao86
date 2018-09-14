@@ -17,6 +17,7 @@
     <meta property="wb:webmaster" content="c2797be5e9930c26">
     <link href="static/assets/revision/!!css/base.v107.css,css/album/album.css,css/681e08d.css?v=681"
           rel="stylesheet">
+          <link rel="stylesheet" href="css/pagination.css"/>
     <script>
         var Url = {};
         var Param = {};
@@ -173,15 +174,12 @@
             </div>
         </div>
         <div id="page-m"><!--分页 s-->
-            <div id="page-m">
-                <div class="page-li"><a class="on active" href="album/1-16.html" data-page="0">1</a><a
-                        href="album/2-16.html" data-page="1">2</a><a href="album/3-16.html" data-page="2">3</a><a
-                        href="album/4-16.html" data-page="3">4</a><a href="album/5-16.html" data-page="4">5</a><a
-                        href="album/6-16.html" data-page="5">6</a><a href="album/7-16.html" data-page="6">7</a><a
-                        href="album/8-16.html" data-page="7">8</a><a href="album/9-16.html" data-page="8">9</a><a
-                        href="album/10-16.html" data-page="9">10</a><a class="next" href="album/2-16.html"
-                                                                       data-page="1">下一页</a></div>
-            </div>
+            			<input id="pages" type="hidden" th:value="${pages}"/>
+						<input id="pageNum" type="hidden" th:value="${pageNum}"/>
+						<input id="pageTotal" type="hidden" th:value="${pageTotal}"/>
+					<div class="M-box1">
+						
+					</div>
         </div><!-- 专辑list end --></div><!-- 专辑 end -->
     <script type="text/javascript"></script>
     <div id="footer">
@@ -309,6 +307,9 @@
         </div>
     </div>
 </div><!--//登录弹窗 end-->
+<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/album/album.js,js/681e08d.js?v=681"></script>
+<script src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
 <script>
     function openCenterLoginWindow(url, name) {
         var url = url; //转向网页的地址;
@@ -319,13 +320,25 @@
         var iLeft = (window.screen.width - 10 - iWidth) / 2; //获得窗口的水平位置;
         window.open(url, name, 'height=' + iHeight + ',,innerHeight=' + iHeight + ',width=' + iWidth + ',innerWidth=' + iWidth + ',top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
     }
+    $(function(){
+    $('.M-box1').pagination({
+			totalData: $("#pageTotal").val(), //数据总条数
+        	showData: 12, //每页显示的条数
+        	pageCount: $("#pages").val(), //总页数,默认为9
+        	current: $("#pageNum").val(), //当前第几页
+   		 	mode: 'fixed'
+});
+		});
+		
+		function urlaction(index){
+			window.location="fandAllAlbum?pageNow="+index+"&typeid=0";
+		}
 </script>
 <script>
     //统计运行时间
     Param.execTime = '0.046266078948975';
 </script>
-<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/album/album.js,js/681e08d.js?v=681"></script>
-<script src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
+
 </body>
 <!-- Mirrored from yihao86/album by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 00:34:45 GMT -->
 </html>

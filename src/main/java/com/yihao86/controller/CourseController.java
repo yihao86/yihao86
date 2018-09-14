@@ -7,7 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.yihao86.pojo.Course;
 import com.yihao86.pojo.Type;
 import com.yihao86.pojo.Videos;
@@ -26,12 +29,19 @@ public class CourseController {
 	private CourseService cs;
 	
 	@RequestMapping("/fandCourse")
-	public String fandCourse(Model model,String a_typeId) {
+	public String fandCourse(Model model,String a_typeId,@RequestParam(name="pageNow",defaultValue="1") Integer pageNow) {
 		List<Type> tlist = ts.selectType();
 		model.addAttribute("tlist", tlist);
+		PageHelper.startPage(pageNow,6);
 		List<Map<String,Object>> clist = cs.fandAlbumCourse(Integer.valueOf(a_typeId));
+		PageInfo<Map<String,Object>> pageAll=new PageInfo<Map<String,Object>>(clist);
+		System.out.println(pageAll.getPages()+"\t"+pageAll.getPageNum()+"\t"+pageAll.getTotal());
+		
 		model.addAttribute("clist", clist);
 		model.addAttribute("a_typeId", a_typeId);
+		model.addAttribute("pages", pageAll.getPages());
+		model.addAttribute("pageNum", pageAll.getPageNum());
+		model.addAttribute("pageTotal",pageAll.getTotal());
 		List<Integer> list = cs.fandNumber(Integer.valueOf(a_typeId));
 		model.addAttribute("list", list);
 		return "teacherCourse";
