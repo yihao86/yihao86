@@ -56,6 +56,11 @@ public class IndexController {
 		List<Integer> list = cs.fandNumber(0);
 		mod.addAttribute("list", list);
 		
+		List<Integer> courseNum = cs.findCourseInfo();
+		for (Integer i : courseNum) {
+			System.out.println(i);
+		}
+		mod.addAttribute("courseNum",courseNum);
 		return "index";
 	}
 

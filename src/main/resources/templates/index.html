@@ -143,7 +143,7 @@
         <div class="layout-cont imgshow">
             <div class="imgshow-t">
                 <div class="hr-link fr clearfix">
-                    <a href="type.html" class="more-link" target="_blank" rel='nofollow'>更多教程>></a>
+                    <a href="findTyeps" class="more-link" target="_blank" rel='nofollow'>更多教程>></a>
                 </div>
                 <h2 class="h2"><span>推荐视频</span><em>共<i th:text="${vlist.size()}">22353</i>节课</em></h2>
             </div>      
@@ -176,7 +176,7 @@
         <div class="layout-cont imgshow">
             <div class="imgshow-t">
                 <div class="hr-link fr clearfix">
-                    <a href="type.html" class="more-link" target="_blank" onclick="pagePositionClick(59)" rel='nofollow'>更多教程>></a>
+                    <a href="findTyeps" class="more-link" target="_blank" onclick="pagePositionClick(59)" rel='nofollow'>更多教程>></a>
                 </div>
                 <h2 class="h2"><span>七天视频</span><em>近日更新<i th:text="${newlist.size()}">100</i>节课</em></h2>
             </div>
@@ -201,7 +201,7 @@
             </div>
             <div class="more-btn"><a rel='nofollow'
                                      href="findTyeps"
-                                     target="_blank">点击查看更多教程</a>
+                                     target="_blank">点击这里换一批</a>
             </div>
         </div>
     </div>
@@ -212,14 +212,14 @@
                     <a href="type.html"
                        class="nav-t more-link" target="_blank">更多教程>></a>
                 </div>
-                <h2 class="h2"><span>程序员的身边事</span><em>共<i>161</i>节课</em></h2>
+                <h2 class="h2"><span>推荐练习</span><em>共<i>161</i>节课</em></h2>
             </div>
             <div class="clearfix task-video">
                 <div class="list fl">
                     <div class="img">
                         <a href="video.html" target="_blank">
                             <img class="lazy"
-                                  src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
+                                  src="'http://localhost:9352/video/'"
                                   data-original="https://pic.huke88.com/video/cover/2018-07-09/E5E974F9-4270-715E-6E07-A52D55F7FBC8.jpg!/fw/500/compress/true/format/jpg"
                                   style="display: block;">
                             <span class="play-cover"></span>
@@ -240,33 +240,33 @@
         <div class="layout-cont imgshow series">
             <div class="imgshow-t">
                 <div class="hr-link fr clearfix">
-                    <a href="type.html" class="more-link" target="_blank">更多教程>></a>
+                    <a href="fandCourse?a_typeId=0" class="more-link" target="_blank">更多教程>></a>
                 </div>
-                <h2 class="h2"><span>系列课程</span><em>共<i>1109</i>套课</em></h2>
+                <h2 class="h2"><span>系列课程</span><em>共<i th:text="${clist.size()}">1109</i>套课</em></h2>
             </div>
             <div class="imgshow-m clearfix">
-                <div class="list">
+                <div class="list" th:each="course,c:${clist}">
                     <div class="list-img">
-                        <a href="video.html" target="_blank">
+                        <a th:href="@{'fandOneCourse?crid='+${course.crid}}" target="_blank">
                             <img class="lazy"
-                                  src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                  data-original="https://pic.huke88.com/lesson/cover/2017-11-30/1E51D490-2D52-7DA3-196D-822C89C135C1.jpg!/fw/500/compress/true/format/jpg"
-                                  alt="版式设计中的主体与层级">
+                                  th:src="'http://localhost:9352/video/'+${course.cr_img}"
+                                  
+                                  th:alt="${course.crname}">
                             <span class="fine">精</span>
                         </a>
                     </div>
                     <div class="img-name clearfix">
-                        <a href="video.html" class="name-link fl" target="_blank">版式设计中的主体与层级</a>
+                        <a th:href="@{'fandOneCourse?crid='+${course.crid}}" class="name-link fl" target="_blank" th:text="${course.crname}">版式设计中的主体与层级</a>
                     </div>
                     <div class="img-data clearfix">
-                        <span class="class-type fl">平面设计</span>
-                        <span class="level fl">共14节课</span>
-                        <span class="learn-num fr">16万人已学</span>
+                        <span class="class-type fl" th:text="${course.a_title}">平面设计</span>
+                        <span class="level fl" th:text="'共'+${courseNum[c.index]}+'节课'">共14节课</span>
+                        <span class="learn-num fr" th:text="${list[c.index]}+'人在学'">16万人已学</span>
                     </div>
                 </div>
             </div>
             <div class="more-btn">
-                <a href="type.html" rel='nofollow' target="_blank">点击查看更多教程</a>
+                <a href="fandCourse?a_typeId=0" rel='nofollow' target="_blank">点击查看更多课程</a>
             </div>
         </div>
     </div>
@@ -274,7 +274,7 @@
         <div class="layout-cont">
             <div class="imgshow-t">
                 <div class="hr-link fr clearfix">
-                    <a href="type.html" class="nav-t more-link"
+                    <a href="findTyeps" class="nav-t more-link"
                        target="_blank" onclick="pagePositionClick(123);">更多教程>></a>
                 </div>
                 <h2 class="h2"><span>视频评改</span><em>共<i>76</i>节课</em></h2>
@@ -299,44 +299,13 @@
                     </div>
                 </div>
             </div>
+            <div class="more-btn">
+                <a href="findTyeps" rel='nofollow' target="_blank">点击查看更多教程</a>
+            </div>
         </div>
     </div><!-- 职业发展 -->
+    
     <div class="section-img grey-bg">
-        <div class="layout-cont imgshow">
-            <div class="imgshow-t">
-                <div class="hr-link fr clearfix"><a href="occupation/11-0-0-0-0-2-0-16/index.html"
-                                class="nav-t more-link" target="_blank" onclick="pagePositionClick(21);">更多教程>></a>
-                </div>
-                <h2 class="h2"><span>职业发展</span><em>共<i>325</i>节课</em></h2></div>
-            <div class="imgshow-m clearfix">
-                <div class="list">
-                    <div class="list-img">
-                        <a href="course/11134.html"target="_blank"
-                           onclick="videoExposureLogic(11134, 1, 'click_times');">
-                            <img class="lazy"
-                                 src="https://pic.huke88.com/cover/cover.png!/format/jpg/compress/true/fwfh/293x179"
-                                 data-original="https://pic.huke88.com/video/cover/2018-03-12/AE48ECD7-69E2-E6C0-91EA-1143D394F010.jpg!/fw/500/compress/true/format/jpg"
-                                 alt="设计师如何摆脱纠结症与拖延症"
-                                 data-exposure-id="11134">
-                            <span class="play-cover"></span>
-                            <span class="time-length">14分33秒</span>
-                        </a>
-                    </div>
-                    <div class="img-name clearfix">
-                        <a href="course/11134.html"
-                           class="name-link fl" target="_blank">设计师如何摆脱纠结症与拖延症</a>
-                    </div>
-                    <div class="img-data clearfix">
-                       <span class="learn-num fr">5458 人已学</span>
-                    </div>
-                </div>
-            </div>
-            <div class="more-btn"><a rel='nofollow'
-                                     href="type.html"
-                                     target="_blank">点击查看更多教程</a></div>
-        </div>
-    </div>
-    <div class="section-img">
         <div class="layout-cont teacher-con"><h2>优秀的老师都在这里</h2>
             <p class="con">实用案例深度解析，专业讲师为你带来设计界前沿的视频教程。设计技巧全面传授，提供成长道路上并不可少的技能。</p>
             <div class="teacher-slide" id="teacher-slide">
@@ -356,7 +325,7 @@
                 </div>
             </div>
         </div>
-        <div class="more-btn"><a href="allteachers.html" target="_blank">点击查看更多讲师</a></div>
+        <div class="more-btn"><a href="clickAllTeacher?t_occupation=0" target="_blank">点击查看更多讲师</a></div>
     </div>
     <div class="video-box-win hide">
         <div class="win-bg"></div>

@@ -3,6 +3,7 @@ package com.yihao86.service;
 import java.util.List;
 import java.util.Map;
 
+import com.yihao86.pojo.Course;
 import com.yihao86.pojo.Videos;
 
 public interface CourseService {
@@ -22,5 +23,7 @@ public interface CourseService {
 	
 	//查找购买数量
 	List<Integer> fandNumber(int a_typeId);
-
+	
+	//查找单个课程的信息
+	List<Integer> findCourseInfo();	
 }

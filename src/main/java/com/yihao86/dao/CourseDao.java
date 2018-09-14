@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 
+import com.yihao86.pojo.Course;
 import com.yihao86.pojo.Videos;
 
 public interface CourseDao {
@@ -22,4 +23,8 @@ public interface CourseDao {
 	
 	//查找购买数量
 	int fandNumber(@Param("p_cid") int crid);
+	
+	List<Course> findCourse();
+	
+	int findCourseNum(@Param("v_crid") int v_crid );
 }
