@@ -17,5 +17,5 @@ public interface VideosService {
 	
 	public List<Map<Object,String>> selectVideoByOne(int f_trid);
 	
-	
+	public List<Map<String, Object>> findByWorks();
 }

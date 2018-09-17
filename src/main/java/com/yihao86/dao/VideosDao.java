@@ -39,4 +39,11 @@ public interface VideosDao {
 	public List<Map<Object,String>> findVideosByOne(@Param("f_trid") int f_trid);
 	
 	List<Map<String,Object>> findBroadcast();
+	
+	/**
+	 * 每周一练
+	 * @return
+	 */
+	public List<Map<String, Object>> findByWorks();
+	
 }

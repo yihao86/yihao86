@@ -65,4 +65,11 @@
 		GROUP BY v.vid  LIMIT 10
 	</select>
 
+
+	<select id="findByWorks" resultType="map">
+		SELECT v.`vid`,v.`v_name`,v.`v_vpath`,v.`v_uploadtime`,v.`v_imgs`,t.`tid`,t.`t_name`,t.`t_photo`,t.`t_abstract`
+		,COUNT(h.`h_vid`) AS num ,DATEDIFF(NOW(),v.`v_uploadtime`) AS days FROM `videos` v LEFT JOIN `history` h ON v.`vid`=h.`h_vid` LEFT JOIN `teachers` t ON v.`v_teacherId`=t.`tid`
+		GROUP
+		BY v.`vid` ORDER BY `v_uploadtime` DESC 
+	</select>
 </mapper>
