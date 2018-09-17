@@ -7,11 +7,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,22 +26,42 @@ import com.github.pagehelper.PageInfo;
 import com.yihao86.pojo.Users;
 import com.yihao86.pojo.Videos;
 import com.yihao86.service.UsersService;
+import com.yihao86.util.SendMsg;
 
 @Controller
 public class UserController {
 
 	@Autowired
 	private UsersService us;
+	
+	@Autowired
+	@Qualifier("redisTemplate")
+	private RedisTemplate rdt;
+	
 
 	@RequestMapping("/findUser")
 	public String userLogin(Model mod, String phone, String cade, HttpSession session) {
-		if ("18873299263".equals(phone) && "12345".equals(cade)) {
-			System.out.println("登錄成功！~~~~~~~~");
-			Users user = us.selectUser(phone);
-			session.setAttribute("user", user);
-			return "forward:/gogogo";
-		}
-		return "index";
+			String e = us.selectUser(phone,cade,session);
+			if(e != null) {
+				return "forward:/errorMsg";
+			}
+		return "forward:/gogogo";
+	}
+	
+	@RequestMapping("/errorMsg")
+	@ResponseBody
+	public String errorMsg(Model mod) {
+		return "error";
+	}
+	
+	@RequestMapping("/findMsg")
+	@ResponseBody
+	public void send(String phone) {
+		System.out.println("hhhhhhhhh"+phone);
+		//String msg = SendMsg.Send(phone);
+		//rdt.opsForValue().set("msg"+phone, msg);
+		//rdt.expire("msg"+phone, 60*5,TimeUnit.SECONDS);
+		
 	}
 
 	@RequestMapping("/findUserById")

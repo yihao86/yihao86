@@ -1,11 +1,28 @@
-<!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
-	<head>
-	
-	<meta charset="utf-8">
-	<title>Video.js 7.0</title>
-	<link href="css/video-js.min.css" rel="stylesheet">
-	<style>
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<!-- Mirrored from yihao86/course/2018.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 00:37:51 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
+<head>
+    <script>
+        var renderingStartTime = (new Date()).valueOf();
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="csrf-param" content="_csrf-frontend">
+    <meta name="csrf-token" content="eVhzVGpOMDUmMgUsWQNTUjhhJjYvBGF4QQwdGw56Zl8fIRklOndfXw==">
+    <title> 标题介绍 </title>
+    <link href="2018.html" rel="canonical">
+    <link href="static/assets/revision/!!css/base.v107.css,css/course/course.v23.css,css/comment/index.v6.css,js/plugins/qiniuplayer/qiniuplayer.min.css,js/plugins/layer/layer.huke.css,css/681e08d.css?v=681"
+          rel="stylesheet">
+    <script>
+        var Url = {};
+        var Param = {};
+    </script>
+    
+    <style>
 body {
 	background-color: #191919
 }
@@ -14,19 +31,127 @@ body {
 	height: 400px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 100px;
 }
 </style>
+    
+    
+</head>
+<body onload="load()">
+<div id="body-container"><input type="hidden" id="referrer" value="../index.html">
+	
+	
+	<div id="new-header">
+        <div class="layout-cont clearfix">
+            <div class="logo fl"><a href="index.html" title="返回首页"></a></div>
+            <div class="nav fl clearfix">
+                <div class="nav-list fl rjrm-list">
+                    <a href="index.html" class="nav-t" target="_blank" onclick="pagePositionClick(21);">java 入门</a>
+                </div><!-- 设计教程 -->
+                <div class="nav-list fl sjjc-list"><a href="" class="nav-t" target="_blank" onclick="pagePositionClick(11);">设计教程</a>
+                    <!--<div class="top-con">
+                        <div class="course-con sjjc-wrap">
+                            <div class="loading">
 
-<script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
-<script>
-    videojs.options.flash.swf = "video-js.swf";
-</script>
-	</head>
 
-	<body>
-    <div class="m">
-      <video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto" width="560" height="400"
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+                <!-- <div class="nav-list fl rjrm-list nav-task">
+                    <a href="exeupload.html" class="nav-t" target="_blank"> 作品评改</a>
+                </div> -->
+                <div class="nav-list fl">
+                    <a href="exe.html" class="nav-t" target="_blank" rel='nofollow' onclick='pagePositionClick(12);'>每周一练</a>
+                </div>
+                <div class="nav-list fl">
+                    <a href="fandCourse?a_typeId=0" class="nav-t" target="_blank">教师机构</a>
+                </div>
+                <div class="nav-list fl bwidth">
+                    <a href="javascript:;" target="_blank" class="nav-t dian"><span></span><span></span><span></span></a>
+                    <div class="nav-m more-nav">
+                        <a href="clickAllTeacher?t_occupation=0" target="_blank" class="">讲师</a>
+                        <a href="fandAllAlbum?typeid=0" target="_blank" class="" rel='nofollow' >专辑</a>
+                    </div>
+                </div>
+            </div><!-- 个人信息 --><!-- 未登录状态 -->
+            <span th:if="${session.user} ne null">           
+            <div class="login fr" >  
+            <div class="user-avatar">
+                <a target="_blank" th:href="@{'findUserById?uid='+${session.user.uid}}">
+                <img style="width: 36px;
+                            height: 36px;
+                            border-radius: 50%;
+                            margin-top: 12px;" th:src="'http://localhost:9352/video/'+${session.user.u_photo}"/>
+               <!--  <i class="sj"></i>
+                <i class="jt"></i> -->
+                </a>
+            </div>                
+           </div></a></span>      
+           <div th:if="${session.user} eq null ">
+           <a href="javascript:;" rel='nofollow' class="register-link fr" id="registerBtn">免费注册</a>
+           <a href="#"  rel='nofollow' class="in-btn" id="loginBtn">
+           <div class="login fr" >登录 </div></a></div>
+            
+            <div class="header-search fr">
+                <div class="search-m search-area">
+                    <input type="text" name="search" placeholder="搜索教程/讲师" class="txt" value="">
+                    <input type="hidden" name="identify" id="search-identify" value="1533256412">
+                    <a href="javascript:void(0);" class="submit-abtn search-butn" id="submit-search"></a>
+                </div>
+                <!-- 头部搜索下拉框 -->
+                <div class="search-win hide">
+                    <div class="search-list">
+                        <div class="list-head hide" id="empty-record"><a
+                                href="javascript:;" class="fr empty-btn" id="empty-btn">清空</a>
+                            <h3 class="visi">最近搜索</h3></div>
+                        <div class="list-m hide" id="record-empty"></div>
+                        <div class="list-head"><h3 class="hot">热门推荐</h3></div>
+                        <div class="list-m hotm">
+                            <p><a href='type.html'
+                                  data-id="5" data-words="C4D" rel='nofollow'
+                                  class="hot-word"><i>1</i>C4D</a>
+                            </p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	
+	
+    <!--video 播放区域 s-->
+    <div class="video-detail">
+        <div class="layout-cont">
+            <div class="video-title clearfix">
+                <div class="title-infos"><!--当前位置-->
+                    <div class="video-current-position">
+                        <i class="cpi-icon"></i>
+                        <span>当前位置：</span>
+                        <a target="_blank" href="index.html">首页</a>
+                        <span> &gt;
+                         <a target="_blank" href="index.html" th:text="${courseInfo['crname']}">软件入门</a></span>
+                        <span> &gt; <span class="location" th:text="${v.v_name}">PS软件介绍及安装</span></span>
+                    </div><!--当前位置 e-->
+                    <div class="video-name">
+                        <h1 th:text="${v.v_name}">PS软件介绍及安装</h1>
+                    </div>
+                </div>
+            </div><!--视频-->
+            <div class="video-body clearfix">
+                <div class="body-left">
+                    <div class="left-main" id="huke88-video-height">
+                        <!-- <div class="video-frame" id="huke88-video">
+                            <img width="100%" height="100%"
+                                 src="https://pic.huke88.com/video/cover/2017-06-29/B4695D45-EC2B-0D40-0F87-7A2B69A5F4AA.jpg!/format/jpg/fw/920"
+                                 alt="PS软件介绍及安装">
+                            <a href="javascript:;" id="huke88-video-play" class="play-btn"></a>
+                        </div> -->
+                        
+                        
+                        
+                        <div class="m">
+      <video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto" width="720" height="440"
 		  poster="" data-setup="{}">
         <source th:src="'http://localhost:9352/video/'+${v.v_vpath}"  type="video/mp4">
         <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
@@ -42,5 +167,582 @@ body {
 			  
 		</script> 
     </div>
+                        
+                        
+                        
+                        <div class="next-video hide">
+                            <span class="fr">×</span>
+                            <span style="font-size:13px;">即将跳转下一节</span>
+                            <a href="0.html"></a>
+                        </div>
+                        <!-- 宽屏 -->
+                        <div id="wide-srceen" class="wide-srceen hide"><span id="wide-srceen-js">宽屏</span><span
+                                id="cancel-wide-srceen-js" class="hide">取消宽屏</span></div><!-- 关于视频推荐 start -->
+                        <!-- 关于视频推荐 end --><!-- 免费学习即将结束提示 -->
+                        <!--评论小提示-->
+                        <div data-before="1" data-after="1" id="reply-tip" class="little-disc-tip hide"><i
+                                id="reply-tip-close" class="write-close"></i><i class="write-disc-icon"></i><span
+                                data-reply-js="publish" class="write-btn" data-id="2">发表评论</span></div>
+                        <!--展开宽屏与收起宽屏按钮-->
+                        <div id="wide-screen" class="wide-handle hide">
+                            <div class="open-wide-screen" id="open-wide-screen"><i class="wd-icon open"></i></div>
+                            <div class="close-wid-screen hide" id="close-wid-screen"><i class="wd-icon close"></i>收起宽屏
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-foot clearfix">
+                        <div class="lf-share bdsharebuttonbox fl">
+                            <span>视频的课程的介绍</span>
+                        </div>
+                        <span id="collect-js" class="clect-cut fr" th:if="${session.user} ne null">收藏</span>
+                        <span id="cancel-collect-js" class="clect-cut fr on hide">已收藏
+                    </span>
+                    </div>
+                </div>
+                <div class="body-right fr tab-m" style="z-index: auto; opacity: 1;">
+                    <div class="right-top">
+                        <div class="teacher-info"><a target="_blank"
+                                                     href="../teachers/1.html"><img
+                                th:src="'http://localhost:9352/video/'+${teacher.t_photo}"
+                                th:alt="${teacher.t_name}"></a>
+                            <p class="tch-name clearfix">
+                                讲师：<span><a target="_blank"
+                                            href="../teachers/1.html" th:text="${teacher.t_name}">
+                           阿角</a></span>
+                                <a href="javascript:;" id="cancel-follow-js" data-id="1" class="hide atten fr">
+                                    <i></i> 已关注</a>
+                                <a href="javascript:;" id="follow-js" data-id="1" class="atten fr">
+                                    <i></i>关注</a>
+                            </p>
+                            <p class="tch-atnum">关注人数：<span id="teacher-follow" th:text="${achievement['fans']}">26733</span></p></div>
+                    </div><!---------------------------------- 相关目录(学习路径/系列课/合集) --------------------------------->
+                    <!-- 相关js在最底部 -->
+                    <div class="tab-head"><span class="a1 active">课程目录</span><span class="a2">课程信息</span></div>
+                    <div class="right-mid"
+                         id="t1" style="display: none;"><span data-reply-js="publish"
+                                                              class="mid-disc-btn" data-id="1">评论</span>
+                        <div class="mid-tool-bar"><!-- <p> 使用软件：
+                            <span>
+                                                                    PS                                                            </span>
+                        </p> -->
+                            <p> 难度等级： <span th:text="${v.v_difficulty}">新手入门</span></p>
+                            <!-- <p> 视频时长： <span>4分05秒</span></p> -->
+                            <p> 学习人数：
+                                <span th:text="${vmap.get(v.v_name)+'人学习'}">523,877</span></p>
+                            <p> 上传时间：
+                                <span th:text="${v.v_uploadtime}">2017-06-29 04:38:07</span></p></div>
+                        <div class="mid-tool-bar"><h4>工具和快捷键：</h4></div>
+                    </div><!------- 学习路径 -------->
+                    <div class="right-mid" id="t2">
+                        <div class="v-list  show "  th:each="lists,l:${list}">
+                            <div class="dt-list over-hidden-class" th:text="'第'+${l.index+1}+'章&nbsp;'+${lists}">第一 章 PS入门</div>
+                            <div class="dd-list" style="display: block;"><span class="line"></span>
+                            <a data-video-id="2018" class="route_video_class" th:each="chapter,vs:${vmap.get(lists)}"
+                            	th:href="@{'goVideo?vid='+${chapter.vid}}">
+                                <p class="active over-hidden-class" th:text="${chapter.v_name}">
+                                  	  第1课 软件入门介绍 </p>
+                            </a></div>
+                        </div>
+                        
+                    </div><!------- 系列课 --------><!------- 合  集 -------->
+                    <!---------------------------------- 相关目录(学习路径/系列课/合集) ---------------------------------></div>
+            </div>
+        </div>
+    </div><!--//video 播放区域 e--><!-- 评论及评论右侧课程推荐 -->
+    <div id="content-body" class="video-b layout-cont clearfix">
+        <div class="video-b-l fl">
+            <div class="tabs-head">
+                <span  class="active">点击查看评价<i> (4124条评论)</i></span>
+            </div>
+            <div class="tabs-m"><!-- 图文教程 -->
+                <!-- 评价模块 -->
+                <div class="comment-wrap hide tabs-wrap" id="comment-wrap">
+                    <div class="difficulty-info clearfix">
+                        <span class="score fl">课程综合评分：<span>9.8</span>分</span>
+                        <div class="diff-m">
+                            <span class="des" style="margin-left: 10px">课程难易程度：</span>
+                            <span class="diff-list">太简单(<i>425</i>)</span>
+                            <span class="diff-list">简单(<i>1302</i>)</span>
+                            <span class="diff-list">适中(<i>1958</i>)</span>
+                            <span class="diff-list">有点难(<i>328</i>)</span>
+                            <span class="diff-list">太难了(<i>109</i>)</span>
+                        </div>
+                    </div>
+                    <!--<div class="unlogin-tip ">您需要学习后才可以评价，<a href="javascript:;" onclick="studyNow()">立即学习</a></div>-->
+                    <div class="login-and-study-dom">
+                        <div class="score-cont">
+                            <div class="head">发表您的学习评价或疑问</div>
+                            <div class="clearfix">
+                                <div class="star-level fl">为课程评分：
+                                    <span><i data-comment="非常糟糕"></i><i data-comment="有待提高"></i><i
+                                            data-comment="一般般"></i><i data-comment="还不错"></i><i data-comment="非常好"></i></span><em
+                                            class="error-tips hide">请选择课程评分</em></div>
+                                <div class="look1 hide" id="look"><i></i></div>
+                                <div class="mood fl"
+                                     data-content='{"1":[{"id":"1","name":"\u8bb2\u89e3\u4e0d\u6e05\u6670"},{"id":"2","name":"\u58f0\u97f3\u592a\u5c0f"},{"id":"3","name":"\u592a\u7b80\u5355"},{"id":"5","name":"\u8bed\u901f\u592a\u5feb"}],"2":[{"id":"9","name":"\u8bfe\u65f6\u592a\u77ed "},{"id":"8","name":"\u6548\u679c\u4e00\u822c"},{"id":"7","name":"\u601d\u8def\u4e0d\u6e05\u6670"},{"id":"6","name":"\u4e0d\u591f\u8be6\u7ec6"}],"3":[{"id":"14","name":"\u5185\u5bb9\u504f\u96be"},{"id":"13","name":"\u7565\u7b80\u5355"},{"id":"12","name":"\u66f4\u8be6\u7ec6\u4e9b"},{"id":"11","name":"\u5185\u5bb9\u8fd8\u4e0d\u9519"},{"id":"10","name":"\u8bed\u901f\u6709\u70b9\u5feb"}],"4":[{"id":"15","name":"\u5185\u5bb9\u4e30\u5bcc"},{"id":"16","name":"\u8bb2\u89e3\u6e05\u6670"},{"id":"17","name":"\u6613\u4e8e\u64cd\u4f5c"},{"id":"24","name":"\u901a\u4fd7\u6613\u61c2"}],"5":[{"id":"20","name":"\u5e72\u8d27\u6ee1\u6ee1"},{"id":"21","name":"\u9887\u6709\u6536\u83b7"},{"id":"22","name":"\u975e\u5e38\u5b9e\u7528"},{"id":"19","name":"64\u4e2a\u8d5e"}]}'></div>
+                            </div>
+                            <div class="easy-hard">难易度程度：
+                                <span><i data-id="1">太简单</i><i data-id="2">简单</i><i data-id="3">适中</i><i
+                                        data-id="4">有点难</i><i data-id="5">太难了</i></span><em class="error-tips hide">请选择课程难易程度</em><span
+                                        class="hkb-c"></span></div>
+                        </div><!-- 一级评论输入框 -->
+                        <div class="comment-textarea">
+                            <form class="firstCommentForm">
+                                <div class="textarea-wrap"><textarea placeholder="请发表您对课程的评价或疑问，至少5个字哦~"
+                                                                     class="textarea"
+                                                                     name="CommentForm[content]"></textarea>
+                                    <div class="clearfix">
+                                        <div class="submit-btn fr"><a href="javascript:;" class="btn">发表评论</a></div>
+                                    </div>
+                                    <span class="cont-num"><em
+                                            data-reply-js="input-num">0</em>/200</span></div>
+                                <input type="hidden" name="CommentForm[image_url]" class="uploaderInput"><input
+                                    type="hidden" class="star_num" name="CommentForm[score]" value="0"><input
+                                    type="hidden" class="difficult" name="CommentForm[difficult]" value="0"><input
+                                    type="hidden" class="video_id" name="CommentForm[video_id]" value="2018"><input
+                                    type="hidden" class="mode" name="CommentForm[mode]" value="0"><input type="hidden"
+                                                                                                         class="tags"
+                                                                                                         name="CommentForm[tags]"
+                                                                                                         value=""><input
+                                    type="hidden" class="is_ask" name="CommentForm[is_ask]" value="0"><input
+                                    type="hidden" name="_csrf-frontend"
+                                    value="eVhzVGpOMDUmMgUsWQNTUjhhJjYvBGF4QQwdGw56Zl8fIRklOndfXw=="></form>
+                        </div>
+                    </div><!-- 评论列表筛选 -->
+                    <div class="comment-sort clearfix"><span class="txt fl">评论列表</span>
+                        <div class="check fl active">仅显示有内容的评论</div>
+                        <div class="down-sort fr">
+                            <div class="down-sort-m">
+                                <a href="javascript:;" data-id="created_at" class="active">评论时间</a>
+                                <a href="javascript:;" data-id="thumbs">点赞数</a>
+                                <a href="javascript:;" data-id="replay_count">回复数</a>
+                            </div>
+                        </div>
+                        <div class="down-sort-txt fr">排序方式：</div>
+                    </div><!-- 评论列表页 -->
+                    <div class="comment-list">
+
+
+                        <div class="comment-one" data-page-id="1" data-comment-id="650985">
+                            <div class="avatar"><a href="https://huke88.com/person?uid=4082042" target="_blank"><img
+                                    src="https://pic.huke88.com/app/avatar/2018-07-29/ACB96509-2EB1-2282-1756-F0EAB05F714B.jpg"></a>
+                            </div>
+                            <div class="list-m">
+                                <div class="list-one"><a href="https://huke88.com/person?uid=4082042" target="_blank">龘浪子龘</a><span
+                                        class="star-level"><i class="full-star"></i><i class="full-star"></i><i
+                                        class="full-star"></i><i class="full-star"></i><i class="full-star"></i></span>
+                                </div>
+                                <div class="list-one">
+                                    <span class="hard">适中</span>
+                                </div>
+                                <div class="list-txt">66666</div>
+                                <div class="list-b clearfix"><span class="fl">52分钟前</span>
+                                    <div class="more-btn fr">
+                                        <i class="fr dian"></i>
+                                        <div class="win-cover" style="display: none;">
+                                            <span class="report" data-id="650985">举报</span>
+                                        </div>
+                                    </div>
+                                    <span class="fr zan-btn "><i></i>0</span>
+                                    <span class="fr reply-btn" ata-id="650985" data-username="龘浪子龘"
+                                          data-type="1">回复</span>
+                                </div>
+                                <div class="comment-list-two">
+
+                                    <div class="comment-two" data-id="24771">
+                                        <div class="avatar-two">
+                                            <a href="https://huke88.com/person?uid=904462"
+                                                                   target="_blank"><img
+                                                src="https://q.qlogo.cn/qqapp/101368766/4728EFDEC5C71FE043531EBC11A591A9/100"></a>
+                                        </div>
+                                        <div class="list-txt-two">
+                                            <a href="https://huke88.com/person?uid=904462"
+                                                                     target="_blank">Xvv </a><span>回复</span><a
+                                                href="https://huke88.com/person?uid=152833" target="_blank">伎俩</a>111111
+                                        </div>
+                                        <div class="list-b-two"><span>2017-12-20 19:07</span><span
+                                                class="zan-btn "><i></i>0</span><span class="reply-btn" data-id="24771"
+                                                                                      data-username="Xvv   "
+                                                                                      data-type="2">回复</span></div>
+                                    </div>
+
+                                </div>
+                                <div class="page-list-two-new"></div>
+                                <!-- 二级评论回复框 -->
+                                <div class="comment-textarea-two">
+                                    <div class="avatar"><img
+                                            src="https://q.qlogo.cn/qqapp/101368766/ECB788BA7013006E16909D48B1D667D2/100">
+                                    </div>
+                                    <div class="textarea-wrap">
+                                        <textarea placeholder="回复 ❤塞塞的"
+                                                  class="textarea"></textarea>
+                                        <span class="cont-num"><em data-reply-js="input-num">0</em>/200</span>
+                                    </div>
+                                    <div class="submit-btn">
+                                        <a href="javascript:;" class="btn" data-id="650957"
+                                           data-type="1">发表评论</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div style="height: 400px">
+                        </div>
+                    </div><!-- 分页 -->
+                    <div class="page-container"></div>
+                </div>
+            </div>
+        </div>
+        <div class="video-b-r fr"><!-- 相关专辑课程 -->
+            <!-- 为你推荐 -->
+            <!-- 每周一练 -->
+            <div class="item">
+                <div class="head"><h3>每周一练</h3></div>
+                <div class="practice-img"><a href="../practice.html" target="_blank"><img
+                        src="https://pic.huke88.com/practice/images/2018-08-01/FC53854B-9ECC-F338-E720-89EEF7D8FD1F.png!/format/jpg/both/298x122"></a>
+                </div>
+                <a href="../practice.html" class="flink" target="_blank">立即参与</a></div>
+        </div>
+    </div>
+    <div class="hbk-win hide">
+        <div class="win-m">
+            <div class="main">
+                <p class="p2">是否确认提问？</p>
+                <div class="btn"><span class="close">再看看</span><span class="cn-btn">确认提问</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="cain-tips hide">提交成功！
+    </div><!--点击评论图片查看大图  -->
+    <div id="BigImgShowBox" class="bigImgShow" style="display:none;"><!--遮罩层-->
+        <div class="bigImgShow-mask"></div>
+        <div class="bigImgShow-box"><a href="javscript:void(0);" onclick="return false;" class="close"></a><img src="#"
+                                                                                                                alt="">
+        </div>
+    </div>
+    <input type="hidden" id="id-support-webp" value="">
+    <!--------------------------------------------------------  视频详情页弹窗start  ------------------------------------------------------>
+    <!--未学习评论弹窗-->
+    <div id="no-learn-reply-win-js" class="hkt-win hide" data-video-modal-id="15"><!--遮罩层-->
+        <div class="hkt-mask">
+            <div class="hkt-cell">
+                <div class="caute-winbox"><span class="caute-close-btn win-close-js"></span>
+                    <div class="caute-bd"><h3>学习后才能评价哦!</h3></div>
+                    <div class="caute-bt"><a href="javascript:;" class="quick-btn tran win-close-js">我知道了</a></div>
+                </div>
+            </div>
+        </div>
+    </div><!--未学习问答弹窗-->
+    <div id="no-learn-reply-win-js" class="hkt-win hide" data-video-modal-id="17"><!--遮罩层-->
+        <div class="hkt-mask">
+            <div class="hkt-cell">
+                <div class="caute-winbox"><span class="caute-close-btn win-close-js"></span>
+                    <div class="caute-bd"><h3>学习后才能提问哦!</h3></div>
+                    <div class="caute-bt"><a href="javascript:;" class="quick-btn tran win-close-js">我知道了</a></div>
+                </div>
+            </div>
+        </div>
+    </div><!--评论弹窗-->
+    <div id="reply-win" data-event-js="reply-form-block-js" class="hkt-win hide" data-modal-id="7"><!--遮罩层-->
+        <div class="hkt-mask">
+            <div class="hkt-cell">
+                <div class="comments-popup"><span class="close-btn win-close-js"></span>
+                    <div class="popup-title"><span class="title-word">我要评论</span></div>
+                    <div class="popup-main">
+                        <div class="popup-star clearfix"><span class="grade-tit fl">本次课程评分：</span>
+                            <div class="start-grade fl" data-event-js="star-choose-js"><i data-text="非常差"></i><i
+                                    data-text="差"></i><i data-text="一般"></i><i data-text="好"></i><i data-text="非常好"></i>
+                            </div>
+                            <span data-event-js="show-tag-js" class="grap-txt fl"></span><input type="hidden"
+                                                                                                class="star-num"></div>
+                        <div class="popup-difficult clearfix" data-event-js="difficult-choose-js"><span class="fl">课程难易程度：</span><a
+                                href="javascript:;" data-id="1">太简单</a><a href="javascript:;" data-id="2">简单</a><a
+                                href="javascript:;" data-id="3">适中</a><a href="javascript:;" data-id="4">有点难</a><a
+                                href="javascript:;" data-id="5">太难了</a><span data-event-js="show-difficult-js"
+                                                                             class="grap-txt fl warning-text"></span>
+                        </div>
+                        <div class="popup-textarea" data-reply-js="form"><textarea name="commont" maxlength="200"
+                                                                                   oninput="onInputs(this)"
+                                                                                   onpropertychange="onInputs(this)"
+                                                                                   placeholder="请填写评论"></textarea>
+                            <div data-reply-js="reply-warning-js" class="reply-warning hide">您近期已提交过同样评论<br>请勿频繁提交重复评论~
+                            </div>
+                            <span class="cont-num"><em data-reply-js="input-num">0</em>/200</span></div>
+                    </div>
+                    <div class="but-box"><a href="javascript:;" data-status="1" id="reply" class="post-btn">提交</a></div>
+                </div>
+            </div>
+        </div>
+    </div><!--删除评论确认-->
+    <div id="reply-remove-win" class="hkt-win hide" data-modal-id="8"><!--遮罩层-->
+        <div class="hkt-mask">
+            <div class="hkt-cell">
+                <div class="comments-popup"><span class="close-btn win-close-js"></span>
+                    <div class="popup-title"><span class="title-word">我要评论</span></div>
+                    <div class="popup-main">
+                        <div class="rm-main"><p>确认要删除这条评论吗？删除后将无法恢复。</p>
+                            <div class="but-box"><span class="cancle-btn rm-but win-close-js">取消</span><span
+                                    id="delete-confirm-js" class="sure-btn rm-but">确认</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- 虎课币获取弹窗 -->
+    <div id="gold-win" class="hkt-win hide" data-modal-id="9">
+        <div class="hkt-mask">
+            <div class="hkt-cell">
+                <div class="caute-winbox"><span class="caute-close-btn win-close-js"></span>
+                    <div class="caute-bd">
+                        <p class="">评论提交成功，将在审核通过后显示</p></div>
+                    <div class="caute-bt"><a href="javascript:;" class="quick-btn tran win-close-js">我知道了</a></div>
+                </div>
+            </div>
+        </div>
+    </div><!--删除评论错误提示-->
+    <div id="reply-remove-error-win" class="hkt-win hide" data-modal-id=10><!--遮罩层-->
+        <div class="hkt-mask">
+            <div class="hkt-cell">
+                <div class="comments-popup"><span class="close-btn win-close-js"></span>
+                    <div class="popup-title"><span class="title-word">评论错误</span></div>
+                    <div class="popup-main">
+                        <div class="rm-main"><p>当日最多删除五条评论</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 下载素材/源文件弹窗 -->
+    <div class="download-source-file hide">
+        <div class="file-m"><span class="close">×</span>
+            <p>下载素材/源文件：</p>
+            <div class="con-link"><a href="javascript:; " id="download-source-js" class="fl">下载课程源文件</a><a
+                    href="javascript:; " id="download-case-js" class="fr">下载课程素材</a></div>
+        </div>
+    </div><!-- 收藏成功提示 -->
+    <div class="collect-sucess-tips hide"><i></i>收藏成功</div><!-- 取消收藏提示 -->
+    <div class="cancel-sucess-tips hide"><i></i>取消成功</div>
+    <!--------------------------------------------------------  视频详情页弹窗end  ------------------------------------------------------>
+    <!-------------------------------------------------  异步请求数据加载template start --------------------------------------------------------->
+    <!--flash 升级提示-->
+    <script id="flash-js" type="text/html">
+        <div
+                class="flash-box"><p>亲爱的用户，您的FLASH好像出现了问题，无法播放视频…</p>
+            <p>建议您…</p>
+            <div class="choose-do"><a href="http://www.macromedia.com/go/getflashplayer">
+                <dl>
+                    <dt><img src="static/assets/revision/images/upload-flash.png"
+                             alt=""></dt>
+                    <dd><p><i class="up-i"></i> 升级Flash插件</p></dd>
+                </dl>
+            </a><span class="or-span">或者</span><a href="http://www.macromedia.com/go/getflashplayer">
+                <dl>
+                    <dt><img src="static/assets/revision/images/open-flash.png"
+                             alt=""></dt>
+                    <dd><p><i class="open-i"></i>打开 Flash 插件 </p><span>请在浏览器设置中打开 Flash 插件</span></dd>
+                </dl>
+            </a></div>
+        </div></script>
+    <script id="lately-list-js" type="text/html">
+        {{each list as v k}}
+        <li class="clearfix"><a target="_blank" href="{{v.videoInfo.url}}">
+            <div class="li-user"><img src="{{v.user.avator}}" alt="{{v.user.username}}">
+                <div class="chark-info">
+                    <div class="chark-top clearfix"><span class="us-name fl"><em>{{v.user.username}}</em>
+                        {{if 0 != v.mark}}
+                        <i class="lit-vip-icon"></i>
+                        {{/if}}
+                    </span><span class="us-stay fl">{{v.created_at}}</span><span class="us-time fr">{{v.videoInfo.created_at}}</span>
+                    </div>
+                    <div class="chark-botm"><p>{{v.videoInfo.title}}</p></div>
+                </div>
+            </div>
+            <div class="li-live"><img
+                    src="https://pic.huke88.com/{{v.videoInfo.image_url}}"
+                    alt="{{v.videoInfo.title}}">
+                <div class="chark-info">
+                    <div class="chark-top"><p>{{v.videoInfo.title}}</p></div>
+                    <div class="chark-botm"><p class="fl">{{v.videoInfo.class}}</p><span class="fr">{{v.videoTotals.video_play}}人学习</span>
+                    </div>
+                </div>
+            </div>
+        </a></li>
+        {{/each}}
+    </script>
+    <script id="recomended-body-js" type="text/html">
+        {{each list as v k}}
+        <li class="rbox-item fl"><a href="{{v.video_href}}" target="_blank"
+                                    onclick="videoExposureLogic({{v.video_id}}, 4, 'click_times');">
+            <div class="img-show"><img src="{{v.image_url}}" style="display: block;"></div>
+            <p>{{v.title}}</p></a></li>
+        {{/each}}
+    </script>
+    <script id="course-form-js" type="text/html">
+        <form
+                class="reply-form">
+            <div class="filed-limit clearfix">
+                <div class="fl reply-obj rp-color">回复 <em>{{username}}</em></div>
+                <div class="fr surplus-num"><em data-reply-js="input-num">0</em>/200</div>
+            </div>
+            <div class="filed"><textarea maxlength="200" oninput="onInputs(this)" onpropertychange="onInputs(this)"
+                                         name="commonts" rows=""
+                                         cols=""></textarea><input type="hidden" name="reply_id"
+                                                                   value="{{reply_id}}"><input
+                    type="hidden" name="reply_uid" value="{{reply_uid}}"></div>
+            <div class="filed-btns"><a href="javascript:;" data-status="1" id="reply-again"
+                                       class="reply-btn fbtn">回复</a><a
+                    href="javascript:;" id="reply-form" class="cancle-btn fbtn">取消</a></div>
+        </form></script>
+    <!-------------------------------------------------  异步请求数据加载template end --------------------------------------------------------->
+    <script>
+        Param.passive_id = '2018';
+        Param.album_type = 1;
+        Param.practiceTableType = "1";
+    </script>
+    <!-------------------------------------------------------- 底部js start --------------------------------------------------------->
+    <!-------------------------------------------------------- 底部js end --------------------------------------------------------->
+    <div id="footer">
+        <div class="layout-cont flogo"><a href="#"></a></div>
+        <div class="our-link layout-cont"><a href="../site/about.html" target="_blank" rel="nofollow">关于我们</a><a
+                href="../site/about.html#2" target="_blank" rel="nofollow">版权声明</a><a href="../site/about.html#3"
+                                                                                      target="_blank" rel="nofollow">侵权举报</a><a
+                href="../site/about.html#4" target="_blank" rel="nofollow">联系我们</a><a href="../site/about.html#5"
+                                                                                      target="_blank" rel="nofollow">售后服务</a><a
+                href="../site/about.html#6" target="_blank" rel="nofollow">常见问题</a><a href="../vip/47.html"
+                                                                                      target="_blank"
+                                                                                      onclick="buttonClickRecord(47);"
+                                                                                      rel="nofollow">VIP特权</a></div>
+        <div class="color-bg">
+            <div class="friends-link layout-cont">
+                <div class="link-t"><span class="next">></span><span class="prev"><</span></div>
+                <div class="slide-m">
+                    <div class="link-m">友情链接：
+                        <a target="_blank" href="http://www.cgmol.com/" rel="nofollow">摩尔网</a><a target="_blank"
+                                                                                                 href="http://www.huishenghuiying.com.cn/"
+                                                                                                 rel="nofollow">视频编辑软件</a><a
+                                target="_blank" href="http://www.mobiletrain.org/" rel="nofollow">Java培训</a><a
+                                target="_blank" href="https://www.xlisi.cn/" rel="nofollow">英语学习网</a><a target="_blank"
+                                                                                                        href="http://www.onlycollege.com.cn/"
+                                                                                                        rel="nofollow">英语培训</a><a
+                                target="_blank" href="http://www.kaoyan1v1.com/" rel="nofollow">研招网</a><a
+                                target="_blank" href="http://www.16xx8.com/" rel="nofollow">PS教程自学网</a><a
+                                target="_blank" href="http://www.compassedu.hk/" rel="nofollow">指南者留学</a><a
+                                target="_blank" href="http://www.prcu.cn/" rel="nofollow">学日语</a><a target="_blank"
+                                                                                                    href="http://www.100.com/"
+                                                                                                    rel="nofollow">一对一辅导</a><a
+                                target="_blank" href="https://aiji66.com/" rel="nofollow">设计素材</a><a target="_blank"
+                                                                                                     href="http://www.narkii.com/"
+                                                                                                     rel="nofollow">工业设计</a><a
+                                target="_blank" href="http://www.ffpic.com/" rel="nofollow">ppt素材</a><a target="_blank"
+                                                                                                        href="http://www.xueui.cn/"
+                                                                                                        rel="nofollow">学UI网</a><a
+                                target="_blank" href="http://ui.tedu.cn/" rel="nofollow">平面设计培训</a><a target="_blank"
+                                                                                                      href="http://www.logosc.cn/"
+                                                                                                      rel="nofollow">LOGO在线制作</a><a
+                                target="_blank" href="http://www.sumiaowang.com/" rel="nofollow">素描</a><a
+                                target="_blank" href="http://hu.offcn.com/" rel="nofollow">湖北人事考试网</a><a target="_blank"
+                                                                                                         href="http://www.68design.net/"
+                                                                                                         rel="nofollow">互联网设计师</a><a
+                                target="_blank" href="http://www.58pic.com/" rel="nofollow">千图网</a><a target="_blank"
+                                                                                                      href="http://pic.netbian.com/"
+                                                                                                      rel="nofollow">4k壁纸</a><a
+                                target="_blank" href="http://www.netbian.com/" rel="nofollow">壁纸</a><a target="_blank"
+                                                                                                       href="http://699pic.com/"
+                                                                                                       rel="nofollow">摄图网</a><a
+                                target="_blank" href="http://www.ooopic.com/" rel="nofollow">我图网</a><a target="_blank"
+                                                                                                       href="http://90sheji.com/"
+                                                                                                       rel="nofollow">90设计</a><a
+                                target="_blank" href="http://588ku.com/ppt/" rel="nofollow">千库网</a><a target="_blank"
+                                                                                                      href="http://ibaotu.com/"
+                                                                                                      rel="nofollow">包图网</a><a
+                                target="_blank" href="../app.html" rel="nofollow">虎课APP</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="currentUrlInput" name="currentUrl" value="2018.html"></div>
+<!--登录弹窗-->
+<script>
+    //统计运行时间
+    Param.execTime = '0.064896821975708';
+</script>
+<script src="static/assets/revision/!!js/jquery.1.11.3.min.js,js/plugins/ali-loghub-tracking/loghub-tracking.js,js/jquery.SuperSlide.2.1.1.js,js/public.102.js,js/index.js,js/course/course/681.4bfe08d.delaye?v=681"></script>
+<script src="static/assets/revision/js/plugins/layer/layer.hukee08d.js?v=681"></script>
+<script>
+
+    $album._init();
+
+
+    //修复详情页跳转后评论空白
+    if ($('#comments-num').parent('a').hasClass('on')) {
+        $('#reply-info-js').removeClass('hide')
+    }
+
+    $('.lazy').lazyload({threshold: 200});
+    $(window).load(function () {
+        window._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": "PS软件介绍及安装视频教程_软件入门-虎课网",
+                "bdDesc": "虎课网软件入门视频教程为您提供PS软件介绍及安装图文制作视频浏览以及下载，帮助您快速的学会PS软件介绍及安装制作过程。",
+                "bdUrl": "https://huke88.com/course/2018.html",
+                "bdPic": "https://pic.huke88.com/video/cover/2017-06-29/B4695D45-EC2B-0D40-0F87-7A2B69A5F4AA.jpg!/fw/720",
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdStyle": "0",
+                "bdSize": "16"
+            },
+            "share": {"bdCustomStyle": ""}
+        };
+        with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'https://static/assets/revision/js/static/api/js/share.js'];
+    });
+</script>
+<script type="text/javascript">
+    function viewBigImg(img) {
+        $('#BigImgShowBox img').attr('src', img);
+        $('#BigImgShowBox').fadeIn();
+    }
+
+    //下载插件
+    $(function () {
+        $(".plug-ins").on("click", ".plug-ins-but", function (e) {
+            var plugins = $(".plug-ins-win").hasClass("hide");
+            if (plugins == true) {
+                $(".plug-ins-win").removeClass("hide");
+            } else {
+                $(".plug-ins-win").addClass("hide");
+            }
+            $(document).on("click", function () {
+                $(".plug-ins-win").addClass("hide");
+            });
+            e.stopPropagation();
+        });
+        $(".plug-ins-win").on("click", function (e) {
+            e.stopPropagation();
+        });
+
+        // 手机看展开显示
+        $(".video-body").on("click", ".app-gz", function () {
+            var a = $(this).parents(".app-win");
+            b = a.hasClass("active");
+            if (b == true) {
+                a.removeClass("active");
+            } else {
+                a.addClass("active");
+            }
+        });
+        $(".video-body").on("click", ".app-m .close", function () {
+            $(".video-body .app-win").removeClass("active");
+        });
+        //如果没有图文，默认显示评论
+        if ($('.default-null-page').size() > 0) {
+            $('.tabs-head span').eq(1).click();
+        }
+
+    });
+</script>
+
 </body>
+<!-- Mirrored from yihao86/course/2018.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 00:37:54 GMT -->
 </html>

@@ -1,6 +1,5 @@
 package com.yihao86.controller;
 
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,13 +16,14 @@ import java.util.List;
 
 @Controller
 public class TestController {
-
+	
     @RequestMapping("/index")
     public String test(Model mod){
         mod.addAttribute("index","a");
         return "fileUpload";
     }
-
+    
+    
     /**
      * 获取yml文件中自定义属性
      */

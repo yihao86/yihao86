@@ -36,6 +36,19 @@ spring:
       maxFileSize: 1024mb
       maxRequestSize: 2048Mb
       
+  # Redis数据库
+  redis:
+    database: 1
+    host: 111.230.232.46
+    port: 6489
+    password: imyourfather
+    timeout: 60s
+    jedis:
+      pool:
+        max-active: 18
+        max-wait: -1
+        max-idle: 18
+        min-idle: 0      
 #thymeleaf start
   thymeleaf:
     encoding: UTF-8
