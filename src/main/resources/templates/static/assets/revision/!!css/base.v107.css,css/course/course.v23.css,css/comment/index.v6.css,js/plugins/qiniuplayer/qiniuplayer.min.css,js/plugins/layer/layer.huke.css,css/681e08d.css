@@ -86,7 +86,7 @@ a, a:hover, del, ins, s, u {
 body, button, input, keygen, legend, select, textarea {
     outline: 0;
     color: #333;
-    font: 14px/1 '微软雅黑', Microsoft YaHei, Arial, Verdana, \5b8b\4f53
+    font: 14px/1 '寰蒋闆呴粦', Microsoft YaHei, Arial, Verdana, \5b8b\4f53
 }
 
 body {
@@ -164,7 +164,7 @@ a, a:hover {
     overflow: hidden
 }
 
-/*弹窗功用样式部分*/
+/*寮圭獥鍔熺敤鏍峰紡閮ㄥ垎*/
 .hkt-win {
     width: 100%;
     height: 100%;
@@ -192,7 +192,7 @@ a, a:hover {
     padding: 10px
 }
 
-/*公共提示弹窗*/
+/*鍏叡鎻愮ず寮圭獥*/
 .comments-popup {
     margin: 0 auto;
     width: 580px;
@@ -267,7 +267,7 @@ a, a:hover {
     color: #333
 }
 
-/*默认缺省页*/
+/*榛樿缂虹渷椤�*/
 .default-null-page {
     padding: 40px;
     text-align: center
@@ -287,11 +287,11 @@ a, a:hover {
     box-sizing: border-box
 }
 
-/*== 弹窗功用样式部分 end==*/
+/*== 寮圭獥鍔熺敤鏍峰紡閮ㄥ垎 end==*/
 
 /*==header end==*/
 /*flowItem*/
-/*列表流 最新修改于6-227*/
+/*鍒楄〃娴� 鏈�鏂颁慨鏀逛簬6-227*/
 .flow-list {
     margin-bottom: -20px;
     margin-right: -20px;
@@ -576,7 +576,7 @@ a, a:hover {
     height: 14px;
 }
 
-/* 新图片流tag颜色 */
+/* 鏂板浘鐗囨祦tag棰滆壊 */
 .imgshow-m .list .img-data .class-type.type-words {
     background: #F5C607 !important
 }
@@ -775,9 +775,9 @@ a, a:hover {
     top: 0
 }
 
-/*新添加结束*/
+/*鏂版坊鍔犵粨鏉�*/
 /*==flowItem end ==*/
-/*侧边悬浮*/
+/*渚ц竟鎮诞*/
 .fixed-bar {
     position: fixed;
     bottom: 20%;
@@ -1051,7 +1051,7 @@ a, a:hover {
     background: url(../../../../../../../../../../../../images/base-icon.v17.png) -376px -410px;
 }
 
-/*vip入口*/
+/*vip鍏ュ彛*/
 .fixed-bar .active-box {
     width: 97px;
     height: 115px;
@@ -1120,8 +1120,8 @@ a, a:hover {
     }
 }
 
-/*==侧边悬浮==*/
-/*分页*/
+/*==渚ц竟鎮诞==*/
+/*鍒嗛〉*/
 .page-list {
     text-align: center;
     margin: 40px 0
@@ -1152,8 +1152,8 @@ a, a:hover {
     border-color: #ffd200
 }
 
-/*==分页==*/
-/*导航栏开始*/
+/*==鍒嗛〉==*/
+/*瀵艰埅鏍忓紑濮�*/
 .vip-drop-titles {
     height: 60px;
     color: #ffa900;
@@ -1308,7 +1308,7 @@ a, a:hover {
     background-position: -492px -372px
 }
 
-/* -- header 分类vip样式 -------- */
+/* -- header 鍒嗙被vip鏍峰紡 -------- */
 #new-header .nav-list .top-con .vip-type.course-con {
     width: 548px;
     border: 1px #ddd solid;
@@ -1436,7 +1436,7 @@ a, a:hover {
     background: #f8f8f8;
 }
 
-/*vip到期提醒开始*/
+/*vip鍒版湡鎻愰啋寮�濮�*/
 #expire-win {
     position: fixed;
     left: 0;
@@ -1519,9 +1519,9 @@ a, a:hover {
     box-shadow: 0 8px 0 #e3854c
 }
 
-/*vip到期提醒结束*/
+/*vip鍒版湡鎻愰啋缁撴潫*/
 
-/* 绑定手机号弹窗 */
+/* 缁戝畾鎵嬫満鍙峰脊绐� */
 .get-phone {
     position: fixed;
     z-index: 102;
@@ -1551,7 +1551,7 @@ a, a:hover {
 
 .get-phone .phone-m .close {
     font-size: 22px;
-    font-family: "宋体";
+    font-family: "瀹嬩綋";
     position: absolute;
     right: 10px;
     top: 10px;
@@ -1604,7 +1604,7 @@ a, a:hover {
     background-color: #ffe465
 }
 
-/*用户下拉面板添加样式*/
+/*鐢ㄦ埛涓嬫媺闈㈡澘娣诲姞鏍峰紡*/
 .user-drop .name span {
     position: relative
 }
@@ -1646,9 +1646,9 @@ a, a:hover {
     border-color: #666
 }
 
-/*vip到期提醒结束*/
+/*vip鍒版湡鎻愰啋缁撴潫*/
 
-/*签到模块开始*/
+/*绛惧埌妯″潡寮�濮�*/
 .sign-btn {
     margin-top: 0px;
     width: 60px;
@@ -1913,9 +1913,9 @@ a, a:hover {
     line-height: 26px
 }
 
-/*签到模块结束*/
+/*绛惧埌妯″潡缁撴潫*/
 
-/* 绑定手机号弹窗 */
+/* 缁戝畾鎵嬫満鍙峰脊绐� */
 .get-phone {
     position: fixed;
     z-index: 102;
@@ -1945,7 +1945,7 @@ a, a:hover {
 
 .get-phone .phone-m .close {
     font-size: 22px;
-    font-family: "宋体";
+    font-family: "瀹嬩綋";
     position: absolute;
     right: 10px;
     top: 10px;
@@ -1998,7 +1998,7 @@ a, a:hover {
     background-color: #ffe465
 }
 
-/*用户下拉面板添加样式*/
+/*鐢ㄦ埛涓嬫媺闈㈡澘娣诲姞鏍峰紡*/
 .user-drop .name span {
     position: relative;
     display: inline-block
@@ -2055,7 +2055,7 @@ a, a:hover {
     top: 0
 }
 
-/*分页*/
+/*鍒嗛〉*/
 #page-m {
     margin: 30px auto;
     text-align: center
@@ -2100,7 +2100,7 @@ a, a:hover {
     width: 92px
 }
 
-/* 9-15导航改版 end */
+/* 9-15瀵艰埅鏀圭増 end */
 /* -------- header 2017-10-12 -- */
 #new-header .sj {
     width: 0;
@@ -2146,7 +2146,7 @@ a, a:hover {
     display: none
 }
 
-/* -------- 头部导航部分 -- */
+/* -------- 澶撮儴瀵艰埅閮ㄥ垎 -- */
 #new-header .nav-list {
     position: relative;
     margin-left: 30px
@@ -2453,7 +2453,7 @@ a, a:hover {
     opacity: .8
 }
 
-/* -------- 头部搜索&签到&消息 -- */
+/* -------- 澶撮儴鎼滅储&绛惧埌&娑堟伅 -- */
 #new-header .header-search {
     width: 150px;
     height: 30px;
@@ -2647,7 +2647,7 @@ a, a:hover {
     padding-left: 82px
 }
 
-/* -------- 头部用户信息 -- */
+/* -------- 澶撮儴鐢ㄦ埛淇℃伅 -- */
 #new-header .login {
     padding-left: 42px;
     position: relative;
@@ -2917,7 +2917,7 @@ a, a:hover {
     padding: 60px 0
 }
 
-/*导航栏升级全站升级终身VIP样式*/
+/*瀵艰埅鏍忓崌绾у叏绔欏崌绾х粓韬玍IP鏍峰紡*/
 .upvip {
     margin: 4px 0 -12px
 }
@@ -2934,7 +2934,7 @@ a, a:hover {
     border-bottom: none
 }
 
-/*账号多处登录提示*/
+/*璐﹀彿澶氬鐧诲綍鎻愮ず*/
 .login-tips {
     position: fixed;
     width: 100%;
@@ -2964,7 +2964,7 @@ a, a:hover {
     color: #fff;
     right: 15px;
     top: 15px;
-    font-family: "宋体";
+    font-family: "瀹嬩綋";
     font-size: 28px;
     cursor: pointer
 }
@@ -3018,7 +3018,7 @@ a, a:hover {
     opacity: .8
 }
 
-/*用户下拉新增样式(优惠券折扣券)*/
+/*鐢ㄦ埛涓嬫媺鏂板鏍峰紡(浼樻儬鍒告姌鎵ｅ埜)*/
 #new-header .user-info .info-m .user-bottom {
     height: 47px;
     line-height: 46px;
@@ -3080,7 +3080,7 @@ a, a:hover {
     font-size: 12px
 }
 
-/*2017-12-25 合辑升级*/
+/*2017-12-25 鍚堣緫鍗囩骇*/
 #album-win {
     position: absolute;
     z-index: 105;
@@ -3249,7 +3249,7 @@ a, a:hover {
     color: #ffd500
 }
 
-/* 按钮css，放到对应的的css文件底部就可以 */
+/* 鎸夐挳css锛屾斁鍒板搴旂殑鐨刢ss鏂囦欢搴曢儴灏卞彲浠� */
 .video-body .left-foot .clect-cut {
     padding: 0 11px;
     height: 26px;
@@ -3322,7 +3322,7 @@ a, a:hover {
     cursor: pointer
 }
 
-/*搜索升级*/
+/*鎼滅储鍗囩骇*/
 #new-header .header-search .submit-abtn {
     right: 11px;
     left: auto
@@ -3469,7 +3469,7 @@ a, a:hover {
     margin-top: 8px
 }
 
-/* 导航新增下拉部分 2017-11-29 */
+/* 瀵艰埅鏂板涓嬫媺閮ㄥ垎 2017-11-29 */
 #new-header .nav-list .dian span {
     width: 4px;
     height: 4px;
@@ -3531,7 +3531,7 @@ a, a:hover {
     top: 5px;
 }
 
-/*赠送VIP的弹窗*/
+/*璧犻�乂IP鐨勫脊绐�*/
 .vip-win {
     position: fixed;
     width: 100%;
@@ -3638,7 +3638,7 @@ a, a:hover {
     }
 }
 
-/*引导绑定手机号的弹窗*/
+/*寮曞缁戝畾鎵嬫満鍙风殑寮圭獥*/
 #bind-phone-new {
     position: fixed;
     width: 100%;
@@ -3669,7 +3669,7 @@ a, a:hover {
 }
 
 #bind-phone-new .win-m .head .close {
-    font-family: "宋体";
+    font-family: "瀹嬩綋";
     font-size: 24px;
     cursor: pointer
 }
@@ -3842,7 +3842,7 @@ a, a:hover {
     background: url(../../../../../../../../../../../../images/hk_new_index_icons.png) -95px -192px
 }
 
-/*低版本ie升级浏览器提醒*/
+/*浣庣増鏈琲e鍗囩骇娴忚鍣ㄦ彁閱�*/
 .upbrower {
     height: 300px;
     position: fixed;
@@ -3941,7 +3941,7 @@ a, a:hover {
     margin-top: 19px
 }
 
-/*2018-1-9导航栏升级*/
+/*2018-1-9瀵艰埅鏍忓崌绾�*/
 #new-header .nav-list .top-con .course-con {
     position: absolute;
     left: 0;
@@ -4773,7 +4773,7 @@ a, a:hover {
     margin-left: 16px;
 }
 
-/* 底部样式  请放到公共样式表里*/
+/* 搴曢儴鏍峰紡  璇锋斁鍒板叕鍏辨牱寮忚〃閲�*/
 #body-container {
     padding-bottom: 340px !important
 }
@@ -5269,7 +5269,7 @@ a, a:hover {
     border-color: #f53500
 }
 
-/*底部友链左右滑动*/
+/*搴曢儴鍙嬮摼宸﹀彸婊戝姩*/
 #footer .friends-link {
     position: relative;
 }
@@ -5291,7 +5291,7 @@ a, a:hover {
 }
 
 #footer .friends-link .link-t span {
-    font-family: "宋体";
+    font-family: "瀹嬩綋";
     font-size: 20px;
     position: absolute;
     cursor: pointer;
@@ -5319,7 +5319,7 @@ a, a:hover {
     display: none;
 }
 
-/* -------- 头部作业评改提示 -- */
+/* -------- 澶撮儴浣滀笟璇勬敼鎻愮ず -- */
 #new-header .nav-list .task-tips {
     position: absolute;
     left: -126px;
@@ -5397,7 +5397,7 @@ a, a:hover {
     position: relative;
 }
 
-/* -- 分类vip图标样式 ------- */
+/* -- 鍒嗙被vip鍥炬爣鏍峰紡 ------- */
 [class*="vipIcon-"] {
     width: 50px;
     height: 57px;
@@ -5429,104 +5429,104 @@ a, a:hover {
     background: #f5c607
 }
 
-/*字体VIP*/
+/*瀛椾綋VIP*/
 .svipIcon-poster, .vvipIcon-poster {
     background: #40b0ff
 }
 
-/*海报VIP*/
+/*娴锋姤VIP*/
 .svipIcon-c4d, .vvipIcon-c4d {
     background: #367dd5
 }
 
-/*C4D教程*/
+/*C4D鏁欑▼*/
 .svipIcon-software, .vvipIcon-software {
     background: #ff7c00
 }
 
-/*软件VIP*/
+/*杞欢VIP*/
 .svipIcon-synthesize, .vvipIcon-synthesize {
     background: #6ebd6b
 }
 
-/*综合VIP*/
+/*缁煎悎VIP*/
 .svipIcon-image, .vvipIcon-image {
     background: #00a99d
 }
 
-/*图像VIP*/
+/*鍥惧儚VIP*/
 .svipIcon-truing, .vvipIcon-truing {
     background: #b062a3
 }
 
-/*精修VIP*/
+/*绮句慨VIP*/
 .svipIcon-photograph, .vvipIcon-photograph {
     background: #494166
 }
 
-/*摄影VIP*/
+/*鎽勫奖VIP*/
 .svipIcon-movies, .vvipIcon-movies {
     background: #d49688
 }
 
-/*影视VIP*/
+/*褰辫VIP*/
 .svipIcon-job, .vvipIcon-job {
     background: #00528e
 }
 
-/*职业VIP*/
+/*鑱屼笟VIP*/
 .svipIcon-portrait, .vvipIcon-portrait {
     background: #ccb374
 }
 
-/*人像VIP*/
+/*浜哄儚VIP*/
 .svipIcon-printing, .vvipIcon-printing {
     background: #a68369
 }
 
-/*印刷VIP*/
+/*鍗板埛VIP*/
 .svipIcon-illustrations, .vvipIcon-illustrations {
     background: #ea5442
 }
 
-/*商业插画VIP*/
+/*鍟嗕笟鎻掔敾VIP*/
 .svipIcon-illustration, .vvipIcon-illustration {
     background: #ea5442
 }
 
-/*商业插画VIP*/
+/*鍟嗕笟鎻掔敾VIP*/
 .svipIcon-store, .vvipIcon-store {
     background: #617f74
 }
 
-/*店铺装修VIP*/
+/*搴楅摵瑁呬慨VIP*/
 .svipIcon-packing, .vvipIcon-packing {
     background: #e5869a
 }
 
-/*包装设计VIP*/
+/*鍖呰璁捐VIP*/
 .svipIcon-indoor, .vvipIcon-indoor {
     background: #74c4c4
 }
 
-/*室内设计VIP*/
+/*瀹ゅ唴璁捐VIP*/
 .svipIcon-foreign, .vvipIcon-foreign {
     background: #fbb03b
 }
 
-/*老外教程VIP*/
+/*鑰佸鏁欑▼VIP*/
 .svipIcon-brand, .vvipIcon-brand {
     background: #00a2b9
 }
 
-/*品牌设计VIP*/
+/*鍝佺墝璁捐VIP*/
 .svipIcon-ui, .vvipIcon-ui {
     background: #eb4c8c
 }
 
-/*UI设计VIP*/
+/*UI璁捐VIP*/
 
-/* ---- 头部导航 app 下载 -- */
+/* ---- 澶撮儴瀵艰埅 app 涓嬭浇 -- */
 #new-header .app-d .app-download {
     width: 360px;
     height: 210px;
@@ -5610,7 +5610,7 @@ a, a:hover {
     height: 17px;
 }
 
-/*侧边栏*/
+/*渚ц竟鏍�*/
 .fixed-box .app-box {
     width: 184px;
     padding: 15px 0 12px;
@@ -5640,7 +5640,7 @@ a, a:hover {
     padding-top: 6px;
 }
 
-/* ---- 限制登录弹窗 ---- */
+/* ---- 闄愬埗鐧诲綍寮圭獥 ---- */
 .layui-layer-content .qq-icon {
     width: 70px;
     height: 19px;
@@ -5674,7 +5674,7 @@ a, a:hover {
     position: absolute;
     right: 10px;
     top: 10px;
-    font-family: "宋体";
+    font-family: "瀹嬩綋";
     cursor: pointer;
 }
 
@@ -5823,7 +5823,7 @@ a, a:hover {
     border-color: #f53500
 }
 
-/* --- sem登录弹框 --- */
+/* --- sem鐧诲綍寮规 --- */
 .welfare-win {
     position: fixed;
     left: 0;
@@ -6145,7 +6145,7 @@ a, a:hover {
 /* COMBO: filename = css/course/course.v23.css, type = text/css, resp = 200 */
 /* COMBO: filename = css/course/course.v8.css, type = text/css, resp = 200 */
 @charset "UTF-8";
-/*视频播放主体*/
+/*瑙嗛鎾斁涓讳綋*/
 #change-wide-srceen {
     position: absolute;
     right: 155px;
@@ -6343,7 +6343,7 @@ a, a:hover {
     color: #333
 }
 
-/*视频播放*/
+/*瑙嗛鎾斁*/
 .video-body {
     position: relative;
     padding-right: 320px
@@ -6974,8 +6974,8 @@ a, a:hover {
     color: #ffd500
 }
 
-/*每周一练图文评价等*/
-/*简介*/
+/*姣忓懆涓�缁冨浘鏂囪瘎浠风瓑*/
+/*绠�浠�*/
 .practice-introduce {
     margin: 30px 0;
     border: 1px solid #e8e8e8
@@ -7045,7 +7045,7 @@ a, a:hover {
     transform: rotate(180deg)
 }
 
-/*图文切换*/
+/*鍥炬枃鍒囨崲*/
 .practice-comments {
     margin-bottom: 40px
 }
@@ -7232,7 +7232,7 @@ a, a:hover {
     color: #333
 }
 
-/*图文部分*/
+/*鍥炬枃閮ㄥ垎*/
 .course-main {
     padding: 20px 40px;
     border: 1px solid #e8e8e8;
@@ -7282,7 +7282,7 @@ a, a:hover {
     transition: all .2s
 }
 
-/********** 课后练习 **********/
+/********** 璇惧悗缁冧範 **********/
 .flow-list .flow-item {
     width: 270px;
     margin-right: 15px
@@ -7301,14 +7301,14 @@ a, a:hover {
     line-height: 1
 }
 
-/*正常播放页图文评价以及滚动等*/
-/* 评价 s*/
-/*评论*/
+/*姝ｅ父鎾斁椤靛浘鏂囪瘎浠蜂互鍙婃粴鍔ㄧ瓑*/
+/* 璇勪环 s*/
+/*璇勮*/
 .comments {
     border: 1px solid #e8e8e8
 }
 
-/*开始评论按钮*/
+/*寮�濮嬭瘎璁烘寜閽�*/
 .comments-start {
     height: 158px;
     text-align: center
@@ -7338,7 +7338,7 @@ a, a:hover {
     background: #ffd900
 }
 
-/*第一集整块*/
+/*绗竴闆嗘暣鍧�*/
 .comments-body > .comments-item {
     position: relative;
     padding-top: 30px;
@@ -7365,7 +7365,7 @@ a, a:hover {
     color: #999
 }
 
-/*头像大小*/
+/*澶村儚澶у皬*/
 .comments-body .comments-item .avatar {
     width: 35px;
     height: 35px;
@@ -7444,7 +7444,7 @@ a, a:hover {
     height: 100%
 }
 
-/*第一级顶部信息*/
+/*绗竴绾ч《閮ㄤ俊鎭�*/
 .comments-body > .comments-item .star-info {
     display: inline-block;
     position: relative;
@@ -7509,7 +7509,7 @@ a, a:hover {
     line-height: 14px
 }
 
-/*难度等级*/
+/*闅惧害绛夌骇*/
 .comments-body > .comments-item .diffcult-level {
     display: inline-block;
     text-align: center;
@@ -7536,7 +7536,7 @@ a, a:hover {
     background: #6c8dd5
 }
 
-/*文本*/
+/*鏂囨湰*/
 .comments-body .comments-item .text-info p {
     word-break: break-all;
     font-size: 14px;
@@ -7553,7 +7553,7 @@ a, a:hover {
     margin: 0 10px
 }
 
-/* 新增加 上传的图片*/
+/* 鏂板鍔� 涓婁紶鐨勫浘鐗�*/
 
 .comments-body .comments-item .text-info .wkImg {
     width: 220px;
@@ -7575,7 +7575,7 @@ a, a:hover {
     margin-top: 15px
 }
 
-/*操作栏*/
+/*鎿嶄綔鏍�*/
 .comments-body .comments-item .handle-bar {
     text-align: left;
     display: block
@@ -7640,7 +7640,7 @@ a, a:hover {
     vertical-align: -4px
 }
 
-/*回复框*/
+/*鍥炲妗�*/
 .comments-body .comments-item .reply-form-container .reply-form textarea {
     width: 100%;
     vertical-align: top;
@@ -7710,7 +7710,7 @@ a, a:hover {
     border: 1px solid #c1c1c1
 }
 
-/*二级，三级评论*/
+/*浜岀骇锛屼笁绾ц瘎璁�*/
 .comments-body .comments-item > .avatar.avatar-large ~ .content ~ .block-tier {
     margin-left: 70px;
     margin-bottom: 20px
@@ -7720,7 +7720,7 @@ a, a:hover {
     margin-left: 45px
 }
 
-/*评论弹窗*/
+/*璇勮寮圭獥*/
 .comments-popup {
     margin: 0 auto;
     width: 580px;
@@ -7954,8 +7954,8 @@ a, a:hover {
     line-height: 22px
 }
 
-/* 评价 e*/
-/*确认学习弹窗*/
+/* 璇勪环 e*/
+/*纭瀛︿範寮圭獥*/
 .learning-warning-cont {
     width: 600px;
     margin: 0 auto;
@@ -8039,7 +8039,7 @@ a, a:hover {
     filter: Alpha(opacity=80)
 }
 
-/*面包屑导航*/
+/*闈㈠寘灞戝鑸�*/
 .video-current-position .cpi-icon {
     display: inline-block;
     width: 10px;
@@ -8055,7 +8055,7 @@ a, a:hover {
     color: #fff
 }
 
-/*后期添加*/
+/*鍚庢湡娣诲姞*/
 #bdshare_weixin_qrcode_dialog {
     box-sizing: content-box;
     -webkit-box-sizing: content-box
@@ -8130,7 +8130,7 @@ a, a:hover {
     cursor: pointer
 }
 
-/*学习弹窗*/
+/*瀛︿範寮圭獥*/
 .reminder-winbox {
     width: 600px;
     background: #fff;
@@ -8193,7 +8193,7 @@ a, a:hover {
     vertical-align: middle
 }
 
-/*按钮*/
+/*鎸夐挳*/
 .reminder-winbox .button-clude {
     text-align: center;
     margin: 20px 0 30px
@@ -8232,7 +8232,7 @@ a, a:hover {
     font-size: 18px
 }
 
-/*图标*/
+/*鍥炬爣*/
 .reminder-winbox .sure-study-icon {
     background: url(../../../../../../../../../../../../images/course/study-icon.png) no-repeat center
 }
@@ -8247,9 +8247,9 @@ a, a:hover {
     background: url(../../../../../../../../../../../../images/course/big-plait-icon.png) no-repeat center
 }
 
-/*提示性弹窗*/
+/*鎻愮ず鎬у脊绐�*/
 /**
-学习后评论提示弹窗
+瀛︿範鍚庤瘎璁烘彁绀哄脊绐�
 
 */
 .caute-winbox {
@@ -8316,7 +8316,7 @@ a, a:hover {
     filter: alpha(opacity=80)
 }
 
-/**@6-28图文评论新添加*/
+/**@6-28鍥炬枃璇勮鏂版坊鍔�*/
 .course-comment-form {
     margin-top: 10px;
     position: relative
@@ -8552,9 +8552,9 @@ a, a:hover {
     filter: alpha(opacity=7)
 }
 
-/*视频适配*/
+/*瑙嗛閫傞厤*/
 
-/*   <!--新加限制2个体验vip弹窗 s-->*/
+/*   <!--鏂板姞闄愬埗2涓綋楠寁ip寮圭獥 s-->*/
 .experience-moba {
     width: 550px;
     height: 360px;
@@ -8599,9 +8599,9 @@ a, a:hover {
     filter: alpha(opacity=80)
 }
 
-/*<!--新加限制2个体验vip弹窗 s--> e*/
+/*<!--鏂板姞闄愬埗2涓綋楠寁ip寮圭獥 s--> e*/
 
-/*2017-7-17 改版新增  */
+/*2017-7-17 鏀圭増鏂板  */
 .play-comments .recomended-body {
     padding: 14px 15px;
     overflow: hidden
@@ -8655,7 +8655,7 @@ a, a:hover {
     height: 100%
 }
 
-/*上传图片评论等 s  */
+/*涓婁紶鍥剧墖璇勮绛� s  */
 .comments .up-progress {
     text-align: left
 }
@@ -8760,9 +8760,9 @@ a, a:hover {
     vertical-align: 0
 }
 
-/*上传图片评论等 e  */
+/*涓婁紶鍥剧墖璇勮绛� e  */
 
-/* 查看大图图片 */
+/* 鏌ョ湅澶у浘鍥剧墖 */
 .bigImgShow {
     width: 100%;
     height: 100%;
@@ -8807,7 +8807,7 @@ a, a:hover {
     top: 73px
 }
 
-/*小屏*/
+/*灏忓睆*/
 @media only screen and (max-width: 1440px) {
     .video-body {
         padding-right: 280px
@@ -8890,7 +8890,7 @@ a, a:hover {
         vertical-align: -4px
     }
 
-    /* 更新新增 */
+    /* 鏇存柊鏂板 */
     .play-comments .recomended-body .recomend-box .rbox-item {
         width: 110px
     }
@@ -8914,7 +8914,7 @@ a, a:hover {
     }
 }
 
-/*插件下载新增部分*/
+/*鎻掍欢涓嬭浇鏂板閮ㄥ垎*/
 .video-body .plug-ins {
     margin-left: 30px;
     position: relative;
@@ -9121,7 +9121,7 @@ a, a:hover {
     color: #fff
 }
 
-/*视频目录切换小屏幕*/
+/*瑙嗛鐩綍鍒囨崲灏忓睆骞�*/
 @media only screen and (max-width: 1440px) {
     .body-right .tab-head span {
         margin: 0 38px
@@ -9221,7 +9221,7 @@ a, a:hover {
 }
 
 .video-frame .next-video span {
-    font-family: "宋体";
+    font-family: "瀹嬩綋";
     font-size: 22px;
     cursor: pointer
 }
@@ -9247,7 +9247,7 @@ a, a:hover {
 }
 
 .video-body .next-video span {
-    font-family: "宋体";
+    font-family: "瀹嬩綋";
     font-size: 22px;
     cursor: pointer;
     color: #fff
@@ -9341,7 +9341,7 @@ a, a:hover {
     display: block
 }
 
-/* 提问表单 */
+/* 鎻愰棶琛ㄥ崟 */
 .asking-form h4 {
     text-align: center;
     font-size: 18px;
@@ -9404,7 +9404,7 @@ a, a:hover {
 
 .cain-win .win-m .head .close {
     color: #999;
-    font-family: "宋体";
+    font-family: "瀹嬩綋";
     font-size: 24px;
     cursor: pointer
 }
@@ -9556,7 +9556,7 @@ a, a:hover {
 
 .hbk-win .win-m .head .close {
     color: #999;
-    font-family: "宋体";
+    font-family: "瀹嬩綋";
     font-size: 24px;
     cursor: pointer
 }
@@ -9604,7 +9604,7 @@ a, a:hover {
     opacity: .8
 }
 
-/*10.27新增插件边上的APP下载提示*/
+/*10.27鏂板鎻掍欢杈逛笂鐨凙PP涓嬭浇鎻愮ず*/
 .video-body .plug-ins {
     margin-left: 25px
 }
@@ -9734,7 +9734,7 @@ a, a:hover {
     position: absolute;
     right: 7px;
     top: 7px;
-    font-family: "宋体";
+    font-family: "瀹嬩綋";
     color: #999;
     cursor: pointer;
     font-weight: bold
@@ -9752,7 +9752,7 @@ a, a:hover {
     background-position: -31px -265px
 }
 
-/* -------- 1031修改课程目录细节 -- */
+/* -------- 1031淇敼璇剧▼鐩綍缁嗚妭 -- */
 .tab-m .right-mid .video-list {
     height: 74px;
     border-bottom: 1px #333333 solid;
@@ -9807,7 +9807,7 @@ a, a:hover {
     overflow: hidden
 }
 
-/*小屏*/
+/*灏忓睆*/
 @media only screen and (max-width: 1440px) {
     .video-body {
         padding-right: 280px
@@ -9886,7 +9886,7 @@ a, a:hover {
         vertical-align: -4px
     }
 
-    /* 更新新增 */
+    /* 鏇存柊鏂板 */
     .play-comments .recomended-body .recomend-box .rbox-item {
         width: 110px
     }
@@ -9922,7 +9922,7 @@ a, a:hover {
     }
 }
 
-/* -------- 重置屏幕头像周围的样式 -- */
+/* -------- 閲嶇疆灞忓箷澶村儚鍛ㄥ洿鐨勬牱寮� -- */
 .comcss .comments-body .comments-item .avatar .uhd-name {
     left: 67px;
     bottom: 31px;
@@ -9973,7 +9973,7 @@ a, a:hover {
     background: url(../../../../../../../../../../../../images/album/collect-icon.png)
 }
 
-/* -- c4d弹窗样式修改 2017-11-21 -------- */
+/* -- c4d寮圭獥鏍峰紡淇敼 2017-11-21 -------- */
 .experience-moba {
     width: 520px;
     height: 280px;
@@ -10102,7 +10102,7 @@ a, a:hover {
     opacity: .8
 }
 
-/* ----------视频详情页按钮调整 2017-12-19-----------*/
+/* ----------瑙嗛璇︽儏椤垫寜閽皟鏁� 2017-12-19-----------*/
 .video-body .body-left .left-foot #cancel-collect-js {
     width: 69px
 }
@@ -10140,7 +10140,7 @@ a, a:hover {
     font-weight: normal;
 }
 
-/* -------- 评论及评论右侧课程推荐 start -- */
+/* -------- 璇勮鍙婅瘎璁哄彸渚ц绋嬫帹鑽� start -- */
 .bigImgShow {
     z-index: 1001;
 }
@@ -10149,7 +10149,7 @@ a, a:hover {
     padding: 30px 0 50px;
 }
 
-/* -------- 图文教程 -- */
+/* -------- 鍥炬枃鏁欑▼ -- */
 .video-b-l .course-wrap {
     padding: 30px 35px 25px;
 }
@@ -10216,7 +10216,7 @@ a, a:hover {
 }
 
 .video-b-l .tabs-head {
-    height: 59px;
+    height: 100px;
     line-height: 58px;
     border-bottom: 1px #ddd solid;
     padding: 0 10px;
@@ -10257,7 +10257,7 @@ a, a:hover {
     left: 0;
 }
 
-/* -------- 评论右侧课程推荐 -- */
+/* -------- 璇勮鍙充晶璇剧▼鎺ㄨ崘 -- */
 .video-b-r {
     width: 300px;
 }
@@ -10462,7 +10462,7 @@ a, a:hover {
     }
 }
 
-/* -------- 评论上传修正 -- */
+/* -------- 璇勮涓婁紶淇 -- */
 #picker2 {
     display: block
 }
@@ -10503,7 +10503,7 @@ a, a:hover {
     margin-left: 185px
 }
 
-/*兼容播放页点击暂停评论弹窗闪现bug*/
+/*鍏煎鎾斁椤电偣鍑绘殏鍋滆瘎璁哄脊绐楅棯鐜癰ug*/
 .video-body .left-main .little-disc-tip {
     transition: all 0.5s cubic-bezier(0, -0.66, 1, 1);
     opacity: 1;
@@ -10524,7 +10524,7 @@ a, a:hover {
     display: inline-block;
 }
 
-/** 下载app  */
+/** 涓嬭浇app  */
 .video-detail .video-title .title-infos .video-name .app-m {
     width: 183px;
     padding: 15px 0 12px;
@@ -10561,7 +10561,7 @@ a, a:hover {
     left: 43px;
 }
 
-/*视频下面 下载app */
+/*瑙嗛涓嬮潰 涓嬭浇app */
 .video-body .left-foot .app-win {
     height: 50px;
 }
@@ -10599,7 +10599,7 @@ a, a:hover {
     color: #333;
 }
 
-/*每周一练上传按钮*/
+/*姣忓懆涓�缁冧笂浼犳寜閽�*/
 .video-b-r .upload-practice .main {
     padding: 12px 19px 19px
 }
@@ -10627,7 +10627,7 @@ a, a:hover {
     background: #ffe24f;
 }
 
-/* 视频播放结束推荐 */
+/* 瑙嗛鎾斁缁撴潫鎺ㄨ崘 */
 .video-body .study-tips {
     height: 48px;
     bottom: 38px;
@@ -11019,7 +11019,7 @@ a, a:hover {
     padding-right: 10px;
 }
 
-/* -------- 评论 -- */
+/* -------- 璇勮 -- */
 .comment-wrap {
     padding-bottom: 24px;
 }
@@ -11691,7 +11691,7 @@ a, a:hover {
 }
 
 .comment-wrap .comment-list .comment-course.tj:before {
-    content: "推荐学习";
+    content: "鎺ㄨ崘瀛︿範";
     position: absolute;
     left: 46px;
     top: 22px;
@@ -12147,7 +12147,7 @@ a, a:hover {
     line-height: 30px;
 }
 
-/* -------- 举报弹窗 -- */
+/* -------- 涓炬姤寮圭獥 -- */
 .report-win .report-head {
     padding: 10px 0 25px;
     font-size: 18px;
@@ -12184,7 +12184,7 @@ a, a:hover {
     vertical-align: -2px;
 }
 
-/* -------- 课程练习 -- */
+/* -------- 璇剧▼缁冧範 -- */
 .video-b .class-practice {
     padding: 22px 20px;
 }
@@ -14243,7 +14243,7 @@ video::-webkit-media-controls-start-playback-button {
 .video-js .vjs-volume-panel {
     width: 108px;
     position: absolute;
-    right: 144px;
+    right: 60px;
     z-index: 2;
 }
 
@@ -14274,7 +14274,9 @@ video::-webkit-media-controls-start-playback-button {
 
 .video-js .vjs-volume-panel .vjs-volume-control {
     width: 60px;
-    opacity: 1
+    opacity: 1;
+    margin-top: -37px;
+    right: -64px;
 }
 
 .video-js {
@@ -14295,7 +14297,7 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 .video-js .vjs-control-bar {
-    padding-right: 43px;
+    padding-right: 110px;
 }
 
 .video-js .vjs-volume-menu-button {

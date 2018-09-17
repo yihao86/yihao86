@@ -28,9 +28,9 @@
             <div class="logo fl"><a href="index.html" title="返回首页"></a></div>
             <div class="nav fl clearfix">
                 <div class="nav-list fl rjrm-list">
-                    <a href="index.html" class="nav-t" target="_blank" onclick="pagePositionClick(21);">java 入门</a>
+                    <a href="fandOneCourse?crid=1" class="nav-t" target="_blank" onclick="pagePositionClick(21);">java 入门</a>
                 </div><!-- 设计教程 -->
-                <div class="nav-list fl sjjc-list"><a href="" class="nav-t" target="_blank" onclick="pagePositionClick(11);">设计教程</a>
+                <div class="nav-list fl sjjc-list"><a href="findTyeps" class="nav-t" target="_blank" onclick="pagePositionClick(11);">设计教程</a>
                     <!--<div class="top-con">
                         <div class="course-con sjjc-wrap">
                             <div class="loading">
@@ -40,9 +40,9 @@
                         </div>
                     </div>-->
                 </div>
-                <div class="nav-list fl rjrm-list nav-task">
+                <!-- <div class="nav-list fl rjrm-list nav-task">
                     <a href="exeupload.html" class="nav-t" target="_blank"> 作品评改</a>
-                </div>
+                </div> -->
                 <div class="nav-list fl">
                     <a href="exe.html" class="nav-t" target="_blank" rel='nofollow' onclick='pagePositionClick(12);'>每周一练</a>
                 </div>
@@ -150,7 +150,7 @@
              <div class="imgshow-m clearfix">
                 <div th:each="v,video:${vlist}" th:if="${video.index lt 12 }" class="list">                                         
                     <div class="list-img">
-                        <a class="show-img" th:href="@{'goVideo?vid='+${v.vid}}" target="_blank">
+                        <a  th:class="${session.user} eq null?'show-img loginBtn' :'show-img'" th:href="@{${session.user} eq null?'#':'goVideo?vid='+${v.vid}}" th:target="${session.user} eq null?'':'_blank'">
                             <img class="lazy"  
                             th:src="'http://localhost:9352/video/'+${v.v_imgs}"                                           
                                                  th:alt="${v.v_name}"
@@ -167,9 +167,6 @@
                     </div>                   
                 </div>
             </div>                
-            <div class="more-btn">
-                <a rel='nofollow' href="findTyeps" target="_blank">点击查看更多教程</a>
-            </div>
         </div>
     </div>
     <div class="section-img grey-bg">
@@ -183,7 +180,7 @@
             <div class="imgshow-m clearfix">
                 <div th:each="v,nvideo:${newlist}" th:if="${nvideo.index lt 16 }" class="list" >
                     <div class="list-img">
-                        <a class="show-img" th:href="@{'goVideo?vid='+${v.vid}}" target="_blank" onclick="videoExposureLogic(20702, 1, 'click_times');">
+                        <a class="show-img" th:href="@{'goVideo?vid='+${v.vid}}" target="_blank">
                             <img class="lazy"  th:src="'http://localhost:9352/video/'+${v.v_imgs}"                                                      
                                                  th:alt="${v.v_name}"
                                                  data-exposure-id="20702">
@@ -270,7 +267,8 @@
             </div>
         </div>
     </div>
-    <div class="section-img">
+    
+    <!-- <!-- <div class="section-img">
         <div class="layout-cont">
             <div class="imgshow-t">
                 <div class="hr-link fr clearfix">
@@ -303,9 +301,9 @@
                 <a href="findTyeps" rel='nofollow' target="_blank">点击查看更多教程</a>
             </div>
         </div>
-    </div><!-- 职业发展 -->
+    </div>职业发展 -->
     
-    <div class="section-img grey-bg">
+    <div class="section-img">
         <div class="layout-cont teacher-con"><h2>优秀的老师都在这里</h2>
             <p class="con">实用案例深度解析，专业讲师为你带来设计界前沿的视频教程。设计技巧全面传授，提供成长道路上并不可少的技能。</p>
             <div class="teacher-slide" id="teacher-slide">
@@ -411,19 +409,21 @@
                         </div>
                         <div class="phone-code clearfix">
                             <div class="code-l fl">
-                                <input type="text" name="" placeholder="请输入图形验证码">
+                                <input id="code_input" type="text" name="yz-img" placeholder="请输入图形验证码">
                             </div>
                             <div class="code-r fr">
-                                <img class="captchaimg" src="#" alt="换一个" title="换一个"  style="cursor:pointer">
+                                <div id="v_container" style="width: 120px;height: 48px;">
+                                </div>
+			                       
                             </div>
-                            <div class="error-txt">图形验证码错误，请重新输入</div>
+                            <div class="error-txt" id="img-error">图形验证码错误，请重新输入</div>
                         </div>
                         <div class="phone-yz">
                             <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
                             <div class="yz-r fr"><input type="text" value="获取动态密码" class="get-p"/></div>
-                            <div class="error-txt">验证码错误，请重新输入</div>
+                            <div class="error-txt" id="yz-error">验证码错误，请重新输入</div>
                         </div>
-                        <div class="phone-btn">登录</div>
+                        <div class="phone-btn" id="my_button">登录</div>
                     </div>
                 </div><!--注册部分-->
                 <div class="tab-main clerafix" style="display: none" id="loginModal-t2">
@@ -445,16 +445,20 @@
                         </div>
                         <div class="phone-code clearfix" style="display:block;">
                             <div class="code-l fl"><input type="text" name="" placeholder="请输入图形验证码"></div>
-                            <div class="code-r fr"><img class="captchaimg" src="#" alt="换一个" title="换一个"
-                                                        style="cursor:pointer"></div>
+                            <div class="code-r fr">
+                            	 <div id="v_container" style="width: 120px;height: 48px;">
+                                </div>
+                            </div>
                             <div class="error-txt">图形验证码错误，请重新输入</div>
                         </div>
                         <div class="phone-yz">
                             <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
-                            <div class="yz-r fr"><input type="submit" value="获取动态密码" class="get-p"></div>
-                            <div class="error-txt">验证码错误，请重新输入</div>
+                            <div class="yz-r fr">
+                            	<input type="submit" value="获取动态密码" class="get-p">
+                            </div>
+                            <div class="error-txt" id="res-error">验证码错误，请重新输入</div>
                         </div>
-                        <div class="phone-btn">注册</div>
+                        <div class="phone-btn" id="my_res">注册</div>
                         <div class="agree-deal"><label for="checkput"><input type="checkbox" checked=""
                                                                              id="checkput"><span>同意 <a
                                 href="site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label></div>
@@ -487,9 +491,12 @@
     Url.getVideoList = 'site/ajax-get-video-list.html';
     Url.recordNotice = 'site/record-notice.html';
     $(".phone-btn").click(function() {
-        var phone=$("input[name='phone']").val();  	
+        var phone=$("input[name='phone']").val();  
         var cade=$("input[name='code']").val();
-           window.location="findUser?phone="+phone+"&cade="+cade;
+        var yanzheng=$("input[name='yz-img']").val();
+        if(phone != '' && cade != '' && yanzheng != '' ){
+        	 window.location="findUser?phone="+phone+"&cade="+cade;
+        }
 		});
 </script><!-- 首页宣传视频  --><!--[if lt IE 9]>
 <script src="https://js.huke88.com/assets/revision/js/es5-shim.js"></script>
@@ -498,6 +505,59 @@
         charset="utf-8"></script>
 <script src="static/assets/revision/js/home/home.v16e08d.js?v=681"
         charset="utf-8"></script>
+        <script src="js/gVerify.js"></script>
+        <script>
+			var verifyCode = new GVerify("v_container");
+			document.getElementById("my_button").onclick = function(){
+				var res = verifyCode.validate(document.getElementById("code_input").value);
+				if(res){
+				}else{
+					$("#clearfix").addClass("error");
+				}
+			}
+			document.getElementById("my_res").onclick = function(){
+				var res = verifyCode.validate(document.getElementById("code_input").value);
+				if(res){
+				}else{
+					$("#clearfix").addClass("error");
+				}
+			}
+			
+			$.ajax(
+	                {
+	                    url:"findUser",
+	                    data:{},
+	                    type:"post",
+	                    async:false,
+	                    //解决编码问题
+	                    scriptCharset: 'utf-8',
+	                    success:function (e) { 
+	                    	
+	                    	document.getElementById("v_container").onclick = function(){
+	            				var res = verifyCode.validate(document.getElementById("code_input").value);
+	            				if(res){
+	            				}else{
+	            					$("#clearfix").addClass("error");
+	            				}
+	            			}
+	            			document.getElementById("my_res").onclick = function(){
+	            				var res = verifyCode.validate(document.getElementById("code_input").value);
+	            				if(res){
+	            				}else{
+	            					$("#clearfix").addClass("error");
+	            				}
+	            			}
+	                    	
+	                    }
+	        },"json");
+			
+			
+			$(".get-p").click(function(){
+				var phone=$("input[name='phone']").val();  
+				$.post("findMsg?phone="+phone);
+			});
+         
+	</script>
 </body>
 <!-- Mirrored from yihao86/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 00:33:36 GMT -->
 </html>

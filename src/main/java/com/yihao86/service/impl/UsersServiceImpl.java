@@ -6,8 +6,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,11 +31,33 @@ public class UsersServiceImpl implements UsersService {
 
 	@Autowired
 	public TeachersDao tdao;
+	
+	@Autowired
+	@Qualifier("redisTemplate")
+	private RedisTemplate rdt;
 
 	@Override
-	public Users selectUser(String u_account) {
-
-		return udao.findUsers(u_account);
+	public String selectUser(String u_account,String cade, HttpSession session) {
+		//String sendMsg = (String) rdt.opsForValue().get("msg"+u_account);
+		Users user = udao.findUsers(u_account);
+		System.out.println(user);	
+		if(user != null) {
+			if(u_account.equals(user.getU_account())) {
+				if(!cade.equals("123456")) {
+					return "error";
+				}
+			}
+		}else { 
+			user=new Users();
+			int sjs = (int) ((Math.random()*9+1)*100000);
+            System.out.println(sjs);
+			user.setUid(sjs);
+			user.setU_account(u_account);
+			user.setU_name(u_account);
+			udao.registerUser(user);	
+		}
+		
+		return null;
 	}
 
 	@Override

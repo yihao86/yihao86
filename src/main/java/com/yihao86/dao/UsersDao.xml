@@ -65,4 +65,8 @@ ORDER BY `v_uploadtime` DESC LIMIT 2
 <delete id="deleteTeacher">
  DELETE FROM `follow` WHERE `f_uid`=#{uid} AND `f_ftid`=#{tid}
 </delete>
+
+<insert id="registerUser"  parameterType="users">
+	INSERT INTO users  VALUES(#{uid},#{u_name},#{u_account},'imgs\tx.png',0)
+</insert>
 </mapper>

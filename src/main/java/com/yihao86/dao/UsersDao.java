@@ -28,4 +28,6 @@ public interface UsersDao {
 	public List<Videos> findTeacherVideo(@Param("tid") int tid);
 	
 	public void deleteTeacher(@Param("uid") int uid,@Param("tid")int tid);
+	
+	Users registerUser(Users users);
 }

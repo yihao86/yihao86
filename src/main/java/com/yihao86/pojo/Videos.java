@@ -15,7 +15,7 @@ public class Videos {
 	
 	private int v_aid;
 	
-	private int v_carid;
+	private int v_crid;
 	
 	private String v_uploadtime;
 	
