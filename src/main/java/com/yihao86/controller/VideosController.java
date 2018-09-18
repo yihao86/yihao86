@@ -3,12 +3,16 @@ package com.yihao86.controller;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.yihao86.pojo.History;
 import com.yihao86.pojo.Teachers;
+import com.yihao86.pojo.Users;
 import com.yihao86.pojo.Videos;
 import com.yihao86.service.CourseService;
 import com.yihao86.service.TeachersService;
@@ -27,7 +31,7 @@ public class VideosController {
 	private TeachersService ts;
 
 	@RequestMapping("goVideo")
-	public String queryVideos(Model mod, int vid) {
+	public String queryVideos(Model mod, int vid , History history,HttpSession session) {
 		Videos v = vs.selectById(vid);
 		
 		mod.addAttribute("v", v);
@@ -44,6 +48,13 @@ public class VideosController {
 		Map<String,Object> achievement = ts.achievement(v.getV_teacherId());
 		mod.addAttribute("teacher", teacher);
 		mod.addAttribute("achievement", achievement);
+		
+		Users user = (Users) session.getAttribute("user");
+		history.setH_vid(vid);
+		history.setH_uid(user.getUid());
+		history.setH_crid(v.getV_crid());
+		history.setH_tid(v.getV_teacherId());
+		vs.insertHistory(history);
 		
 		return "video";
 	}

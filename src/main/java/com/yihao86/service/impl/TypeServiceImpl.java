@@ -1,6 +1,7 @@
 package com.yihao86.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
@@ -33,6 +34,11 @@ public class TypeServiceImpl implements TypeService {
 		
 		
 		return tdao.findSonList(f_trid);
+	}
+
+	@Override
+	public List<Map<String, Object>> hotDoor() {
+		return tdao.hotDoor();
 	}
 
 

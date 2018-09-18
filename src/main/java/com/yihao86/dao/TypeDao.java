@@ -1,6 +1,7 @@
 package com.yihao86.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 
@@ -12,4 +13,5 @@ public interface TypeDao {
 	
 	public List<Type> findSonList(@Param("f_trid") int f_trid);
 	
+	List<Map<String,Object>> hotDoor();
 }

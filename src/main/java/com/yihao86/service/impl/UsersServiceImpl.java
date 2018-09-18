@@ -50,13 +50,14 @@ public class UsersServiceImpl implements UsersService {
 		}else { 
 			user=new Users();
 			int sjs = (int) ((Math.random()*9+1)*100000);
-            System.out.println(sjs);
 			user.setUid(sjs);
 			user.setU_account(u_account);
 			user.setU_name(u_account);
+			user.setU_photo("imgs\\tx.png");
+			user.setU_disable(0);
 			udao.registerUser(user);	
 		}
-		
+		session.setAttribute("user", user);
 		return null;
 	}
 

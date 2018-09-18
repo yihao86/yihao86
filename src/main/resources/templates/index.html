@@ -64,14 +64,13 @@
                 <img style="width: 36px;
                             height: 36px;
                             border-radius: 50%;
-                            margin-top: 12px;" th:src="'http://localhost:9352/video/'+${session.user.u_photo}"/>
+                            margin-top: 12px;" th:src="${session.user.u_photo}"/>
                <!--  <i class="sj"></i>
                 <i class="jt"></i> -->
                 </a>
             </div>                
            </div></a></span>      
            <div th:if="${session.user} eq null ">
-           <a href="javascript:;" rel='nofollow' class="register-link fr" id="registerBtn">免费注册</a>
            <a href="#"  rel='nofollow' class="in-btn" id="loginBtn">
            <div class="login fr" >登录 </div></a></div>
             
@@ -90,9 +89,9 @@
                         <div class="list-m hide" id="record-empty"></div>
                         <div class="list-head"><h3 class="hot">热门推荐</h3></div>
                         <div class="list-m hotm">
-                            <p><a href='type.html'
+                            <p th:each="hotDoor,h:${hot}"><a th:href="@{'findTyeps?typeId='+${hotDoor.typeid}+'&f_trid='+${hotDoor.f_trid}}"
                                   data-id="5" data-words="C4D" rel='nofollow'
-                                  class="hot-word"><i>1</i>C4D</a>
+                                  class="hot-word"><i th:text="${h.index+1}" th:style="${h.index+1 &lt; 2} ? '':'background-color: #666'">1</i><span th:text="${hotDoor.typename}" th:style="${h.index+1 &lt; 2} ? '':'color: #666'">C4D</span></a>
                             </p>
                          </div>
                     </div>
@@ -110,19 +109,19 @@
                                data-url="https://huke88.com/abroad-teacher"
                                data-auth="0" href="javascript:;"
                             >
-                                <div class="img"
+                               <!--  <div class="img"
                                      th:data-address="'http://localhost:9352/video/'+${vmap.v_imgs}"
                                      th:style="'background: url(http://localhost:9352/video/'+${vmap.v_imgs}+') no-repeat  center;
                                      background-size: cover'" th:title="${vmap.v_name}">
-                                </div>
+                                </div> -->
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div class="hd">
-                    <ul>
+                   <!--  <ul>
                         <li th:each="vmap,v:${vmap}"><span th:text="${vmap.v_name}">玩儿推一天任务耳热</span></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <a href="javascript:;" class="prev slide-btn cut-btn"></a>
                 <a href="javascript:;" class="next slide-btn cut-btn"></a>
@@ -163,6 +162,9 @@
                         <a href="video.html" th:text="${v.v_name}" class="name-link fl" target="_blank">PS-只用曲线工具也可以调出完美色调</a>
                     </div>
                     <div class="img-data clearfix">
+                    	<span th:text="${v.v_difficulty}" style="background-color: #38c8ff;color: white;display: inline-block;padding: 0 6px;
+                    											font-weight: 600;border-radius: 4px;font-size: 12px;">19分42秒</span>
+                    	<span th:text="${v.get('time')}"></span>
                         <span class="learn-num fr" th:text="${v.num}+'人已学'">2913 人已学</span>
                     </div>                   
                 </div>
@@ -192,6 +194,8 @@
                         <a href="video.html" th:text="${v.v_name}" class="name-link fl" target="_blank">PS-只用曲线工具也可以调出完美色调</a>
                     </div>
                     <div class="img-data clearfix">
+                    	<span th:text="${v.v_difficulty}" style="background-color: #38c8ff;color: white;display: inline-block;padding: 0 6px;
+                    											font-weight: 600;border-radius: 4px;font-size: 12px;">19分42秒</span>
                         <span class="learn-num fr" th:text="${v.num}+'人已学'">2913 人已学</span>
                     </div>
                 </div>
@@ -391,8 +395,7 @@
             <div class="lrframe-box">
                 <span class="frame-close" data-bind-bs="hideModal"></span>
                 <div class="tab-head">
-                    <span class="t1 active">登录</span>
-                    <span class="t2">注册</span>
+                    <span class="t1 active" style="margin: 0 170px;">登录</span>
                 </div><!--登录部分-->
                 <div class="tab-main clerafix" id="loginModal-t1">
                     <div class="frame-bd fl">
@@ -411,10 +414,9 @@
                             <div class="code-l fl">
                                 <input id="code_input" type="text" name="yz-img" placeholder="请输入图形验证码">
                             </div>
-                            <div class="code-r fr">
+                            <div class="code-r fr" id="rediv">
                                 <div id="v_container" style="width: 120px;height: 48px;">
                                 </div>
-			                       
                             </div>
                             <div class="error-txt" id="img-error">图形验证码错误，请重新输入</div>
                         </div>
@@ -426,44 +428,6 @@
                         <div class="phone-btn" id="my_button">登录</div>
                     </div>
                 </div><!--注册部分-->
-                <div class="tab-main clerafix" style="display: none" id="loginModal-t2">
-                    <div class="frame-bd fl">
-                        <div class="go-phone">使用手机号码注册</div>
-                        <div class="agree-deal">
-                            <label for="checkput">
-                            <input type="checkbox" checked="" >
-                            <span>同意 <a href="site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="phone-m fl">
-                        <div class="phone-title"><span>使用手机号码注册</span></div>
-                        <div class="phone-num">
-                            <i class="phone-icon"></i>
-                            <input type="text" name="phone" placeholder="请输入11位的手机号码">
-                            <div class="error-txt">手机号码格式错误</div>
-                        </div>
-                        <div class="phone-code clearfix" style="display:block;">
-                            <div class="code-l fl"><input type="text" name="" placeholder="请输入图形验证码"></div>
-                            <div class="code-r fr">
-                            	 <div id="v_container" style="width: 120px;height: 48px;">
-                                </div>
-                            </div>
-                            <div class="error-txt">图形验证码错误，请重新输入</div>
-                        </div>
-                        <div class="phone-yz">
-                            <div class="yz-l fl"><input type="text" name="code" placeholder="请输入验证码"></div>
-                            <div class="yz-r fr">
-                            	<input type="submit" value="获取动态密码" class="get-p">
-                            </div>
-                            <div class="error-txt" id="res-error">验证码错误，请重新输入</div>
-                        </div>
-                        <div class="phone-btn" id="my_res">注册</div>
-                        <div class="agree-deal"><label for="checkput"><input type="checkbox" checked=""
-                                                                             id="checkput"><span>同意 <a
-                                href="site/safe-protocol.html" target="_blank">《虎课网网络服务使用协议》</a></span></label></div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -512,14 +476,7 @@
 				var res = verifyCode.validate(document.getElementById("code_input").value);
 				if(res){
 				}else{
-					$("#clearfix").addClass("error");
-				}
-			}
-			document.getElementById("my_res").onclick = function(){
-				var res = verifyCode.validate(document.getElementById("code_input").value);
-				if(res){
-				}else{
-					$("#clearfix").addClass("error");
+					$(".clearfix").addClass("error");
 				}
 			}
 			
@@ -537,17 +494,9 @@
 	            				var res = verifyCode.validate(document.getElementById("code_input").value);
 	            				if(res){
 	            				}else{
-	            					$("#clearfix").addClass("error");
+	            					$(".clearfix").addClass("error");
 	            				}
-	            			}
-	            			document.getElementById("my_res").onclick = function(){
-	            				var res = verifyCode.validate(document.getElementById("code_input").value);
-	            				if(res){
-	            				}else{
-	            					$("#clearfix").addClass("error");
-	            				}
-	            			}
-	                    	
+	            			}	                    	
 	                    }
 	        },"json");
 			
@@ -556,6 +505,9 @@
 				var phone=$("input[name='phone']").val();  
 				$.post("findMsg?phone="+phone);
 			});
+			
+			
+			
          
 	</script>
 </body>

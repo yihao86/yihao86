@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yihao86.pojo.Course;
 import com.yihao86.pojo.Type;
-import com.yihao86.quartz.ScheduledTasks;
+//import com.yihao86.quartz.ScheduledTasks;
 import com.yihao86.service.CourseService;
 import com.yihao86.service.TeachersService;
 import com.yihao86.service.TypeService;
@@ -28,8 +28,8 @@ public class IndexController {
 	@Autowired
 	private TeachersService tcs;
 	
-	@Autowired
-	private ScheduledTasks st;
+	/*@Autowired
+	private ScheduledTasks st;*/
 	
 	@Autowired
 	private CourseService cs;
@@ -38,7 +38,7 @@ public class IndexController {
 	@RequestMapping("gogogo")
 	public String index(Model mod) {
 		System.out.println("hhhhhh_主页查询方法");
-		List<Map<Object,String>> vlist = vs.searchAll();		
+		List<Map<String,Object>> vlist = vs.searchAll();		
 		List<Type> tlist=ts.selectType();
 		List<Map<Object,String>> newlist=vs.selectNewestVideo();
 		mod.addAttribute("tlist", tlist);
@@ -46,9 +46,11 @@ public class IndexController {
 	    mod.addAttribute("newlist", newlist);
 	   	List<Map<String,Object>> map=tcs.findAllAchievement(0,-1);
 		System.out.println(map.size());
-		List<Map<String,Object>> vmap = st.reportCurrentByCron();
 		mod.addAttribute("map",map);
-		mod.addAttribute("vmap", vmap);
+		
+//		List<Map<String,Object>> vmap = st.reportCurrentByCron();
+		
+		//mod.addAttribute("vmap", vmap);
 		
 		List<Map<String,Object>> clist = cs.fandAlbumCourse(0);
 		mod.addAttribute("clist", clist);
@@ -57,10 +59,10 @@ public class IndexController {
 		mod.addAttribute("list", list);
 		
 		List<Integer> courseNum = cs.findCourseInfo();
-		for (Integer i : courseNum) {
-			System.out.println(i);
-		}
 		mod.addAttribute("courseNum",courseNum);
+		
+		List<Map<String,Object>> hot = ts.hotDoor();
+		mod.addAttribute("hot",hot);
 		return "index";
 	}
 

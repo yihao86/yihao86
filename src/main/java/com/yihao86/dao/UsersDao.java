@@ -29,5 +29,5 @@ public interface UsersDao {
 	
 	public void deleteTeacher(@Param("uid") int uid,@Param("tid")int tid);
 	
-	Users registerUser(Users users);
+	int registerUser(Users users);
 }

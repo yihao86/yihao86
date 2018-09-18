@@ -3,11 +3,12 @@ package com.yihao86.service;
 import java.util.List;
 import java.util.Map;
 
+import com.yihao86.pojo.History;
 import com.yihao86.pojo.Videos;
 
 public interface VideosService {
   
-	public List<Map<Object,String>> searchAll();
+	public List<Map<String,Object>> searchAll();
 	
 	public Videos selectById(int vid);
 	
@@ -17,5 +18,5 @@ public interface VideosService {
 	
 	public List<Map<Object,String>> selectVideoByOne(int f_trid);
 	
-	
+	int insertHistory(History history);
 }

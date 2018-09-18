@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 
+import com.yihao86.pojo.History;
 import com.yihao86.pojo.Videos;
 
 public interface VideosDao {
@@ -13,7 +14,7 @@ public interface VideosDao {
 	 * @param vid
 	 * @return
 	 */
-	public List<Map<Object,String>> findAll();
+	public List<Map<String,Object>> findAll();
 
 /**
  * 查询单个视频
@@ -39,4 +40,6 @@ public interface VideosDao {
 	public List<Map<Object,String>> findVideosByOne(@Param("f_trid") int f_trid);
 	
 	List<Map<String,Object>> findBroadcast();
+	
+	int insertHistory(History history);
 }

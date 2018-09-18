@@ -12,4 +12,14 @@
   <select id="findSonList" resultType="Type">
   SELECT * FROM `type` WHERE `f_trid`=#{f_trid} AND `f_trid` &lt;&gt; `typeid`
   </select>
+  
+  <select id="hotDoor" resultType="map" >
+  	SELECT t.`f_trid`,t.`typeid`,COUNT(h.h_vid) n,t.typename
+		FROM `videos` v
+		LEFT JOIN `history` h ON v.`vid`=h.`h_vid`
+		LEFT JOIN `type` t ON t.`typeid` = v.v_typeid
+		GROUP
+		BY t.typename
+		ORDER BY n DESC
+  </select>
 </mapper>

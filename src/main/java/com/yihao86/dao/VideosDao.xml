@@ -6,7 +6,7 @@
 <mapper namespace="com.yihao86.dao.VideosDao">
 	<select id="findAll" resultType="map">
 		SELECT
-		v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,COUNT(h.`h_uid`)
+		v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.v_difficulty,COUNT(h.`h_uid`)
 		AS num
 		FROM `videos` v
 		LEFT JOIN `history` h ON v.`vid`=h.`h_vid`
@@ -22,7 +22,7 @@
 
 	<select id="findNewestVideo" resultType="map">
 		SELECT
-		v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,COUNT(h.`h_uid`)
+		v.`vid`,v.`v_name`,v.`v_uploadtime`,v.`v_imgs`,v.`v_vpath`,v.v_difficulty,COUNT(h.`h_uid`)
 		AS num
 		FROM `videos` v
 		LEFT JOIN `history` h ON v.`vid`=h.`h_vid`
@@ -64,5 +64,9 @@
 		WHERE DATE(NOW()) - v_uploadtime &lt;= 7
 		GROUP BY v.vid  LIMIT 10
 	</select>
+	
+	<insert id="insertHistory" keyColumn="hid" keyProperty="hid" parameterType="history">
+		INSERT INTO history (`h_uid`,`h_vid`,`h_time`,`h_tid`,`h_crid`) VALUES(#{h_uid},#{h_vid},NOW(),#{h_tid},#{h_crid})	
+	</insert>
 
 </mapper>

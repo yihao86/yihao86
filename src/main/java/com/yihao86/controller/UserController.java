@@ -57,7 +57,6 @@ public class UserController {
 	@RequestMapping("/findMsg")
 	@ResponseBody
 	public void send(String phone) {
-		System.out.println("hhhhhhhhh"+phone);
 		//String msg = SendMsg.Send(phone);
 		//rdt.opsForValue().set("msg"+phone, msg);
 		//rdt.expire("msg"+phone, 60*5,TimeUnit.SECONDS);
