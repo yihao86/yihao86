@@ -17,6 +17,8 @@ public interface VideosService {
 	public List<Map<Object,String>> selectVideoByTid(int typeId);
 	
 	public List<Map<Object,String>> selectVideoByOne(int f_trid);
-	
+
 	int insertHistory(History history);
+
+	public List<Map<String, Object>> findByWorks();
 }

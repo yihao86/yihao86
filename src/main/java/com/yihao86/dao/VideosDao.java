@@ -42,4 +42,9 @@ public interface VideosDao {
 	List<Map<String,Object>> findBroadcast();
 	
 	int insertHistory(History history);
+	/**
+	 * 每周一练
+	 * @return
+	 */
+	public List<Map<String, Object>> findByWorks();
 }

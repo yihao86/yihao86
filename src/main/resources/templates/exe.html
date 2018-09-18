@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <!-- Mirrored from yihao86/practice-double/1 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Aug 2018 23:52:25 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -23,6 +23,8 @@
 <link
 	href="static/assets/revision/!!css/base.v107.css,css/practice/index.v1.css,css/681e08d.css?v=681"
 	rel="stylesheet">
+	<link rel="stylesheet" href="css/pagination.css"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script>
 	var Url = {};
 	var Param = {};
@@ -173,22 +175,21 @@
 		</div>
 		<div class="break-nav layout-cont">
 			当前位置： <a href="index.html" target="_blank">首页</a> ><a
-				href="list.html" target="_blank">两周一练</a> > 第一期 PS-机械恐龙合成
+				href="list.html" target="_blank">每周一练</a> > <span th:text="${data.v_name}"></span>
 		</div>
 		<div class="practice-wrapper layout-cont">
 			<div class="practice-info clearfix">
 				<div class="info-l fl clearfix">
-					<a href="../course/16418.html" target="_blank"><img
+					<a target="_blank" th:href="'http://localhost:9352/video/'+${data.v_vpath}"><img
 						class="lazy img fl"
-						src="https://pic.huke88.com/cover/cover.png!/compress/true/format/jpg/fwfh/423x260"
+						th:src="'http://localhost:9352/video/'+${data.v_imgs}" width="423px" height="260px"
 						data-original="https://pic.huke88.com/video/cover/2018-06-04/62599AD7-7D02-DB6E-D518-87766B73987E.jpg!/format/jpg/fwfh/423x260"
 						alt="头像" /></a>
 					<div class="img-r fl">
-						<h2>第一期 PS-机械恐龙合成</h2>
-						<p class="p1">每两周周二上午十点准时发布最新两周一练</p>
-						<p class="p1">活动时间：2018-06-05</p>
+						<h2 th:text="${data.v_name}" style="line-height: 50px;">第一期 PS-机械恐龙合成</h2>
+						<p class="p1" th:text="'活动时间：'+${data.v_uploadtime}" style="line-height: 40px;">活动时间：2018-06-05</p>
 						<div class="abl-b">
-							<a href="../course/16418.html" target="_blank"
+							<a th:href="'http://localhost:9352/video/'+${data.v_vpath}" target="_blank"
 								class="double-practice-class">查看视频教程</a>
 							<!--                        <a href="#" class="return-new" target="_blank">返回最新</a>-->
 							<!--                    <a href="">上传作品</a>-->
@@ -197,13 +198,13 @@
 				</div>
 				<div class="info-r fr">
 					<a href="../t/432.html" target="_blank" class="avatar"><img
-						src="https://pic.huke88.com/image/000/000/004/0364B527-333D-7DEE-140E-51FA19D28FD9.gif!/fw/100"
+						th:src="'http://localhost:9352/video/'+${data.t_photo}"
 						alt="头像" style="border-radius: 50%;"></a>
-					<p class="name">设计狗</p>
-					<p class="p3">
+					<p class="name" th:text="${data.t_name}">设计狗</p>
+					<p class="p3" th:text="${data.t_abstract}">
 						8年电商设计行业经验,曾为多个电商公司主刀设计,3年教学经验,授课富有激情.对视觉合成设计有丰富的经验.精通Photoshop,Illustrator,C4d等相关设计类软件，从实际案例讲解相关工具的使用。</p>
 					<p class="follow-num">
-						关注人数：<span>10422</span>
+						关注人数：<span th:text="${achievement.fans}">10422</span>
 					</p>
 					<div class="follow-btn">
 						<a href="javascript:;" id="cared-none" data-id="432"
@@ -229,48 +230,41 @@
 						class="tab">本期获奖</a> -->
 					<div class="check-box fr clearfix">
 						<a href="1e8d0?order=comment"><span class="fl "><i></i>评论最多</span></a><a
-							href="1ddcc?order=thumbs"><span class="fl "><i></i>点赞最多</span></a><a
 							href="1c22f?order=time"><span class="fl active"><i></i>最新作品</span></a>
 					</div>
 				</div>
 				<div class="imgshow clearfix work-list-new">
-					<div class="list fl">
+					<div class="list fl" th:each="w,video:${list}">
 						<div class="img">
-							<a href="javascript:void(0);" class="practice-home-go-detail"
+							<a th:href="'http://localhost:9352/video/'+${w.v_vpath}" class="practice-home-go-detail"
 								data-id="182"><img class="lazy"
-								src="https://pic.huke88.com/cover/cover.png!/compress/true/format/jpg/both/295x180"
+								th:src="'http://localhost:9352/video/'+${w.v_imgs}" width="295px" height="180px"
 								data-original="https://pic.huke88.com/video/cover/2018-06-19/C735F8C1-F619-B702-D43D-349DE8583099.jpg!/format/jpg/both/295x180"
 								alt="作品封面" /></a>
 						</div>
 						<div class="title">
 							<a href="javascript:void(0);" class="practice-home-go-detail"
-								data-id="182">试着练了一下 请大家多多包</a>
+								data-id="182" th:text="${w.v_name}">试着练了一下 请大家多多包</a>
 						</div>
-						<div class="data clearfix">
-							<span class="view-num fl">19</span><span class="comment-num fl">0</span><span
-								class="zan-num fl">0</span>
+						<div class="data clearfix" >
+							<span class="view-num fl" th:text="${w.num}">19</span><span class="comment-num fl">0</span>
 						</div>
 						<div class="work-user-info clearfix">
 							<a href="../u/1657747.html" class="avatar fl"><img
-								src="../../imgs/avatar/2018/06/05/FAD29A8A-73B3-826F-9BAB-DE49E1BA7F46.jpg"
+								th:src="'http://localhost:9352/video/'+${w.t_photo}"
 								alt="小头像"></a><span class="name fl"><a
-								href="../u/1657747.html">丶</a></span><span class="fr time">1个月前</span>
+								href="../u/1657747.html" th:text="${w.t_name}">丶</a></span><span class="fr time" th:text="${w.days}+'天之前'">1个月前</span>
 						</div>
 					</div>
 				</div>
-				<div id="page-m" class="all-pages">
 					<div id="page-m">
-						<div class="page-li">
-							<a class="on active" href="1e930?page=1&amp;per-page=32"
-								data-page="0">1</a><a href="1fb6c?page=2&amp;per-page=32"
-								data-page="1">2</a><a href="1799e?page=3&amp;per-page=32"
-								data-page="2">3</a><a href="1461a?page=4&amp;per-page=32"
-								data-page="3">4</a><a href="1d95f?page=5&amp;per-page=32"
-								data-page="4">5</a><a class="next"
-								href="1fb6c?page=2&amp;per-page=32" data-page="1">下一页</a>
+							<input id="pages" type="hidden" th:value="${pages}"/>
+							<input id="pageNum" type="hidden" th:value="${pageNum}"/>
+							<input id="pageTotal" type="hidden" th:value="${pageTotal}"/>
+						<div class="M-box1">
+						
 						</div>
 					</div>
-				</div>
 			</div>
 			<!-- 往期回顾 -->
 		</div>
@@ -516,7 +510,6 @@
 			autoPlay : true,
 			mouseOverStop : false
 		});
-	
 		//监听奖励宽度
 		function width() {
 			var height = document.body.clientWidth;
@@ -546,8 +539,24 @@
 		width();
 	
 		$(window).on('resize', function() {
-			width();
+		width();
 		});
+	</script>
+	<script type="text/javascript" src="js/jquery.pagination.js"></script>
+	<script type="text/javascript">
+		$(function(){
+		$('.M-box1').pagination({
+			totalData: $("#pageTotal").val(), //数据总条数
+        	showData: 12, //每页显示的条数
+        	pageCount: $("#pages").val(), //总页数,默认为9
+        	current: $("#pageNum").val(), //当前第几页
+   		 	mode: 'fixed'
+});
+		});
+		
+		function urlaction(index){
+			window.location="findexe?pageNow="+index;
+		}
 	</script>
 </body>
 <!-- Mirrored from yihao86/practice-double/1 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Aug 2018 23:52:26 GMT -->

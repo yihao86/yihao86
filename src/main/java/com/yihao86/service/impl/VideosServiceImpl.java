@@ -3,6 +3,7 @@ package com.yihao86.service.impl;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -11,6 +12,10 @@ import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.yihao86.dao.TeachersDao;
+import com.yihao86.dao.TypeDao;
 import com.yihao86.dao.VideosDao;
 import com.yihao86.pojo.History;
 import com.yihao86.pojo.Videos;
@@ -27,7 +32,9 @@ public class VideosServiceImpl  implements VideosService{
 	private static final List<Videos> Page = null;
 	@Autowired
 	private VideosDao vdao;
-	
+
+	@Autowired
+	private TeachersDao td;
 	/**
 	 * 主页查询所有
 	 */
@@ -116,8 +123,6 @@ public class VideosServiceImpl  implements VideosService{
 		return vdao.findVideosByOne(f_trid);
 	}
 
-
-
 	@Override
 	public int insertHistory(History history) {
 		
@@ -128,7 +133,10 @@ public class VideosServiceImpl  implements VideosService{
 
 
 
-
-
+	@Override
+	public List<Map<String, Object>> findByWorks() {
+		// TODO Auto-generated method stub
+		return vdao.findByWorks();
+	}
 
 }
