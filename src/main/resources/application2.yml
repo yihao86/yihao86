@@ -1,0 +1,123 @@
+[{
+    path: '',
+    component: Layout,
+    name: '_dashboard',
+    redirect: '/dashboard',
+    meta: { title: '' },
+    children: [
+      {
+        path: 'dashboard',
+        component: () => import('@/views/dashboard/index'),
+        name: 'dashboard',
+        meta: { title: '首页', icon: 'dashboard', noCache: true, affix: true }
+      }
+    ]
+  },
+  // 通知公告
+  {
+    path: '',
+    name: '_notice',
+    component: Layout,
+    meta: { title: '通知公告', icon: 'notice' },
+    children: [
+      { path: 'notice', name: 'notice', component: () => import('@/views/notice/index'), meta: { title: '通知公告' } }
+    ]
+  },
+  // 巡查管理
+  {
+    path: '',
+    name: '_patrol',
+    component: Layout,
+    redirect: '/patrol/area',
+    meta: { title: '巡查管理', icon: 'patrol' },
+    children: [
+      { path: 'area', name: 'patrol_area', component: () => import('@/views/patrol/area/index'), meta: { title: '区域划分' } },
+      { path: 'area/create', name: 'patrol_area_create', component: () => import('@/views/patrol/create/index'), hidden: true, meta: { title: '添加' } },
+      { path: 'area/edit/:id', name: 'patrol_area_edit', component: () => import('@/views/patrol/edit/index'), hidden: true, meta: { title: '编辑' } },
+      { path: 'task', name: 'patrol_task', component: () => import('@/views/patrol/task/index'), meta: { title: '巡查任务' } },
+      { path: '/task/task-create', name: 'patrol_task_create', component: () => import('@/views/patrol/taskCreate/index'), hidden: true, meta: { title: '添加' } },
+      { path: '/task/task-edit/:id', name: 'patrol_task_edit', component: () => import('@/views/patrol/taskEdit/index'), hidden: true, meta: { title: '编辑' } },
+      { path: 'record', name: 'patrol_record', component: () => import('@/views/patrol/record/index'), meta: { title: '巡查记录' } },
+      { path: 'record-check/:id', name: 'patrol_record_check', component: () => import('@/views/patrol/recordCheck/index'), hidden: true, meta: { title: '查看' } }
+    ]
+  },
+  // 调研下发
+  {
+    path: '',
+    name: '_survey',
+    component: Layout,
+    redirect: '/survey',
+    children: [
+      { path: 'survey', name: 'survey', component: () => import('@/views/survey/index'), meta: { title: '调研下发', icon: 'survey' } },
+      { path: 'survey/add-survey', hidden: true, name: 'survey_addSurvey', component: () => import('@/views/survey/addSurvey/index'), meta: { title: '新建问卷' } },
+      { path: 'survey/preview-survey', hidden: true, name: 'survey_previewSurvey', component: () => import('@/views/survey/addSurvey/preview'), meta: { title: '预览问卷' } },
+      { path: 'survey/survey-detail', hidden: true, name: 'survey_surveyDetail', component: () => import('@/views/survey/surveyDetail/index'), meta: { title: '调研详情' } }
+    ]
+  },
+  // 隐患管理
+  {
+    path: '',
+    name: '_hiddenDanger',
+    component: Layout,
+    redirect: '/hidden-danger',
+    meta: { title: '隐患管理', icon: 'hiddenDanger' },
+    children: [
+      { path: '/hidden-danger', name: 'hiddenDanger', component: () => import('@/views/hiddenDanger/index'), meta: { title: '隐患管理' } },
+      { path: '/hidden-danger/:id', name: 'dangerDetails', component: () => import('@/views/hiddenDanger/dangerDetails'), hidden: true, meta: { title: '隐患详情' } }
+    ]
+  },
+  // 安全事故
+  {
+    path: '',
+    name: '_accident',
+    component: Layout,
+    redirect: '/accident',
+    children: [
+      { path: 'accident', name: 'accident', component: () => import('@/views/accident/index'), meta: { title: '安全事故', icon: 'accident' } }
+    ]
+  },
+  // 安全台账
+  {
+    path: '',
+    name: '_standingBook',
+    component: Layout,
+    redirect: '/standing-book',
+    meta: { title: '安全台帐' },
+    children: [
+      { path: '/standing-book', name: 'standingBook', component: () => import('@/views/standingBook/index'), meta: { title: '安全台账', icon: 'standingBook' } },
+      { path: '/standing-book/count', name: 'standingBook_count', component: () => import('@/views/standingBook/chemicals/count/index'), hidden: true, meta: { title: '库存记录' } }
+    ]
+  },
+  // 数据统计
+  {
+    path: '/report-forms',
+    name: '_reportForms',
+    component: Layout,
+    redirect: '/report-forms/daily-inspection',
+    meta: { title: '数据统计', icon: 'table' },
+    children: [
+      { path: 'daily-inspection', name: 'reportForms_dailyInspection', component: () => import('@/views/reportForms/dailyInspection/index'), meta: { title: '日常巡查统计' } },
+      { path: 'safety-hazard', name: 'reportForms_safetyHazard', component: () => import('@/views/reportForms/safetyHazard/index'), meta: { title: '安全隐患统计' } },
+      { path: 'accident', name: 'reportForms_Accident', component: () => import('@/views/reportForms/accident/index'), meta: { title: '安全事故统计' }, hidden: true }
+    ]
+  },
+  // 基础设置
+  {
+    path: '/app-setting',
+    name: '_appSetting',
+    component: Layout,
+    redirect: '/app-setting/basic-info',
+    meta: { title: '基础设置', icon: 'appSetting' },
+    children: [
+      { path: 'basic-info', name: 'appSetting_basicInfo', component: () => import('@/views/appSetting/basicInfo/index'), meta: { title: '基础信息' } },
+      { path: 'personnel-access', name: 'appSetting_personnelAccess', component: () => import('@/views/appSetting/personnelAccess/index'), meta: { title: '人员权限管理' } },
+      { path: 'personnel-access/editMember', hidden: true, name: 'appSetting_personnel_editMember', component: () => import('@/views/appSetting/personnelAccess/editMember/index'), meta: { title: '编辑成员' } },
+
+      { path: 'personnel-access/distribution-access', hidden: true, name: 'appSetting_personnelAccess_distributionAccess', component: () => import('@/views/appSetting/personnelAccess/distributionAccess/index'), meta: { title: '分配权限' } },
+      { path: 'orgStructure', name: 'appSetting_orgStructure', component: () => import('@/views/appSetting/orgStructure/index'), meta: { title: '组织架构管理' } },
+      { path: 'orgStructure/editMember', hidden: true, name: 'appSetting_orgStructure_editMember', component: () => import('@/views/appSetting/orgStructure/editMember/index'), meta: { title: '编辑成员' } },
+      { path: 'orgStructure/add-person', hidden: true, name: 'appSetting_orgStructure_addPerson', component: () => import('@/views/appSetting/orgStructure/addPerson/index'), meta: { title: '添加人员' } },
+      { path: 'security-team', name: 'appSetting_securityTeam', component: () => import('@/views/appSetting/securityTeam/index'), meta: { title: '安全小组管理' } },
+      { path: 'sub-structure', name: 'appSetting_subStructure', component: () => import('@/views/appSetting/subStructure/index'), meta: { title: '下级组织架构' } }
+    ]
+  }
