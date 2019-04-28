@@ -34,6 +34,10 @@ public class MyApplication extends SpringBootServletInitializer {
 	}	
 	*/
 	public static void main(String[] args) {
+		
+		/**
+		 * 这是测试提交
+		 */
 		SpringApplication sa = new SpringApplication(MyApplication.class);
 		sa.run(args);
 	}
